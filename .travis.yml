@@ -13,8 +13,9 @@ install:
   - pip install poetry
   - poetry install -vvv
 script:
-  - coverage  run --source=test_mubu_login -m unittest discover
-  - coverage report
+  - poetry run --source=test_mubu_login -m unittest discover
+  - poetry run coverage repost
+  - poetry run coveralls
 #  - poetry run coverage run --source=hogwarts_httprunner -m unittest discover
 #  - poetry run coverage report
 #  - poetry run coveralls
