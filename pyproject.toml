@@ -7,8 +7,14 @@ authors = ["andong"]
 [tool.poetry.dependencies]
 python = "^3.6"
 requests = "^2.22"
+jsonpath = "^0.82.0"
+selenium = "^3.141"
+
+
 
 [tool.poetry.dev-dependencies]
+coverage = "^4.5"
+coveralls = "^1.8"
 
 [build-system]
 requires = ["poetry>=0.12"]
