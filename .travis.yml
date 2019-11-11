@@ -1,6 +1,7 @@
 sudo: false
 language: python
 python:
+  - 3.5
   - 3.6
 matrix:
   include: # Required for Python 3.7+
@@ -13,7 +14,7 @@ install:
   - poetry install -vvv
 script:
   - python test_mubu_login.py
-  - python unittest discover
+  - python -m unittest discover
 #  - poetry run coverage run --source=hogwarts_httprunner -m unittest discover
 #  - poetry run coverage report
 #  - poetry run coveralls
