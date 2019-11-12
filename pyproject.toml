@@ -9,6 +9,8 @@ python = "^3.5"
 requests = "^2.22"
 jsonpath = "^0.82.0"
 selenium = "^3.141"
+pyyaml = "^5.1"
+httprunner = "^2.3"
 
 
 
