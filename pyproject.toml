@@ -12,11 +12,12 @@ selenium = "^3.141"
 pyyaml = "^5.1"
 httprunner = "^2.3"
 
-
-
 [tool.poetry.dev-dependencies]
 coverage = "^4.5"
 coveralls = "^1.8"
+
+[tool.poetry.scripts]
+hogrun = "htturunner.cli:main"
 
 [build-system]
 requires = ["poetry>=0.12"]

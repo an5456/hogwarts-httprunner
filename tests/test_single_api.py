@@ -3,8 +3,8 @@ import unittest
 
 import yaml
 
-from hogwars_httprunner.loader import load_yml
-from hogwars_httprunner.runner import run_yaml
+from htturunner.loader import load_yml
+from htturunner.runner import run_yml
 
 
 class TestSingleApi(unittest.TestCase):
@@ -17,18 +17,21 @@ class TestSingleApi(unittest.TestCase):
 
     def test_run_single_yaml(self):
         single_api_yaml = os.path.join(os.path.dirname(__file__), "api", "get_home_page.yml")
-        result = run_yaml(single_api_yaml)
+        result = run_yml(single_api_yaml)
         print(result)
-        self.assertEqual(result, True)
+        self.assertEqual(len(result), 1)
+        self.assertEqual(result[0], True)
 
         single_api_yaml = os.path.join(os.path.dirname(__file__), "api", "get_login.yml")
-        result = run_yaml(single_api_yaml)
+        result = run_yml(single_api_yaml)
         print(result)
-        self.assertEqual(result, True)
+        self.assertEqual(len(result), 1)
+        self.assertEqual(result[0], True)
 
         single_api_yaml = os.path.join(os.path.dirname(__file__), "api", "get_login_submit.yml")
-        result = run_yaml(single_api_yaml)
+        result = run_yml(single_api_yaml)
         print(result)
-        self.assertEqual(result, True)
+        self.assertEqual(len(result), 1)
+        self.assertEqual(result[0], True)
 
 
