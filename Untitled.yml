@@ -1,0 +1,54 @@
+config:
+    name: testcase description
+    variables: {}
+    verify: False
+teststeps:
+-   name: /cgi-bin/gettoken
+    request:
+        headers:
+            User-Agent: python-requests/2.22.0
+        method: GET
+        params:
+            corpid: ww49e0d1fa2a92fcd4
+            corpsecret: yGKZP7grNAPyejnRqgpTquiv1vgiCVRL3lhWnD2Bktg
+        url: https://qyapi.weixin.qq.com/cgi-bin/gettoken
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - application/json; charset=UTF-8
+    -   eq:
+        - content.errcode
+        - 0
+    -   eq:
+        - content.errmsg
+        - ok
+    -   eq:
+        - content.access_token
+        - 6-DF9_VHi9vGB8GozSjfICWGEGLSheMtg4z6wilbRQA53cRuQQQUkwLBKDvEo1KgSh3lcmgF91fewxzVzgev6zcfpDxT8DD-NY0ecQ6dZlzsfSqzMlCCu9cbJdC5yuy3r7iN1m3FBobR-aiTCMpRcE95NYaAYPh0dvjQrX6XftHVayW8Lcvs319FC_4YfMavlZYqSOIOcXxf2T0Pf-dJeg
+    -   eq:
+        - content.expires_in
+        - 7200
+-   name: /cgi-bin/department/list
+    request:
+        headers:
+            User-Agent: python-requests/2.22.0
+        method: GET
+        params:
+            access_token: 6-DF9_VHi9vGB8GozSjfICWGEGLSheMtg4z6wilbRQA53cRuQQQUkwLBKDvEo1KgSh3lcmgF91fewxzVzgev6zcfpDxT8DD-NY0ecQ6dZlzsfSqzMlCCu9cbJdC5yuy3r7iN1m3FBobR-aiTCMpRcE95NYaAYPh0dvjQrX6XftHVayW8Lcvs319FC_4YfMavlZYqSOIOcXxf2T0Pf-dJeg
+        url: https://qyapi.weixin.qq.com/cgi-bin/department/list
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - application/json; charset=UTF-8
+    -   eq:
+        - content.errcode
+        - 0
+    -   eq:
+        - content.errmsg
+        - ok

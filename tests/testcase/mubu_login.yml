@@ -16,9 +16,16 @@
 #    verify: False
 #  validate:
 #    status_code: 200
--
+#config:
+#    name: testcase description
+#    variables: {}
+#    base_url: https://mubu.com
+#    verify: False
+teststeps:
+- name: https://mubu.com/api/login/submit
+#  api: api/get_login.yml
   request:
-    url: "https://mubu.com/api/login/submit"
+    url: https://mubu.com/api/login/submit
     method: "POST"
     headers:
       user-agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 "
@@ -32,9 +39,10 @@
     status_code: 200
     $.code: 0
 
--
+- name: list?code=$code
+#  api: api/get_login.yml
   request:
-      url: "https://mubu.com/list?code=$code&msg=$msg"
+      url: https://mubu.com/list?code=$msg
       method: "GET"
       headers:
           user-agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 "

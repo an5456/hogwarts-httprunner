@@ -1,14 +1,17 @@
 import re
 
 import jsonpath
+import urllib3
 from requests import sessions
-
+import os
 from htturunner.loader import load_yml
 from htturunner.validate import is_api, is_testcase
+import warnings
 
 session = sessions.Session()
 variable_regex_compile = re.compile(r".*\$(\w+).*")
 session_variables_mapping = {}
+all_veriables_mapping = {}
 
 
 def extract_json_field(resp, json_field):
@@ -28,7 +31,6 @@ def replace_var(content, variables_mapping):
 
 
 def parse_content(content, variables_mapping):
-
     if isinstance(content, dict):
         parsed_content = {}
         for key, value in content.items():
@@ -62,14 +64,31 @@ def run_api(api_info):
     :return:
 
     """
+    warnings.simplefilter("ignore", ResourceWarning)
+    get_run_api(api_info)
     request = api_info["request"]
     global session_variables_mapping
-    parsed_request = parse_content(request, session_variables_mapping)
-    method = parsed_request.pop("method")
-    url = parsed_request.pop("url")
-    print(url)
+    # parsed_request = parse_content(request, session_variables_mapping)
+    # method = parsed_request.pop("method")
+    if all_veriables_mapping["config"]:
+        base_url = all_veriables_mapping["config"]["base_url"]
+        request["url"] = base_url + "/" + request["url"]
+        verify = all_veriables_mapping["config"]["verify"]
+        parsed_request = parse_content(request, session_variables_mapping)
+        parsed_request["verify"] = verify
+        method = parsed_request.pop("method")
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        url = parsed_request.pop("url")
+        reps = session.request(method, url, **parsed_request)
+    else:
+        parsed_request = parse_content(request, session_variables_mapping)
+        method = parsed_request.pop("method")
+        url = parsed_request.pop("url")
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        reps = session.request(method, url, **parsed_request)
     # requests 每一次调用都会创建一个session，所以用同一个session访问
-    reps = session.request(method, url, **parsed_request)
+    # urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+    # reps = session.request(method, url, **parsed_request)
     # 响应断言如果断言的key里面有"$"就用jsonpath获取断言的结果
     # 如果没有"$"就用一般的json规则去提取数据
     validator_mapping = api_info["validate"]
@@ -86,8 +105,7 @@ def run_api(api_info):
         var_expr = extract_mapping[var_name]
         var_value = extract_json_field(reps, var_expr)
         session_variables_mapping[var_name] = var_value
-        print('====' + str(var_value))
-    print(run_api)
+
     return True
 
 
@@ -106,14 +124,49 @@ def run_yml(yml_file):
     """运行yml文件"""
     result = []
     load_content = load_yml(yml_file)
-    if is_api(load_content):
+    global all_veriables_mapping
+    all_veriables_mapping["config"] = load_content.get("config", {})
+
+    if is_api(load_content.get("teststeps")):
         success = run_api(load_content)
         result.append(success)
-    elif is_testcase(load_content):
-        for api_info in load_content:
+    elif is_testcase(load_content.get("teststeps")):
+        for api_info in load_content.get("teststeps"):
             success = run_api(api_info)
             result.append(success)
     else:
         raise Exception("YAML format invalid".format(yml_file))
-    print("=======" + str(result))
+
     return result
+
+
+def load_veritable(yml_file):
+    load_content = load_yml(yml_file)
+    return load_content
+
+
+# 获取依赖接口
+def get_run_api(api_info):
+    file_path = os.path.dirname(os.path.dirname(__file__)) + "/tests/"
+    if api_info.get("api"):
+        ru_path = os.path.join(file_path, api_info.get("api"))
+        print("依赖运行了")
+        load_veritable(ru_path)
+        run_yml(ru_path)
+
+
+def get_config(api_info):
+    file_path = os.path.dirname(os.path.dirname(__file__)) + "/tests/"
+    if api_info.get("api"):
+        ru_path = os.path.join(file_path, api_info.get("api"))
+        print("依赖运行了")
+        load_veritable(ru_path)
+
+
+# def load_veriables(api_info):
+#     file_path = os.path.dirname(os.path.dirname(__file__)) + "/tests/"
+#     if api_info.get("base_url" ):
+#         pass
+
+if __name__ == '__main__':
+    get_run_api({"api": "api/get_login.yml"})
