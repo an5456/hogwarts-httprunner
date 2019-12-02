@@ -35,14 +35,16 @@ teststeps:
   extract:
     code: $.code
     msg: $.msg
+    next: $.data.next
   validate:
     status_code: 200
     $.code: 0
+    $.data.next: /list
 
 - name: list?code=$code
 #  api: api/get_login.yml
   request:
-      url: https://mubu.com/list?code=$msg
+      url: https://mubu.com/list?code=${msg}
       method: "GET"
       headers:
           user-agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 "

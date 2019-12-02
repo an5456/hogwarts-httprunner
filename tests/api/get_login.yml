@@ -8,9 +8,11 @@
 #    status_code: 200
 config:
     name: testcase description
-    variables: {}
+    variables:
+        username: 17729597958
+        password: dong19871103
     base_url: https://mubu.com
-    verify: False
+#    verify: False
 teststeps:
 -  name: https://mubu.com/api/login/submit
    request:
@@ -20,7 +22,6 @@ teststeps:
         user-agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 "
         content-type: "application/x-www-form-urlencoded; charset=UTF-8"
       data: "phone=17729597958&password=dong19871103&remember=true"
-      verify: False
    extract:
       code: $.code
       msg: $.msg
@@ -35,7 +36,6 @@ teststeps:
         params:
             corpid: ww49e0d1fa2a92fcd4
             corpsecret: yGKZP7grNAPyejnRqgpTquiv1vgiCVRL3lhWnD2Bktg
-        verify: False
         url: https://qyapi.weixin.qq.com/cgi-bin/gettoken
    validate:
       $.errmsg: ok
