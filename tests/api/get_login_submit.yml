@@ -1,8 +1,9 @@
 config:
     name: testcase description
     variables:
-        username: 17729597958
-        password: dong19871103
+        username: ${username}
+        password: ${password}
+        code: ${assert}
     base_url: https://mubu.com
 #    verify: False
 
@@ -16,4 +17,4 @@ teststeps:
     data: "phone=${username}&password=${password}&remember=true"
   validate:
       status_code: 200
-      $.code: 0
+      $.code: ${code}
