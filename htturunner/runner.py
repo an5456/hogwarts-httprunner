@@ -102,8 +102,9 @@ def run_api(api_info):
     global session_variables_mapping
     # parsed_request = parse_content(request, session_variables_mapping)
     # method = parsed_request.pop("method")
+    # 有config时执行以下代码
     if all_veriables_mapping["config"]:
-        base_url = all_veriables_mapping["config"]["base_url"]
+        base_url = all_veriables_mapping["config"]["base_url"]#
 
         if len(base_url) < len(request["url"]):
             request["url"] = request["url"]
@@ -116,11 +117,17 @@ def run_api(api_info):
             csv_request = api_info
             for key, value in variables.items():
                 session_variables_mapping[key] = value
+            """
+                # config中的变量通过外部传入，类似：
+                variables:
+                    username: ${username}
+                    password: ${password}
+            """
             if "$" in str(variables):
                 csv_info = load_csv()
                 for csv_dict in csv_info:
-                    parsed_config = parse_content(variables, csv_dict)
-                    parsed_request = parse_content(request, parsed_config)
+                    parsed_config = parse_content(variables, csv_dict)# 解析variables并替换
+                    parsed_request = parse_content(request, parsed_config)# 解析request
                     variables_request = parse_content(csv_request, parsed_config)
                     try:
                         verify = all_veriables_mapping["config"]["verify"]
@@ -147,7 +154,7 @@ def run_api(api_info):
                             else:
                                 assert actual_value == expected_value
                         except AssertionError:
-                            print("=======断言错误=====")
+                            print("=======AssertionError=====")
                             print("expected:{}".format(expected_value))
                             print("actual:{}".format(actual_value))
                     try:
@@ -156,6 +163,11 @@ def run_api(api_info):
                     except JSONDecodeError:
                         print(reps)
             else:
+                """confing中的variables变量的key直接输入的，执行以下方法，类似：
+                    variables:
+                        username: 17729597958
+                        password: 123456
+                """
                 parsed_request = parse_content(request, session_variables_mapping)
                 try:
                     verify = all_veriables_mapping["config"]["verify"]
@@ -183,20 +195,20 @@ def run_api(api_info):
             info = reps.json()
             print(info)
         except JSONDecodeError:
-            print(reps)
+            pass
     # requests 每一次调用都会创建一个session，所以用同一个session访问
     # urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
     # reps = session.request(method, url, **parsed_request)
     # 响应断言如果断言的key里面有"$"就用jsonpath获取断言的结果
     # 如果没有"$"就用一般的json规则去提取数据
-    # validator_mapping = api_info["validate"]
-    # for key in validator_mapping:
-    #     if "$" in key:
-    #         actual_value = extract_json_field(reps, key)
-    #     else:
-    #         actual_value = getattr(reps, key)  # 实际结果
-    #     expected_value = validator_mapping[key]  # 预期结果
-    #     assert actual_value == expected_value
+        validator_mapping = api_info["validate"]
+        for key in validator_mapping:
+            if "$" in key:
+                actual_value = extract_json_field(reps, key)
+            else:
+                actual_value = getattr(reps, key)  # 实际结果
+            expected_value = validator_mapping[key]  # 预期结果
+            assert actual_value == expected_value
     # 提取响应参数
     extract_mapping = api_info.get("extract", {})
     for var_name in extract_mapping.keys():
