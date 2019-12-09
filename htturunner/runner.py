@@ -1,5 +1,6 @@
 import csv
 import io
+import random
 import re
 from json import JSONDecodeError
 import jsonpath
@@ -10,12 +11,15 @@ from htturunner.loader import load_yml
 from htturunner.validate import is_api, is_testcase
 import warnings
 import sys
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 sys.path.append(BASE_DIR)
 
 session = sessions.Session()
 # 匹配规则，例如：${test} 匹配后为：test
 variable_regex_compile = re.compile(r"\$\{(\w+)\}|\$(\w+)")
+# 匹配规则，例如：${func(${var_1}, ${var_2})}
+function_regex_compile = re.compile(r"\$\{(\w+)\(([\$\w\.\-/\s=,]*)\)\}")
 # 提取的断言元素
 session_variables_mapping = {}
 # 获取的config设置内容
@@ -77,10 +81,16 @@ def parse_content(content, variables_mapping):
         return parsed_content
     elif isinstance(content, str):
         matched = variable_regex_compile.findall(content)
-        if matched:
-            return replace_var(content, variables_mapping)
+        matched_function = function_regex_compile.findall(content)
+
+        if matched_function:
+            return parse_funtion(content, all_veriables_mapping["config"]["variables"])
+
+        elif matched:
+                return replace_var(content, variables_mapping)
         else:
             return content
+
     else:
         return content
 
@@ -104,48 +114,53 @@ def run_api(api_info):
     # method = parsed_request.pop("method")
     # 有config时执行以下代码
     if all_veriables_mapping["config"]:
-        base_url = all_veriables_mapping["config"]["base_url"]#
+        try:
+            base_url = all_veriables_mapping["config"]["base_url"]  #
+            if len(base_url) < len(request["url"]):
+                request["url"] = request["url"]
+            else:
+                request["url"] = base_url + "/" + request["url"]
 
-        if len(base_url) < len(request["url"]):
+        except KeyError:
             request["url"] = request["url"]
-        else:
-            request["url"] = base_url + "/" + request["url"]
-
         variables = all_veriables_mapping["config"]["variables"]
 
         if variables is not None:
-            csv_request = api_info
+            # csv_request = api_info
             for key, value in variables.items():
                 session_variables_mapping[key] = value
             """
-                # config中的变量通过外部传入，类似：
+                config中的变量通过外部传入，类似：
                 variables:
                     username: ${username}
                     password: ${password}
+                执行以下代码
             """
             if "$" in str(variables):
-                csv_info = load_csv()
+                csv_info = load_csv()  # 解析csv参数
                 for csv_dict in csv_info:
-                    parsed_config = parse_content(variables, csv_dict)# 解析variables并替换
-                    parsed_request = parse_content(request, parsed_config)# 解析request
-                    variables_request = parse_content(csv_request, parsed_config)
+                    parsed_config = parse_content(variables, csv_dict)  # 解析variables中是否需要替换的参数，如${}
+                    parsed_request = parse_content(request, parsed_config)  # 解析request中是否需要替换参数，如${}
+                    variables_request = parse_content(api_info["validate"],
+                                                      parsed_config)  # 解析断言部分validate是否有替换的参数,如：${}
                     try:
+                        """判断是否有设置verify，绕过ssl验证"""
                         verify = all_veriables_mapping["config"]["verify"]
                         parsed_request["verify"] = verify
                     except KeyError:
                         pass
                     method = parsed_request.pop("method")
-                    urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
                     url = parsed_request.pop("url")
                     print(url)
+                    urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
                     reps = session.request(method, url, **parsed_request)
-                    validator_mapping = variables_request["validate"]
-                    for key in validator_mapping:
+                    # validator_mapping = variables_request["validate"]
+                    for key in variables_request:
                         if "$" in key:
                             actual_value = str(extract_json_field(reps, key))
                         else:
                             actual_value = getattr(reps, key)  # 实际结果
-                        expected_value = validator_mapping[key]  # 预期结果
+                        expected_value = variables_request[key]  # 预期结果
                         try:
                             if isinstance(actual_value, int) or isinstance(expected_value, int):
                                 actual_value = int(actual_value)
@@ -155,15 +170,16 @@ def run_api(api_info):
                                 assert actual_value == expected_value
                         except AssertionError:
                             print("=======AssertionError=====")
-                            print("expected:{}".format(expected_value))
-                            print("actual:{}".format(actual_value))
+                            print("expected:{}={}".format(key, expected_value))
+                            print("actual:{}={}".format(key, actual_value))
                     try:
                         info = reps.json()
                         print(info)
                     except JSONDecodeError:
                         print(reps)
             else:
-                """confing中的variables变量的key直接输入的，执行以下方法，类似：
+                """
+                    confing中的variables变量的key直接输入的，执行以下方法，类似：
                     variables:
                         username: 17729597958
                         password: 123456
@@ -175,9 +191,9 @@ def run_api(api_info):
                 except KeyError:
                     pass
                 method = parsed_request.pop("method")
-                urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
                 url = parsed_request.pop("url")
                 print(url)
+                urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
                 reps = session.request(method, url, **parsed_request)
                 try:
                     info = reps.json()
@@ -196,11 +212,9 @@ def run_api(api_info):
             print(info)
         except JSONDecodeError:
             pass
-    # requests 每一次调用都会创建一个session，所以用同一个session访问
-    # urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-    # reps = session.request(method, url, **parsed_request)
-    # 响应断言如果断言的key里面有"$"就用jsonpath获取断言的结果
-    # 如果没有"$"就用一般的json规则去提取数据
+        # requests 每一次调用都会创建一个session，所以用同一个session访问
+        # 响应断言如果断言的key里面有"$"就用jsonpath获取断言的结果
+        # 如果没有"$"就用一般的json规则去提取数据
         validator_mapping = api_info["validate"]
         for key in validator_mapping:
             if "$" in key:
@@ -208,7 +222,23 @@ def run_api(api_info):
             else:
                 actual_value = getattr(reps, key)  # 实际结果
             expected_value = validator_mapping[key]  # 预期结果
-            assert actual_value == expected_value
+            # assert actual_value == expected_value
+            try:
+                if isinstance(actual_value, int) or isinstance(expected_value, int):
+                    actual_value = int(actual_value)
+                    expected_value = int(expected_value)
+                    assert actual_value == expected_value
+                else:
+                    assert actual_value == expected_value
+            except AssertionError:
+                print("=======AssertionError=====")
+                print("expected:{}->{}".format(key, expected_value))
+                print("actual:{}->{}".format(key, actual_value))
+        # try:
+        #     info = reps.json()
+        #     print(info)
+        # except JSONDecodeError:
+        #     print(reps.text)
     # 提取响应参数
     extract_mapping = api_info.get("extract", {})
     for var_name in extract_mapping.keys():
@@ -217,9 +247,6 @@ def run_api(api_info):
         session_variables_mapping[var_name] = var_value
 
     return True
-
-
-
 
 
 def run_yml(yml_file):
@@ -257,21 +284,9 @@ def get_run_api(api_info):
         run_yml(ru_path)
 
 
-# def get_config(api_info):
-#     file_path = os.path.dirname(os.path.dirname(__file__)) + "/tests/"
-#     if api_info.get("api"):
-#         ru_path = os.path.join(file_path, api_info.get("api"))
-#         print("依赖运行了")
-#         load_veritable(ru_path)
-
-
-# def load_veriables(api_info):
-#     file_path = os.path.dirname(os.path.dirname(__file__)) + "/tests/"
-#     if api_info.get("base_url" ):
-#         pass
 def load_csv():
     csv_file_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    path = os.path.join(csv_file_path+"/tests/data/", "login.csv")
+    path = os.path.join(csv_file_path + "/tests/data/", "login.csv")
     print(path)
     csv_content_list = []
 
@@ -291,11 +306,46 @@ def load_csv():
     #     print("{} not is list".format(args))
 
 
+def test_1(username=None, password=None):
+    print("hello world==={}".format(username))
+    print("hello world==={}".format(password))
+    return str(username) + password
+def test_2():
+    ran = random.randint(0,9)
+    return ran
+
+# 解析函数，并替换
+def parse_funtion(str_1, info_dict):
+    """
+    :param str_1: 需要解析的字符串 类似：https://mubu.com/${test_2()}
+    :param info_dict: 需要替换的数据
+    :return: 被替换后的字符串 ，类似：https://mubu.com/17729678
+    """
+    result_dict = {}
+    parse_list = []
+    regx = function_regex_compile.findall(str_1)
+    try:
+        if regx:
+            for i in regx:
+                if "$" in i[1]:
+                    for h in variable_regex_compile.findall(i[1]):
+                        parse_list.append(h[0] or h[1])
+                    for y in parse_list:
+                        try:
+                            result_dict[y] = info_dict[y]
+                        except Exception as e:
+                            print(e)
+                    ret = str_1.replace("${%s($%s,$%s)}" % (regx[0][0], parse_list[0], parse_list[1]),
+                                        test_1(**result_dict))
+                    return ret
+                else:
+                    l = regx[0][0]
+                    return str_1.replace("${%s()}" % (l), str(test_2()))
+    except Exception as e:
+        print("====="+e)
+
+
 if __name__ == '__main__':
-    l = load_csv()
-    print(l)
-
-
-
-
-
+    str_1 = "xxxs:${test_1($username,$password)}ssss:wwwww"
+    test_dict = {"name": "zhangsan", "password": 123456, "age": 21}
+    print(parse_funtion(str_1, test_dict))

@@ -71,3 +71,19 @@
 #
 #
 # print(regex_findall_variables("fds${afd}sfdsfadsaf$tests$gggg")[2])
+from selenium import webdriver
+import time
+firefox_capabilities = {
+    "browserName": "chrome",
+    "version": "",  # 注意版本号一定要写对
+    "platform": "ANY",
+    "javascriptEnabled": True,
+    "marionette": True,
+}
+browser = webdriver.Remote("http://127.0.0.1:5001/wd/hub",
+                           desired_capabilities=firefox_capabilities)  # 注意端口号4444是我们上文中映射的宿主机端口号
+browser.get("http://www.baidu.com")
+# browser.get_screenshot_as_file(r"C:/baidu.png")
+browser.maximize_window()
+time.sleep(5)
+browser.close()
