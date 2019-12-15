@@ -1,0 +1,303 @@
+{
+  "uid" : "387d7793cd24a201",
+  "name" : "test_run_testcase_yml",
+  "fullName" : "test_testcase.TestSingle#test_run_testcase_yml",
+  "historyId" : "a795ec9b90752ada9e41d5e5673b3878",
+  "time" : {
+    "start" : 1576337208950,
+    "stop" : 1576337216971,
+    "duration" : 8021
+  },
+  "description" : "\n\n            斤斤计较测试\n        ",
+  "descriptionHtml" : "<pre><code>        斤斤计较测试\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : true,
+  "beforeStages" : [ {
+    "name" : "_Module__pytest_setup_module",
+    "time" : {
+      "start" : 1576337208948,
+      "stop" : 1576337208948,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1576337208948,
+      "stop" : 1576337208949,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "\n\n            斤斤计较测试\n        ",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "5055b619abaeb872",
+      "name" : "log",
+      "source" : "5055b619abaeb872.txt",
+      "type" : "text/plain",
+      "size" : 0
+    }, {
+      "uid" : "8edae18f558a397f",
+      "name" : "stdout",
+      "source" : "8edae18f558a397f.txt",
+      "type" : "text/plain",
+      "size" : 1144
+    }, {
+      "uid" : "b51ffb4c5e4665e8",
+      "name" : "stderr",
+      "source" : "b51ffb4c5e4665e8.txt",
+      "type" : "text/plain",
+      "size" : 0
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "_Module__pytest_setup_module::0",
+    "time" : {
+      "start" : 1576337218014,
+      "stop" : 1576337218014,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1576337218013,
+      "stop" : 1576337218013,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "测试接口"
+  }, {
+    "name" : "story",
+    "value" : "测试1"
+  }, {
+    "name" : "suite",
+    "value" : "test_testcase"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestSingle"
+  }, {
+    "name" : "host",
+    "value" : "anxiaodongdeMacBook-Pro.local"
+  }, {
+    "name" : "thread",
+    "value" : "11587-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_testcase"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "93476ef0dd43ba2f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576336673931,
+        "stop" : 1576336674803,
+        "duration" : 872
+      }
+    }, {
+      "uid" : "cfc9440b5a4af60a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576336480035,
+        "stop" : 1576336484538,
+        "duration" : 4503
+      }
+    }, {
+      "uid" : "f5aade63f802c290",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576336397499,
+        "stop" : 1576336398290,
+        "duration" : 791
+      }
+    }, {
+      "uid" : "dfc6302bc77ab457",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576335992328,
+        "stop" : 1576335996181,
+        "duration" : 3853
+      }
+    }, {
+      "uid" : "80d3854db581afe0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576335028181,
+        "stop" : 1576335031997,
+        "duration" : 3816
+      }
+    }, {
+      "uid" : "21f87682e434818c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576334763122,
+        "stop" : 1576334763876,
+        "duration" : 754
+      }
+    }, {
+      "uid" : "2bef925e3b6c397e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576323416985,
+        "stop" : 1576323417794,
+        "duration" : 809
+      }
+    }, {
+      "uid" : "86b9643bd1b7d9b8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576323336547,
+        "stop" : 1576323337309,
+        "duration" : 762
+      }
+    }, {
+      "uid" : "d423a3ca0ee57c3f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576323197929,
+        "stop" : 1576323199654,
+        "duration" : 1725
+      }
+    }, {
+      "uid" : "1ad60fb507de88af",
+      "status" : "broken",
+      "statusDetails" : "json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "time" : {
+        "start" : 1576323161782,
+        "stop" : 1576323162531,
+        "duration" : 749
+      }
+    }, {
+      "uid" : "5c0699b0752ded84",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576323139239,
+        "stop" : 1576323140012,
+        "duration" : 773
+      }
+    }, {
+      "uid" : "4ddf356e4b53fe7b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576323122093,
+        "stop" : 1576323122971,
+        "duration" : 878
+      }
+    }, {
+      "uid" : "ab650bc74c00a0da",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576323072259,
+        "stop" : 1576323073170,
+        "duration" : 911
+      }
+    }, {
+      "uid" : "2205ea4a6c2ba62e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576323037318,
+        "stop" : 1576323038145,
+        "duration" : 827
+      }
+    }, {
+      "uid" : "e904934719777512",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576323022783,
+        "stop" : 1576323023508,
+        "duration" : 725
+      }
+    }, {
+      "uid" : "c1e96fcb4432e199",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576322990159,
+        "stop" : 1576322990898,
+        "duration" : 739
+      }
+    }, {
+      "uid" : "6abdceba3fe62928",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576322972118,
+        "stop" : 1576322973069,
+        "duration" : 951
+      }
+    }, {
+      "uid" : "676bb2e3b53ca542",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576322943453,
+        "stop" : 1576322944238,
+        "duration" : 785
+      }
+    }, {
+      "uid" : "64d4183f6997ea5a",
+      "status" : "broken",
+      "statusDetails" : "json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "time" : {
+        "start" : 1576322872439,
+        "stop" : 1576322873347,
+        "duration" : 908
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "387d7793cd24a201.json",
+  "parameterValues" : [ ]
+}

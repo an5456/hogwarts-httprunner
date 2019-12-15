@@ -1,0 +1,42 @@
+每个测试用例之前运行
+/Users/anxiaodong/PycharmProjects/hogwarts-httprun/tests/data/login.csv
+[91m===============正常登陆[0m
+[95murl https://mubu.com/api/login/submit[0m
+[95mmethod POST[0m
+[95mrequest_data {'headers': {'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 ', 'content-type': 'application/x-www-form-urlencoded; charset=UTF-8'}, 'data': {'phone': '17729597958', 'password': 'dong19871103', 'remember': 'true'}}[0m
+
+[93mpass [0m
+{'code': 0, 'msg': None, 'data': {'next': '/list'}}
+[91m===============密码错误[0m
+[95murl https://mubu.com/api/login/submit[0m
+[95mmethod POST[0m
+[95mrequest_data {'headers': {'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 ', 'content-type': 'application/x-www-form-urlencoded; charset=UTF-8'}, 'data': {'phone': '17729597958', 'password': 'dong19871103', 'remember': 'true'}}[0m
+
+[1;31m=======AssertionError=====[0m
+[1;36mexpected:[0m
+	status_code=2001
+[1;32mactual:[0m
+	status_code=200
+[1;31m=======AssertionError=====[0m
+[1;36mexpected:[0m
+	$.code=2
+[1;32mactual:[0m
+	$.code=0
+{'code': 0, 'msg': None, 'data': {'next': '/list'}}
+[91m===============用户名错误[0m
+[95murl https://mubu.com/api/login/submit[0m
+[95mmethod POST[0m
+[95mrequest_data {'headers': {'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 ', 'content-type': 'application/x-www-form-urlencoded; charset=UTF-8'}, 'data': {'phone': '17729597958', 'password': 'dong19871103', 'remember': 'true'}}[0m
+
+[1;31m=======AssertionError=====[0m
+[1;36mexpected:[0m
+	status_code=2001
+[1;32mactual:[0m
+	status_code=200
+[1;31m=======AssertionError=====[0m
+[1;36mexpected:[0m
+	$.code=2
+[1;32mactual:[0m
+	$.code=0
+{'code': 0, 'msg': None, 'data': {'next': '/list'}}
+每个测试用例之后执行

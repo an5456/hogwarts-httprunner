@@ -4,23 +4,23 @@ config:
         username: 17729597958
         password: dong19871103
 #    base_url: https://mubu.com
-#    verify: False
+    verify: False
 teststeps:
 -   username:
     request:
-        url: https://mubu.com/${test_1($username,$password)}
+        url: https://mubu.com/?phone=${telephone()}
         method: "GET"
         headers:
             user-agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 "
         verify: False
     validate:
         status_code: 200
--   username:
-    request:
-        url: https://mubu.com/${test_2()}
-        method: "GET"
-        headers:
-            user-agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 "
-        verify: False
-    validate:
-        status_code: 200
+#-   username:
+#    request:
+#        url: https://mubu.com/${telephone()}
+#        method: "GET"
+#        headers:
+#            user-agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 "
+#        verify: False
+#    validate:
+#        status_code: 200

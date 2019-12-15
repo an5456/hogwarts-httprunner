@@ -1,0 +1,6 @@
+每个测试用例之前运行
+https://mubu.com/api/login/submit
+[92murls==[0mhttps://mubu.com/api/login/submit
+[92mhttps://mubu.com/api/login/submit[0m
+<Response [200]>
+每个测试用例之后执行

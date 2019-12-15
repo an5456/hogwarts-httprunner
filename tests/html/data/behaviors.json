@@ -1,0 +1,73 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "测试接口",
+    "children" : [ {
+      "name" : "测试1",
+      "children" : [ {
+        "name" : "test_run_testcase_yml",
+        "uid" : "387d7793cd24a201",
+        "parentUid" : "200b281afa50b2454e309f232c76f4a7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1576337208950,
+          "stop" : 1576337216971,
+          "duration" : 8021
+        },
+        "flaky" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "200b281afa50b2454e309f232c76f4a7"
+    }, {
+      "name" : "测试2",
+      "children" : [ {
+        "name" : "test_run_login",
+        "uid" : "51727435d1ab4268",
+        "parentUid" : "28ef4d408ae8a2f70a5c9f53bf72059f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1576337216976,
+          "stop" : 1576337217193,
+          "duration" : 217
+        },
+        "flaky" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "28ef4d408ae8a2f70a5c9f53bf72059f"
+    }, {
+      "name" : "测试3",
+      "children" : [ {
+        "name" : "test_get_login_submit",
+        "uid" : "143b9e35a9e9b5b9",
+        "parentUid" : "c2a0e7ec63b78e92d5b22ef33574da3f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1576337217196,
+          "stop" : 1576337217593,
+          "duration" : 397
+        },
+        "flaky" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c2a0e7ec63b78e92d5b22ef33574da3f"
+    }, {
+      "name" : "测试4",
+      "children" : [ {
+        "name" : "test_get_home_page",
+        "uid" : "c6893dfcd144b883",
+        "parentUid" : "8650a35675163e4a2800d438a4a76b1a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1576337217596,
+          "stop" : 1576337218012,
+          "duration" : 416
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "8650a35675163e4a2800d438a4a76b1a"
+    } ],
+    "uid" : "a946f7f2848a07a3b16cc482d28ca675"
+  } ]
+}

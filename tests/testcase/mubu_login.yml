@@ -23,14 +23,15 @@
 #    verify: False
 teststeps:
 - name: https://mubu.com/api/login/submit
-#  api: api/get_login.yml
+  api: api/get_login.yml
   request:
     url: https://mubu.com/api/login/submit
     method: "POST"
     headers:
       user-agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 "
       content-type: "application/x-www-form-urlencoded; charset=UTF-8"
-    data: "phone=17729597958&password=dong19871103&remember=true"
+#    data: "phone=17729597958&password=dong19871103&remember=true"
+    data: {"phone":"17729597958","password":"dong19871103","remember":"true"}
     verify: False
   extract:
     code: $.code

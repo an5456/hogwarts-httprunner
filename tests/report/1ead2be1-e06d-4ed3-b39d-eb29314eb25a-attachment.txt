@@ -1,0 +1,22 @@
+模块之前
+每个类之前运行
+每个测试用例之前运行
+依赖运行了
+https://mubu.com/api/login/submit
+[92murls==[0mhttps://mubu.com/api/login/submit
+[92mhttps://mubu.com/api/login/submit[0m
+{'code': 0, 'msg': None, 'data': {'next': '/list'}}
+https://qyapi.weixin.qq.com/cgi-bin/gettoken
+[92murls==[0mhttps://qyapi.weixin.qq.com/cgi-bin/gettoken
+[92mhttps://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ww49e0d1fa2a92fcd4&corpsecret=yGKZP7grNAPyejnRqgpTquiv1vgiCVRL3lhWnD2Bktg[0m
+{'errcode': 0, 'errmsg': 'ok', 'access_token': 'W-PkrfUL9RejTV-SbcCvRASLk0V9ppuPQWzyH6v3471qLk348bg9JNAOJQQsivr4u6rA3ETjhB6KYrppKdq3qrmE_ZQjU4PtqaNwLDGs7Za-drzL1Jl-dOUkm9NUJ544waL2NQEd2iWRZkVB_V5nDjnnvFl18MvqmCvGJzfShLWXzXD0VdgiXd3P6N50kciulYESzSH-6iKTIKPzxq8xbA', 'expires_in': 7200}
+https://mubu.com/api/login/submit
+[92murls==[0mhttps://mubu.com/api/login/submit
+[92mhttps://mubu.com/api/login/submit[0m
+{'code': 0, 'msg': None, 'data': {'next': '/list'}}
+https://mubu.com/list?code=None
+[92murls==[0mhttps://mubu.com/list?code=None
+[92mhttps://mubu.com/list?code=None[0m
+<Response [200]>
+[None, None]
+每个测试用例之后执行

@@ -1,0 +1,10 @@
+每个测试用例之前运行
+<class 'mappingproxy'>
+手机号:14593543086
+https://mubu.com/?phone=14593543086
+[92murls==[0mhttps://mubu.com/?phone=14593543086
+[92mhttps://mubu.com/list[0m
+<Response [200]>
+每个测试用例之后执行
+每个类之后运行
+模块之后
