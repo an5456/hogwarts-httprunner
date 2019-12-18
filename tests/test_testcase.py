@@ -72,5 +72,5 @@ class TestSingle:
         """
         single_testcase_yaml = os.path.join(os.path.dirname(__file__), "api", "get_home_page.yml")
         result = self.run.run_yml(single_testcase_yaml)
-        allure.attach.file("/Users/anxiaodong/PycharmProjects/hogwarts-httprun/data/login.csv", "报告", allure.attachment_type.CSV)
+       # allure.attach.file("/Users/anxiaodong/PycharmProjects/hogwarts-httprun/data/login.csv", "报告", allure.attachment_type.CSV)
         print(result)
