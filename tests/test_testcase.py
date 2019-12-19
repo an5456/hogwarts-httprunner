@@ -89,6 +89,7 @@ class TestSingle:
         """
         single_testcase_yaml = os.path.join(os.path.dirname(__file__), "api", "get_home_page.yml")
         result = self.run.run_yml(single_testcase_yaml)
+<<<<<<< HEAD
         logger.info("666666666" + str(result))
         for ass in result[0]:
             logger.info("url:" + ass["url"])
@@ -111,4 +112,7 @@ class TestSingle:
                 assert vale["expected"] == vale["actual"]
         allure.attach.file("/Users/anxiaodong/PycharmProjects/hogwarts-httprun/data/login.csv", "报告",
                            allure.attachment_type.CSV)
+=======
+       # allure.attach.file("/Users/anxiaodong/PycharmProjects/hogwarts-httprun/data/login.csv", "报告", allure.attachment_type.CSV)
+>>>>>>> d909362bd965dbc21c389794decbfb80491c1928
         print(result)
