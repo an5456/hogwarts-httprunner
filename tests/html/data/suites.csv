@@ -1,14 +1,14 @@
 "Status","Name","Duration in ms","Description"
-"passed","test_testcase.TestSingle#test_run_login","217","
+"passed","test_testcase.TestSingle#test_get_home_page","381","
+
+            测试呵呵呵呵
+        "
+"passed","test_testcase.TestSingle#test_run_login","194","
 
             范德萨范德萨
         "
-"passed","test_testcase.TestSingle#test_get_login_submit","397"," 呵呵呵呵1234"
-"passed","test_testcase.TestSingle#test_run_testcase_yml","8021","
+"failed","test_testcase.TestSingle#test_get_login_submit","380"," 呵呵呵呵1234"
+"passed","test_testcase.TestSingle#test_run_testcase_yml","764","
 
             斤斤计较测试
-        "
-"passed","test_testcase.TestSingle#test_get_home_page","416","
-
-            测试呵呵呵呵
         "

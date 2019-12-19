@@ -4,57 +4,57 @@
   "children" : [ {
     "name" : "anxiaodongdeMacBook-Pro.local",
     "children" : [ {
-      "name" : "11587-MainThread",
+      "name" : "12213-MainThread",
       "children" : [ {
-        "name" : "test_run_login",
-        "uid" : "51727435d1ab4268",
-        "parentUid" : "08dbdbe3ba3eb616960d20886520b770",
+        "name" : "test_get_home_page",
+        "uid" : "7eb841b288619820",
+        "parentUid" : "7cd550dcd804798eeb9f73f952bd679c",
         "status" : "passed",
         "time" : {
-          "start" : 1576337216976,
-          "stop" : 1576337217193,
-          "duration" : 217
+          "start" : 1576684308489,
+          "stop" : 1576684308870,
+          "duration" : 381
+        },
+        "flaky" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_run_login",
+        "uid" : "49a6bc8dd1930afd",
+        "parentUid" : "7cd550dcd804798eeb9f73f952bd679c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1576684307833,
+          "stop" : 1576684308027,
+          "duration" : 194
         },
         "flaky" : true,
         "parameters" : [ ]
       }, {
         "name" : "test_get_login_submit",
-        "uid" : "143b9e35a9e9b5b9",
-        "parentUid" : "08dbdbe3ba3eb616960d20886520b770",
-        "status" : "passed",
+        "uid" : "f99829b23fc727ce",
+        "parentUid" : "7cd550dcd804798eeb9f73f952bd679c",
+        "status" : "failed",
         "time" : {
-          "start" : 1576337217196,
-          "stop" : 1576337217593,
-          "duration" : 397
+          "start" : 1576684308031,
+          "stop" : 1576684308411,
+          "duration" : 380
         },
         "flaky" : true,
         "parameters" : [ ]
       }, {
         "name" : "test_run_testcase_yml",
-        "uid" : "387d7793cd24a201",
-        "parentUid" : "08dbdbe3ba3eb616960d20886520b770",
+        "uid" : "e13b0d91bf9a607c",
+        "parentUid" : "7cd550dcd804798eeb9f73f952bd679c",
         "status" : "passed",
         "time" : {
-          "start" : 1576337208950,
-          "stop" : 1576337216971,
-          "duration" : 8021
+          "start" : 1576684307064,
+          "stop" : 1576684307828,
+          "duration" : 764
         },
         "flaky" : true,
         "parameters" : [ ]
-      }, {
-        "name" : "test_get_home_page",
-        "uid" : "c6893dfcd144b883",
-        "parentUid" : "08dbdbe3ba3eb616960d20886520b770",
-        "status" : "passed",
-        "time" : {
-          "start" : 1576337217596,
-          "stop" : 1576337218012,
-          "duration" : 416
-        },
-        "flaky" : false,
-        "parameters" : [ ]
       } ],
-      "uid" : "08dbdbe3ba3eb616960d20886520b770"
+      "uid" : "7cd550dcd804798eeb9f73f952bd679c"
     } ],
     "uid" : "90798661423fb2d2323aed12cbceaa57"
   } ]

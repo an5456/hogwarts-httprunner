@@ -4,6 +4,14 @@ import allure
 
 from htturunner.runner import Runapi
 
+# import logging
+#
+# logger = logging.getLogger()
+# logger.setLevel(logging.INFO)
+from loguru import logger
+
+from htturunner.utis import Utils
+
 
 def setup_module():
     print("模块之前")
@@ -17,7 +25,7 @@ def teardown_module():
 class TestSingle:
 
     def setup(self):
-        print("每个测试用例之前运行")
+        logger.info("每个测试用例之前运行")
 
     def teardown(self):
         print("每个测试用例之后执行")
@@ -28,13 +36,6 @@ class TestSingle:
     def teardown_class(self):
         print("每个类之后运行")
 
-    # def test_loader_single_testcase(self):
-    #     """加载出的用例内容和原始信息一致
-    #     """
-    #     single_testcase_yaml = os.path.join(os.path.dirname(__file__), "testcase", "mubu_login.yml")
-    #     loaded_json = load_yml(single_testcase_yaml)
-    # self.assertIsInstance(loaded_json, list)
-    # self.assertEqual(len(loaded_json), 2)
     run = Runapi()
 
     @allure.story("测试1")
@@ -55,14 +56,30 @@ class TestSingle:
         """
         single_testcase_yaml = os.path.join(os.path.dirname(__file__), "api", "get_login.yml")
         result = self.run.run_yml(single_testcase_yaml)
+        logger.info("hhhhhhhhhhhhh")
 
     @allure.story("测试3")
     def test_get_login_submit(self):
         """ 呵呵呵呵1234"""
         single_testcase_yaml = os.path.join(os.path.dirname(__file__), "api", "get_login_submit.yml")
-
+        print("jjjjjjjjjjjjjjjjjjjj")
         result = self.run.run_yml(single_testcase_yaml)
-        assert result[0] == True
+        logger.info("666666666" + str(result))
+        for ass in result[0]:
+            logger.info("url:" + ass["url"])
+            logger.info("method:" + ass["method"])
+            if ass["request_info"].get("type") == "jsondumps":
+
+                logger.info("request_data:"+"\n"+Utils.format_output(ass["request_data"]))
+                logger.info("response_data:"+"\n"+Utils.format_output(ass["response_data"]))
+
+            else:
+                logger.info("request_data:"+str(ass["request_data"]))
+                logger.info("response_data:"+str(ass["response_data"]))
+            logger.info("----------------" + "Assert" + "------------------")
+            for vale in ass["data"]:
+                logger.info("{} expected:{} actual:{}".format(vale["key"], vale["expected"], vale["actual"]))
+                assert vale["expected"] == vale["actual"]
 
     @allure.story("测试4")
     def test_get_home_page(self):
@@ -72,5 +89,26 @@ class TestSingle:
         """
         single_testcase_yaml = os.path.join(os.path.dirname(__file__), "api", "get_home_page.yml")
         result = self.run.run_yml(single_testcase_yaml)
-        allure.attach.file("/Users/anxiaodong/PycharmProjects/hogwarts-httprun/data/login.csv", "报告", allure.attachment_type.CSV)
+        logger.info("666666666" + str(result))
+        for ass in result[0]:
+            logger.info("url:" + ass["url"])
+            logger.info("method:" + ass["method"])
+            if isinstance(ass["request_info"], dict):
+                    if ass["request_info"].get("type") == "jsondumps":
+
+                        logger.info(Utils.format_output(ass["request_data"]))
+                        logger.info(Utils.format_output(ass["response_data"]))
+
+                    else:
+                        logger.info("request_data:" + str(ass["request_data"]))
+                        logger.info("response_data:" + str(ass["response_data"]))
+            else:
+                logger.info("request_data:" + str(ass["request_data"]))
+                logger.info("response_data:" + str(ass["response_data"]))
+            logger.info("----------------" + "Assert" + "------------------")
+            for vale in ass["data"]:
+                logger.info("{} expected:{} actual:{}".format(vale["key"], vale["expected"], vale["actual"]))
+                assert vale["expected"] == vale["actual"]
+        allure.attach.file("/Users/anxiaodong/PycharmProjects/hogwarts-httprun/data/login.csv", "报告",
+                           allure.attachment_type.CSV)
         print(result)

@@ -7,13 +7,13 @@
       "name" : "测试1",
       "children" : [ {
         "name" : "test_run_testcase_yml",
-        "uid" : "387d7793cd24a201",
+        "uid" : "e13b0d91bf9a607c",
         "parentUid" : "200b281afa50b2454e309f232c76f4a7",
         "status" : "passed",
         "time" : {
-          "start" : 1576337208950,
-          "stop" : 1576337216971,
-          "duration" : 8021
+          "start" : 1576684307064,
+          "stop" : 1576684307828,
+          "duration" : 764
         },
         "flaky" : true,
         "parameters" : [ ]
@@ -23,13 +23,13 @@
       "name" : "测试2",
       "children" : [ {
         "name" : "test_run_login",
-        "uid" : "51727435d1ab4268",
+        "uid" : "49a6bc8dd1930afd",
         "parentUid" : "28ef4d408ae8a2f70a5c9f53bf72059f",
         "status" : "passed",
         "time" : {
-          "start" : 1576337216976,
-          "stop" : 1576337217193,
-          "duration" : 217
+          "start" : 1576684307833,
+          "stop" : 1576684308027,
+          "duration" : 194
         },
         "flaky" : true,
         "parameters" : [ ]
@@ -39,13 +39,13 @@
       "name" : "测试3",
       "children" : [ {
         "name" : "test_get_login_submit",
-        "uid" : "143b9e35a9e9b5b9",
+        "uid" : "f99829b23fc727ce",
         "parentUid" : "c2a0e7ec63b78e92d5b22ef33574da3f",
-        "status" : "passed",
+        "status" : "failed",
         "time" : {
-          "start" : 1576337217196,
-          "stop" : 1576337217593,
-          "duration" : 397
+          "start" : 1576684308031,
+          "stop" : 1576684308411,
+          "duration" : 380
         },
         "flaky" : true,
         "parameters" : [ ]
@@ -55,15 +55,15 @@
       "name" : "测试4",
       "children" : [ {
         "name" : "test_get_home_page",
-        "uid" : "c6893dfcd144b883",
+        "uid" : "7eb841b288619820",
         "parentUid" : "8650a35675163e4a2800d438a4a76b1a",
         "status" : "passed",
         "time" : {
-          "start" : 1576337217596,
-          "stop" : 1576337218012,
-          "duration" : 416
+          "start" : 1576684308489,
+          "stop" : 1576684308870,
+          "duration" : 381
         },
-        "flaky" : false,
+        "flaky" : true,
         "parameters" : [ ]
       } ],
       "uid" : "8650a35675163e4a2800d438a4a76b1a"

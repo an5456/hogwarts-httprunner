@@ -1,0 +1,10 @@
+每个测试用例之前运行
+https://mubu.com/api/login/submit
+[92murls==[0mhttps://mubu.com/api/login/submit
+[92mhttps://mubu.com/api/login/submit[0m
+{'code': 0, 'msg': None, 'data': {'next': '/list'}}
+https://qyapi.weixin.qq.com/cgi-bin/gettoken
+[92murls==[0mhttps://qyapi.weixin.qq.com/cgi-bin/gettoken
+[92mhttps://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ww49e0d1fa2a92fcd4&corpsecret=yGKZP7grNAPyejnRqgpTquiv1vgiCVRL3lhWnD2Bktg[0m
+{'errcode': 0, 'errmsg': 'ok', 'access_token': 'jJ4rnf3Q8O1e9HPrJRsCNGa3-acWu9oGF1wdKj-WPXd8vgUnuVXToijbLxgFYU21Nj8d3SzPEUOa_GmpW_H-urgXKrm-t__LtOGKkwxy-ULtjdQjsJqP4nzx5ZE7-Ua15Rlj5XwGl_d0lQKBOlC6p2gyan_6ktDapCwi5Bq5p3CuZT6hNMRGXSJDpCaGm9FRs9jWpL16Ni_aHhKfWl22uA', 'expires_in': 7200}
+每个测试用例之后执行

@@ -1,0 +1,25 @@
+[32mINFO    [0m root:test_testcase.py:22 每个测试用例之前运行
+[32mINFO    [0m root:test_testcase.py:60 666666666[[{'url': 'https://mubu.com/api/login/submit', 'method': 'POST', 'data': [{'expected': 200, 'actual': 200, 'key': 'status_code'}, {'expected': '0', 'actual': '0', 'key': '$.code'}, {'expected': 200, 'actual': 200, 'key': 'status_code'}]}, {'url': 'https://mubu.com/api/login/submit', 'method': 'POST', 'data': [{'expected': 200, 'actual': 200, 'key': 'status_code'}, {'expected': '0', 'actual': '0', 'key': '$.code'}, {'expected': 200, 'actual': 200, 'key': 'status_code'}]}, {'url': 'https://mubu.com/api/login/submit', 'method': 'POST', 'data': [{'expected': 200, 'actual': 200, 'key': 'status_code'}, {'expected': '0', 'actual': '0', 'key': '$.code'}, {'expected': 200, 'actual': 200, 'key': 'status_code'}]}, {'url': 'https://mubu.com/api/login/submit', 'method': 'POST', 'data': [{'expected': 200, 'actual': 200, 'key': 'status_code'}, {'expected': '2', 'actual': '0', 'key': '$.code'}, {'expected': 200, 'actual': 200, 'key': 'status_code'}]}, {'url': 'https://mubu.com/api/login/submit', 'method': 'POST', 'data': [{'expected': 200, 'actual': 200, 'key': 'status_code'}, {'expected': '2', 'actual': '0', 'key': '$.code'}, {'expected': 200, 'actual': 200, 'key': 'status_code'}]}, {'url': 'https://mubu.com/api/login/submit', 'method': 'POST', 'data': [{'expected': 200, 'actual': 200, 'key': 'status_code'}, {'expected': '2', 'actual': '0', 'key': '$.code'}, {'expected': 200, 'actual': 200, 'key': 'status_code'}]}, {'url': 'https://mubu.com/api/login/submit', 'method': 'POST', 'data': [{'expected': 200, 'actual': 200, 'key': 'status_code'}, {'expected': '0', 'actual': '0', 'key': '$.code'}, {'expected': 200, 'actual': 200, 'key': 'status_code'}]}, {'url': 'https://mubu.com/api/login/submit', 'method': 'POST', 'data': [{'expected': 200, 'actual': 200, 'key': 'status_code'}, {'expected': '0', 'actual': '0', 'key': '$.code'}, {'expected': 200, 'actual': 200, 'key': 'status_code'}]}, {'url': 'https://mubu.com/api/login/submit', 'method': 'POST', 'data': [{'expected': 200, 'actual': 200, 'key': 'status_code'}, {'expected': '0', 'actual': '0', 'key': '$.code'}, {'expected': 200, 'actual': 200, 'key': 'status_code'}]}]]
+[32mINFO    [0m root:test_testcase.py:62 url:https://mubu.com/api/login/submit
+[32mINFO    [0m root:test_testcase.py:63 method:POST
+[32mINFO    [0m root:test_testcase.py:64 ----------------Assert------------------
+[32mINFO    [0m root:test_testcase.py:67 status_code expected:200 actual:200
+[32mINFO    [0m root:test_testcase.py:67 $.code expected:0 actual:0
+[32mINFO    [0m root:test_testcase.py:67 status_code expected:200 actual:200
+[32mINFO    [0m root:test_testcase.py:62 url:https://mubu.com/api/login/submit
+[32mINFO    [0m root:test_testcase.py:63 method:POST
+[32mINFO    [0m root:test_testcase.py:64 ----------------Assert------------------
+[32mINFO    [0m root:test_testcase.py:67 status_code expected:200 actual:200
+[32mINFO    [0m root:test_testcase.py:67 $.code expected:0 actual:0
+[32mINFO    [0m root:test_testcase.py:67 status_code expected:200 actual:200
+[32mINFO    [0m root:test_testcase.py:62 url:https://mubu.com/api/login/submit
+[32mINFO    [0m root:test_testcase.py:63 method:POST
+[32mINFO    [0m root:test_testcase.py:64 ----------------Assert------------------
+[32mINFO    [0m root:test_testcase.py:67 status_code expected:200 actual:200
+[32mINFO    [0m root:test_testcase.py:67 $.code expected:0 actual:0
+[32mINFO    [0m root:test_testcase.py:67 status_code expected:200 actual:200
+[32mINFO    [0m root:test_testcase.py:62 url:https://mubu.com/api/login/submit
+[32mINFO    [0m root:test_testcase.py:63 method:POST
+[32mINFO    [0m root:test_testcase.py:64 ----------------Assert------------------
+[32mINFO    [0m root:test_testcase.py:67 status_code expected:200 actual:200
+[32mINFO    [0m root:test_testcase.py:67 $.code expected:2 actual:0

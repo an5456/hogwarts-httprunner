@@ -1,41 +1,41 @@
 [ {
-  "uid" : "51727435d1ab4268",
+  "uid" : "49a6bc8dd1930afd",
   "name" : "test_run_login",
   "time" : {
-    "start" : 1576337216976,
-    "stop" : 1576337217193,
-    "duration" : 217
+    "start" : 1576684307833,
+    "stop" : 1576684308027,
+    "duration" : 194
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "143b9e35a9e9b5b9",
-  "name" : "test_get_login_submit",
-  "time" : {
-    "start" : 1576337217196,
-    "stop" : 1576337217593,
-    "duration" : 397
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "387d7793cd24a201",
-  "name" : "test_run_testcase_yml",
-  "time" : {
-    "start" : 1576337208950,
-    "stop" : 1576337216971,
-    "duration" : 8021
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "c6893dfcd144b883",
+  "uid" : "7eb841b288619820",
   "name" : "test_get_home_page",
   "time" : {
-    "start" : 1576337217596,
-    "stop" : 1576337218012,
-    "duration" : 416
+    "start" : 1576684308489,
+    "stop" : 1576684308870,
+    "duration" : 381
   },
   "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e13b0d91bf9a607c",
+  "name" : "test_run_testcase_yml",
+  "time" : {
+    "start" : 1576684307064,
+    "stop" : 1576684307828,
+    "duration" : 764
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f99829b23fc727ce",
+  "name" : "test_get_login_submit",
+  "time" : {
+    "start" : 1576684308031,
+    "stop" : 1576684308411,
+    "duration" : 380
+  },
+  "status" : "failed",
   "severity" : "normal"
 } ]

@@ -1,0 +1,1 @@
+[32mINFO    [0m root:test_testcase.py:22 每个测试用例之前运行

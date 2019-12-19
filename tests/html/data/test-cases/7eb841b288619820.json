@@ -1,0 +1,534 @@
+{
+  "uid" : "7eb841b288619820",
+  "name" : "test_get_home_page",
+  "fullName" : "test_testcase.TestSingle#test_get_home_page",
+  "historyId" : "9c95dab400b4a6de89dedd0371d0cc61",
+  "time" : {
+    "start" : 1576684308489,
+    "stop" : 1576684308870,
+    "duration" : 381
+  },
+  "description" : "\n\n            测试呵呵呵呵\n        ",
+  "descriptionHtml" : "<pre><code>        测试呵呵呵呵\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : true,
+  "beforeStages" : [ {
+    "name" : "_Module__pytest_setup_module",
+    "time" : {
+      "start" : 1576684307061,
+      "stop" : 1576684307061,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1576684307062,
+      "stop" : 1576684307062,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "\n\n            测试呵呵呵呵\n        ",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "77b94c659bc283d7",
+      "name" : "报告",
+      "source" : "77b94c659bc283d7.csv",
+      "type" : "text/csv",
+      "size" : 173
+    }, {
+      "uid" : "fcaf36406f64c4be",
+      "name" : "log",
+      "source" : "fcaf36406f64c4be.txt",
+      "type" : "text/plain",
+      "size" : 73
+    }, {
+      "uid" : "82c3688582b31911",
+      "name" : "stdout",
+      "source" : "82c3688582b31911.txt",
+      "type" : "text/plain",
+      "size" : 0
+    }, {
+      "uid" : "2c7aaad64b9985d7",
+      "name" : "stderr",
+      "source" : "2c7aaad64b9985d7.txt",
+      "type" : "text/plain",
+      "size" : 0
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 4,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "_Module__pytest_setup_module::0",
+    "time" : {
+      "start" : 1576684308871,
+      "stop" : 1576684308871,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1576684308871,
+      "stop" : 1576684308871,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "测试4"
+  }, {
+    "name" : "feature",
+    "value" : "测试接口"
+  }, {
+    "name" : "suite",
+    "value" : "test_testcase"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestSingle"
+  }, {
+    "name" : "host",
+    "value" : "anxiaodongdeMacBook-Pro.local"
+  }, {
+    "name" : "thread",
+    "value" : "12213-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_testcase"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "f2321a63fb84b5ba",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576683680880,
+        "stop" : 1576683681228,
+        "duration" : 348
+      }
+    }, {
+      "uid" : "eb81a27325f0bb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576678928617,
+        "stop" : 1576678928987,
+        "duration" : 370
+      }
+    }, {
+      "uid" : "ea6e1e4c92cf8fcf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576602519687,
+        "stop" : 1576602520104,
+        "duration" : 417
+      }
+    }, {
+      "uid" : "8baed8c00e7ce720",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576602392788,
+        "stop" : 1576602393129,
+        "duration" : 341
+      }
+    }, {
+      "uid" : "79694894eea2d484",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576602248107,
+        "stop" : 1576602248447,
+        "duration" : 340
+      }
+    }, {
+      "uid" : "c3bbcc7f96d4de61",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576602076676,
+        "stop" : 1576602076991,
+        "duration" : 315
+      }
+    }, {
+      "uid" : "56dd958271276353",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576601905520,
+        "stop" : 1576601905888,
+        "duration" : 368
+      }
+    }, {
+      "uid" : "f3354ccc0b111fdd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576601746691,
+        "stop" : 1576601747049,
+        "duration" : 358
+      }
+    }, {
+      "uid" : "6231cd2df8977930",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576601641364,
+        "stop" : 1576601641785,
+        "duration" : 421
+      }
+    }, {
+      "uid" : "2b9510c6aedba4e2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576601439286,
+        "stop" : 1576601439634,
+        "duration" : 348
+      }
+    }, {
+      "uid" : "ee594701a7fe9ae2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576601265660,
+        "stop" : 1576601266032,
+        "duration" : 372
+      }
+    }, {
+      "uid" : "1ea9e66c8355a859",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576601145894,
+        "stop" : 1576601146306,
+        "duration" : 412
+      }
+    }, {
+      "uid" : "ad758ce63462a728",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576601039187,
+        "stop" : 1576601039578,
+        "duration" : 391
+      }
+    }, {
+      "uid" : "22af9c77d34f17e6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576600899655,
+        "stop" : 1576600900013,
+        "duration" : 358
+      }
+    }, {
+      "uid" : "788d0c50a05beb61",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576600513257,
+        "stop" : 1576600513638,
+        "duration" : 381
+      }
+    }, {
+      "uid" : "9ceb2b66d7e7625c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576599528959,
+        "stop" : 1576599529314,
+        "duration" : 355
+      }
+    }, {
+      "uid" : "87d45a8662209d85",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576595909774,
+        "stop" : 1576595910149,
+        "duration" : 375
+      }
+    }, {
+      "uid" : "e8f4fc5b3c58a23",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576423781311,
+        "stop" : 1576423781752,
+        "duration" : 441
+      }
+    }, {
+      "uid" : "eef504802b4fa0b5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576376345703,
+        "stop" : 1576376346090,
+        "duration" : 387
+      }
+    }, {
+      "uid" : "3ae9755c9ce5deeb",
+      "status" : "broken",
+      "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/Users/anxiaodong/PycharmProjects/hogwarts-httprun/tests/data/login.csv'",
+      "time" : {
+        "start" : 1576376214112,
+        "stop" : 1576376214489,
+        "duration" : 377
+      }
+    }, {
+      "uid" : "da22484ae1627b2c",
+      "status" : "broken",
+      "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/Users/anxiaodong/PycharmProjects/hogwarts-httprun/tests/data/login.csv'",
+      "time" : {
+        "start" : 1576375920505,
+        "stop" : 1576375920871,
+        "duration" : 366
+      }
+    }, {
+      "uid" : "23428835b8408cbe",
+      "status" : "broken",
+      "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/Users/anxiaodong/PycharmProjects/hogwarts-httprun/tests/data/login.csv'",
+      "time" : {
+        "start" : 1576375524675,
+        "stop" : 1576375525064,
+        "duration" : 389
+      }
+    }, {
+      "uid" : "ddae82753ac7d68c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576337569229,
+        "stop" : 1576337569700,
+        "duration" : 471
+      }
+    }, {
+      "uid" : "6fd498859e31bd2a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576337556492,
+        "stop" : 1576337556919,
+        "duration" : 427
+      }
+    }, {
+      "uid" : "2eaa0ccc9af3d6a6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576337380154,
+        "stop" : 1576337380583,
+        "duration" : 429
+      }
+    }, {
+      "uid" : "e52a0ceb03fc7948",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576337314309,
+        "stop" : 1576337324573,
+        "duration" : 10264
+      }
+    }, {
+      "uid" : "9223418c2ecb63c4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576337292107,
+        "stop" : 1576337292527,
+        "duration" : 420
+      }
+    }, {
+      "uid" : "e9c3d25b12e4ef37",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576337217596,
+        "stop" : 1576337218012,
+        "duration" : 416
+      }
+    }, {
+      "uid" : "9c2bee4dd30ed78e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576336675452,
+        "stop" : 1576336675856,
+        "duration" : 404
+      }
+    }, {
+      "uid" : "2f6dd42bd9828c59",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576336485572,
+        "stop" : 1576336486994,
+        "duration" : 1422
+      }
+    }, {
+      "uid" : "37e54e95cae939c2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576336398975,
+        "stop" : 1576336399774,
+        "duration" : 799
+      }
+    }, {
+      "uid" : "677cbac0e752a824",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576335996802,
+        "stop" : 1576335997202,
+        "duration" : 400
+      }
+    }, {
+      "uid" : "62c872d3b95b5f21",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576335032617,
+        "stop" : 1576335034333,
+        "duration" : 1716
+      }
+    }, {
+      "uid" : "4abd02c467afd3d2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576334764470,
+        "stop" : 1576334764847,
+        "duration" : 377
+      }
+    }, {
+      "uid" : "87539a2fbad02cd7",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576323418440,
+        "stop" : 1576323418839,
+        "duration" : 399
+      }
+    }, {
+      "uid" : "90de2b46924cad47",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576323337786,
+        "stop" : 1576323338242,
+        "duration" : 456
+      }
+    }, {
+      "uid" : "7b4529acee9f422f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576323200318,
+        "stop" : 1576323200690,
+        "duration" : 372
+      }
+    }, {
+      "uid" : "d8723b82b9dfaf33",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576323163252,
+        "stop" : 1576323163721,
+        "duration" : 469
+      }
+    }, {
+      "uid" : "6c09a4e862ea6295",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576323140708,
+        "stop" : 1576323141095,
+        "duration" : 387
+      }
+    }, {
+      "uid" : "a38399742d8ed0e4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576323123789,
+        "stop" : 1576323124282,
+        "duration" : 493
+      }
+    }, {
+      "uid" : "5404508f35ea82f3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576323073971,
+        "stop" : 1576323074432,
+        "duration" : 461
+      }
+    }, {
+      "uid" : "94b1087bc64564e9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576323038626,
+        "stop" : 1576323039061,
+        "duration" : 435
+      }
+    }, {
+      "uid" : "d9919c7fa9f31104",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576323024138,
+        "stop" : 1576323024526,
+        "duration" : 388
+      }
+    }, {
+      "uid" : "bc42add43fc345d1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576322991472,
+        "stop" : 1576322991856,
+        "duration" : 384
+      }
+    }, {
+      "uid" : "e66df37c6fdc24d4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576322973570,
+        "stop" : 1576322974011,
+        "duration" : 441
+      }
+    }, {
+      "uid" : "b7e998e608d82520",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576322944962,
+        "stop" : 1576322945365,
+        "duration" : 403
+      }
+    }, {
+      "uid" : "e60c6c07af1b2d5f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576322874250,
+        "stop" : 1576322874644,
+        "duration" : 394
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "7eb841b288619820.json",
+  "parameterValues" : [ ]
+}

@@ -1,10 +1,10 @@
-config:
-    name: testcase description
-    variables:
-        username: 17729597958
-        password: dong19871103
-#    base_url: https://mubu.com
-    verify: False
+#config:
+#    name: testcase description
+##    variables:
+##        username: 17729597958
+##        password: dong19871103
+##    base_url: https://mubu.com
+#    verify: False
 teststeps:
 -   username:
     request:
@@ -13,8 +13,11 @@ teststeps:
         headers:
             user-agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 "
         verify: False
+    type: jsondumps
     validate:
-        status_code: 200
+    -  eq:
+       - status_code
+       - 200
 #-   username:
 #    request:
 #        url: https://mubu.com/${telephone()}

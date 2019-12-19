@@ -1,0 +1,6 @@
+[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:959 Starting new HTTPS connection (1): mubu.com:443
+[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:437 https://mubu.com:443 "POST /api/login/submit HTTP/1.1" 200 None
+[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:959 Starting new HTTPS connection (1): qyapi.weixin.qq.com:443
+[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:437 https://qyapi.weixin.qq.com:443 "GET /cgi-bin/gettoken?corpid=ww49e0d1fa2a92fcd4&corpsecret=yGKZP7grNAPyejnRqgpTquiv1vgiCVRL3lhWnD2Bktg HTTP/1.1" 200 277
+[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:437 https://mubu.com:443 "POST /api/login/submit HTTP/1.1" 200 None
+[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:437 https://mubu.com:443 "GET /list?code=None HTTP/1.1" 200 None

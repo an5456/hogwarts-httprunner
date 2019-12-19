@@ -2,7 +2,7 @@ import re
 from htturunner.func_suit import FuncSuit
 
 # 匹配规则，例如：${test} 匹配后为：test
-from htturunner.loader import load_yml
+
 from htturunner.validate import is_api
 
 variable_regex_compile = re.compile(r"\$\{(\w+)\}|\$(\w+)")
@@ -39,7 +39,7 @@ class ParseContent:
             matched_function = function_regex_compile.findall(content)
 
             if matched_function:
-                return self.parse_funtion(content, self.all_veriables_mapping["config"]["variables"])
+                return self.parse_funtion(content, self.all_veriables_mapping["config"].get("variables"))
 
             elif matched:
                 return self.replace_var(content, variables_mapping)
