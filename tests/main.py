@@ -8,10 +8,10 @@ if __name__ == '__main__':
                    "allure generate ./report -o ./html --clean;"
                    , shell=True)
     if os_type == "Darwin":
-        pid = subprocess.run("ps -ef|grep python3 |awk '{print $2}' |awk 'NR==2'", shell=True)
+        pid = subprocess.run("ps -ef|grep http.server | grep -E '[0-9] python3'|awk '{print $2}'", shell=True)
     else:
         pid = subprocess.run("ps -ef|grep python3 |awk '{print $2}' |awk 'NR==1'", shell=True)
-        pass
+    # pid = subprocess.run("ps -ef|grep python3|grep 8899|awk '{print $2}' |awk 'NR==2'", shell=True)
     if pid is not "":
         subprocess.run("kill -9" + str(pid) + "", shell=True)
         print("kill report server ")

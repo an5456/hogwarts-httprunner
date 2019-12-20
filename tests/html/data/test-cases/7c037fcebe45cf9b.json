@@ -1,0 +1,142 @@
+{
+  "uid" : "7c037fcebe45cf9b",
+  "name" : "test_get_login_submit",
+  "fullName" : "test_testcase.TestSingle#test_get_login_submit",
+  "historyId" : "9d45b30fd97667aff13f3a162735a3a9",
+  "time" : {
+    "start" : 1576323337532,
+    "stop" : 1576323337688,
+    "duration" : 156
+  },
+  "status" : "broken",
+  "statusMessage" : "json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+  "statusTrace" : "self = <tests.test_testcase.TestSingle object at 0x10983b9b0>\n\n    def test_get_login_submit(self):\n        single_testcase_yaml = os.path.join(os.path.dirname(__file__), \"api\", \"get_login_submit.yml\")\n>       result = self.run.run_yml(single_testcase_yaml)\n\ntest_testcase.py:47: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n../htturunner/runner.py:283: in run_yml\n    success = self.run_api(load_content.get(\"teststeps\"))\n../htturunner/runner.py:177: in run_api\n    actual_value = str(self.extract_json_field(reps, key))\n../htturunner/runner.py:43: in extract_json_field\n    value = jsonpath.jsonpath(resp.json(), json_field)\n../../../my_env/httptunner/lib/python3.6/site-packages/requests/models.py:897: in json\n    return complexjson.loads(self.text, **kwargs)\n/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/__init__.py:354: in loads\n    return _default_decoder.decode(s)\n/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/decoder.py:339: in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <json.decoder.JSONDecoder object at 0x1049e7a58>\ns = '<!DOCTYPE html>\\n<html lang=\"zh-CN\">\\n<head>\\n<title>无法处理您的请求 - 幕布</title>\\n<meta charset=\"utf-8\">\\n<meta name=\"rende...\\',\\'ga\\');\\nga(\\'create\\', \\'UA-77727571-1\\', \\'auto\\');\\nga(\\'send\\', \\'pageview\\');\\n}\\n</script>\\n</body>\\n</html>'\nidx = 0\n\n    def raw_decode(self, s, idx=0):\n        \"\"\"Decode a JSON document from ``s`` (a ``str`` beginning with\n        a JSON document) and return a 2-tuple of the Python\n        representation and the index in ``s`` where the document ended.\n    \n        This can be used to decode a JSON document from a string that may\n        have extraneous data at the end.\n    \n        \"\"\"\n        try:\n            obj, end = self.scan_once(s, idx)\n        except StopIteration as err:\n>           raise JSONDecodeError(\"Expecting value\", s, err.value) from None\nE           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n\n/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/decoder.py:357: JSONDecodeError",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1576323336545,
+      "stop" : 1576323336545,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_Module__pytest_setup_module",
+    "time" : {
+      "start" : 1576323336545,
+      "stop" : 1576323336545,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+    "statusTrace" : "self = <tests.test_testcase.TestSingle object at 0x10983b9b0>\n\n    def test_get_login_submit(self):\n        single_testcase_yaml = os.path.join(os.path.dirname(__file__), \"api\", \"get_login_submit.yml\")\n>       result = self.run.run_yml(single_testcase_yaml)\n\ntest_testcase.py:47: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n../htturunner/runner.py:283: in run_yml\n    success = self.run_api(load_content.get(\"teststeps\"))\n../htturunner/runner.py:177: in run_api\n    actual_value = str(self.extract_json_field(reps, key))\n../htturunner/runner.py:43: in extract_json_field\n    value = jsonpath.jsonpath(resp.json(), json_field)\n../../../my_env/httptunner/lib/python3.6/site-packages/requests/models.py:897: in json\n    return complexjson.loads(self.text, **kwargs)\n/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/__init__.py:354: in loads\n    return _default_decoder.decode(s)\n/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/decoder.py:339: in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <json.decoder.JSONDecoder object at 0x1049e7a58>\ns = '<!DOCTYPE html>\\n<html lang=\"zh-CN\">\\n<head>\\n<title>无法处理您的请求 - 幕布</title>\\n<meta charset=\"utf-8\">\\n<meta name=\"rende...\\',\\'ga\\');\\nga(\\'create\\', \\'UA-77727571-1\\', \\'auto\\');\\nga(\\'send\\', \\'pageview\\');\\n}\\n</script>\\n</body>\\n</html>'\nidx = 0\n\n    def raw_decode(self, s, idx=0):\n        \"\"\"Decode a JSON document from ``s`` (a ``str`` beginning with\n        a JSON document) and return a 2-tuple of the Python\n        representation and the index in ``s`` where the document ended.\n    \n        This can be used to decode a JSON document from a string that may\n        have extraneous data at the end.\n    \n        \"\"\"\n        try:\n            obj, end = self.scan_once(s, idx)\n        except StopIteration as err:\n>           raise JSONDecodeError(\"Expecting value\", s, err.value) from None\nE           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n\n/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/decoder.py:357: JSONDecodeError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "a0af05e3a79be43d",
+      "name" : "log",
+      "source" : "a0af05e3a79be43d.txt",
+      "type" : "text/plain",
+      "size" : 0
+    }, {
+      "uid" : "3d5019328f272eea",
+      "name" : "stdout",
+      "source" : "3d5019328f272eea.txt",
+      "type" : "text/plain",
+      "size" : 565
+    }, {
+      "uid" : "1a58df5176fe972b",
+      "name" : "stderr",
+      "source" : "1a58df5176fe972b.txt",
+      "type" : "text/plain",
+      "size" : 0
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1576323338243,
+      "stop" : 1576323338243,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_Module__pytest_setup_module::0",
+    "time" : {
+      "start" : 1576323338243,
+      "stop" : 1576323338243,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "test_testcase"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestSingle"
+  }, {
+    "name" : "host",
+    "value" : "anxiaodongdeMacBook-Pro.local"
+  }, {
+    "name" : "thread",
+    "value" : "9617-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_testcase"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "7c037fcebe45cf9b.json",
+  "parameterValues" : [ ]
+}
