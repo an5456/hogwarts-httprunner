@@ -58,7 +58,7 @@ class TestSingle:
         result = self.run.run_yml(single_testcase_yaml)
         logger.info("hhhhhhhhhhhhh")
 
-    @allure.story("测试3")
+    @allure.story("测试登陆123")
     def test_get_login_submit(self):
         """ 呵呵呵呵1234"""
         single_testcase_yaml = os.path.join(os.path.dirname(__file__), "api", "get_login_submit.yml")
