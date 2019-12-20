@@ -1,0 +1,138 @@
+{
+  "uid" : "87d5aceaf0dfed4a",
+  "name" : "test_run_login",
+  "fullName" : "test_testcase.TestSingle#test_run_login",
+  "historyId" : "fea38451c2c2faeec54aa425a7c9b17c",
+  "time" : {
+    "start" : 1576323199659,
+    "stop" : 1576323199877,
+    "duration" : 218
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1576323197928,
+      "stop" : 1576323197928,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_Module__pytest_setup_module",
+    "time" : {
+      "start" : 1576323197928,
+      "stop" : 1576323197928,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "8e04d6c72bcfe0e2",
+      "name" : "log",
+      "source" : "8e04d6c72bcfe0e2.txt",
+      "type" : "text/plain",
+      "size" : 0
+    }, {
+      "uid" : "e68e60483ce8a17b",
+      "name" : "stdout",
+      "source" : "e68e60483ce8a17b.txt",
+      "type" : "text/plain",
+      "size" : 765
+    }, {
+      "uid" : "a6411ebfdde2fc65",
+      "name" : "stderr",
+      "source" : "a6411ebfdde2fc65.txt",
+      "type" : "text/plain",
+      "size" : 0
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1576323200692,
+      "stop" : 1576323200692,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_Module__pytest_setup_module::0",
+    "time" : {
+      "start" : 1576323200693,
+      "stop" : 1576323200693,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "test_testcase"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestSingle"
+  }, {
+    "name" : "host",
+    "value" : "anxiaodongdeMacBook-Pro.local"
+  }, {
+    "name" : "thread",
+    "value" : "9487-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_testcase"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "87d5aceaf0dfed4a.json",
+  "parameterValues" : [ ]
+}
