@@ -58,13 +58,17 @@ class TestSingle:
         result = self.run.run_yml(single_testcase_yaml)
         logger.info("hhhhhhhhhhhhh")
 
+
     @allure.story("测试_hello_world3")
+
+    @allure.story("测试登陆123")
+
     def test_get_login_submit(self):
         """ 呵呵呵呵1234"""
         single_testcase_yaml = os.path.join(os.path.dirname(__file__), "api", "get_login_submit.yml")
         print("jjjjjjjjjjjjjjjjjjjj")
         result = self.run.run_yml(single_testcase_yaml)
-        logger.info("666666666" + str(result))
+        #logger.info("666666666" + str(result))
         for ass in result[0]:
             logger.info("url:" + ass["url"])
             logger.info("method:" + ass["method"])
@@ -90,7 +94,11 @@ class TestSingle:
         single_testcase_yaml = os.path.join(os.path.dirname(__file__), "api", "get_home_page.yml")
         result = self.run.run_yml(single_testcase_yaml)
 
+
         logger.info("666666666" + str(result))
+
+        #logger.info("666666666" + str(result))
+
         for ass in result[0]:
             logger.info("url:" + ass["url"])
             logger.info("method:" + ass["method"])
@@ -110,8 +118,15 @@ class TestSingle:
             for vale in ass["data"]:
                 logger.info("{} expected:{} actual:{}".format(vale["key"], vale["expected"], vale["actual"]))
                 assert vale["expected"] == vale["actual"]
-        allure.attach.file("/Users/anxiaodong/PycharmProjects/hogwarts-httprun/data/login.csv", "报告",
-                           allure.attachment_type.CSV)
+        #
+        # allure.attach.file("/Users/anxiaodong/PycharmProjects/hogwarts-httprun/data/login.csv", "报告",
+        #                    allure.attachment_type.CSV)
+
+       # allure.attach.file("/Users/anxiaodong/PycharmProjects/hogwarts-httprun/data/login.csv", "报告", allure.attachment_type.CSV)
+
+
+        #allure.attach.file("/Users/anxiaodong/PycharmProjects/hogwarts-httprun/data/login.csv", "报告",
+                           #allure.attachment_type.CSV)
 
        # allure.attach.file("/Users/anxiaodong/PycharmProjects/hogwarts-httprun/data/login.csv", "报告", allure.attachment_type.CSV)
 
