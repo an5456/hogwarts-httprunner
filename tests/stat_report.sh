@@ -3,12 +3,13 @@
 killReport()
 {
     pid=`ps -ef|grep http.server | grep -E '[0-9] python3'|awk '{print $2}'`
-    echo "report Id :$pid"
+    echo "report server pid :$pid"
     if [[ "$pid" = "" ]]
     then
         echo "no report pid alive"
     else
         kill -9 $pid
+        echo "start report server"
     fi
 }
 killReport
