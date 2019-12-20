@@ -7,13 +7,13 @@
       "name" : "测试1",
       "children" : [ {
         "name" : "test_run_testcase_yml",
-        "uid" : "a200c8e34062b571",
+        "uid" : "b50ea16e91fba39f",
         "parentUid" : "200b281afa50b2454e309f232c76f4a7",
         "status" : "passed",
         "time" : {
-          "start" : 1576865170184,
-          "stop" : 1576865174263,
-          "duration" : 4079
+          "start" : 1576866224081,
+          "stop" : 1576866224905,
+          "duration" : 824
         },
         "flaky" : true,
         "parameters" : [ ]
@@ -23,13 +23,13 @@
       "name" : "测试2",
       "children" : [ {
         "name" : "test_run_login",
-        "uid" : "324e4159e893057",
+        "uid" : "1c4245a76c78f47c",
         "parentUid" : "28ef4d408ae8a2f70a5c9f53bf72059f",
         "status" : "passed",
         "time" : {
-          "start" : 1576865174269,
-          "stop" : 1576865174498,
-          "duration" : 229
+          "start" : 1576866224916,
+          "stop" : 1576866225114,
+          "duration" : 198
         },
         "flaky" : true,
         "parameters" : [ ]
@@ -39,13 +39,13 @@
       "name" : "测试登陆123",
       "children" : [ {
         "name" : "test_get_login_submit",
-        "uid" : "6b09d69537073c0b",
+        "uid" : "e584c994809ceee4",
         "parentUid" : "a68519fabdf8f99bdcd658f5cc07b5cc",
         "status" : "passed",
         "time" : {
-          "start" : 1576865174504,
-          "stop" : 1576865175067,
-          "duration" : 563
+          "start" : 1576866225118,
+          "stop" : 1576866225486,
+          "duration" : 368
         },
         "flaky" : true,
         "parameters" : [ ]
@@ -55,13 +55,13 @@
       "name" : "测试4",
       "children" : [ {
         "name" : "test_get_home_page",
-        "uid" : "9e9f6608960ba138",
+        "uid" : "f31b9f9151139c4e",
         "parentUid" : "8650a35675163e4a2800d438a4a76b1a",
         "status" : "passed",
         "time" : {
-          "start" : 1576865175071,
-          "stop" : 1576865175515,
-          "duration" : 444
+          "start" : 1576866225492,
+          "stop" : 1576866225895,
+          "duration" : 403
         },
         "flaky" : true,
         "parameters" : [ ]
