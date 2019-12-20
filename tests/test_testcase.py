@@ -58,7 +58,7 @@ class TestSingle:
         result = self.run.run_yml(single_testcase_yaml)
         logger.info("hhhhhhhhhhhhh")
 
-    @allure.story("测试3")
+    @allure.story("测试_hello_world3")
     def test_get_login_submit(self):
         """ 呵呵呵呵1234"""
         single_testcase_yaml = os.path.join(os.path.dirname(__file__), "api", "get_login_submit.yml")
@@ -89,7 +89,7 @@ class TestSingle:
         """
         single_testcase_yaml = os.path.join(os.path.dirname(__file__), "api", "get_home_page.yml")
         result = self.run.run_yml(single_testcase_yaml)
-<<<<<<< HEAD
+
         logger.info("666666666" + str(result))
         for ass in result[0]:
             logger.info("url:" + ass["url"])
@@ -112,7 +112,7 @@ class TestSingle:
                 assert vale["expected"] == vale["actual"]
         allure.attach.file("/Users/anxiaodong/PycharmProjects/hogwarts-httprun/data/login.csv", "报告",
                            allure.attachment_type.CSV)
-=======
+
        # allure.attach.file("/Users/anxiaodong/PycharmProjects/hogwarts-httprun/data/login.csv", "报告", allure.attachment_type.CSV)
->>>>>>> d909362bd965dbc21c389794decbfb80491c1928
+
         print(result)

@@ -1,6 +1,6 @@
 import unittest
 
-from htturunner.runner import replace_var
+
 
 
 # class TestHogRunner(unittest.TestCase):

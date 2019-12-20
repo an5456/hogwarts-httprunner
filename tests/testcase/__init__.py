@@ -14,14 +14,14 @@
 #             runner, sum(distances), sum(distances) / float(len(distances))
 #
 #         )
-from tests.test_testcase import TestSingle
+# from tests.test_testcase import TestSingle
+#
+#
+# def res(fun_name):
+#     f = TestSingle.__dict__
+#     if fun_name in f:
+#
+#         f[fun_name]()
 
-
-def res(fun_name):
-    f = TestSingle.__dict__
-    if fun_name in f:
-
-        f[fun_name]()
-
-
-res("test_get_login_submit")
+#
+# res("test_get_login_submit")

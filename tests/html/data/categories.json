@@ -1,25 +1,5 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
   "name" : "categories",
-  "children" : [ {
-    "name" : "Product defects",
-    "children" : [ {
-      "name" : "AssertionError: assert '2' == '0'\n  - 2\n  + 0",
-      "children" : [ {
-        "name" : "test_get_login_submit",
-        "uid" : "f99829b23fc727ce",
-        "parentUid" : "1502594595fe46660a08b56e464a5995",
-        "status" : "failed",
-        "time" : {
-          "start" : 1576684308031,
-          "stop" : 1576684308411,
-          "duration" : 380
-        },
-        "flaky" : true,
-        "parameters" : [ ]
-      } ],
-      "uid" : "1502594595fe46660a08b56e464a5995"
-    } ],
-    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
-  } ]
+  "children" : [ ]
 }

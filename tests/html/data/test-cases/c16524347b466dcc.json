@@ -1,0 +1,672 @@
+{
+  "uid" : "c16524347b466dcc",
+  "name" : "test_get_login_submit",
+  "fullName" : "test_testcase.TestSingle#test_get_login_submit",
+  "historyId" : "9d45b30fd97667aff13f3a162735a3a9",
+  "time" : {
+    "start" : 1576861917982,
+    "stop" : 1576861918375,
+    "duration" : 393
+  },
+  "description" : " 呵呵呵呵1234",
+  "descriptionHtml" : "<p>呵呵呵呵1234</p>\n",
+  "status" : "passed",
+  "flaky" : true,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1576861915729,
+      "stop" : 1576861915729,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_Module__pytest_setup_module",
+    "time" : {
+      "start" : 1576861915729,
+      "stop" : 1576861915729,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : " 呵呵呵呵1234",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "6493efc56b18b901",
+      "name" : "log",
+      "source" : "6493efc56b18b901.txt",
+      "type" : "text/plain",
+      "size" : 1238
+    }, {
+      "uid" : "cc9506db372ce8e3",
+      "name" : "stdout",
+      "source" : "cc9506db372ce8e3.txt",
+      "type" : "text/plain",
+      "size" : 0
+    }, {
+      "uid" : "6c45c2f66c173433",
+      "name" : "stderr",
+      "source" : "6c45c2f66c173433.txt",
+      "type" : "text/plain",
+      "size" : 0
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1576861918736,
+      "stop" : 1576861918737,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_Module__pytest_setup_module::0",
+    "time" : {
+      "start" : 1576861918737,
+      "stop" : 1576861918737,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "测试接口"
+  }, {
+    "name" : "story",
+    "value" : "测试_hello_world3"
+  }, {
+    "name" : "suite",
+    "value" : "test_testcase"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestSingle"
+  }, {
+    "name" : "host",
+    "value" : "anxiaodongdeMacBook-Pro.local"
+  }, {
+    "name" : "thread",
+    "value" : "4729-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_testcase"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "27c4e51fc2980c79",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576861143880,
+        "stop" : 1576861144261,
+        "duration" : 381
+      }
+    }, {
+      "uid" : "af87da0afe86b420",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576860999391,
+        "stop" : 1576860999757,
+        "duration" : 366
+      }
+    }, {
+      "uid" : "3b1cbf77977c999f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576860938106,
+        "stop" : 1576860938443,
+        "duration" : 337
+      }
+    }, {
+      "uid" : "a7829298a8264548",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576860805015,
+        "stop" : 1576860806632,
+        "duration" : 1617
+      }
+    }, {
+      "uid" : "185b5cc48c88a740",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576860779694,
+        "stop" : 1576860780155,
+        "duration" : 461
+      }
+    }, {
+      "uid" : "54b11e0aee567620",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576860719134,
+        "stop" : 1576860719527,
+        "duration" : 393
+      }
+    }, {
+      "uid" : "c75b8388105d5deb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576860185563,
+        "stop" : 1576860185955,
+        "duration" : 392
+      }
+    }, {
+      "uid" : "7d85fd78b28624ac",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576859564495,
+        "stop" : 1576859565163,
+        "duration" : 668
+      }
+    }, {
+      "uid" : "b75eb42ed9a354ad",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576859504692,
+        "stop" : 1576859505034,
+        "duration" : 342
+      }
+    }, {
+      "uid" : "1b95eacfbd1c9ec1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576859407002,
+        "stop" : 1576859407361,
+        "duration" : 359
+      }
+    }, {
+      "uid" : "f589f713e3c3ed9d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576859339671,
+        "stop" : 1576859340169,
+        "duration" : 498
+      }
+    }, {
+      "uid" : "10161b3c7b2c980a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576859279242,
+        "stop" : 1576859279623,
+        "duration" : 381
+      }
+    }, {
+      "uid" : "cc94a6d6ff9548fc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576859113969,
+        "stop" : 1576859114351,
+        "duration" : 382
+      }
+    }, {
+      "uid" : "85cb359e8476e9ef",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '2' == '0'\n  - 2\n  + 0",
+      "time" : {
+        "start" : 1576685889193,
+        "stop" : 1576685889530,
+        "duration" : 337
+      }
+    }, {
+      "uid" : "3ac78f8c0ae3ada",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '2' == '0'\n  - 2\n  + 0",
+      "time" : {
+        "start" : 1576684308031,
+        "stop" : 1576684308411,
+        "duration" : 380
+      }
+    }, {
+      "uid" : "8a8187bb4b0cbfb9",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '2' == '0'\n  - 2\n  + 0",
+      "time" : {
+        "start" : 1576683680460,
+        "stop" : 1576683680810,
+        "duration" : 350
+      }
+    }, {
+      "uid" : "473bceb34c7f5220",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '2' == '0'\n  - 2\n  + 0",
+      "time" : {
+        "start" : 1576678928200,
+        "stop" : 1576678928547,
+        "duration" : 347
+      }
+    }, {
+      "uid" : "a95f87f5f3ba0145",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '2' == '0'\n  - 2\n  + 0",
+      "time" : {
+        "start" : 1576602519261,
+        "stop" : 1576602519626,
+        "duration" : 365
+      }
+    }, {
+      "uid" : "eeba6f01a09dc40c",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '2' == '0'\n  - 2\n  + 0",
+      "time" : {
+        "start" : 1576602392404,
+        "stop" : 1576602392727,
+        "duration" : 323
+      }
+    }, {
+      "uid" : "3e34e7c496f5a4e1",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '2' == '0'\n  - 2\n  + 0",
+      "time" : {
+        "start" : 1576602247712,
+        "stop" : 1576602248047,
+        "duration" : 335
+      }
+    }, {
+      "uid" : "e147cb27eceb363b",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '2' == '0'\n  - 2\n  + 0",
+      "time" : {
+        "start" : 1576602076314,
+        "stop" : 1576602076619,
+        "duration" : 305
+      }
+    }, {
+      "uid" : "1ec0c0a47f4f4ecf",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '2' == '0'\n  - 2\n  + 0",
+      "time" : {
+        "start" : 1576601905094,
+        "stop" : 1576601905455,
+        "duration" : 361
+      }
+    }, {
+      "uid" : "bf75bc062d434804",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '2' == '0'\n  - 2\n  + 0",
+      "time" : {
+        "start" : 1576601746280,
+        "stop" : 1576601746628,
+        "duration" : 348
+      }
+    }, {
+      "uid" : "9218832e61257f4e",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '2' == '0'\n  - 2\n  + 0",
+      "time" : {
+        "start" : 1576601640913,
+        "stop" : 1576601641304,
+        "duration" : 391
+      }
+    }, {
+      "uid" : "90a1e6792f2ebc7f",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '2' == '0'\n  - 2\n  + 0",
+      "time" : {
+        "start" : 1576601438853,
+        "stop" : 1576601439220,
+        "duration" : 367
+      }
+    }, {
+      "uid" : "fb4c23635cbf042b",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '2' == '0'\n  - 2\n  + 0",
+      "time" : {
+        "start" : 1576601265244,
+        "stop" : 1576601265596,
+        "duration" : 352
+      }
+    }, {
+      "uid" : "f7491191dc4cc2cb",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '2' == '0'\n  - 2\n  + 0",
+      "time" : {
+        "start" : 1576601145474,
+        "stop" : 1576601145833,
+        "duration" : 359
+      }
+    }, {
+      "uid" : "33d9d370c857efe9",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '2' == '0'\n  - 2\n  + 0",
+      "time" : {
+        "start" : 1576601038760,
+        "stop" : 1576601039124,
+        "duration" : 364
+      }
+    }, {
+      "uid" : "ae5b74441788f71f",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '2' == '0'\n  - 2\n  + 0",
+      "time" : {
+        "start" : 1576600899218,
+        "stop" : 1576600899582,
+        "duration" : 364
+      }
+    }, {
+      "uid" : "8a6392ee7341200",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '2' == '0'\n  - 2\n  + 0",
+      "time" : {
+        "start" : 1576600512825,
+        "stop" : 1576600513193,
+        "duration" : 368
+      }
+    }, {
+      "uid" : "4199d8ffe85c3793",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '2' == '0'\n  - 2\n  + 0",
+      "time" : {
+        "start" : 1576599528528,
+        "stop" : 1576599528889,
+        "duration" : 361
+      }
+    }, {
+      "uid" : "c2cd53e83cfc28f2",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert False == True",
+      "time" : {
+        "start" : 1576595909341,
+        "stop" : 1576595909711,
+        "duration" : 370
+      }
+    }, {
+      "uid" : "520ca9e29eb7832f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576423780915,
+        "stop" : 1576423781308,
+        "duration" : 393
+      }
+    }, {
+      "uid" : "1f56982051e07554",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576376345324,
+        "stop" : 1576376345700,
+        "duration" : 376
+      }
+    }, {
+      "uid" : "14374df964e2d17e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576376213776,
+        "stop" : 1576376214109,
+        "duration" : 333
+      }
+    }, {
+      "uid" : "964a43faedad9179",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576375920045,
+        "stop" : 1576375920500,
+        "duration" : 455
+      }
+    }, {
+      "uid" : "ffe8b2480ba7bae8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576375524339,
+        "stop" : 1576375524669,
+        "duration" : 330
+      }
+    }, {
+      "uid" : "2c2af1419b921afa",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576337568803,
+        "stop" : 1576337569223,
+        "duration" : 420
+      }
+    }, {
+      "uid" : "b4c554770677690a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576337554370,
+        "stop" : 1576337556488,
+        "duration" : 2118
+      }
+    }, {
+      "uid" : "9ca5c5dda074a50c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576337379737,
+        "stop" : 1576337380149,
+        "duration" : 412
+      }
+    }, {
+      "uid" : "f4d009a8bb266118",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576337313876,
+        "stop" : 1576337314304,
+        "duration" : 428
+      }
+    }, {
+      "uid" : "42e9028994b8d031",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576337291705,
+        "stop" : 1576337292103,
+        "duration" : 398
+      }
+    }, {
+      "uid" : "c61c1b8cfba960a6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576337217196,
+        "stop" : 1576337217593,
+        "duration" : 397
+      }
+    }, {
+      "uid" : "a75765cc4dd7ca2b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576336675059,
+        "stop" : 1576336675447,
+        "duration" : 388
+      }
+    }, {
+      "uid" : "f34868caf104c254",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576336484803,
+        "stop" : 1576336485566,
+        "duration" : 763
+      }
+    }, {
+      "uid" : "5e1b676a247d8ff7",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576336398519,
+        "stop" : 1576336398971,
+        "duration" : 452
+      }
+    }, {
+      "uid" : "e2bcfdef24c2d2a9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576335996410,
+        "stop" : 1576335996796,
+        "duration" : 386
+      }
+    }, {
+      "uid" : "28f8e13ffdf2a7ab",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576335032233,
+        "stop" : 1576335032612,
+        "duration" : 379
+      }
+    }, {
+      "uid" : "ecc8e4ebd9fa1e35",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576334764111,
+        "stop" : 1576334764464,
+        "duration" : 353
+      }
+    }, {
+      "uid" : "fcf3663a5bc9a54c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576323418029,
+        "stop" : 1576323418435,
+        "duration" : 406
+      }
+    }, {
+      "uid" : "e0a246a84e1252fa",
+      "status" : "broken",
+      "statusDetails" : "json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "time" : {
+        "start" : 1576323337532,
+        "stop" : 1576323337688,
+        "duration" : 156
+      }
+    }, {
+      "uid" : "d4389a8fa3172412",
+      "status" : "broken",
+      "statusDetails" : "json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "time" : {
+        "start" : 1576323199883,
+        "stop" : 1576323200225,
+        "duration" : 342
+      }
+    }, {
+      "uid" : "73e1f14e1950aa2f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576323162847,
+        "stop" : 1576323163247,
+        "duration" : 400
+      }
+    }, {
+      "uid" : "5a80d2d53b3a6bb2",
+      "status" : "broken",
+      "statusDetails" : "json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "time" : {
+        "start" : 1576323140232,
+        "stop" : 1576323140619,
+        "duration" : 387
+      }
+    }, {
+      "uid" : "604caffed4c92b4b",
+      "status" : "broken",
+      "statusDetails" : "json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "time" : {
+        "start" : 1576323123224,
+        "stop" : 1576323123687,
+        "duration" : 463
+      }
+    }, {
+      "uid" : "c4054f36d5bc6f73",
+      "status" : "broken",
+      "statusDetails" : "json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "time" : {
+        "start" : 1576323073430,
+        "stop" : 1576323073878,
+        "duration" : 448
+      }
+    }, {
+      "uid" : "b3b4a56d04c63768",
+      "status" : "broken",
+      "statusDetails" : "json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "time" : {
+        "start" : 1576323038417,
+        "stop" : 1576323038577,
+        "duration" : 160
+      }
+    }, {
+      "uid" : "b7d1c53eb3012177",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576323023729,
+        "stop" : 1576323024134,
+        "duration" : 405
+      }
+    }, {
+      "uid" : "25139159a2b4581f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576322991107,
+        "stop" : 1576322991467,
+        "duration" : 360
+      }
+    }, {
+      "uid" : "8ce7e141bf4dc747",
+      "status" : "broken",
+      "statusDetails" : "json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "time" : {
+        "start" : 1576322973300,
+        "stop" : 1576322973471,
+        "duration" : 171
+      }
+    }, {
+      "uid" : "775ae5e8433f0a42",
+      "status" : "broken",
+      "statusDetails" : "json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "time" : {
+        "start" : 1576322944465,
+        "stop" : 1576322944855,
+        "duration" : 390
+      }
+    }, {
+      "uid" : "6bb60bb05b721525",
+      "status" : "passed",
+      "time" : {
+        "start" : 1576322873874,
+        "stop" : 1576322874245,
+        "duration" : 371
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "c16524347b466dcc.json",
+  "parameterValues" : [ ]
+}
