@@ -3,7 +3,7 @@ import datetime
 import logging
 import os
 
-from page_object.logs.properties_utils import Properties
+from htturunner.properties_utils import Properties
 
 
 class GetLog:

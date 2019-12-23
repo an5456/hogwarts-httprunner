@@ -63,9 +63,9 @@ class Runapi:
         global result_dict
 
         # 有config时执行以下代码
-        if all_veriables_mapping["config"]:
+        if all_veriables_mapping["confing"]:
             try:
-                base_url = all_veriables_mapping["config"]["base_url"]  #
+                base_url = all_veriables_mapping["confing"]["base_url"]  #
                 if len(base_url) < len(request["url"]):
                     request["url"] = request["url"]
                 else:
@@ -77,7 +77,7 @@ class Runapi:
             #     variables = all_veriables_mapping["config"].get("variables")
             # else:
             #     variables = None
-            variables = all_veriables_mapping["config"].get("variables", None)
+            variables = all_veriables_mapping["confing"].get("variables", None)
 
             if variables is not None:
                 # csv_request = api_info
@@ -244,7 +244,7 @@ class Runapi:
         result = []
         load_content = Load.load_yml(yml_file)
         global all_veriables_mapping
-        all_veriables_mapping["config"] = load_content.get("config", {})
+        all_veriables_mapping["confing"] = load_content.get("confing", {})
 
         if is_api(load_content.get("teststeps")):
             success = self.run_api(load_content.get("teststeps"))

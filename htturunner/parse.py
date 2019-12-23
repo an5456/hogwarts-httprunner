@@ -39,7 +39,7 @@ class ParseContent:
             matched_function = function_regex_compile.findall(content)
 
             if matched_function:
-                return self.parse_funtion(content, self.all_veriables_mapping["config"].get("variables"))
+                return self.parse_funtion(content, self.all_veriables_mapping["confing"].get("variables"))
 
             elif matched:
                 return self.replace_var(content, variables_mapping)
