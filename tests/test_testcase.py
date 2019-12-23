@@ -64,21 +64,21 @@ class TestSingle:
         """ 呵呵呵呵1234"""
         single_testcase_yaml = os.path.join(os.path.dirname(__file__), "api", "get_login_submit.yml")
         result = self.run.run_yml(single_testcase_yaml)
-        # for ass in result[0]:
-        #     logging.info("url:" + ass["url"])
-        #     logging.info("method:" + ass["method"])
-        #     if ass["request_info"].get("type") == "json":
-        #
-        #         logging.info("request_data:"+"\n"+Utils.format_output(ass["request_data"]))
-        #         logging.info("response_data:"+"\n"+Utils.format_output(ass["response_data"]))
-        #
-        #     else:
-        #         logging.info("request_data:"+str(ass["request_data"]))
-        #         logging.info("response_data:"+str(ass["response_data"]))
-        #     logging.info("----------------" + "Assert" + "------------------")
-        #     for vale in ass["data"]:
-        #         logging.info("{} expected:{} actual:{}".format(vale["key"], vale["expected"], vale["actual"]))
-        #         assert vale["expected"] == vale["actual"]
+        for ass in result[0]:
+            logging.info("url:" + ass["url"])
+            logging.info("method:" + ass["method"])
+            if ass["request_info"].get("type") == "json":
+
+                logging.info("request_data:"+"\n"+Utils.format_output(ass["request_data"]))
+                logging.info("response_data:"+"\n"+Utils.format_output(ass["response_data"]))
+
+            else:
+                logging.info("request_data:"+str(ass["request_data"]))
+                logging.info("response_data:"+str(ass["response_data"]))
+            logging.info("----------------" + "Assert" + "------------------")
+            for vale in ass["data"]:
+                logging.info("{} expected:{} actual:{}".format(vale["key"], vale["expected"], vale["actual"]))
+                assert vale["expected"] == vale["actual"]
         print(result)
 
     @allure.story("测试4")
@@ -107,5 +107,5 @@ class TestSingle:
                 assert vale["expected"] == vale["actual"]
         print(result)
 
-        allure.attach.file(os.path.join(os.path.dirname(os.path.dirname(__file__)+"data"+"login.csv")), "报告",allure.attachment_type.CSV)
+        allure.attach.file(os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "login.csv"), "报告",allure.attachment_type.CSV)
 
