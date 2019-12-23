@@ -16,7 +16,7 @@
 #    verify: False
 #  validate:
 #    status_code: 200
-#config:
+#confing:
 #    name: testcase description
 #    variables: {}
 #    base_url: https://mubu.com

@@ -1,0 +1,151 @@
+{
+  "uid" : "72bad381fe362c24",
+  "name" : "test_run_testcase_yml",
+  "fullName" : "test_testcase.TestSingle#test_run_testcase_yml",
+  "historyId" : "a795ec9b90752ada9e41d5e5673b3878",
+  "time" : {
+    "start" : 1577112336855,
+    "stop" : 1577112336875,
+    "duration" : 20
+  },
+  "description" : "\n\n            斤斤计较测试\n        ",
+  "descriptionHtml" : "<pre><code>        斤斤计较测试\n</code></pre>\n",
+  "status" : "broken",
+  "statusMessage" : "KeyError: 'confing'",
+  "statusTrace" : "self = <tests.test_testcase.TestSingle object at 0x10a298630>\n\n    @allure.story(\"测试1\")\n    def test_run_testcase_yml(self):\n        \"\"\"\n    \n            斤斤计较测试\n        \"\"\"\n        single_testcase_yaml = os.path.join(os.path.dirname(__file__), \"testcase\", \"mubu_login.yml\")\n>       result = self.run.run_yml(single_testcase_yaml)\n\ntest_testcase.py:49: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n../htturunner/runner.py:253: in run_yml\n    success = self.run_api(api_info)\n../htturunner/runner.py:58: in run_api\n    self.get_run_api(api_info)  # 判断是否获取依赖接口\n../htturunner/runner.py:267: in get_run_api\n    self.run_yml(ru_path)\n../htturunner/runner.py:253: in run_yml\n    success = self.run_api(api_info)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <htturunner.runner.Runapi object at 0x10560c080>\napi_info = {'extract': {'code': '$.code', 'msg': '$.msg'}, 'name': 'https://mubu.com/api/login/submit', 'request': {'data': {'pas...e Gecko) Chrome/78.0.3904.97 Safari/537.36 '}, 'method': 'POST', 'url': 'api/login/submit'}, 'validate': {'$.code': 0}}\n\n    def run_api(self, api_info):\n        \"\"\"\n    \n        :param api:\n            {\n                \"request\": {},\n                \"validate\": {}\n            }\n        :return:\n    \n        \"\"\"\n        warnings.simplefilter(\"ignore\", ResourceWarning)\n        self.get_run_api(api_info)  # 判断是否获取依赖接口\n        request = api_info[\"request\"]\n        global session_variables_mapping\n        global result\n        global result_dict\n    \n        # 有config时执行以下代码\n>       if all_veriables_mapping[\"confing\"]:\nE       KeyError: 'confing'\n\n../htturunner/runner.py:65: KeyError",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1577112336854,
+      "stop" : 1577112336854,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_Module__pytest_setup_module",
+    "time" : {
+      "start" : 1577112336853,
+      "stop" : 1577112336853,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "\n\n            斤斤计较测试\n        ",
+    "status" : "broken",
+    "statusMessage" : "KeyError: 'confing'",
+    "statusTrace" : "self = <tests.test_testcase.TestSingle object at 0x10a298630>\n\n    @allure.story(\"测试1\")\n    def test_run_testcase_yml(self):\n        \"\"\"\n    \n            斤斤计较测试\n        \"\"\"\n        single_testcase_yaml = os.path.join(os.path.dirname(__file__), \"testcase\", \"mubu_login.yml\")\n>       result = self.run.run_yml(single_testcase_yaml)\n\ntest_testcase.py:49: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n../htturunner/runner.py:253: in run_yml\n    success = self.run_api(api_info)\n../htturunner/runner.py:58: in run_api\n    self.get_run_api(api_info)  # 判断是否获取依赖接口\n../htturunner/runner.py:267: in get_run_api\n    self.run_yml(ru_path)\n../htturunner/runner.py:253: in run_yml\n    success = self.run_api(api_info)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <htturunner.runner.Runapi object at 0x10560c080>\napi_info = {'extract': {'code': '$.code', 'msg': '$.msg'}, 'name': 'https://mubu.com/api/login/submit', 'request': {'data': {'pas...e Gecko) Chrome/78.0.3904.97 Safari/537.36 '}, 'method': 'POST', 'url': 'api/login/submit'}, 'validate': {'$.code': 0}}\n\n    def run_api(self, api_info):\n        \"\"\"\n    \n        :param api:\n            {\n                \"request\": {},\n                \"validate\": {}\n            }\n        :return:\n    \n        \"\"\"\n        warnings.simplefilter(\"ignore\", ResourceWarning)\n        self.get_run_api(api_info)  # 判断是否获取依赖接口\n        request = api_info[\"request\"]\n        global session_variables_mapping\n        global result\n        global result_dict\n    \n        # 有config时执行以下代码\n>       if all_veriables_mapping[\"confing\"]:\nE       KeyError: 'confing'\n\n../htturunner/runner.py:65: KeyError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "3e2414ecc559000c",
+      "name" : "log",
+      "source" : "3e2414ecc559000c.txt",
+      "type" : "text/plain",
+      "size" : 73
+    }, {
+      "uid" : "1acaa620fad0a18",
+      "name" : "stdout",
+      "source" : "1acaa620fad0a18.txt",
+      "type" : "text/plain",
+      "size" : 0
+    }, {
+      "uid" : "ff7cbb2e614712f4",
+      "name" : "stderr",
+      "source" : "ff7cbb2e614712f4.txt",
+      "type" : "text/plain",
+      "size" : 0
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1577112340499,
+      "stop" : 1577112340499,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_Module__pytest_setup_module::0",
+    "time" : {
+      "start" : 1577112340499,
+      "stop" : 1577112340500,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "测试接口"
+  }, {
+    "name" : "story",
+    "value" : "测试1"
+  }, {
+    "name" : "suite",
+    "value" : "test_testcase"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestSingle"
+  }, {
+    "name" : "host",
+    "value" : "localhost"
+  }, {
+    "name" : "thread",
+    "value" : "9883-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_testcase"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "72bad381fe362c24.json",
+  "parameterValues" : [ ]
+}

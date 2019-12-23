@@ -2,13 +2,13 @@ import os
 
 import allure
 
+from htturunner.getlog import GetLog
 from htturunner.runner import Runapi
 
-# import logging
-#
-# logger = logging.getLogger()
-# logger.setLevel(logging.INFO)
-from loguru import logger
+import logging
+
+
+
 
 from htturunner.utis import Utils
 
@@ -25,7 +25,7 @@ def teardown_module():
 class TestSingle:
 
     def setup(self):
-        logger.info("每个测试用例之前运行")
+        logging.info("每个测试用例之前运行")
 
     def teardown(self):
         print("每个测试用例之后执行")
@@ -36,6 +36,7 @@ class TestSingle:
     def teardown_class(self):
         print("每个类之后运行")
 
+    GetLog().set_log_config_1()
     run = Runapi()
 
     @allure.story("测试1")
@@ -46,7 +47,7 @@ class TestSingle:
         """
         single_testcase_yaml = os.path.join(os.path.dirname(__file__), "testcase", "mubu_login.yml")
         result = self.run.run_yml(single_testcase_yaml)
-        print(result)
+
 
     @allure.story("测试2")
     def test_run_login(self):
@@ -56,28 +57,28 @@ class TestSingle:
         """
         single_testcase_yaml = os.path.join(os.path.dirname(__file__), "api", "get_login.yml")
         result = self.run.run_yml(single_testcase_yaml)
-        logger.info("hhhhhhhhhhhhh")
+        logging.info("hhhhhhhhhhhhh")
 
     @allure.story("测试登陆123")
     def test_get_login_submit(self):
         """ 呵呵呵呵1234"""
         single_testcase_yaml = os.path.join(os.path.dirname(__file__), "api", "get_login_submit.yml")
         result = self.run.run_yml(single_testcase_yaml)
-        logger.info("666666666" + str(result))
+        # logging.info("666666666" + str(result))
         for ass in result[0]:
-            logger.info("url:" + ass["url"])
-            logger.info("method:" + ass["method"])
+            logging.info("url:" + ass["url"])
+            logging.info("method:" + ass["method"])
             if ass["request_info"].get("type") == "jsondumps":
 
-                logger.info("request_data:"+"\n"+Utils.format_output(ass["request_data"]))
-                logger.info("response_data:"+"\n"+Utils.format_output(ass["response_data"]))
+                logging.info("request_data:"+"\n"+Utils.format_output(ass["request_data"]))
+                logging.info("response_data:"+"\n"+Utils.format_output(ass["response_data"]))
 
             else:
-                logger.info("request_data:"+str(ass["request_data"]))
-                logger.info("response_data:"+str(ass["response_data"]))
-            logger.info("----------------" + "Assert" + "------------------")
+                logging.info("request_data:"+str(ass["request_data"]))
+                logging.info("response_data:"+str(ass["response_data"]))
+            logging.info("----------------" + "Assert" + "------------------")
             for vale in ass["data"]:
-                logger.info("{} expected:{} actual:{}".format(vale["key"], vale["expected"], vale["actual"]))
+                logging.info("{} expected:{} actual:{}".format(vale["key"], vale["expected"], vale["actual"]))
                 assert vale["expected"] == vale["actual"]
 
     @allure.story("测试4")
@@ -89,27 +90,27 @@ class TestSingle:
         single_testcase_yaml = os.path.join(os.path.dirname(__file__), "api", "get_home_page.yml")
         result = self.run.run_yml(single_testcase_yaml)
 
-        logger.info("666666666" + str(result))
+        # logging.info("666666666" + str(result))
         for ass in result[0]:
-            logger.info("url:" + ass["url"])
-            logger.info("method:" + ass["method"])
+            logging.info("url:" + ass["url"])
+            logging.info("method:" + ass["method"])
             if isinstance(ass["request_info"], dict):
                     if ass["request_info"].get("type") == "jsondumps":
 
-                        logger.info(Utils.format_output(ass["request_data"]))
-                        logger.info(Utils.format_output(ass["response_data"]))
+                        logging.info(Utils.format_output(ass["request_data"]))
+                        logging.info(Utils.format_output(ass["response_data"]))
 
                     else:
-                        logger.info("request_data:" + str(ass["request_data"]))
-                        logger.info("response_data:" + str(ass["response_data"]))
+                        logging.info("request_data:" + str(ass["request_data"]))
+                        logging.info("response_data:" + str(ass["response_data"]))
             else:
-                logger.info("request_data:" + str(ass["request_data"]))
-                logger.info("response_data:" + str(ass["response_data"]))
-            logger.info("----------------" + "Assert" + "------------------")
+                logging.info("request_data:" + str(ass["request_data"]))
+                logging.info("response_data:" + str(ass["response_data"]))
+            logging.info("----------------" + "Assert" + "------------------")
             for vale in ass["data"]:
-                logger.info("{} expected:{} actual:{}".format(vale["key"], vale["expected"], vale["actual"]))
+                logging.info("{} expected:{} actual:{}".format(vale["key"], vale["expected"], vale["actual"]))
                 assert vale["expected"] == vale["actual"]
         #
         # allure.attach.file("/Users/anxiaodong/PycharmProjects/hogwarts-httprun/data/login.csv", "报告",
         #                    allure.attachment_type.CSv
-        print(result)
+

@@ -4,57 +4,57 @@
   "children" : [ {
     "name" : "anxiaodongdeMacBook-Pro.local",
     "children" : [ {
-      "name" : "9370-MainThread",
+      "name" : "10606-MainThread",
       "children" : [ {
-        "name" : "test_get_home_page",
-        "uid" : "f57ce7dd3c6cdc86",
-        "parentUid" : "64d6521608764e3933413dd6e1f6ecec",
+        "name" : "test_run_login",
+        "uid" : "32fdc1d4bec444bf",
+        "parentUid" : "d2250899c6e8c9f740de0e9129207178",
         "status" : "passed",
         "time" : {
-          "start" : 1576867242720,
-          "stop" : 1576867243367,
-          "duration" : 647
+          "start" : 1577113812209,
+          "stop" : 1577113812417,
+          "duration" : 208
+        },
+        "flaky" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_get_home_page",
+        "uid" : "4f6cd3a58b246fa6",
+        "parentUid" : "d2250899c6e8c9f740de0e9129207178",
+        "status" : "passed",
+        "time" : {
+          "start" : 1577113812839,
+          "stop" : 1577113813222,
+          "duration" : 383
         },
         "flaky" : true,
         "parameters" : [ ]
       }, {
         "name" : "test_run_testcase_yml",
-        "uid" : "17881c6f496a33be",
-        "parentUid" : "64d6521608764e3933413dd6e1f6ecec",
+        "uid" : "be9372658f4d7c75",
+        "parentUid" : "d2250899c6e8c9f740de0e9129207178",
         "status" : "passed",
         "time" : {
-          "start" : 1576867239519,
-          "stop" : 1576867241492,
-          "duration" : 1973
-        },
-        "flaky" : true,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_run_login",
-        "uid" : "f63a9357ccff76bb",
-        "parentUid" : "64d6521608764e3933413dd6e1f6ecec",
-        "status" : "passed",
-        "time" : {
-          "start" : 1576867241496,
-          "stop" : 1576867241839,
-          "duration" : 343
+          "start" : 1577113811463,
+          "stop" : 1577113812203,
+          "duration" : 740
         },
         "flaky" : true,
         "parameters" : [ ]
       }, {
         "name" : "test_get_login_submit",
-        "uid" : "44eaa864c88c242f",
-        "parentUid" : "64d6521608764e3933413dd6e1f6ecec",
+        "uid" : "38b396d4b79f93da",
+        "parentUid" : "d2250899c6e8c9f740de0e9129207178",
         "status" : "passed",
         "time" : {
-          "start" : 1576867241844,
-          "stop" : 1576867242716,
-          "duration" : 872
+          "start" : 1577113812422,
+          "stop" : 1577113812835,
+          "duration" : 413
         },
         "flaky" : true,
         "parameters" : [ ]
       } ],
-      "uid" : "64d6521608764e3933413dd6e1f6ecec"
+      "uid" : "d2250899c6e8c9f740de0e9129207178"
     } ],
     "uid" : "90798661423fb2d2323aed12cbceaa57"
   } ]
