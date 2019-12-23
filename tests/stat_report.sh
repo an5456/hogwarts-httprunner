@@ -21,4 +21,7 @@ cd ./html/
 echo "start report server"
 nohup python3 -m http.server 8899 >out.log 2>&1 &
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3ecb6f521e3bb8d32709e3ba0408e3786832a899
