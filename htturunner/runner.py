@@ -30,8 +30,7 @@ session = sessions.Session()
 session_variables_mapping = {}
 # 获取的config设置内容
 all_veriables_mapping = {}
-# 返回需要的数据
-result = []
+
 res_dict = {}
 
 
@@ -59,7 +58,7 @@ class Runapi:
         self.get_run_api(api_info)  # 判断是否获取依赖接口
         request = api_info["request"]
         global session_variables_mapping
-        global result
+
         global result_dict
 
         # 有config时执行以下代码
@@ -91,6 +90,7 @@ class Runapi:
                     执行以下代码
                 """
                 if "$" in str(variables):
+                    result = []
                     csv_info = Load.load_csv()  # 解析csv参数
                     for csv_dict in csv_info:
                         parsed_config = self.action.parse_content(variables, csv_dict)  # 解析variables中是否需要替换的参数，如${}
@@ -131,7 +131,7 @@ class Runapi:
                                         "key": key
                                     }
                                     exp.append(reps_dict)
-                                logger.info(exp)
+
                         if parsed_request.get("data") is None:
                             parsed_request["data"] = None
                         try:
@@ -170,6 +170,7 @@ class Runapi:
                     reps = session.request(method, url, **parsed_request)
                     self.extract_data(api_info, reps)  # 提取响应信息
         else:
+            result = []
             parsed_request = self.action.parse_content(request, session_variables_mapping)
             method = parsed_request.pop("method")
             url = parsed_request.pop("url")
@@ -199,7 +200,6 @@ class Runapi:
                             "key": key
                         }
                         exp.append(reps_dict)
-                    logger.info(exp)
             if parsed_request.get("data") == None:
                 parsed_request["data"] = None
             try:
@@ -217,7 +217,7 @@ class Runapi:
             result.append(res_dict)
             # 提取响应参数
             self.extract_data(api_info, reps)
-        return result
+            return result
         # for key in validator_mapping:
         #     if "$" in key:
         #         actual_value = self.extract_json_field(reps, key)

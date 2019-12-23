@@ -1,4 +1,3 @@
-
 import datetime
 import logging
 import os
@@ -7,20 +6,10 @@ from htturunner.properties_utils import Properties
 
 
 class GetLog:
-    def set_log_config(self):
-        pro = Properties("log.properties").get_properties()
-        log_config = {
-            "filename": pro["filename"],
-            "level": pro["level"]
-        }
-
-        logging.basicConfig(**log_config)
-
-        logging.debug("debug")
 
     def set_log_config_1(self):
         try:
-            file_path = os.path.dirname(os.path.dirname(__file__))+"/confing/"
+            file_path = os.path.dirname(os.path.dirname(__file__)) + "/confing/"
             log_config_path = os.path.join(file_path, 'log.properties')
             pro = Properties(log_config_path).get_properties()
 
@@ -55,18 +44,11 @@ class GetLog:
             formatter = logging.Formatter(datefmt=pro['datefmt'], fmt=pro["format"])
 
             file_handler.setFormatter(formatter)
-           # error_handler.setFormatter(formatter)
+            # error_handler.setFormatter(formatter)
             stream_handler.setFormatter(formatter)
         except FileNotFoundError as e:
             print("文件路径不对：{}".format(e))
 
-        # log_config = {
-        #     "filename": pro["filename"],
-        #     "level": pro["level"],/Users/anxiaodong/PycharmProjects/selenium_project/page_object/logs/log.properties
-        #     "format": pro["format"],
-        #     "datefmt": pro["datefmt"]
-        # }
-        # logging.basicConfig(**log_config)
 
 
 if __name__ == '__main__':
