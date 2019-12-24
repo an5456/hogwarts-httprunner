@@ -6,7 +6,7 @@
 ##    base_url: https://mubu.com
 #    verify: False
 teststeps:
-    username:
+    name: get_home_page
     request:
         url: https://mubu.com/?phone=${telephone()}
         method: "GET"

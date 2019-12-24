@@ -1,4 +1,4 @@
-confing:
+config:
     name: testcase description
     variables:
         username: ${username}

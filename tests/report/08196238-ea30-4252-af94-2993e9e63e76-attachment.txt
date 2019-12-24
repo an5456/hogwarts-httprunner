@@ -1,0 +1,2 @@
+[32mINFO    [0m root:test_testcase.py:25 每个测试用例之前运行
+[32mINFO    [0m root:test_testcase.py:56 hhhhhhhhhhhhh

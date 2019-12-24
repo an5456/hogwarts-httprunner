@@ -13,6 +13,7 @@ class Load:
             yml_content = f.read()
             loaded_json = yaml.load(yml_content, Loader=yaml.FullLoader)
         return loaded_json
+
     @classmethod
     def load_csv(self):
         """加载csv文件"""

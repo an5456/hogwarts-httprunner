@@ -1,9 +1,10 @@
 import re
+from json import JSONDecodeError
+
 from htturunner.func_suit import FuncSuit
 
 # 匹配规则，例如：${test} 匹配后为：test
-
-from htturunner.validate import is_api
+from htturunner.utis import Utils
 
 variable_regex_compile = re.compile(r"\$\{(\w+)\}|\$(\w+)")
 # 匹配规则，例如：${func(${var_1}, ${var_2})}
@@ -13,15 +14,12 @@ function_regex_compile = re.compile(r"\$\{(\w+)\(([\$\w\.\-/\s=,]*)\)\}")
 session_variables_mapping = {}
 
 
-# 获取的config设置内容
-# all_veriables_mapping = {}
-
-
 class ParseContent:
     def __init__(self, all_veriables_mapping):
         self.all_veriables_mapping = all_veriables_mapping
 
     def parse_content(self, content, variables_mapping):
+        """解析和替换"""
         if isinstance(content, dict):
             parsed_content = {}
             for key, value in content.items():
@@ -39,7 +37,7 @@ class ParseContent:
             matched_function = function_regex_compile.findall(content)
 
             if matched_function:
-                return self.parse_funtion(content, self.all_veriables_mapping["confing"].get("variables"))
+                return self.parse_funtion(content, self.all_veriables_mapping["config"].get("variables"))
 
             elif matched:
                 return self.replace_var(content, variables_mapping)
@@ -120,3 +118,43 @@ class ParseContent:
             value = variables_mapping[var_name[0]]
             replace_content = content.replace("${%s}" % var_name[0], str(value))
         return replace_content
+
+    def parse_return_info(self, variables_request, reps, url, method, parsed_request, api_info, name):
+        """组装返回断言和日志信息"""
+        exp = []
+        for var_value in variables_request:
+            for key, value in var_value.items():
+                if "eq" in key:
+                    key = value[0]
+                    # 响应断言如果断言的key里面有"$"就用jsonpath获取断言的结果
+                    # 如果没有"$"就用一般的json规则去提取数据
+                    if "$" in key:
+                        actual_value = str(Utils.extract_json_field(reps, key))
+                    else:
+                        actual_value = getattr(reps, key)  # 实际结果
+                    expected_value = value[1]  # 预期结果
+
+                    if isinstance(actual_value, int) or isinstance(expected_value, int):
+                        actual_value = int(actual_value)
+                        expected_value = int(expected_value)
+                    reps_dict = {
+                        "expected": expected_value,
+                        "actual": actual_value,
+                        "key": key
+                    }
+                    exp.append(reps_dict)
+        try:
+            reps = reps.json()
+        except JSONDecodeError:
+            reps = reps.text
+        res_dict = {
+            "name": name,
+            "url": url,
+            "method": method,
+            "request_data": {**parsed_request},
+            "response_data": reps,
+            "assert_data": exp,
+            "request_info": api_info
+        }
+
+        return res_dict

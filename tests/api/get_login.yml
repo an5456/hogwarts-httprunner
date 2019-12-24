@@ -6,7 +6,7 @@
 #    verify: False
 #validate:
 #    status_code: 200
-confing:
+config:
     name: testcase description
     variables:
         username: 17729597958

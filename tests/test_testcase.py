@@ -7,9 +7,6 @@ from htturunner.runner import Runapi
 
 import logging
 
-
-
-
 from htturunner.utis import Utils
 
 
@@ -48,7 +45,6 @@ class TestSingle:
         single_testcase_yaml = os.path.join(os.path.dirname(__file__), "testcase", "mubu_login.yml")
         result = self.run.run_yml(single_testcase_yaml)
 
-
     @allure.story("测试2")
     def test_run_login(self):
         """
@@ -65,18 +61,19 @@ class TestSingle:
         single_testcase_yaml = os.path.join(os.path.dirname(__file__), "api", "get_login_submit.yml")
         result = self.run.run_yml(single_testcase_yaml)
         for ass in result[0]:
+            logging.info(30*"="+ass["name"]+30*"=")
             logging.info("url:" + ass["url"])
             logging.info("method:" + ass["method"])
             if ass["request_info"].get("type") == "json":
 
-                logging.info("request_data:"+"\n"+Utils.format_output(ass["request_data"]))
-                logging.info("response_data:"+"\n"+Utils.format_output(ass["response_data"]))
+                logging.info("request_data:" + "\n" + Utils.format_output(ass["request_data"]))
+                logging.info("response_data:" + "\n" + Utils.format_output(ass["response_data"]))
 
             else:
-                logging.info("request_data:"+str(ass["request_data"]))
-                logging.info("response_data:"+str(ass["response_data"]))
-            logging.info("----------------" + "Assert" + "------------------")
-            for vale in ass["data"]:
+                logging.info("request_data:" + str(ass["request_data"]))
+                logging.info("response_data:" + str(ass["response_data"]))
+            logging.info(10*"-" + "Assert" + 10*"-")
+            for vale in ass["assert_data"]:
                 logging.info("{} expected:{} actual:{}".format(vale["key"], vale["expected"], vale["actual"]))
                 assert vale["expected"] == vale["actual"]
         print(result)
@@ -90,22 +87,23 @@ class TestSingle:
         single_testcase_yaml = os.path.join(os.path.dirname(__file__), "api", "get_home_page.yml")
         result = self.run.run_yml(single_testcase_yaml)
         for ass in result[0]:
+            logging.info(30 * "=" + ass["name"] + 30 * "=")
             logging.info("url:" + ass["url"])
             logging.info("method:" + ass["method"])
             if isinstance(ass["request_info"], dict):
-                    if ass["request_info"].get("type") == "json":
+                if ass["request_info"].get("type") == "json":
 
-                        logging.info("request_data:"+Utils.format_output(ass["request_data"]))
-                        logging.info("response_data:" +Utils.format_output(ass["response_data"]))
+                    logging.info("request_data:" + Utils.format_output(ass["request_data"]))
+                    logging.info("response_data:" + Utils.format_output(ass["response_data"]))
 
-                    else:
-                        logging.info("request_data:" + str(ass["request_data"]))
-                        logging.info("response_data:" + str(ass["response_data"]))
-            logging.info("----------------" + "Assert" + "------------------")
-            for vale in ass["data"]:
+                else:
+                    logging.info("request_data:" + str(ass["request_data"]))
+                    logging.info("response_data:" + str(ass["response_data"]))
+            logging.info(10*"-" + "Assert" + 10*"-")
+            for vale in ass["assert_data"]:
                 logging.info("{} expected:{} actual:{}".format(vale["key"], vale["expected"], vale["actual"]))
                 assert vale["expected"] == vale["actual"]
         print(result)
 
-        allure.attach.file(os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "login.csv"), "报告",allure.attachment_type.CSV)
-
+        allure.attach.file(os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "login.csv"), "报告",
+                           allure.attachment_type.CSV)
