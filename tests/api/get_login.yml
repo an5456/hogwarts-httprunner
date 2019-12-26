@@ -14,7 +14,7 @@ config:
     base_url: https://mubu.com
 #    verify: False
 teststeps:
--  name: https://mubu.com/api/login/submit
+-  name: https://mubu.com/api/login/submit呵呵
    request:
       url: api/login/submit
       method: "POST"
@@ -28,7 +28,8 @@ teststeps:
       msg: $.msg
 
    validate:
-      $.code: 0
+   -  eq: ["$.code", 0]
+#      $.code: 0
 
 -  name: /cgi-bin/gettoken
    request:
@@ -40,10 +41,12 @@ teststeps:
             corpsecret: yGKZP7grNAPyejnRqgpTquiv1vgiCVRL3lhWnD2Bktg
         url: https://qyapi.weixin.qq.com/cgi-bin/gettoken
    validate:
-      $.errmsg: ok
-#    -   eq:
-#        - status_code
-#        - 200
+   -  eq:
+      -  $.errmsg
+      -  ok
+   -  eq:
+      - status_code
+      - 200
 #    -   eq:
 #        - headers.Content-Type
 #        - application/json; charset=UTF-8

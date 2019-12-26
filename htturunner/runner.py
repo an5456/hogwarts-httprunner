@@ -11,12 +11,6 @@ import warnings
 import sys
 import logging
 
-logger = logging.getLogger()
-logger.setLevel(logging.INFO)
-
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-sys.path.append(BASE_DIR)
-
 session = sessions.Session()
 # # 匹配规则，例如：${test} 匹配后为：test
 # variable_regex_compile = re.compile(r"\$\{(\w+)\}|\$(\w+)")
@@ -27,7 +21,7 @@ session_variables_mapping = {}
 # 获取的config设置内容
 all_veriables_mapping = {}
 
-res_dict = {}
+res_list = []
 
 
 # 对应接口返回的json响应内容，使用jsonpath 提取想要的字段
@@ -37,20 +31,18 @@ class Runapi:
 
     def run_api(self, api_info):
         """
-
         :param api:
             {
                 "request": {},
                 "validate": {}
             }
         :return:
-
         """
         warnings.simplefilter("ignore", ResourceWarning)
         self.get_run_api(api_info)  # 判断是否获取依赖接口
         request = api_info["request"]
         global session_variables_mapping
-
+        global res_list
         # 有config时执行以下代码
         if all_veriables_mapping["config"]:
             try:
@@ -61,11 +53,8 @@ class Runapi:
                     request["url"] = base_url + "/" + request["url"]
             except KeyError:
                 request["url"] = request["url"]
-
             variables = all_veriables_mapping["config"].get("variables", None)
-
             if variables is not None:
-
                 for key, value in variables.items():
                     session_variables_mapping[key] = value
                 """
@@ -89,17 +78,10 @@ class Runapi:
                             parsed_request["verify"] = verify
                         except KeyError:
                             pass
-                        method = parsed_request.pop("method")
-                        url = parsed_request.pop("url")
-                        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-                        reps = session.request(method, url, **parsed_request)
-                        name = api_info["name"]
-                        # 提取断言和日志信息
-                        result_data = self.action.parse_return_info(variables_request, reps, url, method, parsed_request, api_info, name)
-                        result.append(result_data)
-                        # 提取响应参数
-                        self.extract_data(api_info, reps)
-                    return result
+                        result_data = self.send_request(variables_request, parsed_request, api_info)
+                        res_list.append(result_data)
+                    return res_list
+
                 else:
                     """
                         config中的variables变量的key直接输入的，执行以下方法，类似：
@@ -107,32 +89,35 @@ class Runapi:
                             username: 17729597958
                             password: 123456
                     """
+
                     parsed_request = self.action.parse_content(request, session_variables_mapping)
                     try:
                         verify = all_veriables_mapping["config"]["verify"]
                         parsed_request["verify"] = verify
                     except KeyError:
                         pass
-                    method = parsed_request.pop("method")
-                    url = parsed_request.pop("url")
-                    urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-                    reps = session.request(method, url, **parsed_request)
-                    self.extract_data(api_info, reps)  # 提取响应信息
+                    result_data = self.send_request(api_info["validate"], parsed_request, api_info)
+                    res_list.append(result_data)
+                    return res_list
         else:
             result = []
             parsed_request = self.action.parse_content(request, session_variables_mapping)
-            method = parsed_request.pop("method")
-            url = parsed_request.pop("url")
-            urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-            reps = session.request(method, url, **parsed_request)
-            # requests 每一次调用都会创建一个session，所以用同一个session访问
-            validator_mapping = api_info["validate"]
-            name = api_info["name"]
-            get_assert_request_response_data = self.action.parse_return_info(validator_mapping, reps, url, method, parsed_request, api_info, name)
-            result.append(get_assert_request_response_data)
-            # 提取响应参数
-            self.extract_data(api_info, reps)
-            return result
+            result_data = self.send_request(api_info["validate"], parsed_request, api_info)
+            res_list.append(result_data)
+            return res_list
+
+    def send_request(self, validate=None,parsed_request=None, api_info=None):
+        """发送请求"""
+        method = parsed_request.pop("method")
+        url = parsed_request.pop("url")
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        reps = session.request(method, url, **parsed_request)
+        result_data = self.action.parse_return_info(validate, reps, url,
+                                                    method, parsed_request,
+                                                    api_info, api_info["name"])
+
+        self.extract_data(api_info, reps)
+        return result_data
 
     def run_yml(self, yml_file):
         """运行yml文件"""
@@ -150,7 +135,6 @@ class Runapi:
                 result.append(success)
         else:
             raise Exception("YAML format invalid".format(yml_file))
-
         return result
 
     # 获取依赖接口

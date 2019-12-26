@@ -39,71 +39,46 @@ class TestSingle:
     @allure.story("测试1")
     def test_run_testcase_yml(self):
         """
-
             斤斤计较测试
         """
-        single_testcase_yaml = os.path.join(os.path.dirname(__file__), "testcase", "mubu_login.yml")
-        result = self.run.run_yml(single_testcase_yaml)
+        self.result_assert("testcase", "mubu_login.yml")
 
     @allure.story("测试2")
     def test_run_login(self):
         """
-
             范德萨范德萨
         """
-        single_testcase_yaml = os.path.join(os.path.dirname(__file__), "api", "get_login.yml")
-        result = self.run.run_yml(single_testcase_yaml)
-        logging.info("hhhhhhhhhhhhh")
+        self.result_assert("api", "get_login.yml")
 
     @allure.story("测试登陆123")
     def test_get_login_submit(self):
         """ 呵呵呵呵1234"""
-        single_testcase_yaml = os.path.join(os.path.dirname(__file__), "api", "get_login_submit.yml")
-        result = self.run.run_yml(single_testcase_yaml)
-        for ass in result[0]:
-            logging.info(30*"="+ass["name"]+30*"=")
-            logging.info("url:" + ass["url"])
-            logging.info("method:" + ass["method"])
-            if ass["request_info"].get("type") == "json":
-
-                logging.info("request_data:" + "\n" + Utils.format_output(ass["request_data"]))
-                logging.info("response_data:" + "\n" + Utils.format_output(ass["response_data"]))
-
-            else:
-                logging.info("request_data:" + str(ass["request_data"]))
-                logging.info("response_data:" + str(ass["response_data"]))
-            logging.info(10*"-" + "Assert" + 10*"-")
-            for vale in ass["assert_data"]:
-                logging.info("{} expected:{} actual:{}".format(vale["key"], vale["expected"], vale["actual"]))
-                assert vale["expected"] == vale["actual"]
-        print(result)
+        self.result_assert("api", "get_login_submit.yml")
 
     @allure.story("测试4")
     def test_get_home_page(self):
         """
-
             测试呵呵呵呵
         """
-        single_testcase_yaml = os.path.join(os.path.dirname(__file__), "api", "get_home_page.yml")
+        self.result_assert("api", "get_home_page.yml")
+        allure.attach.file(os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "login.csv"), "报告",
+                           allure.attachment_type.CSV)
+
+    def result_assert(self, path_1, filename):
+        single_testcase_yaml = os.path.join(os.path.dirname(__file__), path_1, filename)
         result = self.run.run_yml(single_testcase_yaml)
         for ass in result[0]:
-            logging.info(30 * "=" + ass["name"] + 30 * "=")
+            logging.info(20 * "=" + ass["name"] + 20 * "=")
             logging.info("url:" + ass["url"])
             logging.info("method:" + ass["method"])
-            if isinstance(ass["request_info"], dict):
-                if ass["request_info"].get("type") == "json":
-
-                    logging.info("request_data:" + Utils.format_output(ass["request_data"]))
-                    logging.info("response_data:" + Utils.format_output(ass["response_data"]))
-
-                else:
-                    logging.info("request_data:" + str(ass["request_data"]))
-                    logging.info("response_data:" + str(ass["response_data"]))
-            logging.info(10*"-" + "Assert" + 10*"-")
+            if ass["request_info"].get("type") == "json":
+                logging.info("request_data:" + "\n" + Utils.format_output(ass["request_data"]))
+                logging.info("response_data:" + "\n" + Utils.format_output(ass["response_data"]))
+            else:
+                logging.info("request_data:" + str(ass["request_data"]))
+                logging.info("response_data:" + str(ass["response_data"]))
+            logging.info(10 * "-" + "Assert" + 10 * "-")
             for vale in ass["assert_data"]:
                 logging.info("{} expected:{} actual:{}".format(vale["key"], vale["expected"], vale["actual"]))
                 assert vale["expected"] == vale["actual"]
         print(result)
-
-        allure.attach.file(os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "login.csv"), "报告",
-                           allure.attachment_type.CSV)
