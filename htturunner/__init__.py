@@ -20,37 +20,39 @@
 # docker run --name prometheus -d -p 9090:9090 -v /root/prometheus.yml:/etc/prometheus/prometheus.yml  prom/prometheus --config.file=/root/prometheus.yml
 #
 # docker run -d --name mysql-exporter -p 9104:9104 -e DATA_SOURCE_NAME="root:test123456.@(119.3.89.184:3306)/mysql" prom/mysqld-exporter
-from os import _wrap_close
-import os
-
-
-# 源码
-
-
-
-def popen(cmd, mode="r", buffering=-1):
-    if not isinstance(cmd, str):
-        raise TypeError("invalid cmd type (%s, expected string)" % type(cmd))
-    if mode not in ("r", "w"):
-        raise ValueError("invalid mode %r" % mode)
-    if buffering == 0 or buffering is None:
-        raise ValueError("popen() does not support unbuffered streams")
-    import subprocess, io
-    if mode == "r":
-        proc = subprocess.Popen(cmd,
-                                shell=True,
-                                stdout=subprocess.PIPE,
-                                bufsize=buffering)
-        return _wrap_close(io.TextIOWrapper(proc.stdout), proc)
-    else:
-        proc = subprocess.Popen(cmd,
-                                shell=True,
-                                stdin=subprocess.PIPE,
-                                bufsize=buffering)
-        return _wrap_close(io.TextIOWrapper(proc.stdin), proc)
+# from os import _wrap_close
+# import os
+#
+#
+# # 源码
+#
+#
+#
+# def popen(cmd, mode="r", buffering=-1):
+#     if not isinstance(cmd, str):
+#         raise TypeError("invalid cmd type (%s, expected string)" % type(cmd))
+#     if mode not in ("r", "w"):
+#         raise ValueError("invalid mode %r" % mode)
+#     if buffering == 0 or buffering is None:
+#         raise ValueError("popen() does not support unbuffered streams")
+#     import subprocess, io
+#     if mode == "r":
+#         proc = subprocess.Popen(cmd,
+#                                 shell=True,
+#                                 stdout=subprocess.PIPE,
+#                                 bufsize=buffering)
+#         return _wrap_close(io.TextIOWrapper(proc.stdout), proc)
+#     else:
+#         proc = subprocess.Popen(cmd,
+#                                 shell=True,
+#                                 stdin=subprocess.PIPE,
+#                                 bufsize=buffering)
+#         return _wrap_close(io.TextIOWrapper(proc.stdin), proc)
 
 #
 # adb = "pytest -v /Users/anxiaodong/PycharmProjects/hogwarts-httprun/tests/test_testcase.py"
 # d = os.popen(adb)
 # print(d.read())
+import os
 
+print(os.path.dirname(os.path.dirname(__file__)))

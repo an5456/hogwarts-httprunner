@@ -26,7 +26,7 @@ teststeps:
    extract:
       code: $.code
       msg: $.msg
-
+   save: saveinfo
    validate:
    -  eq: ["$.code", 0]
 #      $.code: 0
