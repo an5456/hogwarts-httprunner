@@ -9,7 +9,7 @@ config:
 #    verify: False
 
 teststeps:
-  name: 测试登陆接口—参数校验
+  name: 测试登陆接口
   request:
     url: api/login/submit
     method: "POST"

@@ -29,6 +29,7 @@ class Utils:
 
     @classmethod
     def read_yaml(cls, path):
+        """读取yaml中信息"""
         operation = open(path, "r", encoding="utf-8")
         return yaml.load(operation.read(), Loader=yaml.FullLoader)
 

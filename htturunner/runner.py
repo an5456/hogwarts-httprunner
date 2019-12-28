@@ -20,11 +20,9 @@ session = sessions.Session()
 session_variables_mapping = {}
 # 获取的config设置内容
 all_veriables_mapping = {}
-
 res_list = []
 
 
-# 对应接口返回的json响应内容，使用jsonpath 提取想要的字段
 class Runapi:
     def __init__(self):
         self.action = ParseContent(all_veriables_mapping)
@@ -65,20 +63,19 @@ class Runapi:
                     执行以下代码
                 """
                 if "$" in str(variables):
-                    result = []
                     csv_info = Load.load_csv()  # 解析csv参数
                     for csv_dict in csv_info:
                         parsed_config = self.action.parse_content(variables, csv_dict)  # 解析variables中是否需要替换的参数，如${}
                         parsed_request = self.action.parse_content(request, parsed_config)  # 解析request中是否需要替换参数，如${}
-                        variables_request = self.action.parse_content(api_info["validate"],
-                                                                      parsed_config)  # 解析断言部分validate是否有替换的参数,如：${}
+                        parsed_validate = self.action.parse_content(api_info["validate"],
+                                                                    parsed_config)  # 解析断言部分validate是否有替换的参数,如：${}
                         try:
                             """判断是否有设置verify，绕过ssl验证"""
                             verify = all_veriables_mapping["config"]["verify"]
                             parsed_request["verify"] = verify
                         except KeyError:
                             pass
-                        result_data = self.send_request(variables_request, parsed_request, api_info)
+                        result_data = self.send_request(parsed_validate, parsed_request, api_info, csv_dict)
                         res_list.append(result_data)
                     return res_list
 
@@ -89,8 +86,8 @@ class Runapi:
                             username: 17729597958
                             password: 123456
                     """
-
                     parsed_request = self.action.parse_content(request, session_variables_mapping)
+
                     try:
                         verify = all_veriables_mapping["config"]["verify"]
                         parsed_request["verify"] = verify
@@ -100,23 +97,33 @@ class Runapi:
                     res_list.append(result_data)
                     return res_list
         else:
-            result = []
             parsed_request = self.action.parse_content(request, session_variables_mapping)
             result_data = self.send_request(api_info["validate"], parsed_request, api_info)
             res_list.append(result_data)
             return res_list
 
-    def send_request(self, validate=None,parsed_request=None, api_info=None):
+    def send_request(self, validate=None, parsed_request=None, api_info=None, csv_dict=None):
         """发送请求"""
         method = parsed_request.pop("method")
         url = parsed_request.pop("url")
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         reps = session.request(method, url, **parsed_request)
-        result_data = self.action.parse_return_info(validate, reps, url,
-                                                    method, parsed_request,
-                                                    api_info, api_info["name"])
+        if api_info.get("save"):
+            Utils.write_data_to_yaml("/Users/anxiaodong/PycharmProjects/hogwarts-httprun/data/cookies.yaml", {"cookies": {"cookies": api_info.get("save")}})
+        if csv_dict:
+            result_data = self.action.parse_return_info(validate, reps, url,
+                                                        method, parsed_request,
+                                                        api_info, api_info["name"], csv_dict.get("desc"))
+        else:
+            result_data = self.action.parse_return_info(validate, reps, url,
+                                                        method, parsed_request,
+                                                        api_info, api_info["name"])
 
         self.extract_data(api_info, reps)
+        if api_info.get("save"):
+            parsed_save = self.action.parse_content(api_info["save"], session_variables_mapping)
+            save_dict = {"cookies":{"cookie": parsed_save}}
+            Utils.write_data_to_yaml("/Users/anxiaodong/PycharmProjects/hogwarts-httprun/data/cookies.yaml", save_dict)
         return result_data
 
     def run_yml(self, yml_file):
@@ -153,6 +160,8 @@ class Runapi:
             var_expr = extract_mapping[var_name]
             var_value = Utils.extract_json_field(reps, var_expr)
             session_variables_mapping[var_name] = var_value
+
+
 
 
 if __name__ == '__main__':

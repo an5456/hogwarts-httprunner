@@ -33,6 +33,7 @@ teststeps:
 #    data: "phone=17729597958&password=dong19871103&remember=true"
     data: {"phone":"17729597958","password":"dong19871103","remember":"true"}
     verify: False
+  type: json
   extract:
     code: $.code
     msg: $.msg
@@ -41,7 +42,7 @@ teststeps:
   -  eq: ["status_code", 200]
 #    $.code: 0
 #    $.data.next: /list
-
+  saveinfo: ${code}
 - name: list?code=$code
 #  api: api/get_login.yml
   request:
@@ -50,5 +51,6 @@ teststeps:
       headers:
           user-agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 "
       verify: False
+  type: json
   validate:
   -  eq: ["status_code", 200]

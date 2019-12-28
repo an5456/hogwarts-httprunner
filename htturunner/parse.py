@@ -82,7 +82,9 @@ class ParseContent:
                                             self.res(regx_data[0][0], result_dict))
                         return ret
                     else:
-                        return str_1.replace("${%s()}" % (regx_data[0][0]), self.res(regx_data[0][0]))
+                        s = self.res(regx_data[0][0])
+                        print(s)
+                        return str_1.replace("${%s()}" % (regx_data[0][0]), str(self.res(regx_data[0][0])))
         except Exception as e:
             print("=====" + str(e))
 
@@ -119,7 +121,7 @@ class ParseContent:
             replace_content = content.replace("${%s}" % var_name[0], str(value))
         return replace_content
 
-    def parse_return_info(self, variables_request, reps, url, method, parsed_request, api_info, name):
+    def parse_return_info(self, variables_request, reps, url, method, parsed_request, api_info, name, csv_dict=None):
         """组装返回断言和日志信息"""
         exp = []
         for var_value in variables_request:
@@ -146,9 +148,11 @@ class ParseContent:
         try:
             reps = reps.json()
         except JSONDecodeError:
-            reps = reps.text
+            # reps = reps.text
+            reps = ""
         res_dict = {
             "name": name,
+            "csv_name": csv_dict,
             "url": url,
             "method": method,
             "request_data": {**parsed_request},

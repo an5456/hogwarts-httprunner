@@ -5,6 +5,8 @@ import string
 import time
 from datetime import timedelta, date
 
+import yaml, os
+
 letters = string.ascii_letters
 # 获取26个小写字母
 Lowercase_letters = string.ascii_lowercase
@@ -74,9 +76,17 @@ class FuncSuit:
         print(salt)
         # return salt
 
+    def read_1(self, username, password):
+        """读取yaml中信息"""
+        if username == "17729597958" and password == "dong19871103":
+            path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "cookies.yaml")
+            operation = open(path, "r", encoding="utf-8")
+            return yaml.load(operation.read(), Loader=yaml.FullLoader).get("cookies")["cookie"]
+
 
 if __name__ == '__main__':
     FuncSuit().telephone()
     FuncSuit().create_telephone()
     FuncSuit().code()
     FuncSuit().r_string()
+    print(FuncSuit().read_yaml())

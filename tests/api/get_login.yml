@@ -26,7 +26,8 @@ teststeps:
    extract:
       code: $.code
       msg: $.msg
-   save: saveinfo
+   save: ${code}
+   type: json
    validate:
    -  eq: ["$.code", 0]
 #      $.code: 0
@@ -40,6 +41,10 @@ teststeps:
             corpid: ww49e0d1fa2a92fcd4
             corpsecret: yGKZP7grNAPyejnRqgpTquiv1vgiCVRL3lhWnD2Bktg
         url: https://qyapi.weixin.qq.com/cgi-bin/gettoken
+   type: json
+   extract:
+     access_token: $.access_token
+   save: ${access_token}
    validate:
    -  eq:
       -  $.errmsg
@@ -47,6 +52,7 @@ teststeps:
    -  eq:
       - status_code
       - 200
+#   -  eq: ["access_token", $.access_token]
 #    -   eq:
 #        - headers.Content-Type
 #        - application/json; charset=UTF-8
