@@ -148,7 +148,10 @@ class ParseContent:
         try:
             reps = reps.json()
         except JSONDecodeError:
+<<<<<<< HEAD
             # reps = reps.text
+=======
+>>>>>>> 89c3ba2736206fe2809a626742b8e0538f41cbb4
             reps = ""
         res_dict = {
             "name": name,
