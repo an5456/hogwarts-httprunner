@@ -51,9 +51,18 @@ class ParseContent:
     def res(self, fun_name, info_dict=None):
         f = FuncSuit.__dict__
         print(type(f))
+        # if isinstance(info_dict, dict):
+        #     if fun_name in f:
+        #         return f[fun_name](FuncSuit(), info_dict)
+        # elif isinstance(info_dict, list):
+        #     if fun_name in f:
+        #         return f[fun_name](FuncSuit(), info_dict)
+        # else:
+        #     if fun_name in f:
+        #         return f[fun_name](FuncSuit())
         if info_dict:
             if fun_name in f:
-                return f[fun_name](FuncSuit(), **info_dict)
+                return f[fun_name](FuncSuit(), info_dict)
         else:
             if fun_name in f:
                 return f[fun_name](FuncSuit())
@@ -69,21 +78,29 @@ class ParseContent:
         regx_data = function_regex_compile.findall(str_1)
         try:
             if regx_data:
-                for i in regx_data:
-                    if "$" in i[1]:
-                        for re_data in variable_regex_compile.findall(i[1]):
-                            parse_list.append(re_data[0] or re_data[1])
-                        for value in parse_list:
-                            try:
-                                result_dict[value] = info_dict[value]
-                            except Exception as e:
-                                print(e)
-                        ret = str_1.replace("${%s($%s,$%s)}" % (regx_data[0][0], parse_list[0], parse_list[1]),
-                                            self.res(regx_data[0][0], result_dict))
-                        return ret
+                    if len(regx_data[0]) >1:
+                        for y in regx_data[0]:
+                            if "$" in regx_data[0][1]:
+                                for re_data in variable_regex_compile.findall(regx_data[0][1]):
+                                    parse_list.append(re_data[0] or re_data[1])
+                                for value in parse_list:
+                                    try:
+                                        result_dict[value] = info_dict[value]
+                                    except Exception as e:
+                                        print(e)
+                                s = "${%s($%s,$%s)}" % (regx_data[0][0], parse_list[0], parse_list[1])
+                                print(s)
+                                r = self.res(regx_data[0][0], result_dict)
+                                print(r)
+                                rets = str_1.replace(str(s), str(r))
+                                return str_1.replace("${%s($%s,$%s)}" % (regx_data[0][0], parse_list[0], parse_list[1]), str_1.replace(str(s), str(r)))
+                            else:
+                                t = regx_data[0][1].split(",")
+                                result_dict[t[0]] = t[0]
+                                result_dict[t[1]] = t[1]
+                                g = "${%s(%s,%s)}" % (regx_data[0][0], t[0], t[1])
+                                return str_1.replace("${%s(%s,%s)}" % (regx_data[0][0], t[0], t[1]), self.res(regx_data[0][0], t))
                     else:
-                        s = self.res(regx_data[0][0])
-                        print(s)
                         return str_1.replace("${%s()}" % (regx_data[0][0]), str(self.res(regx_data[0][0])))
         except Exception as e:
             print("=====" + str(e))
@@ -148,10 +165,9 @@ class ParseContent:
         try:
             reps = reps.json()
         except JSONDecodeError:
-<<<<<<< HEAD
+
             # reps = reps.text
-=======
->>>>>>> 89c3ba2736206fe2809a626742b8e0538f41cbb4
+
             reps = ""
         res_dict = {
             "name": name,

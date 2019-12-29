@@ -8,14 +8,12 @@ config:
 teststeps:
     name: get_home_page
     request:
-        url: https://mubu.com/?phone=${read_1($username, $password)}
+        url: https://mubu.com/?phone=${read_1($username,$password)}
         method: "GET"
         headers:
             user-agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 "
         verify: False
     type: json
-    extract:
-        status_code: status_code
     validate:
     -  eq:
        - status_code

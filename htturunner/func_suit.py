@@ -76,9 +76,9 @@ class FuncSuit:
         print(salt)
         # return salt
 
-    def read_1(self, username, password):
+    def read_1(self,lis):
         """读取yaml中信息"""
-        if username == "17729597958" and password == "dong19871103":
+        if isinstance(lis,dict):
             path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "cookies.yaml")
             operation = open(path, "r", encoding="utf-8")
             return yaml.load(operation.read(), Loader=yaml.FullLoader).get("cookies")["cookie"]
