@@ -20,10 +20,10 @@ session = sessions.Session()
 session_variables_mapping = {}
 # 获取的config设置内容
 all_veriables_mapping = {}
-res_list = []
 
 
 class Runapi:
+
     def __init__(self):
         self.action = ParseContent(all_veriables_mapping)
 
@@ -40,7 +40,7 @@ class Runapi:
         self.get_run_api(api_info)  # 判断是否获取依赖接口
         request = api_info["request"]
         global session_variables_mapping
-        global res_list
+        res_list = []
         # 有config时执行以下代码
         if all_veriables_mapping["config"]:
             try:
@@ -123,7 +123,7 @@ class Runapi:
         self.extract_data(api_info, reps)
         if api_info.get("save"):
             parsed_save = self.action.parse_content(api_info["save"], session_variables_mapping)
-            save_dict = {"cookies":{"cookie": parsed_save}}
+            save_dict = {"cookies": {"cookie": parsed_save}}
             Utils.write_data_to_yaml(path, save_dict)
         return result_data
 
@@ -161,8 +161,6 @@ class Runapi:
             var_expr = extract_mapping[var_name]
             var_value = Utils.extract_json_field(reps, var_expr)
             session_variables_mapping[var_name] = var_value
-
-
 
 
 if __name__ == '__main__':

@@ -26,5 +26,10 @@ class Result:
                 logging.info("response_data:" + str(ass["response_data"]))
             logging.info(10 * "-" + "Assert" + 10 * "-")
             for vale in ass["assert_data"]:
-                logging.info("{} expected:{} actual:{}".format(vale["key"], vale["expected"], vale["actual"]))
-                assert vale["expected"] == vale["actual"]
+                if vale["expected"] == vale["actual"]:
+                    logging.info("{} expected:{} actual:{} PASS".format(vale["key"], vale["expected"], vale["actual"]))
+                else:
+                    logging.info("{} expected:{} actual:{} FAIL".format(vale["key"], vale["expected"], vale["actual"]))
+                    raise AssertionError
+
+
