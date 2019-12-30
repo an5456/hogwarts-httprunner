@@ -1,0 +1,175 @@
+2019/12/30 19:52:04 - result_assert - INFO - ====================get_home_page====================
+2019/12/30 19:52:04 - result_assert - INFO - url:https://mubu.com/?phone=https://mubu.com/?phone=loaH_lO8LkdjxXAk2skU6gg2r2O_J_YP4vTJuKqDgT_PX2bT8IKB42xEj4HC2OqjcFYjp31QhLTAHNv1cslHRQl4CWinPalj5QTopDkeaN1UtNAOP-143dc9nLkOqyLPOqb5O_wIjV44prsrFCyyV7cnvhr0dF94fuzipYMecQeeL0NQ5yrrd67USptoPHJ0Zjtt-8zMROL9swBhp6vt5A
+2019/12/30 19:52:04 - result_assert - INFO - method:GET
+2019/12/30 19:52:04 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 "
+  },
+  "verify": false
+}
+2019/12/30 19:52:04 - result_assert - INFO - response_data:
+""
+2019/12/30 19:52:04 - result_assert - INFO - ----------Assert----------
+2019/12/30 19:52:04 - result_assert - INFO - status_code expected:200 actual:200
+2019/12/30 19:52:19 - result_assert - INFO - ====================测试登陆接口--正常登陆====================
+2019/12/30 19:52:19 - result_assert - INFO - url:https://mubu.com/api/login/submit
+2019/12/30 19:52:19 - result_assert - INFO - method:POST
+2019/12/30 19:52:19 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 ",
+    "content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+  },
+  "data": {
+    "phone": "17729597958",
+    "password": "dong19871103",
+    "remember": "true"
+  }
+}
+2019/12/30 19:52:19 - result_assert - INFO - response_data:
+{
+  "code": 0,
+  "msg": null,
+  "data": {
+    "next": "/list"
+  }
+}
+2019/12/30 19:52:19 - result_assert - INFO - ----------Assert----------
+2019/12/30 19:52:19 - result_assert - INFO - status_code expected:200 actual:200
+2019/12/30 19:52:19 - result_assert - INFO - $.code expected:0 actual:0
+2019/12/30 19:52:19 - result_assert - INFO - status_code expected:200 actual:200
+2019/12/30 19:52:19 - result_assert - INFO - ====================测试登陆接口--密码错误====================
+2019/12/30 19:52:19 - result_assert - INFO - url:https://mubu.com/api/login/submit
+2019/12/30 19:52:19 - result_assert - INFO - method:POST
+2019/12/30 19:52:19 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 ",
+    "content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+  },
+  "data": {
+    "phone": "17729597958",
+    "password": "dong19871103",
+    "remember": "true"
+  }
+}
+2019/12/30 19:52:19 - result_assert - INFO - response_data:
+{
+  "code": 0,
+  "msg": null,
+  "data": {
+    "next": "/list"
+  }
+}
+2019/12/30 19:52:19 - result_assert - INFO - ----------Assert----------
+2019/12/30 19:52:19 - result_assert - INFO - status_code expected:200 actual:200
+2019/12/30 19:52:19 - result_assert - INFO - $.code expected:0 actual:0
+2019/12/30 19:52:19 - result_assert - INFO - status_code expected:200 actual:200
+2019/12/30 19:52:19 - result_assert - INFO - ====================测试登陆接口--用户名错误====================
+2019/12/30 19:52:19 - result_assert - INFO - url:https://mubu.com/api/login/submit
+2019/12/30 19:52:19 - result_assert - INFO - method:POST
+2019/12/30 19:52:19 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 ",
+    "content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+  },
+  "data": {
+    "phone": "17729597958",
+    "password": "dong19871103",
+    "remember": "true"
+  }
+}
+2019/12/30 19:52:19 - result_assert - INFO - response_data:
+{
+  "code": 0,
+  "msg": null,
+  "data": {
+    "next": "/list"
+  }
+}
+2019/12/30 19:52:19 - result_assert - INFO - ----------Assert----------
+2019/12/30 19:52:19 - result_assert - INFO - status_code expected:200 actual:200
+2019/12/30 19:52:19 - result_assert - INFO - $.code expected:0 actual:0
+2019/12/30 19:52:19 - result_assert - INFO - status_code expected:200 actual:200
+2019/12/30 19:52:55 - result_assert - INFO - ====================测试登陆接口--正常登陆====================
+2019/12/30 19:52:55 - result_assert - INFO - url:https://mubu.com/api/login/submit
+2019/12/30 19:52:55 - result_assert - INFO - method:POST
+2019/12/30 19:52:55 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 ",
+    "content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+  },
+  "data": {
+    "phone": "17729597958",
+    "password": "dong19871103",
+    "remember": "true"
+  }
+}
+2019/12/30 19:52:55 - result_assert - INFO - response_data:
+{
+  "code": 0,
+  "msg": null,
+  "data": {
+    "next": "/list"
+  }
+}
+2019/12/30 19:52:55 - result_assert - INFO - ----------Assert----------
+2019/12/30 19:52:55 - result_assert - INFO - status_code expected:200 actual:200
+2019/12/30 19:52:55 - result_assert - INFO - $.code expected:0 actual:0
+2019/12/30 19:52:55 - result_assert - INFO - status_code expected:200 actual:200
+2019/12/30 19:52:55 - result_assert - INFO - ====================测试登陆接口--密码错误====================
+2019/12/30 19:52:55 - result_assert - INFO - url:https://mubu.com/api/login/submit
+2019/12/30 19:52:55 - result_assert - INFO - method:POST
+2019/12/30 19:52:55 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 ",
+    "content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+  },
+  "data": {
+    "phone": "17729597958",
+    "password": "dong19871103",
+    "remember": "true"
+  }
+}
+2019/12/30 19:52:55 - result_assert - INFO - response_data:
+{
+  "code": 0,
+  "msg": null,
+  "data": {
+    "next": "/list"
+  }
+}
+2019/12/30 19:52:55 - result_assert - INFO - ----------Assert----------
+2019/12/30 19:52:55 - result_assert - INFO - status_code expected:200 actual:200
+2019/12/30 19:52:55 - result_assert - INFO - $.code expected:0 actual:0
+2019/12/30 19:52:55 - result_assert - INFO - status_code expected:200 actual:200
+2019/12/30 19:52:55 - result_assert - INFO - ====================测试登陆接口--用户名错误====================
+2019/12/30 19:52:55 - result_assert - INFO - url:https://mubu.com/api/login/submit
+2019/12/30 19:52:55 - result_assert - INFO - method:POST
+2019/12/30 19:52:55 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 ",
+    "content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+  },
+  "data": {
+    "phone": "17729597958",
+    "password": "dong19871103",
+    "remember": "true"
+  }
+}
+2019/12/30 19:52:55 - result_assert - INFO - response_data:
+{
+  "code": 0,
+  "msg": null,
+  "data": {
+    "next": "/list"
+  }
+}
+2019/12/30 19:52:55 - result_assert - INFO - ----------Assert----------
+2019/12/30 19:52:55 - result_assert - INFO - status_code expected:200 actual:200
+2019/12/30 19:52:55 - result_assert - INFO - $.code expected:1 actual:0
