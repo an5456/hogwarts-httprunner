@@ -108,8 +108,9 @@ class Runapi:
         url = parsed_request.pop("url")
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         reps = session.request(method, url, **parsed_request)
-        if api_info.get("save"):
-            Utils.write_data_to_yaml("/Users/anxiaodong/PycharmProjects/hogwarts-httprun/data/cookies.yaml", {"cookies": {"cookies": api_info.get("save")}})
+        path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "cookies.yaml")
+        # if api_info.get("save"):
+        #     Utils.write_data_to_yaml(path, {"cookies": {"cookies": api_info.get("save")}})
         if csv_dict:
             result_data = self.action.parse_return_info(validate, reps, url,
                                                         method, parsed_request,
@@ -123,7 +124,7 @@ class Runapi:
         if api_info.get("save"):
             parsed_save = self.action.parse_content(api_info["save"], session_variables_mapping)
             save_dict = {"cookies":{"cookie": parsed_save}}
-            Utils.write_data_to_yaml("/Users/anxiaodong/PycharmProjects/hogwarts-httprun/data/cookies.yaml", save_dict)
+            Utils.write_data_to_yaml(path, save_dict)
         return result_data
 
     def run_yml(self, yml_file):
