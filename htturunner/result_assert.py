@@ -11,9 +11,16 @@ class Result:
     def result_assert(cls, path_1, filename):
         single_testcase_yaml = os.path.join(os.path.dirname(os.path.dirname(__file__)), "tests", path_1, filename)
         result = cls.run.run_yml(single_testcase_yaml)
-        for ass in result[0]:
+        if len(result) > 1:
+            result = result
+        else:
+            result = result[0]
+
+        for ass in result:
+            if isinstance(ass, list):
+                ass = ass[0]
             if ass.get("csv_name"):
-                logging.info(20 * "=" + ass["name"] + "--"+ ass["csv_name"] + 20 * "=")
+                logging.info(20 * "=" + ass["name"] + "--" + ass["csv_name"] + 20 * "=")
             else:
                 logging.info(20 * "=" + ass["name"] + 20 * "=")
             logging.info("url:" + ass["url"])
@@ -31,5 +38,3 @@ class Result:
                 else:
                     logging.info("{} expected:{} actual:{} FAIL".format(vale["key"], vale["expected"], vale["actual"]))
                     raise AssertionError
-
-

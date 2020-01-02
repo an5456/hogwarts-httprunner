@@ -1,6 +1,5 @@
 import os
 import allure
-from htturunner.getlog import GetLog
 from htturunner.result_assert import Result
 
 
@@ -15,7 +14,6 @@ def teardown_module():
 @allure.feature("测试接口")
 class TestSingle:
 
-    GetLog().set_log_config_1()
     @allure.story("测试1")
     def test_run_testcase_yml(self):
         """斤斤计较测试"""

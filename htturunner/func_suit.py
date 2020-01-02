@@ -16,6 +16,8 @@ Capital = string.ascii_uppercase
 digits = string.digits
 
 codelist = []
+
+
 class FuncSuit:
 
     def test_2(self):
@@ -47,7 +49,6 @@ class FuncSuit:
 
         # 拼接手机号
         telephone = "1{}{}{}".format(second, third, suffix)
-        print('手机号:%s' % telephone)
         return telephone
 
     def create_telephone(self):
@@ -76,13 +77,20 @@ class FuncSuit:
         print(salt)
         # return salt
 
-    def read_1(self,lis):
+    def get_token(self, lis=None):
         """读取yaml中信息"""
-        if isinstance(lis,dict):
+        if isinstance(lis, dict):
             path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "cookies.yaml")
             operation = open(path, "r", encoding="utf-8")
             return yaml.load(operation.read(), Loader=yaml.FullLoader).get("cookies")["cookie"]
-
+        elif isinstance(lis, list):
+            path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "cookies.yaml")
+            operation = open(path, "r", encoding="utf-8")
+            return yaml.load(operation.read(), Loader=yaml.FullLoader).get("cookies")["cookie"]
+        else:
+            path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "cookies.yaml")
+            operation = open(path, "r", encoding="utf-8")
+            return yaml.load(operation.read(), Loader=yaml.FullLoader).get("cookies")["cookie"]
 
 if __name__ == '__main__':
     FuncSuit().telephone()

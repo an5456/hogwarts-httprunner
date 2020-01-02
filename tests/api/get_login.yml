@@ -12,7 +12,7 @@ config:
         username: 17729597958
         password: dong19871103
     base_url: https://mubu.com
-#    verify: False
+    verify: False
 teststeps:
 -  name: https://mubu.com/api/login/submit呵呵
    request:

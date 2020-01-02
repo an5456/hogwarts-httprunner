@@ -50,16 +50,6 @@ class ParseContent:
     # 获取模块中的类的方法名，并执行
     def res(self, fun_name, info_dict=None):
         f = FuncSuit.__dict__
-        print(type(f))
-        # if isinstance(info_dict, dict):
-        #     if fun_name in f:
-        #         return f[fun_name](FuncSuit(), info_dict)
-        # elif isinstance(info_dict, list):
-        #     if fun_name in f:
-        #         return f[fun_name](FuncSuit(), info_dict)
-        # else:
-        #     if fun_name in f:
-        #         return f[fun_name](FuncSuit())
         if info_dict:
             if fun_name in f:
                 return f[fun_name](FuncSuit(), info_dict)
@@ -78,8 +68,7 @@ class ParseContent:
         regx_data = function_regex_compile.findall(str_1)
         try:
             if regx_data:
-                    if len(regx_data[0]) >1:
-                        for y in regx_data[0]:
+                    if regx_data[0][1] is not "":
                             if "$" in regx_data[0][1]:
                                 for re_data in variable_regex_compile.findall(regx_data[0][1]):
                                     parse_list.append(re_data[0] or re_data[1])
@@ -92,7 +81,6 @@ class ParseContent:
                                 print(s)
                                 r = self.res(regx_data[0][0], result_dict)
                                 print(r)
-                                rets = str_1.replace(str(s), str(r))
                                 return str_1.replace("${%s($%s,$%s)}" % (regx_data[0][0], parse_list[0], parse_list[1]), str_1.replace(str(s), str(r)))
                             else:
                                 t = regx_data[0][1].split(",")
@@ -138,8 +126,9 @@ class ParseContent:
             replace_content = content.replace("${%s}" % var_name[0], str(value))
         return replace_content
 
-    def parse_return_info(self, variables_request, reps, url, method, parsed_request, api_info, name, csv_dict=None):
+    def parse_return_info(self, variables_request, reps, url, method, parsed_request, api_info, name, session_mapping_dict, csv_dict=None, ):
         """组装返回断言和日志信息"""
+        variables_request = self.parse_content(variables_request, session_mapping_dict)
         exp = []
         for var_value in variables_request:
             for key, value in var_value.items():
@@ -148,7 +137,10 @@ class ParseContent:
                     # 响应断言如果断言的key里面有"$"就用jsonpath获取断言的结果
                     # 如果没有"$"就用一般的json规则去提取数据
                     if "$" in key:
-                        actual_value = str(Utils.extract_json_field(reps, key))
+                        if len(value) > 2:
+                            actual_value = str(Utils.extract_json_field(session_mapping_dict, key))
+                        else:
+                            actual_value = str(Utils.extract_json_field(reps, key))
                     else:
                         actual_value = getattr(reps, key)  # 实际结果
                     expected_value = value[1]  # 预期结果

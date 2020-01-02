@@ -50,7 +50,6 @@ class GetLog:
             print("文件路径不对：{}".format(e))
 
 
-
 if __name__ == '__main__':
     # set_log_config()
     GetLog().set_log_config_1()

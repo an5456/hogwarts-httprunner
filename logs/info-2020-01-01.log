@@ -1,0 +1,1730 @@
+2020/01/01 00:00:53 - result_assert - INFO - ====================测试登陆接口--正常登陆====================
+2020/01/01 00:00:53 - result_assert - INFO - url:https://mubu.com/api/login/submit
+2020/01/01 00:00:53 - result_assert - INFO - method:POST
+2020/01/01 00:00:53 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 ",
+    "content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+  },
+  "data": {
+    "phone": "17729597958",
+    "password": "dong19871103",
+    "remember": true
+  },
+  "verify": false
+}
+2020/01/01 00:00:53 - result_assert - INFO - response_data:
+{
+  "code": 0,
+  "msg": null,
+  "data": {
+    "next": "/list"
+  }
+}
+2020/01/01 00:00:53 - result_assert - INFO - ----------Assert----------
+2020/01/01 00:00:53 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 00:00:53 - result_assert - INFO - $.code expected:0 actual:0 PASS
+2020/01/01 00:00:53 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 00:00:53 - result_assert - INFO - ====================测试登陆接口--密码错误====================
+2020/01/01 00:00:53 - result_assert - INFO - url:https://mubu.com/api/login/submit
+2020/01/01 00:00:53 - result_assert - INFO - method:POST
+2020/01/01 00:00:53 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 ",
+    "content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+  },
+  "data": {
+    "phone": "17729597958",
+    "password": "dong198711031",
+    "remember": true
+  },
+  "verify": false
+}
+2020/01/01 00:00:53 - result_assert - INFO - response_data:
+{
+  "code": 5,
+  "msg": "密码错误，请重新输入",
+  "data": null
+}
+2020/01/01 00:00:53 - result_assert - INFO - ----------Assert----------
+2020/01/01 00:00:53 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 00:00:53 - result_assert - INFO - $.code expected:0 actual:5 FAIL
+2020/01/01 00:01:38 - result_assert - INFO - ====================get_home_page====================
+2020/01/01 00:01:38 - result_assert - INFO - url:https://mubu.com/?phone=https://mubu.com/?phone=hW35u5zC_e8yP-HfWWH2LhVPFZNlLo0XgdB5UIjUJF18OaEPSVYoZnpoLrc-kZk8pnpmFsrrU97bHUhwpoTGB4LBJWWxoNciL72rO75nkPJLTRTPwmKldm18Q9FxWD9K8hSXzTIHAfuUEwRcE9Ojiel9tCx9hMCVcv_4rMxkQqOCFoJuW2ni1AdZVbtCte7yyZLy7Pq7A0YcJjvthE6OcA
+2020/01/01 00:01:38 - result_assert - INFO - method:GET
+2020/01/01 00:01:38 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 "
+  },
+  "verify": false
+}
+2020/01/01 00:01:38 - result_assert - INFO - response_data:
+""
+2020/01/01 00:01:38 - result_assert - INFO - ----------Assert----------
+2020/01/01 00:01:38 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 00:20:54 - result_assert - INFO - ====================/cgi-bin/gettoken====================
+2020/01/01 00:20:54 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/gettoken
+2020/01/01 00:20:54 - result_assert - INFO - method:GET
+2020/01/01 00:20:54 - result_assert - INFO - request_data:{'headers': {'User-Agent': 'python-requests/2.22.0'}, 'params': {'corpid': 'ww49e0d1fa2a92fcd4', 'corpsecret': 'yGKZP7grNAPyejnRqgpTquiv1vgiCVRL3lhWnD2Bktg'}, 'verify': False}
+2020/01/01 00:20:54 - result_assert - INFO - response_data:{'errcode': 0, 'errmsg': 'ok', 'access_token': 'pDGYY_FpabmhgspwUnOughNPQp2meiPT9Rhjn1tu4ahpKJYSMj9-A6Nhmo1xS7fMXEW0AOBuE5D25naTapp8yLB28ApmemxiMVXxB95O4v2daQI-9p-dxHKZVLT23OIP2rFcLkl3lddPMN2TNIX85u1GH45jxZZbYcpCto980plXUj2L-pXj3scVQFa9nJEaUwM8XGyDP9ybOKLH-VZM1g', 'expires_in': 7200}
+2020/01/01 00:20:54 - result_assert - INFO - ----------Assert----------
+2020/01/01 00:20:54 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 00:21:19 - result_assert - INFO - ====================/cgi-bin/gettoken====================
+2020/01/01 00:21:19 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/gettoken
+2020/01/01 00:21:19 - result_assert - INFO - method:GET
+2020/01/01 00:21:19 - result_assert - INFO - request_data:{'headers': {'User-Agent': 'python-requests/2.22.0'}, 'params': {'corpid': 'ww49e0d1fa2a92fcd4', 'corpsecret': 'yGKZP7grNAPyejnRqgpTquiv1vgiCVRL3lhWnD2Bktg'}, 'verify': False}
+2020/01/01 00:21:19 - result_assert - INFO - response_data:{'errcode': 0, 'errmsg': 'ok', 'access_token': 'pDGYY_FpabmhgspwUnOughNPQp2meiPT9Rhjn1tu4ahpKJYSMj9-A6Nhmo1xS7fMXEW0AOBuE5D25naTapp8yLB28ApmemxiMVXxB95O4v2daQI-9p-dxHKZVLT23OIP2rFcLkl3lddPMN2TNIX85u1GH45jxZZbYcpCto980plXUj2L-pXj3scVQFa9nJEaUwM8XGyDP9ybOKLH-VZM1g', 'expires_in': 7200}
+2020/01/01 00:21:19 - result_assert - INFO - ----------Assert----------
+2020/01/01 00:21:19 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 00:21:19 - result_assert - INFO - $.errcode expected:0 actual:0 PASS
+2020/01/01 00:21:19 - result_assert - INFO - $.errmsg expected:ok actual:ok PASS
+2020/01/01 00:24:06 - result_assert - INFO - ====================/cgi-bin/gettoken====================
+2020/01/01 00:24:06 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/gettoken
+2020/01/01 00:24:06 - result_assert - INFO - method:GET
+2020/01/01 00:24:06 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "User-Agent": "python-requests/2.22.0"
+  },
+  "params": {
+    "corpid": "ww49e0d1fa2a92fcd4",
+    "corpsecret": "yGKZP7grNAPyejnRqgpTquiv1vgiCVRL3lhWnD2Bktg"
+  },
+  "verify": false
+}
+2020/01/01 00:24:06 - result_assert - INFO - response_data:
+{
+  "errcode": 0,
+  "errmsg": "ok",
+  "access_token": "pDGYY_FpabmhgspwUnOughNPQp2meiPT9Rhjn1tu4ahpKJYSMj9-A6Nhmo1xS7fMXEW0AOBuE5D25naTapp8yLB28ApmemxiMVXxB95O4v2daQI-9p-dxHKZVLT23OIP2rFcLkl3lddPMN2TNIX85u1GH45jxZZbYcpCto980plXUj2L-pXj3scVQFa9nJEaUwM8XGyDP9ybOKLH-VZM1g",
+  "expires_in": 7200
+}
+2020/01/01 00:24:06 - result_assert - INFO - ----------Assert----------
+2020/01/01 00:24:06 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 00:24:06 - result_assert - INFO - $.errcode expected:0 actual:0 PASS
+2020/01/01 00:24:06 - result_assert - INFO - $.errmsg expected:ok actual:ok PASS
+2020/01/01 00:26:09 - result_assert - INFO - ====================/cgi-bin/gettoken====================
+2020/01/01 00:26:09 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/gettoken
+2020/01/01 00:26:09 - result_assert - INFO - method:GET
+2020/01/01 00:26:09 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "User-Agent": "python-requests/2.22.0"
+  },
+  "params": {
+    "corpid": "ww49e0d1fa2a92fcd4",
+    "corpsecret": "yGKZP7grNAPyejnRqgpTquiv1vgiCVRL3lhWnD2Bktg"
+  },
+  "verify": false
+}
+2020/01/01 00:26:09 - result_assert - INFO - response_data:
+{
+  "errcode": 0,
+  "errmsg": "ok",
+  "access_token": "pDGYY_FpabmhgspwUnOughNPQp2meiPT9Rhjn1tu4ahpKJYSMj9-A6Nhmo1xS7fMXEW0AOBuE5D25naTapp8yLB28ApmemxiMVXxB95O4v2daQI-9p-dxHKZVLT23OIP2rFcLkl3lddPMN2TNIX85u1GH45jxZZbYcpCto980plXUj2L-pXj3scVQFa9nJEaUwM8XGyDP9ybOKLH-VZM1g",
+  "expires_in": 7200
+}
+2020/01/01 00:26:09 - result_assert - INFO - ----------Assert----------
+2020/01/01 00:26:09 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 00:26:09 - result_assert - INFO - $.errcode expected:0 actual:0 PASS
+2020/01/01 00:26:09 - result_assert - INFO - $.errmsg expected:ok actual:ok PASS
+2020/01/01 00:29:20 - result_assert - INFO - ====================/cgi-bin/gettoken====================
+2020/01/01 00:29:20 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/gettoken
+2020/01/01 00:29:20 - result_assert - INFO - method:GET
+2020/01/01 00:29:20 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "User-Agent": "python-requests/2.22.0"
+  },
+  "params": {
+    "corpid": "ww49e0d1fa2a92fcd4",
+    "corpsecret": "yGKZP7grNAPyejnRqgpTquiv1vgiCVRL3lhWnD2Bktg"
+  },
+  "verify": false
+}
+2020/01/01 00:29:20 - result_assert - INFO - response_data:
+{
+  "errcode": 0,
+  "errmsg": "ok",
+  "access_token": "pDGYY_FpabmhgspwUnOughNPQp2meiPT9Rhjn1tu4ahpKJYSMj9-A6Nhmo1xS7fMXEW0AOBuE5D25naTapp8yLB28ApmemxiMVXxB95O4v2daQI-9p-dxHKZVLT23OIP2rFcLkl3lddPMN2TNIX85u1GH45jxZZbYcpCto980plXUj2L-pXj3scVQFa9nJEaUwM8XGyDP9ybOKLH-VZM1g",
+  "expires_in": 7200
+}
+2020/01/01 00:29:20 - result_assert - INFO - ----------Assert----------
+2020/01/01 00:29:20 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 00:29:20 - result_assert - INFO - $.errcode expected:0 actual:0 PASS
+2020/01/01 00:29:20 - result_assert - INFO - $.errmsg expected:ok actual:ok PASS
+2020/01/01 00:39:18 - result_assert - INFO - ====================/cgi-bin/gettoken====================
+2020/01/01 00:39:18 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/gettoken
+2020/01/01 00:39:18 - result_assert - INFO - method:GET
+2020/01/01 00:39:18 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "User-Agent": "python-requests/2.22.0"
+  },
+  "params": {
+    "corpid": "ww49e0d1fa2a92fcd4",
+    "corpsecret": "yGKZP7grNAPyejnRqgpTquiv1vgiCVRL3lhWnD2Bktg"
+  },
+  "verify": false
+}
+2020/01/01 00:39:18 - result_assert - INFO - response_data:
+{
+  "errcode": 0,
+  "errmsg": "ok",
+  "access_token": "pDGYY_FpabmhgspwUnOughNPQp2meiPT9Rhjn1tu4ahpKJYSMj9-A6Nhmo1xS7fMXEW0AOBuE5D25naTapp8yLB28ApmemxiMVXxB95O4v2daQI-9p-dxHKZVLT23OIP2rFcLkl3lddPMN2TNIX85u1GH45jxZZbYcpCto980plXUj2L-pXj3scVQFa9nJEaUwM8XGyDP9ybOKLH-VZM1g",
+  "expires_in": 7200
+}
+2020/01/01 00:39:18 - result_assert - INFO - ----------Assert----------
+2020/01/01 00:39:18 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 00:39:18 - result_assert - INFO - $.errcode expected:0 actual:0 PASS
+2020/01/01 00:39:18 - result_assert - INFO - $.errmsg expected:ok actual:ok PASS
+2020/01/01 00:39:40 - result_assert - INFO - ====================https://mubu.com/api/login/submit====================
+2020/01/01 00:39:40 - result_assert - INFO - url:https://mubu.com/api/login/submit
+2020/01/01 00:39:40 - result_assert - INFO - method:POST
+2020/01/01 00:39:40 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 ",
+    "content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+  },
+  "data": {
+    "phone": "17729597958",
+    "password": "dong19871103",
+    "remember": "true"
+  },
+  "verify": false
+}
+2020/01/01 00:39:40 - result_assert - INFO - response_data:
+{
+  "code": 0,
+  "msg": null,
+  "data": {
+    "next": "/list"
+  }
+}
+2020/01/01 00:39:40 - result_assert - INFO - ----------Assert----------
+2020/01/01 00:39:40 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 00:39:40 - result_assert - INFO - ====================https://mubu.com/api/login/submit呵呵====================
+2020/01/01 00:39:40 - result_assert - INFO - url:https://mubu.com/api/login/submit
+2020/01/01 00:39:40 - result_assert - INFO - method:POST
+2020/01/01 00:39:40 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 ",
+    "content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+  },
+  "data": {
+    "phone": "17729597958",
+    "password": "dong19871103",
+    "remember": "true"
+  },
+  "verify": false
+}
+2020/01/01 00:39:40 - result_assert - INFO - response_data:
+{
+  "code": 0,
+  "msg": null,
+  "data": {
+    "next": "/list"
+  }
+}
+2020/01/01 00:39:40 - result_assert - INFO - ----------Assert----------
+2020/01/01 00:39:40 - result_assert - INFO - $.code expected:0 actual:0 PASS
+2020/01/01 00:39:41 - result_assert - INFO - ====================测试登陆接口--正常登陆====================
+2020/01/01 00:39:41 - result_assert - INFO - url:https://mubu.com/api/login/submit
+2020/01/01 00:39:41 - result_assert - INFO - method:POST
+2020/01/01 00:39:41 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 ",
+    "content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+  },
+  "data": {
+    "phone": "17729597958",
+    "password": "dong19871103",
+    "remember": true
+  },
+  "verify": false
+}
+2020/01/01 00:39:41 - result_assert - INFO - response_data:
+{
+  "code": 0,
+  "msg": null,
+  "data": {
+    "next": "/list"
+  }
+}
+2020/01/01 00:39:41 - result_assert - INFO - ----------Assert----------
+2020/01/01 00:39:41 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 00:39:41 - result_assert - INFO - $.code expected:0 actual:0 PASS
+2020/01/01 00:39:41 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 00:39:41 - result_assert - INFO - ====================测试登陆接口--密码错误====================
+2020/01/01 00:39:41 - result_assert - INFO - url:https://mubu.com/api/login/submit
+2020/01/01 00:39:41 - result_assert - INFO - method:POST
+2020/01/01 00:39:41 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 ",
+    "content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+  },
+  "data": {
+    "phone": "17729597958",
+    "password": "dong198711031",
+    "remember": true
+  },
+  "verify": false
+}
+2020/01/01 00:39:41 - result_assert - INFO - response_data:
+{
+  "code": 5,
+  "msg": "密码错误，请重新输入",
+  "data": null
+}
+2020/01/01 00:39:41 - result_assert - INFO - ----------Assert----------
+2020/01/01 00:39:41 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 00:39:41 - result_assert - INFO - $.code expected:0 actual:5 FAIL
+2020/01/01 00:39:41 - result_assert - INFO - ====================get_home_page====================
+2020/01/01 00:39:41 - result_assert - INFO - url:https://mubu.com/?phone=https://mubu.com/?phone=pDGYY_FpabmhgspwUnOughNPQp2meiPT9Rhjn1tu4ahpKJYSMj9-A6Nhmo1xS7fMXEW0AOBuE5D25naTapp8yLB28ApmemxiMVXxB95O4v2daQI-9p-dxHKZVLT23OIP2rFcLkl3lddPMN2TNIX85u1GH45jxZZbYcpCto980plXUj2L-pXj3scVQFa9nJEaUwM8XGyDP9ybOKLH-VZM1g
+2020/01/01 00:39:41 - result_assert - INFO - method:GET
+2020/01/01 00:39:41 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 "
+  },
+  "verify": false
+}
+2020/01/01 00:39:41 - result_assert - INFO - response_data:
+""
+2020/01/01 00:39:41 - result_assert - INFO - ----------Assert----------
+2020/01/01 00:39:41 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 00:40:27 - result_assert - INFO - ====================/cgi-bin/gettoken====================
+2020/01/01 00:40:27 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/gettoken
+2020/01/01 00:40:27 - result_assert - INFO - method:GET
+2020/01/01 00:40:27 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "User-Agent": "python-requests/2.22.0"
+  },
+  "params": {
+    "corpid": "ww49e0d1fa2a92fcd4",
+    "corpsecret": "yGKZP7grNAPyejnRqgpTquiv1vgiCVRL3lhWnD2Bktg"
+  },
+  "verify": false
+}
+2020/01/01 00:40:27 - result_assert - INFO - response_data:
+{
+  "errcode": 0,
+  "errmsg": "ok",
+  "access_token": "pDGYY_FpabmhgspwUnOughNPQp2meiPT9Rhjn1tu4ahpKJYSMj9-A6Nhmo1xS7fMXEW0AOBuE5D25naTapp8yLB28ApmemxiMVXxB95O4v2daQI-9p-dxHKZVLT23OIP2rFcLkl3lddPMN2TNIX85u1GH45jxZZbYcpCto980plXUj2L-pXj3scVQFa9nJEaUwM8XGyDP9ybOKLH-VZM1g",
+  "expires_in": 7200
+}
+2020/01/01 00:40:27 - result_assert - INFO - ----------Assert----------
+2020/01/01 00:40:27 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 00:40:27 - result_assert - INFO - $.errcode expected:0 actual:0 PASS
+2020/01/01 00:40:27 - result_assert - INFO - $.errmsg expected:ok actual:ok PASS
+2020/01/01 00:52:34 - result_assert - INFO - ====================/cgi-bin/gettoken====================
+2020/01/01 00:52:34 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/gettoken
+2020/01/01 00:52:34 - result_assert - INFO - method:GET
+2020/01/01 00:52:34 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "User-Agent": "python-requests/2.22.0"
+  },
+  "params": {
+    "corpid": "ww49e0d1fa2a92fcd4",
+    "corpsecret": "yGKZP7grNAPyejnRqgpTquiv1vgiCVRL3lhWnD2Bktg"
+  },
+  "verify": false
+}
+2020/01/01 00:52:34 - result_assert - INFO - response_data:
+{
+  "errcode": 0,
+  "errmsg": "ok",
+  "access_token": "pDGYY_FpabmhgspwUnOughNPQp2meiPT9Rhjn1tu4ahpKJYSMj9-A6Nhmo1xS7fMXEW0AOBuE5D25naTapp8yLB28ApmemxiMVXxB95O4v2daQI-9p-dxHKZVLT23OIP2rFcLkl3lddPMN2TNIX85u1GH45jxZZbYcpCto980plXUj2L-pXj3scVQFa9nJEaUwM8XGyDP9ybOKLH-VZM1g",
+  "expires_in": 7200
+}
+2020/01/01 00:52:34 - result_assert - INFO - ----------Assert----------
+2020/01/01 00:52:34 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 00:52:34 - result_assert - INFO - $.errcode expected:0 actual:0 PASS
+2020/01/01 00:52:34 - result_assert - INFO - $.errmsg expected:ok actual:ok PASS
+2020/01/01 14:49:30 - result_assert - INFO - ====================/cgi-bin/gettoken====================
+2020/01/01 14:49:30 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/gettoken
+2020/01/01 14:49:30 - result_assert - INFO - method:GET
+2020/01/01 14:49:30 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "User-Agent": "python-requests/2.22.0"
+  },
+  "params": {
+    "corpid": "ww49e0d1fa2a92fcd4",
+    "corpsecret": "yGKZP7grNAPyejnRqgpTquiv1vgiCVRL3lhWnD2Bktg"
+  },
+  "verify": false
+}
+2020/01/01 14:49:30 - result_assert - INFO - response_data:
+{
+  "errcode": 0,
+  "errmsg": "ok",
+  "access_token": "0rnlwmP6F7-YKcN8uvaM22I4jooHcbfTyH2b58yz7Ao6F6UIKZzbt_HsIiCkDpiUjpkSvEUqtdP9HQNFLOwJV-qrktO969EoQIfciY0JxJx90WsoDPWlHAAZQ8lUiDjN7lsdYdxTslGU4BBMvZ-BWceB8U11zty7vOHiPxkj6JB4CYLfRK16RSCiyHJASz-mufjTUDXoH5lIi5nLlIRtjQ",
+  "expires_in": 7200
+}
+2020/01/01 14:49:30 - result_assert - INFO - ----------Assert----------
+2020/01/01 14:49:30 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 14:49:30 - result_assert - INFO - $.errcode expected:0 actual:0 PASS
+2020/01/01 14:49:30 - result_assert - INFO - $.errmsg expected:ok actual:ok PASS
+2020/01/01 14:51:34 - result_assert - INFO - ====================/cgi-bin/gettoken====================
+2020/01/01 14:51:34 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/gettoken
+2020/01/01 14:51:34 - result_assert - INFO - method:GET
+2020/01/01 14:51:34 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "User-Agent": "python-requests/2.22.0"
+  },
+  "params": {
+    "corpid": "ww49e0d1fa2a92fcd4",
+    "corpsecret": "yGKZP7grNAPyejnRqgpTquiv1vgiCVRL3lhWnD2Bktg"
+  },
+  "verify": false
+}
+2020/01/01 14:51:34 - result_assert - INFO - response_data:
+{
+  "errcode": 0,
+  "errmsg": "ok",
+  "access_token": "0rnlwmP6F7-YKcN8uvaM22I4jooHcbfTyH2b58yz7Ao6F6UIKZzbt_HsIiCkDpiUjpkSvEUqtdP9HQNFLOwJV-qrktO969EoQIfciY0JxJx90WsoDPWlHAAZQ8lUiDjN7lsdYdxTslGU4BBMvZ-BWceB8U11zty7vOHiPxkj6JB4CYLfRK16RSCiyHJASz-mufjTUDXoH5lIi5nLlIRtjQ",
+  "expires_in": 7200
+}
+2020/01/01 14:51:34 - result_assert - INFO - ----------Assert----------
+2020/01/01 14:51:34 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 14:51:34 - result_assert - INFO - $.errcode expected:0 actual:0 PASS
+2020/01/01 14:51:34 - result_assert - INFO - $.errmsg expected:ok actual:ok PASS
+2020/01/01 16:10:35 - result_assert - INFO - ====================/cgi-bin/gettoken====================
+2020/01/01 16:10:35 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/gettoken
+2020/01/01 16:10:35 - result_assert - INFO - method:GET
+2020/01/01 16:10:35 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "User-Agent": "python-requests/2.22.0"
+  },
+  "params": {
+    "corpid": "ww49e0d1fa2a92fcd4",
+    "corpsecret": "yGKZP7grNAPyejnRqgpTquiv1vgiCVRL3lhWnD2Bktg"
+  },
+  "verify": false
+}
+2020/01/01 16:10:35 - result_assert - INFO - response_data:
+{
+  "errcode": 0,
+  "errmsg": "ok",
+  "access_token": "0rnlwmP6F7-YKcN8uvaM22I4jooHcbfTyH2b58yz7Ao6F6UIKZzbt_HsIiCkDpiUjpkSvEUqtdP9HQNFLOwJV-qrktO969EoQIfciY0JxJx90WsoDPWlHAAZQ8lUiDjN7lsdYdxTslGU4BBMvZ-BWceB8U11zty7vOHiPxkj6JB4CYLfRK16RSCiyHJASz-mufjTUDXoH5lIi5nLlIRtjQ",
+  "expires_in": 7200
+}
+2020/01/01 16:10:35 - result_assert - INFO - ----------Assert----------
+2020/01/01 16:10:35 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 16:10:35 - result_assert - INFO - $.errcode expected:0 actual:0 PASS
+2020/01/01 16:10:35 - result_assert - INFO - $.errmsg expected:ok actual:ok PASS
+2020/01/01 16:14:16 - result_assert - INFO - ====================/cgi-bin/gettoken====================
+2020/01/01 16:14:16 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/gettoken
+2020/01/01 16:14:16 - result_assert - INFO - method:GET
+2020/01/01 16:14:16 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "User-Agent": "python-requests/2.22.0"
+  },
+  "params": {
+    "corpid": "ww49e0d1fa2a92fcd4",
+    "corpsecret": "yGKZP7grNAPyejnRqgpTquiv1vgiCVRL3lhWnD2Bktg"
+  },
+  "verify": false
+}
+2020/01/01 16:14:16 - result_assert - INFO - response_data:
+{
+  "errcode": 0,
+  "errmsg": "ok",
+  "access_token": "0rnlwmP6F7-YKcN8uvaM22I4jooHcbfTyH2b58yz7Ao6F6UIKZzbt_HsIiCkDpiUjpkSvEUqtdP9HQNFLOwJV-qrktO969EoQIfciY0JxJx90WsoDPWlHAAZQ8lUiDjN7lsdYdxTslGU4BBMvZ-BWceB8U11zty7vOHiPxkj6JB4CYLfRK16RSCiyHJASz-mufjTUDXoH5lIi5nLlIRtjQ",
+  "expires_in": 7200
+}
+2020/01/01 16:14:16 - result_assert - INFO - ----------Assert----------
+2020/01/01 16:14:16 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 16:14:16 - result_assert - INFO - $.errcode expected:0 actual:0 PASS
+2020/01/01 16:14:16 - result_assert - INFO - $.errmsg expected:ok actual:ok PASS
+2020/01/01 16:14:27 - result_assert - INFO - ====================/cgi-bin/gettoken====================
+2020/01/01 16:14:27 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/gettoken
+2020/01/01 16:14:27 - result_assert - INFO - method:GET
+2020/01/01 16:14:27 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "User-Agent": "python-requests/2.22.0"
+  },
+  "params": {
+    "corpid": "ww49e0d1fa2a92fcd4",
+    "corpsecret": "yGKZP7grNAPyejnRqgpTquiv1vgiCVRL3lhWnD2Bktg"
+  },
+  "verify": false
+}
+2020/01/01 16:14:27 - result_assert - INFO - response_data:
+{
+  "errcode": 0,
+  "errmsg": "ok",
+  "access_token": "0rnlwmP6F7-YKcN8uvaM22I4jooHcbfTyH2b58yz7Ao6F6UIKZzbt_HsIiCkDpiUjpkSvEUqtdP9HQNFLOwJV-qrktO969EoQIfciY0JxJx90WsoDPWlHAAZQ8lUiDjN7lsdYdxTslGU4BBMvZ-BWceB8U11zty7vOHiPxkj6JB4CYLfRK16RSCiyHJASz-mufjTUDXoH5lIi5nLlIRtjQ",
+  "expires_in": 7200
+}
+2020/01/01 16:14:27 - result_assert - INFO - ----------Assert----------
+2020/01/01 16:14:27 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 16:14:27 - result_assert - INFO - $.errcode expected:0 actual:0 PASS
+2020/01/01 16:14:27 - result_assert - INFO - $.errmsg expected:ok actual:ok PASS
+2020/01/01 16:48:05 - result_assert - INFO - ====================/cgi-bin/department/list====================
+2020/01/01 16:48:05 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/department/list
+2020/01/01 16:48:05 - result_assert - INFO - method:GET
+2020/01/01 16:48:05 - result_assert - INFO - request_data:{'headers': {'User-Agent': 'python-requests/2.22.0'}, 'params': {'access_token': None, 'id': '0'}}
+2020/01/01 16:48:05 - result_assert - INFO - response_data:{'errcode': 41001, 'errmsg': 'access_token missing, hint: [1577868485_46_ce9c1acebb92ac7f1e5d6eb0c6125ce0], from ip: 112.10.91.226, more info at https://open.work.weixin.qq.com/devtool/query?e=41001', 'department': []}
+2020/01/01 16:48:05 - result_assert - INFO - ----------Assert----------
+2020/01/01 16:48:05 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 16:48:05 - result_assert - INFO - $.errmsg expected:ok actual:access_token missing, hint: [1577868485_46_ce9c1acebb92ac7f1e5d6eb0c6125ce0], from ip: 112.10.91.226, more info at https://open.work.weixin.qq.com/devtool/query?e=41001 FAIL
+2020/01/01 16:48:21 - result_assert - INFO - ====================/cgi-bin/gettoken====================
+2020/01/01 16:48:21 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/gettoken
+2020/01/01 16:48:21 - result_assert - INFO - method:GET
+2020/01/01 16:48:21 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "User-Agent": "python-requests/2.22.0"
+  },
+  "params": {
+    "corpid": "ww49e0d1fa2a92fcd4",
+    "corpsecret": "yGKZP7grNAPyejnRqgpTquiv1vgiCVRL3lhWnD2Bktg"
+  },
+  "verify": false
+}
+2020/01/01 16:48:21 - result_assert - INFO - response_data:
+{
+  "errcode": 0,
+  "errmsg": "ok",
+  "access_token": "0rnlwmP6F7-YKcN8uvaM22I4jooHcbfTyH2b58yz7Ao6F6UIKZzbt_HsIiCkDpiUjpkSvEUqtdP9HQNFLOwJV-qrktO969EoQIfciY0JxJx90WsoDPWlHAAZQ8lUiDjN7lsdYdxTslGU4BBMvZ-BWceB8U11zty7vOHiPxkj6JB4CYLfRK16RSCiyHJASz-mufjTUDXoH5lIi5nLlIRtjQ",
+  "expires_in": 7200
+}
+2020/01/01 16:48:21 - result_assert - INFO - ----------Assert----------
+2020/01/01 16:48:21 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 16:48:21 - result_assert - INFO - $.errcode expected:0 actual:0 PASS
+2020/01/01 16:48:21 - result_assert - INFO - $.errmsg expected:ok actual:ok PASS
+2020/01/01 16:48:21 - result_assert - INFO - ====================/cgi-bin/department/list====================
+2020/01/01 16:48:21 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/department/list
+2020/01/01 16:48:21 - result_assert - INFO - method:GET
+2020/01/01 16:48:21 - result_assert - INFO - request_data:{'headers': {'User-Agent': 'python-requests/2.22.0'}, 'params': {'access_token': None, 'id': '0'}}
+2020/01/01 16:48:21 - result_assert - INFO - response_data:{'errcode': 41001, 'errmsg': 'access_token missing, hint: [1577868501_53_42e887091ea9b0ddb0a4c3b6eeab306a], from ip: 112.10.91.226, more info at https://open.work.weixin.qq.com/devtool/query?e=41001', 'department': []}
+2020/01/01 16:48:21 - result_assert - INFO - ----------Assert----------
+2020/01/01 16:48:21 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 16:48:21 - result_assert - INFO - $.errmsg expected:ok actual:access_token missing, hint: [1577868501_53_42e887091ea9b0ddb0a4c3b6eeab306a], from ip: 112.10.91.226, more info at https://open.work.weixin.qq.com/devtool/query?e=41001 FAIL
+2020/01/01 16:49:24 - result_assert - INFO - ====================/cgi-bin/gettoken====================
+2020/01/01 16:49:24 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/gettoken
+2020/01/01 16:49:24 - result_assert - INFO - method:GET
+2020/01/01 16:49:24 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "User-Agent": "python-requests/2.22.0"
+  },
+  "params": {
+    "corpid": "ww49e0d1fa2a92fcd4",
+    "corpsecret": "yGKZP7grNAPyejnRqgpTquiv1vgiCVRL3lhWnD2Bktg"
+  },
+  "verify": false
+}
+2020/01/01 16:49:24 - result_assert - INFO - response_data:
+{
+  "errcode": 0,
+  "errmsg": "ok",
+  "access_token": "0rnlwmP6F7-YKcN8uvaM22I4jooHcbfTyH2b58yz7Ao6F6UIKZzbt_HsIiCkDpiUjpkSvEUqtdP9HQNFLOwJV-qrktO969EoQIfciY0JxJx90WsoDPWlHAAZQ8lUiDjN7lsdYdxTslGU4BBMvZ-BWceB8U11zty7vOHiPxkj6JB4CYLfRK16RSCiyHJASz-mufjTUDXoH5lIi5nLlIRtjQ",
+  "expires_in": 7200
+}
+2020/01/01 16:49:24 - result_assert - INFO - ----------Assert----------
+2020/01/01 16:49:24 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 16:49:24 - result_assert - INFO - $.errcode expected:0 actual:0 PASS
+2020/01/01 16:49:24 - result_assert - INFO - $.errmsg expected:ok actual:ok PASS
+2020/01/01 16:49:35 - result_assert - INFO - ====================/cgi-bin/gettoken====================
+2020/01/01 16:49:35 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/gettoken
+2020/01/01 16:49:35 - result_assert - INFO - method:GET
+2020/01/01 16:49:35 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "User-Agent": "python-requests/2.22.0"
+  },
+  "params": {
+    "corpid": "ww49e0d1fa2a92fcd4",
+    "corpsecret": "yGKZP7grNAPyejnRqgpTquiv1vgiCVRL3lhWnD2Bktg"
+  },
+  "verify": false
+}
+2020/01/01 16:49:35 - result_assert - INFO - response_data:
+{
+  "errcode": 0,
+  "errmsg": "ok",
+  "access_token": "O0hKGKai09UAP2EQIjuiyTlsJOkUngMz7_x6a5J0NvnEetrEYDtoshmBUlmA1hcrSOv2QykuEljsYUd-Sg1-JnIMoWeqxN6xs-I5Odwsz4dMnhCfZuA4siBa1F4SINKdQjPIoWf4uWmBAmAu8-Kb4xE48hr9xMaHS9nEob_nTmgfQ7LuAX6HRGCwA65pUWMXM1FSCvD60BuGkHhcIHFNgg",
+  "expires_in": 7200
+}
+2020/01/01 16:49:35 - result_assert - INFO - ----------Assert----------
+2020/01/01 16:49:35 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 16:49:35 - result_assert - INFO - $.errcode expected:0 actual:0 PASS
+2020/01/01 16:49:35 - result_assert - INFO - $.errmsg expected:ok actual:ok PASS
+2020/01/01 16:49:35 - result_assert - INFO - ====================/cgi-bin/department/list====================
+2020/01/01 16:49:35 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/department/list
+2020/01/01 16:49:35 - result_assert - INFO - method:GET
+2020/01/01 16:49:35 - result_assert - INFO - request_data:{'headers': {'User-Agent': 'python-requests/2.22.0'}, 'params': {'access_token': None, 'id': '0'}}
+2020/01/01 16:49:35 - result_assert - INFO - response_data:{'errcode': 41001, 'errmsg': 'access_token missing, hint: [1577868575_52_4d90f2a5cc22b44c3f02510e85266b14], from ip: 112.10.91.226, more info at https://open.work.weixin.qq.com/devtool/query?e=41001', 'department': []}
+2020/01/01 16:49:35 - result_assert - INFO - ----------Assert----------
+2020/01/01 16:49:35 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 16:49:35 - result_assert - INFO - $.errmsg expected:ok actual:access_token missing, hint: [1577868575_52_4d90f2a5cc22b44c3f02510e85266b14], from ip: 112.10.91.226, more info at https://open.work.weixin.qq.com/devtool/query?e=41001 FAIL
+2020/01/01 16:59:46 - result_assert - INFO - ====================/cgi-bin/department/list====================
+2020/01/01 16:59:46 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/department/list
+2020/01/01 16:59:46 - result_assert - INFO - method:GET
+2020/01/01 16:59:46 - result_assert - INFO - request_data:{'headers': {'User-Agent': 'python-requests/2.22.0'}, 'params': {'access_token': 'O0hKGKai09UAP2EQIjuiyTlsJOkUngMz7_x6a5J0NvnEetrEYDtoshmBUlmA1hcrSOv2QykuEljsYUd-Sg1-JnIMoWeqxN6xs-I5Odwsz4dMnhCfZuA4siBa1F4SINKdQjPIoWf4uWmBAmAu8-Kb4xE48hr9xMaHS9nEob_nTmgfQ7LuAX6HRGCwA65pUWMXM1FSCvD60BuGkHhcIHFNgg', 'id': '0'}}
+2020/01/01 16:59:46 - result_assert - INFO - response_data:{'errcode': 0, 'errmsg': 'ok', 'department': [{'id': 1, 'name': 'beyond', 'parentid': 0, 'order': 100000000}, {'id': 2, 'name': '测试部', 'parentid': 1, 'order': 100000000}, {'id': 3, 'name': '开发部', 'parentid': 1, 'order': 99999000}, {'id': 4, 'name': '测试一部', 'parentid': 2, 'order': 10}, {'id': 5, 'name': '子部门163803', 'parentid': 2, 'order': 1}]}
+2020/01/01 16:59:46 - result_assert - INFO - ----------Assert----------
+2020/01/01 17:00:34 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 17:00:35 - result_assert - INFO - $.errmsg expected:ok actual:ok PASS
+2020/01/01 17:01:10 - result_assert - INFO - ====================/cgi-bin/department/list====================
+2020/01/01 17:01:10 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/department/list
+2020/01/01 17:01:10 - result_assert - INFO - method:GET
+2020/01/01 17:01:10 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "User-Agent": "python-requests/2.22.0"
+  },
+  "params": {
+    "access_token": "O0hKGKai09UAP2EQIjuiyTlsJOkUngMz7_x6a5J0NvnEetrEYDtoshmBUlmA1hcrSOv2QykuEljsYUd-Sg1-JnIMoWeqxN6xs-I5Odwsz4dMnhCfZuA4siBa1F4SINKdQjPIoWf4uWmBAmAu8-Kb4xE48hr9xMaHS9nEob_nTmgfQ7LuAX6HRGCwA65pUWMXM1FSCvD60BuGkHhcIHFNgg",
+    "id": "0"
+  }
+}
+2020/01/01 17:01:10 - result_assert - INFO - response_data:
+{
+  "errcode": 0,
+  "errmsg": "ok",
+  "department": [
+    {
+      "id": 1,
+      "name": "beyond",
+      "parentid": 0,
+      "order": 100000000
+    },
+    {
+      "id": 2,
+      "name": "测试部",
+      "parentid": 1,
+      "order": 100000000
+    },
+    {
+      "id": 3,
+      "name": "开发部",
+      "parentid": 1,
+      "order": 99999000
+    },
+    {
+      "id": 4,
+      "name": "测试一部",
+      "parentid": 2,
+      "order": 10
+    },
+    {
+      "id": 5,
+      "name": "子部门163803",
+      "parentid": 2,
+      "order": 1
+    }
+  ]
+}
+2020/01/01 17:01:10 - result_assert - INFO - ----------Assert----------
+2020/01/01 17:01:10 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 17:01:10 - result_assert - INFO - $.errmsg expected:ok actual:ok PASS
+2020/01/01 17:07:51 - result_assert - INFO - ====================获取token====================
+2020/01/01 17:07:51 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/gettoken
+2020/01/01 17:07:51 - result_assert - INFO - method:GET
+2020/01/01 17:07:51 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "User-Agent": "python-requests/2.22.0"
+  },
+  "params": {
+    "corpid": "ww49e0d1fa2a92fcd4",
+    "corpsecret": "yGKZP7grNAPyejnRqgpTquiv1vgiCVRL3lhWnD2Bktg"
+  },
+  "verify": false
+}
+2020/01/01 17:07:51 - result_assert - INFO - response_data:
+{
+  "errcode": 0,
+  "errmsg": "ok",
+  "access_token": "O0hKGKai09UAP2EQIjuiyTlsJOkUngMz7_x6a5J0NvnEetrEYDtoshmBUlmA1hcrSOv2QykuEljsYUd-Sg1-JnIMoWeqxN6xs-I5Odwsz4dMnhCfZuA4siBa1F4SINKdQjPIoWf4uWmBAmAu8-Kb4xE48hr9xMaHS9nEob_nTmgfQ7LuAX6HRGCwA65pUWMXM1FSCvD60BuGkHhcIHFNgg",
+  "expires_in": 7200
+}
+2020/01/01 17:07:51 - result_assert - INFO - ----------Assert----------
+2020/01/01 17:07:51 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 17:07:51 - result_assert - INFO - $.errcode expected:0 actual:0 PASS
+2020/01/01 17:07:51 - result_assert - INFO - $.errmsg expected:ok actual:ok PASS
+2020/01/01 17:07:51 - result_assert - INFO - ====================/cgi-bin/department/list====================
+2020/01/01 17:07:51 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/department/list
+2020/01/01 17:07:51 - result_assert - INFO - method:GET
+2020/01/01 17:07:51 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "User-Agent": "python-requests/2.22.0"
+  },
+  "params": {
+    "access_token": "O0hKGKai09UAP2EQIjuiyTlsJOkUngMz7_x6a5J0NvnEetrEYDtoshmBUlmA1hcrSOv2QykuEljsYUd-Sg1-JnIMoWeqxN6xs-I5Odwsz4dMnhCfZuA4siBa1F4SINKdQjPIoWf4uWmBAmAu8-Kb4xE48hr9xMaHS9nEob_nTmgfQ7LuAX6HRGCwA65pUWMXM1FSCvD60BuGkHhcIHFNgg",
+    "id": "0"
+  }
+}
+2020/01/01 17:07:51 - result_assert - INFO - response_data:
+{
+  "errcode": 0,
+  "errmsg": "ok",
+  "department": [
+    {
+      "id": 1,
+      "name": "beyond",
+      "parentid": 0,
+      "order": 100000000
+    },
+    {
+      "id": 2,
+      "name": "测试部",
+      "parentid": 1,
+      "order": 100000000
+    },
+    {
+      "id": 3,
+      "name": "开发部",
+      "parentid": 1,
+      "order": 99999000
+    },
+    {
+      "id": 4,
+      "name": "测试一部",
+      "parentid": 2,
+      "order": 10
+    },
+    {
+      "id": 5,
+      "name": "子部门163803",
+      "parentid": 2,
+      "order": 1
+    }
+  ]
+}
+2020/01/01 17:07:51 - result_assert - INFO - ----------Assert----------
+2020/01/01 17:07:51 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 17:07:51 - result_assert - INFO - $.errmsg expected:ok actual:ok PASS
+2020/01/01 17:13:31 - result_assert - INFO - ====================/cgi-bin/department/create====================
+2020/01/01 17:13:31 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/department/create
+2020/01/01 17:13:31 - result_assert - INFO - method:POST
+2020/01/01 17:13:31 - result_assert - INFO - request_data:{'headers': {'User-Agent': 'python-requests/2.22.0', 'content-type': 'application/json; charset=utf-8'}, 'json': {'id': None, 'name': '子部门234152', 'order': 1, 'parentid': 2}, 'params': {'access_token': 'O0hKGKai09UAP2EQIjuiyTlsJOkUngMz7_x6a5J0NvnEetrEYDtoshmBUlmA1hcrSOv2QykuEljsYUd-Sg1-JnIMoWeqxN6xs-I5Odwsz4dMnhCfZuA4siBa1F4SINKdQjPIoWf4uWmBAmAu8-Kb4xE48hr9xMaHS9nEob_nTmgfQ7LuAX6HRGCwA65pUWMXM1FSCvD60BuGkHhcIHFNgg'}}
+2020/01/01 17:13:31 - result_assert - INFO - response_data:{'errcode': 0, 'errmsg': 'created', 'id': 6}
+2020/01/01 17:13:31 - result_assert - INFO - ----------Assert----------
+2020/01/01 17:13:31 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 17:13:31 - result_assert - INFO - $.errcode expected:0 actual:0 PASS
+2020/01/01 17:14:10 - result_assert - INFO - ====================/cgi-bin/department/list====================
+2020/01/01 17:14:10 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/department/list
+2020/01/01 17:14:10 - result_assert - INFO - method:GET
+2020/01/01 17:14:10 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "User-Agent": "python-requests/2.22.0"
+  },
+  "params": {
+    "access_token": "O0hKGKai09UAP2EQIjuiyTlsJOkUngMz7_x6a5J0NvnEetrEYDtoshmBUlmA1hcrSOv2QykuEljsYUd-Sg1-JnIMoWeqxN6xs-I5Odwsz4dMnhCfZuA4siBa1F4SINKdQjPIoWf4uWmBAmAu8-Kb4xE48hr9xMaHS9nEob_nTmgfQ7LuAX6HRGCwA65pUWMXM1FSCvD60BuGkHhcIHFNgg",
+    "id": "0"
+  }
+}
+2020/01/01 17:14:10 - result_assert - INFO - response_data:
+{
+  "errcode": 0,
+  "errmsg": "ok",
+  "department": [
+    {
+      "id": 1,
+      "name": "beyond",
+      "parentid": 0,
+      "order": 100000000
+    },
+    {
+      "id": 2,
+      "name": "测试部",
+      "parentid": 1,
+      "order": 100000000
+    },
+    {
+      "id": 3,
+      "name": "开发部",
+      "parentid": 1,
+      "order": 99999000
+    },
+    {
+      "id": 4,
+      "name": "测试一部",
+      "parentid": 2,
+      "order": 10
+    },
+    {
+      "id": 5,
+      "name": "子部门163803",
+      "parentid": 2,
+      "order": 1
+    },
+    {
+      "id": 6,
+      "name": "子部门234152",
+      "parentid": 2,
+      "order": 1
+    }
+  ]
+}
+2020/01/01 17:14:10 - result_assert - INFO - ----------Assert----------
+2020/01/01 17:14:10 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 17:14:10 - result_assert - INFO - $.errmsg expected:ok actual:ok PASS
+2020/01/01 17:23:05 - result_assert - INFO - ====================/cgi-bin/department/list====================
+2020/01/01 17:23:05 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/department/list
+2020/01/01 17:23:05 - result_assert - INFO - method:GET
+2020/01/01 17:23:05 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "User-Agent": "python-requests/2.22.0"
+  },
+  "params": {
+    "access_token": "O0hKGKai09UAP2EQIjuiyTlsJOkUngMz7_x6a5J0NvnEetrEYDtoshmBUlmA1hcrSOv2QykuEljsYUd-Sg1-JnIMoWeqxN6xs-I5Odwsz4dMnhCfZuA4siBa1F4SINKdQjPIoWf4uWmBAmAu8-Kb4xE48hr9xMaHS9nEob_nTmgfQ7LuAX6HRGCwA65pUWMXM1FSCvD60BuGkHhcIHFNgg",
+    "id": "0"
+  }
+}
+2020/01/01 17:23:05 - result_assert - INFO - response_data:
+{
+  "errcode": 0,
+  "errmsg": "ok",
+  "department": [
+    {
+      "id": 1,
+      "name": "beyond",
+      "parentid": 0,
+      "order": 100000000
+    },
+    {
+      "id": 2,
+      "name": "测试部",
+      "parentid": 1,
+      "order": 100000000
+    },
+    {
+      "id": 3,
+      "name": "开发部",
+      "parentid": 1,
+      "order": 99999000
+    },
+    {
+      "id": 4,
+      "name": "测试一部",
+      "parentid": 2,
+      "order": 10
+    },
+    {
+      "id": 5,
+      "name": "子部门163803",
+      "parentid": 2,
+      "order": 1
+    },
+    {
+      "id": 6,
+      "name": "子部门234152",
+      "parentid": 2,
+      "order": 1
+    }
+  ]
+}
+2020/01/01 17:23:05 - result_assert - INFO - ----------Assert----------
+2020/01/01 17:23:05 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 17:23:05 - result_assert - INFO - $.errmsg expected:ok actual:ok PASS
+2020/01/01 17:24:45 - result_assert - INFO - ====================获取token====================
+2020/01/01 17:24:45 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/gettoken
+2020/01/01 17:24:45 - result_assert - INFO - method:GET
+2020/01/01 17:24:45 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "User-Agent": "python-requests/2.22.0"
+  },
+  "params": {
+    "corpid": "ww49e0d1fa2a92fcd4",
+    "corpsecret": "yGKZP7grNAPyejnRqgpTquiv1vgiCVRL3lhWnD2Bktg"
+  },
+  "verify": false
+}
+2020/01/01 17:24:45 - result_assert - INFO - response_data:
+{
+  "errcode": 0,
+  "errmsg": "ok",
+  "access_token": "O0hKGKai09UAP2EQIjuiyTlsJOkUngMz7_x6a5J0NvnEetrEYDtoshmBUlmA1hcrSOv2QykuEljsYUd-Sg1-JnIMoWeqxN6xs-I5Odwsz4dMnhCfZuA4siBa1F4SINKdQjPIoWf4uWmBAmAu8-Kb4xE48hr9xMaHS9nEob_nTmgfQ7LuAX6HRGCwA65pUWMXM1FSCvD60BuGkHhcIHFNgg",
+  "expires_in": 7200
+}
+2020/01/01 17:24:45 - result_assert - INFO - ----------Assert----------
+2020/01/01 17:24:45 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 17:24:45 - result_assert - INFO - $.errcode expected:0 actual:0 PASS
+2020/01/01 17:24:45 - result_assert - INFO - $.errmsg expected:ok actual:ok PASS
+2020/01/01 17:24:45 - result_assert - INFO - ====================获取部门列表接口====================
+2020/01/01 17:24:45 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/department/list
+2020/01/01 17:24:45 - result_assert - INFO - method:GET
+2020/01/01 17:24:45 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "User-Agent": "python-requests/2.22.0"
+  },
+  "params": {
+    "access_token": "O0hKGKai09UAP2EQIjuiyTlsJOkUngMz7_x6a5J0NvnEetrEYDtoshmBUlmA1hcrSOv2QykuEljsYUd-Sg1-JnIMoWeqxN6xs-I5Odwsz4dMnhCfZuA4siBa1F4SINKdQjPIoWf4uWmBAmAu8-Kb4xE48hr9xMaHS9nEob_nTmgfQ7LuAX6HRGCwA65pUWMXM1FSCvD60BuGkHhcIHFNgg",
+    "id": "0"
+  }
+}
+2020/01/01 17:24:45 - result_assert - INFO - response_data:
+{
+  "errcode": 0,
+  "errmsg": "ok",
+  "department": [
+    {
+      "id": 1,
+      "name": "beyond",
+      "parentid": 0,
+      "order": 100000000
+    },
+    {
+      "id": 2,
+      "name": "测试部",
+      "parentid": 1,
+      "order": 100000000
+    },
+    {
+      "id": 3,
+      "name": "开发部",
+      "parentid": 1,
+      "order": 99999000
+    },
+    {
+      "id": 4,
+      "name": "测试一部",
+      "parentid": 2,
+      "order": 10
+    },
+    {
+      "id": 5,
+      "name": "子部门163803",
+      "parentid": 2,
+      "order": 1
+    },
+    {
+      "id": 6,
+      "name": "子部门234152",
+      "parentid": 2,
+      "order": 1
+    }
+  ]
+}
+2020/01/01 17:24:45 - result_assert - INFO - ----------Assert----------
+2020/01/01 17:24:45 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 17:24:45 - result_assert - INFO - $.errmsg expected:ok actual:ok PASS
+2020/01/01 17:24:46 - result_assert - INFO - ====================创建部门接口====================
+2020/01/01 17:24:46 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/department/create
+2020/01/01 17:24:46 - result_assert - INFO - method:POST
+2020/01/01 17:24:46 - result_assert - INFO - request_data:{'headers': {'User-Agent': 'python-requests/2.22.0', 'content-type': 'application/json; charset=utf-8'}, 'json': {'id': None, 'name': '子部门234152', 'order': 1, 'parentid': 2}, 'params': {'access_token': 'O0hKGKai09UAP2EQIjuiyTlsJOkUngMz7_x6a5J0NvnEetrEYDtoshmBUlmA1hcrSOv2QykuEljsYUd-Sg1-JnIMoWeqxN6xs-I5Odwsz4dMnhCfZuA4siBa1F4SINKdQjPIoWf4uWmBAmAu8-Kb4xE48hr9xMaHS9nEob_nTmgfQ7LuAX6HRGCwA65pUWMXM1FSCvD60BuGkHhcIHFNgg'}}
+2020/01/01 17:24:46 - result_assert - INFO - response_data:{'errcode': 60008, 'errmsg': 'department existed, hint: [1577870686_46_80614440815c0c215b33032dde7a2da7], from ip: 112.10.91.226, more info at https://open.work.weixin.qq.com/devtool/query?e=60008'}
+2020/01/01 17:24:46 - result_assert - INFO - ----------Assert----------
+2020/01/01 17:24:46 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 17:24:46 - result_assert - INFO - $.errcode expected:0 actual:60008 FAIL
+2020/01/01 17:25:01 - result_assert - INFO - ====================创建部门接口====================
+2020/01/01 17:25:01 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/department/create
+2020/01/01 17:25:01 - result_assert - INFO - method:POST
+2020/01/01 17:25:01 - result_assert - INFO - request_data:{'headers': {'User-Agent': 'python-requests/2.22.0', 'content-type': 'application/json; charset=utf-8'}, 'json': {'id': None, 'name': '子部门234152', 'order': 1, 'parentid': 2}, 'params': {'access_token': 'O0hKGKai09UAP2EQIjuiyTlsJOkUngMz7_x6a5J0NvnEetrEYDtoshmBUlmA1hcrSOv2QykuEljsYUd-Sg1-JnIMoWeqxN6xs-I5Odwsz4dMnhCfZuA4siBa1F4SINKdQjPIoWf4uWmBAmAu8-Kb4xE48hr9xMaHS9nEob_nTmgfQ7LuAX6HRGCwA65pUWMXM1FSCvD60BuGkHhcIHFNgg'}}
+2020/01/01 17:25:01 - result_assert - INFO - response_data:{'errcode': 60008, 'errmsg': 'department existed, hint: [1577870701_56_3ccf77457bf6f8165e620e889d3002e1], from ip: 112.10.91.226, more info at https://open.work.weixin.qq.com/devtool/query?e=60008'}
+2020/01/01 17:25:01 - result_assert - INFO - ----------Assert----------
+2020/01/01 17:25:01 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 17:25:01 - result_assert - INFO - $.errcode expected:0 actual:60008 FAIL
+2020/01/01 17:28:18 - result_assert - INFO - ====================获取token====================
+2020/01/01 17:28:18 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/gettoken
+2020/01/01 17:28:18 - result_assert - INFO - method:GET
+2020/01/01 17:28:18 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "User-Agent": "python-requests/2.22.0"
+  },
+  "params": {
+    "corpid": "ww49e0d1fa2a92fcd4",
+    "corpsecret": "yGKZP7grNAPyejnRqgpTquiv1vgiCVRL3lhWnD2Bktg"
+  },
+  "verify": false
+}
+2020/01/01 17:28:18 - result_assert - INFO - response_data:
+{
+  "errcode": 0,
+  "errmsg": "ok",
+  "access_token": "O0hKGKai09UAP2EQIjuiyTlsJOkUngMz7_x6a5J0NvnEetrEYDtoshmBUlmA1hcrSOv2QykuEljsYUd-Sg1-JnIMoWeqxN6xs-I5Odwsz4dMnhCfZuA4siBa1F4SINKdQjPIoWf4uWmBAmAu8-Kb4xE48hr9xMaHS9nEob_nTmgfQ7LuAX6HRGCwA65pUWMXM1FSCvD60BuGkHhcIHFNgg",
+  "expires_in": 7200
+}
+2020/01/01 17:28:18 - result_assert - INFO - ----------Assert----------
+2020/01/01 17:28:18 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 17:28:18 - result_assert - INFO - $.errcode expected:0 actual:0 PASS
+2020/01/01 17:28:18 - result_assert - INFO - $.errmsg expected:ok actual:ok PASS
+2020/01/01 17:28:18 - result_assert - INFO - ====================获取部门列表接口====================
+2020/01/01 17:28:18 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/department/list
+2020/01/01 17:28:18 - result_assert - INFO - method:GET
+2020/01/01 17:28:18 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "User-Agent": "python-requests/2.22.0"
+  },
+  "params": {
+    "access_token": "O0hKGKai09UAP2EQIjuiyTlsJOkUngMz7_x6a5J0NvnEetrEYDtoshmBUlmA1hcrSOv2QykuEljsYUd-Sg1-JnIMoWeqxN6xs-I5Odwsz4dMnhCfZuA4siBa1F4SINKdQjPIoWf4uWmBAmAu8-Kb4xE48hr9xMaHS9nEob_nTmgfQ7LuAX6HRGCwA65pUWMXM1FSCvD60BuGkHhcIHFNgg",
+    "id": "0"
+  }
+}
+2020/01/01 17:28:18 - result_assert - INFO - response_data:
+{
+  "errcode": 0,
+  "errmsg": "ok",
+  "department": [
+    {
+      "id": 1,
+      "name": "beyond",
+      "parentid": 0,
+      "order": 100000000
+    },
+    {
+      "id": 2,
+      "name": "测试部",
+      "parentid": 1,
+      "order": 100000000
+    },
+    {
+      "id": 3,
+      "name": "开发部",
+      "parentid": 1,
+      "order": 99999000
+    },
+    {
+      "id": 4,
+      "name": "测试一部",
+      "parentid": 2,
+      "order": 10
+    },
+    {
+      "id": 5,
+      "name": "子部门163803",
+      "parentid": 2,
+      "order": 1
+    },
+    {
+      "id": 6,
+      "name": "子部门234152",
+      "parentid": 2,
+      "order": 1
+    }
+  ]
+}
+2020/01/01 17:28:18 - result_assert - INFO - ----------Assert----------
+2020/01/01 17:28:18 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 17:28:18 - result_assert - INFO - $.errmsg expected:ok actual:ok PASS
+2020/01/01 17:28:55 - result_assert - INFO - ====================获取token====================
+2020/01/01 17:28:55 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/gettoken
+2020/01/01 17:28:55 - result_assert - INFO - method:GET
+2020/01/01 17:28:55 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "User-Agent": "python-requests/2.22.0"
+  },
+  "params": {
+    "corpid": "ww49e0d1fa2a92fcd4",
+    "corpsecret": "yGKZP7grNAPyejnRqgpTquiv1vgiCVRL3lhWnD2Bktg"
+  },
+  "verify": false
+}
+2020/01/01 17:28:55 - result_assert - INFO - response_data:
+{
+  "errcode": 0,
+  "errmsg": "ok",
+  "access_token": "O0hKGKai09UAP2EQIjuiyTlsJOkUngMz7_x6a5J0NvnEetrEYDtoshmBUlmA1hcrSOv2QykuEljsYUd-Sg1-JnIMoWeqxN6xs-I5Odwsz4dMnhCfZuA4siBa1F4SINKdQjPIoWf4uWmBAmAu8-Kb4xE48hr9xMaHS9nEob_nTmgfQ7LuAX6HRGCwA65pUWMXM1FSCvD60BuGkHhcIHFNgg",
+  "expires_in": 7200
+}
+2020/01/01 17:28:55 - result_assert - INFO - ----------Assert----------
+2020/01/01 17:28:55 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 17:28:55 - result_assert - INFO - $.errcode expected:0 actual:0 PASS
+2020/01/01 17:28:55 - result_assert - INFO - $.errmsg expected:ok actual:ok PASS
+2020/01/01 17:28:55 - result_assert - INFO - ====================获取部门列表接口====================
+2020/01/01 17:28:55 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/department/list
+2020/01/01 17:28:55 - result_assert - INFO - method:GET
+2020/01/01 17:28:55 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "User-Agent": "python-requests/2.22.0"
+  },
+  "params": {
+    "access_token": "O0hKGKai09UAP2EQIjuiyTlsJOkUngMz7_x6a5J0NvnEetrEYDtoshmBUlmA1hcrSOv2QykuEljsYUd-Sg1-JnIMoWeqxN6xs-I5Odwsz4dMnhCfZuA4siBa1F4SINKdQjPIoWf4uWmBAmAu8-Kb4xE48hr9xMaHS9nEob_nTmgfQ7LuAX6HRGCwA65pUWMXM1FSCvD60BuGkHhcIHFNgg",
+    "id": "0"
+  }
+}
+2020/01/01 17:28:55 - result_assert - INFO - response_data:
+{
+  "errcode": 0,
+  "errmsg": "ok",
+  "department": [
+    {
+      "id": 1,
+      "name": "beyond",
+      "parentid": 0,
+      "order": 100000000
+    },
+    {
+      "id": 2,
+      "name": "测试部",
+      "parentid": 1,
+      "order": 100000000
+    },
+    {
+      "id": 3,
+      "name": "开发部",
+      "parentid": 1,
+      "order": 99999000
+    },
+    {
+      "id": 4,
+      "name": "测试一部",
+      "parentid": 2,
+      "order": 10
+    },
+    {
+      "id": 5,
+      "name": "子部门163803",
+      "parentid": 2,
+      "order": 1
+    },
+    {
+      "id": 6,
+      "name": "子部门234152",
+      "parentid": 2,
+      "order": 1
+    }
+  ]
+}
+2020/01/01 17:28:55 - result_assert - INFO - ----------Assert----------
+2020/01/01 17:28:55 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 17:28:55 - result_assert - INFO - $.errmsg expected:ok actual:ok PASS
+2020/01/01 17:28:55 - result_assert - INFO - ====================创建部门接口====================
+2020/01/01 17:28:55 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/department/create
+2020/01/01 17:28:55 - result_assert - INFO - method:POST
+2020/01/01 17:28:55 - result_assert - INFO - request_data:{'headers': {'User-Agent': 'python-requests/2.22.0', 'content-type': 'application/json; charset=utf-8'}, 'json': {'id': None, 'name': '子部门18515670394', 'order': 1, 'parentid': 2}, 'params': {'access_token': 'O0hKGKai09UAP2EQIjuiyTlsJOkUngMz7_x6a5J0NvnEetrEYDtoshmBUlmA1hcrSOv2QykuEljsYUd-Sg1-JnIMoWeqxN6xs-I5Odwsz4dMnhCfZuA4siBa1F4SINKdQjPIoWf4uWmBAmAu8-Kb4xE48hr9xMaHS9nEob_nTmgfQ7LuAX6HRGCwA65pUWMXM1FSCvD60BuGkHhcIHFNgg'}}
+2020/01/01 17:28:55 - result_assert - INFO - response_data:{'errcode': 0, 'errmsg': 'created', 'id': 7}
+2020/01/01 17:28:55 - result_assert - INFO - ----------Assert----------
+2020/01/01 17:28:55 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 17:28:55 - result_assert - INFO - $.errcode expected:0 actual:0 PASS
+2020/01/01 17:32:18 - result_assert - INFO - ====================获取token====================
+2020/01/01 17:32:18 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/gettoken
+2020/01/01 17:32:18 - result_assert - INFO - method:GET
+2020/01/01 17:32:18 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "User-Agent": "python-requests/2.22.0"
+  },
+  "params": {
+    "corpid": "ww49e0d1fa2a92fcd4",
+    "corpsecret": "yGKZP7grNAPyejnRqgpTquiv1vgiCVRL3lhWnD2Bktg"
+  },
+  "verify": false
+}
+2020/01/01 17:32:18 - result_assert - INFO - response_data:
+{
+  "errcode": 0,
+  "errmsg": "ok",
+  "access_token": "O0hKGKai09UAP2EQIjuiyTlsJOkUngMz7_x6a5J0NvnEetrEYDtoshmBUlmA1hcrSOv2QykuEljsYUd-Sg1-JnIMoWeqxN6xs-I5Odwsz4dMnhCfZuA4siBa1F4SINKdQjPIoWf4uWmBAmAu8-Kb4xE48hr9xMaHS9nEob_nTmgfQ7LuAX6HRGCwA65pUWMXM1FSCvD60BuGkHhcIHFNgg",
+  "expires_in": 7200
+}
+2020/01/01 17:32:18 - result_assert - INFO - ----------Assert----------
+2020/01/01 17:32:18 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 17:32:18 - result_assert - INFO - $.errcode expected:0 actual:0 PASS
+2020/01/01 17:32:18 - result_assert - INFO - $.errmsg expected:ok actual:ok PASS
+2020/01/01 17:32:18 - result_assert - INFO - ====================获取部门列表接口====================
+2020/01/01 17:32:18 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/department/list
+2020/01/01 17:32:18 - result_assert - INFO - method:GET
+2020/01/01 17:32:18 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "User-Agent": "python-requests/2.22.0"
+  },
+  "params": {
+    "access_token": "O0hKGKai09UAP2EQIjuiyTlsJOkUngMz7_x6a5J0NvnEetrEYDtoshmBUlmA1hcrSOv2QykuEljsYUd-Sg1-JnIMoWeqxN6xs-I5Odwsz4dMnhCfZuA4siBa1F4SINKdQjPIoWf4uWmBAmAu8-Kb4xE48hr9xMaHS9nEob_nTmgfQ7LuAX6HRGCwA65pUWMXM1FSCvD60BuGkHhcIHFNgg",
+    "id": "0"
+  }
+}
+2020/01/01 17:32:18 - result_assert - INFO - response_data:
+{
+  "errcode": 0,
+  "errmsg": "ok",
+  "department": [
+    {
+      "id": 1,
+      "name": "beyond",
+      "parentid": 0,
+      "order": 100000000
+    },
+    {
+      "id": 2,
+      "name": "测试部",
+      "parentid": 1,
+      "order": 100000000
+    },
+    {
+      "id": 3,
+      "name": "开发部",
+      "parentid": 1,
+      "order": 99999000
+    },
+    {
+      "id": 4,
+      "name": "测试一部",
+      "parentid": 2,
+      "order": 10
+    },
+    {
+      "id": 5,
+      "name": "子部门163803",
+      "parentid": 2,
+      "order": 1
+    },
+    {
+      "id": 6,
+      "name": "子部门234152",
+      "parentid": 2,
+      "order": 1
+    },
+    {
+      "id": 7,
+      "name": "子部门18515670394",
+      "parentid": 2,
+      "order": 1
+    }
+  ]
+}
+2020/01/01 17:32:18 - result_assert - INFO - ----------Assert----------
+2020/01/01 17:32:18 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 17:32:18 - result_assert - INFO - $.errmsg expected:ok actual:ok PASS
+2020/01/01 17:32:18 - result_assert - INFO - ====================创建部门接口====================
+2020/01/01 17:32:18 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/department/create
+2020/01/01 17:32:18 - result_assert - INFO - method:POST
+2020/01/01 17:32:18 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "User-Agent": "python-requests/2.22.0",
+    "content-type": "application/json; charset=utf-8"
+  },
+  "json": {
+    "id": null,
+    "name": "子部门18723009234",
+    "order": 1,
+    "parentid": 2
+  },
+  "params": {
+    "access_token": "O0hKGKai09UAP2EQIjuiyTlsJOkUngMz7_x6a5J0NvnEetrEYDtoshmBUlmA1hcrSOv2QykuEljsYUd-Sg1-JnIMoWeqxN6xs-I5Odwsz4dMnhCfZuA4siBa1F4SINKdQjPIoWf4uWmBAmAu8-Kb4xE48hr9xMaHS9nEob_nTmgfQ7LuAX6HRGCwA65pUWMXM1FSCvD60BuGkHhcIHFNgg"
+  }
+}
+2020/01/01 17:32:18 - result_assert - INFO - response_data:
+{
+  "errcode": 0,
+  "errmsg": "created",
+  "id": 8
+}
+2020/01/01 17:32:18 - result_assert - INFO - ----------Assert----------
+2020/01/01 17:32:18 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 17:32:18 - result_assert - INFO - $.errcode expected:0 actual:0 PASS
+2020/01/01 17:33:14 - result_assert - INFO - ====================获取token====================
+2020/01/01 17:33:14 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/gettoken
+2020/01/01 17:33:14 - result_assert - INFO - method:GET
+2020/01/01 17:33:14 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "User-Agent": "python-requests/2.22.0"
+  },
+  "params": {
+    "corpid": "ww49e0d1fa2a92fcd4",
+    "corpsecret": "yGKZP7grNAPyejnRqgpTquiv1vgiCVRL3lhWnD2Bktg"
+  },
+  "verify": false
+}
+2020/01/01 17:33:14 - result_assert - INFO - response_data:
+{
+  "errcode": 0,
+  "errmsg": "ok",
+  "access_token": "O0hKGKai09UAP2EQIjuiyTlsJOkUngMz7_x6a5J0NvnEetrEYDtoshmBUlmA1hcrSOv2QykuEljsYUd-Sg1-JnIMoWeqxN6xs-I5Odwsz4dMnhCfZuA4siBa1F4SINKdQjPIoWf4uWmBAmAu8-Kb4xE48hr9xMaHS9nEob_nTmgfQ7LuAX6HRGCwA65pUWMXM1FSCvD60BuGkHhcIHFNgg",
+  "expires_in": 7200
+}
+2020/01/01 17:33:14 - result_assert - INFO - ----------Assert----------
+2020/01/01 17:33:14 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 17:33:14 - result_assert - INFO - $.errcode expected:0 actual:0 PASS
+2020/01/01 17:33:14 - result_assert - INFO - $.errmsg expected:ok actual:ok PASS
+2020/01/01 17:33:14 - result_assert - INFO - ====================获取部门列表接口====================
+2020/01/01 17:33:14 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/department/list
+2020/01/01 17:33:14 - result_assert - INFO - method:GET
+2020/01/01 17:33:14 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "User-Agent": "python-requests/2.22.0"
+  },
+  "params": {
+    "access_token": "O0hKGKai09UAP2EQIjuiyTlsJOkUngMz7_x6a5J0NvnEetrEYDtoshmBUlmA1hcrSOv2QykuEljsYUd-Sg1-JnIMoWeqxN6xs-I5Odwsz4dMnhCfZuA4siBa1F4SINKdQjPIoWf4uWmBAmAu8-Kb4xE48hr9xMaHS9nEob_nTmgfQ7LuAX6HRGCwA65pUWMXM1FSCvD60BuGkHhcIHFNgg",
+    "id": "0"
+  }
+}
+2020/01/01 17:33:14 - result_assert - INFO - response_data:
+{
+  "errcode": 0,
+  "errmsg": "ok",
+  "department": [
+    {
+      "id": 1,
+      "name": "beyond",
+      "parentid": 0,
+      "order": 100000000
+    },
+    {
+      "id": 2,
+      "name": "测试部",
+      "parentid": 1,
+      "order": 100000000
+    },
+    {
+      "id": 3,
+      "name": "开发部",
+      "parentid": 1,
+      "order": 99999000
+    },
+    {
+      "id": 4,
+      "name": "测试一部",
+      "parentid": 2,
+      "order": 10
+    },
+    {
+      "id": 5,
+      "name": "子部门163803",
+      "parentid": 2,
+      "order": 1
+    },
+    {
+      "id": 6,
+      "name": "子部门234152",
+      "parentid": 2,
+      "order": 1
+    },
+    {
+      "id": 7,
+      "name": "子部门18515670394",
+      "parentid": 2,
+      "order": 1
+    },
+    {
+      "id": 8,
+      "name": "子部门18723009234",
+      "parentid": 2,
+      "order": 1
+    }
+  ]
+}
+2020/01/01 17:33:14 - result_assert - INFO - ----------Assert----------
+2020/01/01 17:33:14 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 17:33:14 - result_assert - INFO - $.errmsg expected:ok actual:ok PASS
+2020/01/01 17:33:15 - result_assert - INFO - ====================创建部门接口====================
+2020/01/01 17:33:15 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/department/create
+2020/01/01 17:33:15 - result_assert - INFO - method:POST
+2020/01/01 17:33:15 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "User-Agent": "python-requests/2.22.0",
+    "content-type": "application/json; charset=utf-8"
+  },
+  "json": {
+    "id": null,
+    "name": "子部门15388279666",
+    "order": 1,
+    "parentid": 2
+  },
+  "params": {
+    "access_token": "O0hKGKai09UAP2EQIjuiyTlsJOkUngMz7_x6a5J0NvnEetrEYDtoshmBUlmA1hcrSOv2QykuEljsYUd-Sg1-JnIMoWeqxN6xs-I5Odwsz4dMnhCfZuA4siBa1F4SINKdQjPIoWf4uWmBAmAu8-Kb4xE48hr9xMaHS9nEob_nTmgfQ7LuAX6HRGCwA65pUWMXM1FSCvD60BuGkHhcIHFNgg"
+  }
+}
+2020/01/01 17:33:15 - result_assert - INFO - response_data:
+{
+  "errcode": 0,
+  "errmsg": "created",
+  "id": 9
+}
+2020/01/01 17:33:15 - result_assert - INFO - ----------Assert----------
+2020/01/01 17:33:15 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 17:33:15 - result_assert - INFO - $.errcode expected:0 actual:0 PASS
+2020/01/01 18:37:10 - result_assert - INFO - ====================创建部门接口====================
+2020/01/01 18:37:10 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/department/create
+2020/01/01 18:37:10 - result_assert - INFO - method:POST
+2020/01/01 18:37:10 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "User-Agent": "python-requests/2.22.0",
+    "content-type": "application/json; charset=utf-8"
+  },
+  "json": {
+    "id": null,
+    "name": "子部门17727310688",
+    "order": 1,
+    "parentid": 2
+  },
+  "params": {
+    "access_token": "O0hKGKai09UAP2EQIjuiyTlsJOkUngMz7_x6a5J0NvnEetrEYDtoshmBUlmA1hcrSOv2QykuEljsYUd-Sg1-JnIMoWeqxN6xs-I5Odwsz4dMnhCfZuA4siBa1F4SINKdQjPIoWf4uWmBAmAu8-Kb4xE48hr9xMaHS9nEob_nTmgfQ7LuAX6HRGCwA65pUWMXM1FSCvD60BuGkHhcIHFNgg"
+  }
+}
+2020/01/01 18:37:10 - result_assert - INFO - response_data:
+{
+  "errcode": 0,
+  "errmsg": "created",
+  "id": 12
+}
+2020/01/01 18:37:10 - result_assert - INFO - ----------Assert----------
+2020/01/01 18:37:11 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 18:37:12 - result_assert - INFO - $.errcode expected:0 actual:0 PASS
+2020/01/01 20:35:55 - result_assert - INFO - ====================创建部门接口====================
+2020/01/01 20:35:55 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/department/create
+2020/01/01 20:35:55 - result_assert - INFO - method:POST
+2020/01/01 20:35:55 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "User-Agent": "python-requests/2.22.0",
+    "content-type": "application/json; charset=utf-8"
+  },
+  "json": {
+    "id": null,
+    "name": "子部门14570047727",
+    "order": 1,
+    "parentid": 2
+  },
+  "params": {
+    "access_token": "O0hKGKai09UAP2EQIjuiyTlsJOkUngMz7_x6a5J0NvnEetrEYDtoshmBUlmA1hcrSOv2QykuEljsYUd-Sg1-JnIMoWeqxN6xs-I5Odwsz4dMnhCfZuA4siBa1F4SINKdQjPIoWf4uWmBAmAu8-Kb4xE48hr9xMaHS9nEob_nTmgfQ7LuAX6HRGCwA65pUWMXM1FSCvD60BuGkHhcIHFNgg"
+  }
+}
+2020/01/01 20:35:55 - result_assert - INFO - response_data:
+{
+  "errcode": 0,
+  "errmsg": "created",
+  "id": 29
+}
+2020/01/01 20:35:55 - result_assert - INFO - ----------Assert----------
+2020/01/01 20:35:56 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 20:35:57 - result_assert - INFO - $.errcode expected:0 actual:0 PASS
+2020/01/01 21:08:36 - result_assert - INFO - ====================获取token====================
+2020/01/01 21:08:36 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/gettoken
+2020/01/01 21:08:36 - result_assert - INFO - method:GET
+2020/01/01 21:08:36 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "User-Agent": "python-requests/2.22.0"
+  },
+  "params": {
+    "corpid": "ww49e0d1fa2a92fcd4",
+    "corpsecret": "yGKZP7grNAPyejnRqgpTquiv1vgiCVRL3lhWnD2Bktg"
+  },
+  "verify": false
+}
+2020/01/01 21:08:36 - result_assert - INFO - response_data:
+{
+  "errcode": 0,
+  "errmsg": "ok",
+  "access_token": "e2NKlv3i1WIMwr5B4bLlgRIDU2qLAtU6rTLAr5CZMU5BKebUPRK_RXG4agB9TPLqhmSkZsCyt_RKj3_anlvzXtdvbV4F-XEORms3qFXJeJ-CbzsF7D6IE4y8rKFvhi0dG2H-eToSLuwpM6_MRf3_GhpIYLA247ECa_ijP4MBsFQJefh6D-R7PqGvdh_R97E4Q_YWyciHbccgVamwcV3BYQ",
+  "expires_in": 7200
+}
+2020/01/01 21:08:36 - result_assert - INFO - ----------Assert----------
+2020/01/01 21:08:36 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 21:08:36 - result_assert - INFO - $.errcode expected:0 actual:0 PASS
+2020/01/01 21:08:36 - result_assert - INFO - $.errmsg expected:ok actual:ok PASS
+2020/01/01 21:12:13 - result_assert - INFO - ====================获取部门列表接口====================
+2020/01/01 21:12:13 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/department/list
+2020/01/01 21:12:13 - result_assert - INFO - method:GET
+2020/01/01 21:12:13 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "User-Agent": "python-requests/2.22.0"
+  },
+  "params": {
+    "access_token": "e2NKlv3i1WIMwr5B4bLlgRIDU2qLAtU6rTLAr5CZMU5BKebUPRK_RXG4agB9TPLqhmSkZsCyt_RKj3_anlvzXtdvbV4F-XEORms3qFXJeJ-CbzsF7D6IE4y8rKFvhi0dG2H-eToSLuwpM6_MRf3_GhpIYLA247ECa_ijP4MBsFQJefh6D-R7PqGvdh_R97E4Q_YWyciHbccgVamwcV3BYQ",
+    "id": "0"
+  }
+}
+2020/01/01 21:12:13 - result_assert - INFO - response_data:
+{
+  "errcode": 0,
+  "errmsg": "ok",
+  "department": [
+    {
+      "id": 1,
+      "name": "beyond",
+      "parentid": 0,
+      "order": 100000000
+    },
+    {
+      "id": 2,
+      "name": "测试部",
+      "parentid": 1,
+      "order": 100000000
+    },
+    {
+      "id": 3,
+      "name": "开发部",
+      "parentid": 1,
+      "order": 99999000
+    },
+    {
+      "id": 4,
+      "name": "测试一部",
+      "parentid": 2,
+      "order": 10
+    },
+    {
+      "id": 5,
+      "name": "子部门163803",
+      "parentid": 2,
+      "order": 1
+    },
+    {
+      "id": 6,
+      "name": "子部门234152",
+      "parentid": 2,
+      "order": 1
+    },
+    {
+      "id": 7,
+      "name": "子部门18515670394",
+      "parentid": 2,
+      "order": 1
+    },
+    {
+      "id": 8,
+      "name": "子部门18723009234",
+      "parentid": 2,
+      "order": 1
+    },
+    {
+      "id": 9,
+      "name": "子部门15388279666",
+      "parentid": 2,
+      "order": 1
+    },
+    {
+      "id": 10,
+      "name": "子部门18120868356",
+      "parentid": 2,
+      "order": 1
+    },
+    {
+      "id": 11,
+      "name": "子部门18366846304",
+      "parentid": 2,
+      "order": 1
+    },
+    {
+      "id": 12,
+      "name": "子部门17727310688",
+      "parentid": 2,
+      "order": 1
+    },
+    {
+      "id": 13,
+      "name": "子部门17053599295",
+      "parentid": 2,
+      "order": 1
+    },
+    {
+      "id": 14,
+      "name": "子部门18342298283",
+      "parentid": 2,
+      "order": 1
+    },
+    {
+      "id": 15,
+      "name": "子部门13337068868",
+      "parentid": 2,
+      "order": 1
+    },
+    {
+      "id": 16,
+      "name": "子部门13811919762",
+      "parentid": 2,
+      "order": 1
+    },
+    {
+      "id": 17,
+      "name": "子部门17046314437",
+      "parentid": 2,
+      "order": 1
+    },
+    {
+      "id": 18,
+      "name": "子部门15336901309",
+      "parentid": 2,
+      "order": 1
+    },
+    {
+      "id": 19,
+      "name": "子部门17835778479",
+      "parentid": 2,
+      "order": 1
+    },
+    {
+      "id": 20,
+      "name": "子部门15386963000",
+      "parentid": 2,
+      "order": 1
+    },
+    {
+      "id": 21,
+      "name": "子部门15685214532",
+      "parentid": 2,
+      "order": 1
+    },
+    {
+      "id": 22,
+      "name": "子部门18239337693",
+      "parentid": 2,
+      "order": 1
+    },
+    {
+      "id": 23,
+      "name": "子部门13268171570",
+      "parentid": 2,
+      "order": 1
+    },
+    {
+      "id": 24,
+      "name": "子部门13027058180",
+      "parentid": 2,
+      "order": 1
+    },
+    {
+      "id": 25,
+      "name": "子部门17253847984",
+      "parentid": 2,
+      "order": 1
+    },
+    {
+      "id": 26,
+      "name": "子部门14971319249",
+      "parentid": 2,
+      "order": 1
+    },
+    {
+      "id": 27,
+      "name": "子部门14784565901",
+      "parentid": 2,
+      "order": 1
+    },
+    {
+      "id": 28,
+      "name": "子部门17872632577",
+      "parentid": 2,
+      "order": 1
+    },
+    {
+      "id": 29,
+      "name": "子部门14570047727",
+      "parentid": 2,
+      "order": 1
+    }
+  ]
+}
+2020/01/01 21:12:13 - result_assert - INFO - ----------Assert----------
+2020/01/01 21:12:13 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 21:12:13 - result_assert - INFO - $.errmsg expected:ok actual:ok PASS
+2020/01/01 22:56:38 - result_assert - INFO - ====================获取部门列表接口====================
+2020/01/01 22:56:38 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/department/list
+2020/01/01 22:56:38 - result_assert - INFO - method:GET
+2020/01/01 22:56:38 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "User-Agent": "python-requests/2.22.0"
+  },
+  "params": {
+    "access_token": "e2NKlv3i1WIMwr5B4bLlgRIDU2qLAtU6rTLAr5CZMU5BKebUPRK_RXG4agB9TPLqhmSkZsCyt_RKj3_anlvzXtdvbV4F-XEORms3qFXJeJ-CbzsF7D6IE4y8rKFvhi0dG2H-eToSLuwpM6_MRf3_GhpIYLA247ECa_ijP4MBsFQJefh6D-R7PqGvdh_R97E4Q_YWyciHbccgVamwcV3BYQ",
+    "id": "0"
+  }
+}
+2020/01/01 22:56:38 - result_assert - INFO - response_data:
+{
+  "errcode": 0,
+  "errmsg": "ok",
+  "department": [
+    {
+      "id": 1,
+      "name": "beyond",
+      "parentid": 0,
+      "order": 100000000
+    },
+    {
+      "id": 2,
+      "name": "测试部",
+      "parentid": 1,
+      "order": 100000000
+    },
+    {
+      "id": 3,
+      "name": "开发部",
+      "parentid": 1,
+      "order": 99999000
+    },
+    {
+      "id": 4,
+      "name": "测试一部",
+      "parentid": 2,
+      "order": 10
+    },
+    {
+      "id": 5,
+      "name": "子部门163803",
+      "parentid": 2,
+      "order": 1
+    },
+    {
+      "id": 17,
+      "name": "子部门17046314437",
+      "parentid": 2,
+      "order": 1
+    },
+    {
+      "id": 11,
+      "name": "子部门18366846304",
+      "parentid": 2,
+      "order": 1
+    }
+  ]
+}
+2020/01/01 22:56:38 - result_assert - INFO - ----------Assert----------
+2020/01/01 22:56:38 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 22:56:38 - result_assert - INFO - $.errmsg expected:ok actual:ok PASS
+2020/01/01 23:50:42 - result_assert - INFO - ====================创建部门接口====================
+2020/01/01 23:50:42 - result_assert - INFO - url:https://qyapi.weixin.qq.com/cgi-bin/department/create
+2020/01/01 23:50:42 - result_assert - INFO - method:POST
+2020/01/01 23:50:42 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "User-Agent": "python-requests/2.22.0",
+    "content-type": "application/json; charset=utf-8"
+  },
+  "json": {
+    "id": null,
+    "name": "子部门13419751418",
+    "order": 1,
+    "parentid": 2
+  },
+  "params": {
+    "access_token": "e2NKlv3i1WIMwr5B4bLlgRIDU2qLAtU6rTLAr5CZMU5BKebUPRK_RXG4agB9TPLqhmSkZsCyt_RKj3_anlvzXtdvbV4F-XEORms3qFXJeJ-CbzsF7D6IE4y8rKFvhi0dG2H-eToSLuwpM6_MRf3_GhpIYLA247ECa_ijP4MBsFQJefh6D-R7PqGvdh_R97E4Q_YWyciHbccgVamwcV3BYQ"
+  }
+}
+2020/01/01 23:50:42 - result_assert - INFO - response_data:
+{
+  "errcode": 0,
+  "errmsg": "created",
+  "id": 24
+}
+2020/01/01 23:50:42 - result_assert - INFO - ----------Assert----------
+2020/01/01 23:50:43 - result_assert - INFO - status_code expected:200 actual:200 PASS
+2020/01/01 23:50:43 - result_assert - INFO - $.errcode expected:0 actual:0 PASS

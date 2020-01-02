@@ -18,7 +18,10 @@ class Utils:
         :param json_field: 解析表达式 $..data
         :return:
         """
-        value = jsonpath.jsonpath(resp.json(), json_field)
+        if isinstance(resp, dict):
+            value = jsonpath.jsonpath(resp, json_field)
+        else:
+            value = jsonpath.jsonpath(resp.json(), json_field)
         return value[0]
 
     @classmethod

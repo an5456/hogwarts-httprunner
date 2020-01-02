@@ -1218,3 +1218,54 @@
 2019/12/31 01:58:06 - result_assert - INFO - ----------Assert----------
 2019/12/31 01:58:06 - result_assert - INFO - status_code expected:200 actual:200 PASS
 2019/12/31 01:58:06 - result_assert - INFO - $.code expected:0 actual:5 FAIL
+2019/12/31 21:58:53 - result_assert - INFO - ====================https://mubu.com/api/login/submit呵呵====================
+2019/12/31 21:58:53 - result_assert - INFO - url:https://mubu.com/api/login/submit
+2019/12/31 21:58:53 - result_assert - INFO - method:POST
+2019/12/31 21:58:53 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 ",
+    "content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+  },
+  "data": {
+    "phone": "17729597958",
+    "password": "dong19871103",
+    "remember": "true"
+  }
+}
+2019/12/31 21:58:53 - result_assert - INFO - response_data:
+{
+  "code": 0,
+  "msg": null,
+  "data": {
+    "next": "/list"
+  }
+}
+2019/12/31 21:58:53 - result_assert - INFO - ----------Assert----------
+2019/12/31 21:58:53 - result_assert - INFO - $.code expected:0 actual:0 PASS
+2019/12/31 23:52:30 - result_assert - INFO - ====================https://mubu.com/api/login/submit呵呵====================
+2019/12/31 23:52:30 - result_assert - INFO - url:https://mubu.com/api/login/submit
+2019/12/31 23:52:30 - result_assert - INFO - method:POST
+2019/12/31 23:52:30 - result_assert - INFO - request_data:
+{
+  "headers": {
+    "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 ",
+    "content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+  },
+  "data": {
+    "phone": "17729597958",
+    "password": "dong19871103",
+    "remember": "true"
+  },
+  "verify": false
+}
+2019/12/31 23:52:30 - result_assert - INFO - response_data:
+{
+  "code": 0,
+  "msg": null,
+  "data": {
+    "next": "/list"
+  }
+}
+2019/12/31 23:52:30 - result_assert - INFO - ----------Assert----------
+2019/12/31 23:52:30 - result_assert - INFO - $.code expected:0 actual:0 PASS

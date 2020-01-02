@@ -6,7 +6,7 @@ config:
         code: ${assert}
         status: ${status}
     base_url: https://mubu.com
-#    verify: False
+    verify: False
 
 teststeps:
   name: 测试登陆接口

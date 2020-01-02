@@ -9,11 +9,7 @@ killReport()
         echo "no report pid alive"
     else
         kill -9 $pid
-
         echo "report server pid  kill"
-
-        echo "start report server"
-
     fi
 }
 killReport
