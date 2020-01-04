@@ -1,0 +1,28 @@
+config:
+    name: testcase description
+    variables: {}
+    varify: false
+teststeps:
+-   name: 删除部门
+    api: api/get_create_department.yml
+    request:
+        headers:
+            content-type: application/x-www-form-urlencoded; charset=UTF-8
+            sec-fetch-mode: cors
+            sec-fetch-site: same-origin
+            user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_2) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36
+            x-requested-with: XMLHttpRequest
+        method: GET
+        params:
+            access_token: ${get_token()}
+            id: ${created_id}
+        url: https://qyapi.weixin.qq.com/cgi-bin/department/delete
+    type: json
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - $.errmsg
+        - deleted

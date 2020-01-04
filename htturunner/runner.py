@@ -9,7 +9,6 @@ from htturunner.parse import ParseContent
 from htturunner.utis import Utils
 from htturunner.validate import is_api, is_testcase
 import warnings
-import sys
 import logging
 
 session = sessions.Session()
@@ -43,11 +42,6 @@ class Runapi:
         warnings.simplefilter("ignore", ResourceWarning)
         self.get_run_api(api_info)  # 判断是否获取依赖接口
         request = api_info["request"]
-        if api_info.get('teardown'):
-            session_variables_mapping["extract"] = api_info['teardown'].get("extract")
-        else:
-            if session_variables_mapping.get("extract"):
-                api_info["extract"] = session_variables_mapping["extract"]
         # 有config时执行以下代码
         if all_veriables_mapping["config"]:
             try:
@@ -120,14 +114,23 @@ class Runapi:
 
         method = parsed_request.pop("method")
         url = parsed_request.pop("url")
+        if api_info.get('teardown'):
+            session_variables_mapping["extract"] = api_info['teardown'].get("extract")
+        else:
+            if session_variables_mapping.get("extract"):
+                api_info["extract"] = session_variables_mapping["extract"]
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         reps = session.request(method, url, **parsed_request)
         path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "cookies.yaml")
 
-        self.get_request_data(api_info)
+        self.get_request_data(parsed_request, api_info)
         self.extract_data(api_info, reps)
+
         try:
             self.teardown_yaml(api_info)
+            if session_variables_mapping.get("extract") is not None:
+                session_variables_mapping.pop("extract")
+
         except KeyError:
             pass
 
@@ -151,6 +154,7 @@ class Runapi:
     def run_yml(self, yml_file):
         """运行yml文件"""
         result = []
+        end_result = []
         load_content = Load.load_yml(yml_file)
         global all_veriables_mapping
         all_veriables_mapping["config"] = load_content.get("config", {})
@@ -164,7 +168,8 @@ class Runapi:
                 result.append(success)
         else:
             raise Exception("YAML format invalid".format(yml_file))
-        return result
+        end_result.append(result)
+        return end_result
 
     # 获取依赖接口
     def get_run_api(self, api_info):
@@ -182,24 +187,30 @@ class Runapi:
             Load.load_yml(ru_path)
             self.run_yml(ru_path)
 
-    def get_request_data(self, api_info):
+    def get_request_data(self, parsed_request, api_info):
         """获取请求数据"""
-        parsed_request = self.action.parse_content(api_info["request"], session_variables_mapping)
-        extract_mapping = api_info.get("extr", {})
-        for var_name in extract_mapping.keys():
-            var_expr = extract_mapping[var_name]
-            var_value = Utils.extract_json_field(parsed_request, var_expr)
-            session_variables_mapping[var_name] = var_value
+        parsed_request = self.action.parse_content(parsed_request, session_variables_mapping)
+        try:
+            extract_mapping = api_info.get("extr", {})
+            for var_name in extract_mapping.keys():
+                var_expr = extract_mapping[var_name]
+                var_value = Utils.extract_json_field(parsed_request, var_expr)
+                session_variables_mapping[var_name] = var_value
+        except Exception as e:
+            logging.error(e)
 
     def extract_data(self, api_info, reps):
         """提取响应断言信息"""
         extract_mapping = api_info.get("extract", {})
-        for var_name in extract_mapping.keys():
-            var_expr = extract_mapping[var_name]
-            if "${" in var_expr:
-                var_expr = self.action.parse_content(var_expr, session_variables_mapping)
-            var_value = Utils.extract_json_field(reps, var_expr)
-            session_variables_mapping[var_name] = var_value
+        try:
+            for var_name in extract_mapping.keys():
+                var_expr = extract_mapping[var_name]
+                if "${" in var_expr:
+                    var_expr = self.action.parse_content(var_expr, session_variables_mapping)
+                var_value = Utils.extract_json_field(reps, var_expr)
+                session_variables_mapping[var_name] = var_value
+        except AttributeError:
+            logging.error("extract is None")
 
 
 if __name__ == '__main__':

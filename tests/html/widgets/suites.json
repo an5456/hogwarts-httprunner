@@ -1,6 +1,17 @@
 {
-  "total" : 1,
+  "total" : 2,
   "items" : [ {
+    "uid" : "73dc1798285c81e18af90a53d20adcf2",
+    "name" : "test_weixin_apart",
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 4,
+      "unknown" : 0,
+      "total" : 5
+    }
+  }, {
     "uid" : "c5b9ea08638a2e809ea770f760ddbde1",
     "name" : "test_testcase",
     "statistic" : {

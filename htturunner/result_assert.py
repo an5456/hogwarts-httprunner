@@ -11,14 +11,37 @@ class Result:
     def result_assert(cls, path_1, filename):
         single_testcase_yaml = os.path.join(os.path.dirname(os.path.dirname(__file__)), "tests", path_1, filename)
         result = cls.run.run_yml(single_testcase_yaml)
+
         if len(result) > 1:
-            result = result
+            result1 = []
+            if isinstance(result[0][0], list):
+                for res in result:
+                    for r in res:
+                        result = r[0]
+                        result1.append(result)
+                result = result1
+            else:
+                for res in result:
+                    result = res[0][0]
+                    result1.append(result)
+                result = result1
+        elif len(result) > 1 and isinstance(result[0][0], list):
+            result1 = []
+            for res in result[0]:
+                for r in res:
+                    result = r[0]
+                    result1.append(result)
+            result = result1
+        elif len(result[0]) > 1:
+            result2 = []
+            for res in result[0]:
+                result = res[0]
+                result2.append(result)
+            result = result2
         else:
-            result = result[0]
+            result = result[0][0]
 
         for ass in result:
-            if isinstance(ass, list):
-                ass = ass[0]
             if ass.get("csv_name"):
                 logging.info(20 * "=" + ass["name"] + "--" + ass["csv_name"] + 20 * "=")
             else:

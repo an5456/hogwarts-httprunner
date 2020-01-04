@@ -1,0 +1,31 @@
+INFO     root:result_assert.py:48 ====================修改部门名称====================
+INFO     root:result_assert.py:49 url:https://qyapi.weixin.qq.com/cgi-bin/department/update
+INFO     root:result_assert.py:50 method:GET
+INFO     root:result_assert.py:52 request_data:
+                                  {
+                                    "headers": {
+                                      "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+                                      "sec-fetch-mode": "cors",
+                                      "sec-fetch-site": "same-origin",
+                                      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36",
+                                      "x-requested-with": "XMLHttpRequest"
+                                    },
+                                    "json": {
+                                      "id": "33",
+                                      "name": "修改13118977490",
+                                      "parentid": 2,
+                                      "order": 1
+                                    },
+                                    "params": {
+                                      "access_token": "sSktpMT3iH9fHoLJ2qQUS0C7I81jk3FdM0wu-hudi2PjymSU8OEelsEhc22pC0SLyby10KNxke-HE8VN03aqGAP_l_xnZK9ZWju4Xc8SwPlgE1iNcYoudF0qn_MvGimYYCrb9PU-Qmy3VHEtptM6P6tV36YdANVdwsujz2rJ7n8aADsdvCoj84iEtRmJwSnqKsBXShpCbiKYO4VrT4JbKQ"
+                                    },
+                                    "verify": false
+                                  }
+INFO     root:result_assert.py:53 response_data:
+                                  {
+                                    "errcode": 60003,
+                                    "errmsg": "department not found, hint: [1578149607_52_49ad267b4bf333baad1d1fdad7f2845c], from ip: 112.10.91.226, more info at https://open.work.weixin.qq.com/devtool/query?e=60003"
+                                  }
+INFO     root:result_assert.py:57 ----------Assert----------
+INFO     root:result_assert.py:60 status_code expected:200 actual:200 PASS
+INFO     root:result_assert.py:62 $.errcode expected:0 actual:60003 FAIL

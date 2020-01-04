@@ -1,0 +1,102 @@
+{
+  "uid" : "46eed93b8ee03cac",
+  "name" : "test_get_department_list",
+  "fullName" : "test_weixin_apart.TestApart#test_get_department_list",
+  "historyId" : "28e41a0a6f1810034074f52f2cc6f690",
+  "time" : {
+    "start" : 1578131205681,
+    "stop" : 1578131205774,
+    "duration" : 93
+  },
+  "description" : "获取部门列表",
+  "descriptionHtml" : "<p>获取部门列表</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "get_log",
+    "time" : {
+      "start" : 1578131205579,
+      "stop" : 1578131205579,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "获取部门列表",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "dd3b985523e06024",
+      "name" : "log",
+      "source" : "dd3b985523e06024.txt",
+      "type" : "text/plain",
+      "size" : 16642
+    }, {
+      "uid" : "a85773454bfe390c",
+      "name" : "stdout",
+      "source" : "a85773454bfe390c.txt",
+      "type" : "text/plain",
+      "size" : 0
+    }, {
+      "uid" : "3d2f364d00d3027f",
+      "name" : "stderr",
+      "source" : "3d2f364d00d3027f.txt",
+      "type" : "text/plain",
+      "size" : 0
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "部门管理"
+  }, {
+    "name" : "story",
+    "value" : "获取部分列表"
+  }, {
+    "name" : "suite",
+    "value" : "test_weixin_apart"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestApart"
+  }, {
+    "name" : "host",
+    "value" : "anxiaodongdeMacBook-Pro.local"
+  }, {
+    "name" : "thread",
+    "value" : "1997-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_weixin_apart"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "46eed93b8ee03cac.json",
+  "parameterValues" : [ ]
+}

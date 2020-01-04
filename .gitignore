@@ -1,4 +1,9 @@
 # my env
 .idea/*
+.coverage
+.pytest_cache
+html
+report
+logs
 
 

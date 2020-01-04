@@ -1,0 +1,84 @@
+INFO     root:result_assert.py:46 ====================测试登陆接口--正常登陆====================
+INFO     root:result_assert.py:49 url:https://mubu.com/api/login/submit
+INFO     root:result_assert.py:50 method:POST
+INFO     root:result_assert.py:52 request_data:
+                                  {
+                                    "headers": {
+                                      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 ",
+                                      "content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+                                    },
+                                    "data": {
+                                      "phone": "17729597958",
+                                      "password": "dong19871103",
+                                      "remember": true
+                                    },
+                                    "verify": false
+                                  }
+INFO     root:result_assert.py:53 response_data:
+                                  {
+                                    "code": 0,
+                                    "msg": null,
+                                    "data": {
+                                      "next": "/list"
+                                    }
+                                  }
+INFO     root:result_assert.py:57 ----------Assert----------
+INFO     root:result_assert.py:60 status_code expected:200 actual:200 PASS
+INFO     root:result_assert.py:60 $.code expected:0 actual:0 PASS
+INFO     root:result_assert.py:60 status_code expected:200 actual:200 PASS
+INFO     root:result_assert.py:46 ====================测试登陆接口--密码错误====================
+INFO     root:result_assert.py:49 url:https://mubu.com/api/login/submit
+INFO     root:result_assert.py:50 method:POST
+INFO     root:result_assert.py:52 request_data:
+                                  {
+                                    "headers": {
+                                      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 ",
+                                      "content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+                                    },
+                                    "data": {
+                                      "phone": "17729597958",
+                                      "password": "dong19871103",
+                                      "remember": true
+                                    },
+                                    "verify": false
+                                  }
+INFO     root:result_assert.py:53 response_data:
+                                  {
+                                    "code": 0,
+                                    "msg": null,
+                                    "data": {
+                                      "next": "/list"
+                                    }
+                                  }
+INFO     root:result_assert.py:57 ----------Assert----------
+INFO     root:result_assert.py:60 status_code expected:200 actual:200 PASS
+INFO     root:result_assert.py:60 $.code expected:0 actual:0 PASS
+INFO     root:result_assert.py:60 status_code expected:200 actual:200 PASS
+INFO     root:result_assert.py:46 ====================测试登陆接口--用户名错误====================
+INFO     root:result_assert.py:49 url:https://mubu.com/api/login/submit
+INFO     root:result_assert.py:50 method:POST
+INFO     root:result_assert.py:52 request_data:
+                                  {
+                                    "headers": {
+                                      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 ",
+                                      "content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+                                    },
+                                    "data": {
+                                      "phone": "17729597958",
+                                      "password": "dong19871103",
+                                      "remember": true
+                                    },
+                                    "verify": false
+                                  }
+INFO     root:result_assert.py:53 response_data:
+                                  {
+                                    "code": 0,
+                                    "msg": null,
+                                    "data": {
+                                      "next": "/list"
+                                    }
+                                  }
+INFO     root:result_assert.py:57 ----------Assert----------
+INFO     root:result_assert.py:60 status_code expected:200 actual:200 PASS
+INFO     root:result_assert.py:60 $.code expected:0 actual:0 PASS
+INFO     root:result_assert.py:60 status_code expected:200 actual:200 PASS

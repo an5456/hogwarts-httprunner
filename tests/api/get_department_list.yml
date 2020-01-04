@@ -1,5 +1,5 @@
 config:
-    varify: False
+    verify: False
 teststeps:
     name: 获取部门列表接口
     request:

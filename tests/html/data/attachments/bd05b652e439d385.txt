@@ -1,0 +1,30 @@
+INFO     root:result_assert.py:48 ====================创建部门接口====================
+INFO     root:result_assert.py:49 url:https://qyapi.weixin.qq.com/cgi-bin/department/create
+INFO     root:result_assert.py:50 method:POST
+INFO     root:result_assert.py:52 request_data:
+                                  {
+                                    "headers": {
+                                      "User-Agent": "python-requests/2.22.0",
+                                      "content-type": "application/json; charset=utf-8"
+                                    },
+                                    "json": {
+                                      "id": null,
+                                      "name": "子部门18249362763",
+                                      "order": 1,
+                                      "parentid": 2
+                                    },
+                                    "params": {
+                                      "access_token": "sSktpMT3iH9fHoLJ2qQUS0C7I81jk3FdM0wu-hudi2PjymSU8OEelsEhc22pC0SLyby10KNxke-HE8VN03aqGAP_l_xnZK9ZWju4Xc8SwPlgE1iNcYoudF0qn_MvGimYYCrb9PU-Qmy3VHEtptM6P6tV36YdANVdwsujz2rJ7n8aADsdvCoj84iEtRmJwSnqKsBXShpCbiKYO4VrT4JbKQ"
+                                    },
+                                    "verify": false
+                                  }
+INFO     root:result_assert.py:53 response_data:
+                                  {
+                                    "errcode": 0,
+                                    "errmsg": "created",
+                                    "id": 32
+                                  }
+INFO     root:result_assert.py:57 ----------Assert----------
+INFO     root:result_assert.py:60 status_code expected:200 actual:200 PASS
+INFO     root:result_assert.py:60 $.errcode expected:0 actual:0 PASS
+INFO     root:result_assert.py:60 $.name expected:子部门18249362763 actual:子部门18249362763 PASS

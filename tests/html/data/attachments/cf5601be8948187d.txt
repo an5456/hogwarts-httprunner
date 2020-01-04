@@ -1,0 +1,82 @@
+[32mINFO    [0m root:test_testcase.py:25 每个测试用例之前运行
+[32mINFO    [0m root:test_testcase.py:79 ====================测试登陆接口—参数校验====================
+[32mINFO    [0m root:test_testcase.py:80 url:https://mubu.com/api/login/submit
+[32mINFO    [0m root:test_testcase.py:81 method:POST
+[32mINFO    [0m root:test_testcase.py:84 request_data:
+                                  {
+                                    "headers": {
+                                      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 ",
+                                      "content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+                                    },
+                                    "data": {
+                                      "phone": "17729597958",
+                                      "password": "dong19871103",
+                                      "remember": "true"
+                                    }
+                                  }
+[32mINFO    [0m root:test_testcase.py:85 response_data:
+                                  {
+                                    "code": 0,
+                                    "msg": null,
+                                    "data": {
+                                      "next": "/list"
+                                    }
+                                  }
+[32mINFO    [0m root:test_testcase.py:90 ----------Assert----------
+[32mINFO    [0m root:test_testcase.py:92 status_code expected:200 actual:200
+[32mINFO    [0m root:test_testcase.py:92 $.code expected:0 actual:0
+[32mINFO    [0m root:test_testcase.py:92 status_code expected:200 actual:200
+[32mINFO    [0m root:test_testcase.py:79 ====================测试登陆接口—参数校验====================
+[32mINFO    [0m root:test_testcase.py:80 url:https://mubu.com/api/login/submit
+[32mINFO    [0m root:test_testcase.py:81 method:POST
+[32mINFO    [0m root:test_testcase.py:84 request_data:
+                                  {
+                                    "headers": {
+                                      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 ",
+                                      "content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+                                    },
+                                    "data": {
+                                      "phone": "17729597958",
+                                      "password": "dong19871103",
+                                      "remember": "true"
+                                    }
+                                  }
+[32mINFO    [0m root:test_testcase.py:85 response_data:
+                                  {
+                                    "code": 0,
+                                    "msg": null,
+                                    "data": {
+                                      "next": "/list"
+                                    }
+                                  }
+[32mINFO    [0m root:test_testcase.py:90 ----------Assert----------
+[32mINFO    [0m root:test_testcase.py:92 status_code expected:200 actual:200
+[32mINFO    [0m root:test_testcase.py:92 $.code expected:0 actual:0
+[32mINFO    [0m root:test_testcase.py:92 status_code expected:200 actual:200
+[32mINFO    [0m root:test_testcase.py:79 ====================测试登陆接口—参数校验====================
+[32mINFO    [0m root:test_testcase.py:80 url:https://mubu.com/api/login/submit
+[32mINFO    [0m root:test_testcase.py:81 method:POST
+[32mINFO    [0m root:test_testcase.py:84 request_data:
+                                  {
+                                    "headers": {
+                                      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 ",
+                                      "content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+                                    },
+                                    "data": {
+                                      "phone": "17729597958",
+                                      "password": "dong19871103",
+                                      "remember": "true"
+                                    }
+                                  }
+[32mINFO    [0m root:test_testcase.py:85 response_data:
+                                  {
+                                    "code": 0,
+                                    "msg": null,
+                                    "data": {
+                                      "next": "/list"
+                                    }
+                                  }
+[32mINFO    [0m root:test_testcase.py:90 ----------Assert----------
+[32mINFO    [0m root:test_testcase.py:92 status_code expected:200 actual:200
+[32mINFO    [0m root:test_testcase.py:92 $.code expected:0 actual:0
+[32mINFO    [0m root:test_testcase.py:92 status_code expected:200 actual:200

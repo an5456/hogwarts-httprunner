@@ -1,0 +1,136 @@
+{
+  "uid" : "aa73fffcd988ed9c",
+  "name" : "test_get_home_page",
+  "fullName" : "test_testcase.TestSingle#test_get_home_page",
+  "historyId" : "9c95dab400b4a6de89dedd0371d0cc61",
+  "time" : {
+    "start" : 1578131421533,
+    "stop" : 1578131421904,
+    "duration" : 371
+  },
+  "description" : "测试呵呵呵呵",
+  "descriptionHtml" : "<p>测试呵呵呵呵</p>\n",
+  "status" : "broken",
+  "statusMessage" : "AttributeError: 'str' object has no attribute 'get'",
+  "statusTrace" : "self = <tests.test_testcase.TestSingle object at 0x10cc8def0>\n\n    @allure.story(\"测试4\")\n    def test_get_home_page(self):\n        \"\"\"测试呵呵呵呵\"\"\"\n>       Result.result_assert(\"api\", \"get_home_page.yml\")\n\ntest_testcase.py:35: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\ncls = <class 'htturunner.result_assert.Result'>, path_1 = 'api'\nfilename = 'get_home_page.yml'\n\n    @classmethod\n    def result_assert(cls, path_1, filename):\n        single_testcase_yaml = os.path.join(os.path.dirname(os.path.dirname(__file__)), \"tests\", path_1, filename)\n        result = cls.run.run_yml(single_testcase_yaml)\n    \n        if len(result) > 1:\n            result1 = []\n            if isinstance(result[0][0], list):\n                for res in result:\n                    for r in res:\n                        result = r[0]\n                        result1.append(result)\n                result = result1\n            else:\n                for res in result:\n                    result = res[0][0]\n                    result1.append(result)\n                result = result1\n        elif len(result) > 1 and isinstance(result[0][0], list):\n            result1 = []\n            for res in result[0]:\n                for r in res:\n                    result = r[0]\n                    result1.append(result)\n            result = result1\n        elif len(result[0]) > 1:\n            result2 = []\n            for res in result[0]:\n                result = res[0]\n                result2.append(result)\n            result = result2\n        else:\n            result = result[0][0]\n    \n        for ass in result:\n>           if ass.get(\"csv_name\"):\nE           AttributeError: 'str' object has no attribute 'get'\n\n../htturunner/result_assert.py:45: AttributeError",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Module__pytest_setup_module",
+    "time" : {
+      "start" : 1578131420096,
+      "stop" : 1578131420096,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "get_log",
+    "time" : {
+      "start" : 1578131420095,
+      "stop" : 1578131420096,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "测试呵呵呵呵",
+    "status" : "broken",
+    "statusMessage" : "AttributeError: 'str' object has no attribute 'get'",
+    "statusTrace" : "self = <tests.test_testcase.TestSingle object at 0x10cc8def0>\n\n    @allure.story(\"测试4\")\n    def test_get_home_page(self):\n        \"\"\"测试呵呵呵呵\"\"\"\n>       Result.result_assert(\"api\", \"get_home_page.yml\")\n\ntest_testcase.py:35: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\ncls = <class 'htturunner.result_assert.Result'>, path_1 = 'api'\nfilename = 'get_home_page.yml'\n\n    @classmethod\n    def result_assert(cls, path_1, filename):\n        single_testcase_yaml = os.path.join(os.path.dirname(os.path.dirname(__file__)), \"tests\", path_1, filename)\n        result = cls.run.run_yml(single_testcase_yaml)\n    \n        if len(result) > 1:\n            result1 = []\n            if isinstance(result[0][0], list):\n                for res in result:\n                    for r in res:\n                        result = r[0]\n                        result1.append(result)\n                result = result1\n            else:\n                for res in result:\n                    result = res[0][0]\n                    result1.append(result)\n                result = result1\n        elif len(result) > 1 and isinstance(result[0][0], list):\n            result1 = []\n            for res in result[0]:\n                for r in res:\n                    result = r[0]\n                    result1.append(result)\n            result = result1\n        elif len(result[0]) > 1:\n            result2 = []\n            for res in result[0]:\n                result = res[0]\n                result2.append(result)\n            result = result2\n        else:\n            result = result[0][0]\n    \n        for ass in result:\n>           if ass.get(\"csv_name\"):\nE           AttributeError: 'str' object has no attribute 'get'\n\n../htturunner/result_assert.py:45: AttributeError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "54d21bdce81f8189",
+      "name" : "log",
+      "source" : "54d21bdce81f8189.txt",
+      "type" : "text/plain",
+      "size" : 0
+    }, {
+      "uid" : "4eb33f4d8373ce0",
+      "name" : "stdout",
+      "source" : "4eb33f4d8373ce0.txt",
+      "type" : "text/plain",
+      "size" : 0
+    }, {
+      "uid" : "85145a9723aac877",
+      "name" : "stderr",
+      "source" : "85145a9723aac877.txt",
+      "type" : "text/plain",
+      "size" : 0
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "_Module__pytest_setup_module::0",
+    "time" : {
+      "start" : 1578131421910,
+      "stop" : 1578131421910,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "测试接口"
+  }, {
+    "name" : "story",
+    "value" : "测试4"
+  }, {
+    "name" : "suite",
+    "value" : "test_testcase"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestSingle"
+  }, {
+    "name" : "host",
+    "value" : "anxiaodongdeMacBook-Pro.local"
+  }, {
+    "name" : "thread",
+    "value" : "2138-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_testcase"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "aa73fffcd988ed9c.json",
+  "parameterValues" : [ ]
+}

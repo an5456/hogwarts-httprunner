@@ -92,9 +92,9 @@ class FuncSuit:
             operation = open(path, "r", encoding="utf-8")
             return yaml.load(operation.read(), Loader=yaml.FullLoader).get("cookies")["cookie"]
 
+
 if __name__ == '__main__':
     FuncSuit().telephone()
     FuncSuit().create_telephone()
     FuncSuit().code()
     FuncSuit().r_string()
-    print(FuncSuit().read_yaml())

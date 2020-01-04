@@ -1,0 +1,102 @@
+{
+  "uid" : "bebcab76d7126935",
+  "name" : "test_delete_department",
+  "fullName" : "test_weixin_apart.TestApart#test_delete_department",
+  "historyId" : "5ee475380eb6570273936d594eafc2c4",
+  "time" : {
+    "start" : 1578131573065,
+    "stop" : 1578131573267,
+    "duration" : 202
+  },
+  "description" : "删除部门",
+  "descriptionHtml" : "<p>删除部门</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "get_log",
+    "time" : {
+      "start" : 1578131572567,
+      "stop" : 1578131572567,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "删除部门",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "bcbf4c5c08b6400d",
+      "name" : "log",
+      "source" : "bcbf4c5c08b6400d.txt",
+      "type" : "text/plain",
+      "size" : 27169
+    }, {
+      "uid" : "b6402db0ae525fc4",
+      "name" : "stdout",
+      "source" : "b6402db0ae525fc4.txt",
+      "type" : "text/plain",
+      "size" : 0
+    }, {
+      "uid" : "1bbc8ca8570e744",
+      "name" : "stderr",
+      "source" : "1bbc8ca8570e744.txt",
+      "type" : "text/plain",
+      "size" : 0
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "部门管理"
+  }, {
+    "name" : "story",
+    "value" : "删除部门"
+  }, {
+    "name" : "suite",
+    "value" : "test_weixin_apart"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestApart"
+  }, {
+    "name" : "host",
+    "value" : "anxiaodongdeMacBook-Pro.local"
+  }, {
+    "name" : "thread",
+    "value" : "2245-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_weixin_apart"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "bebcab76d7126935.json",
+  "parameterValues" : [ ]
+}

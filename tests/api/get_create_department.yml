@@ -1,8 +1,9 @@
 config:
-    varify: False
+    verify: False
     base_url: https://qyapi.weixin.qq.com
 teststeps:
     name: 创建部门接口
+#    api: api/base_api/get_weixin_token.yml
     request:
         headers:
             User-Agent: python-requests/2.22.0

@@ -1,0 +1,106 @@
+{
+  "uid" : "18263889e53900c",
+  "name" : "test_delete_department",
+  "fullName" : "test_weixin_apart.TestApart#test_delete_department",
+  "historyId" : "5ee475380eb6570273936d594eafc2c4",
+  "time" : {
+    "start" : 1578131422390,
+    "stop" : 1578131422610,
+    "duration" : 220
+  },
+  "description" : "删除部门",
+  "descriptionHtml" : "<p>删除部门</p>\n",
+  "status" : "broken",
+  "statusMessage" : "AttributeError: 'str' object has no attribute 'get'",
+  "statusTrace" : "self = <tests.test_weixin_apart.TestApart object at 0x10ccab4e0>\n\n    @allure.story(\"删除部门\")\n    def test_delete_department(self):\n        \"\"\"删除部门\"\"\"\n>       Result.result_assert(\"api\", \"get_weixin_delete_department.yml\")\n\ntest_weixin_apart.py:31: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\ncls = <class 'htturunner.result_assert.Result'>, path_1 = 'api'\nfilename = 'get_weixin_delete_department.yml'\n\n    @classmethod\n    def result_assert(cls, path_1, filename):\n        single_testcase_yaml = os.path.join(os.path.dirname(os.path.dirname(__file__)), \"tests\", path_1, filename)\n        result = cls.run.run_yml(single_testcase_yaml)\n    \n        if len(result) > 1:\n            result1 = []\n            if isinstance(result[0][0], list):\n                for res in result:\n                    for r in res:\n                        result = r[0]\n                        result1.append(result)\n                result = result1\n            else:\n                for res in result:\n                    result = res[0][0]\n                    result1.append(result)\n                result = result1\n        elif len(result) > 1 and isinstance(result[0][0], list):\n            result1 = []\n            for res in result[0]:\n                for r in res:\n                    result = r[0]\n                    result1.append(result)\n            result = result1\n        elif len(result[0]) > 1:\n            result2 = []\n            for res in result[0]:\n                result = res[0]\n                result2.append(result)\n            result = result2\n        else:\n            result = result[0][0]\n    \n        for ass in result:\n>           if ass.get(\"csv_name\"):\nE           AttributeError: 'str' object has no attribute 'get'\n\n../htturunner/result_assert.py:45: AttributeError",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "get_log",
+    "time" : {
+      "start" : 1578131421912,
+      "stop" : 1578131421912,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "删除部门",
+    "status" : "broken",
+    "statusMessage" : "AttributeError: 'str' object has no attribute 'get'",
+    "statusTrace" : "self = <tests.test_weixin_apart.TestApart object at 0x10ccab4e0>\n\n    @allure.story(\"删除部门\")\n    def test_delete_department(self):\n        \"\"\"删除部门\"\"\"\n>       Result.result_assert(\"api\", \"get_weixin_delete_department.yml\")\n\ntest_weixin_apart.py:31: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\ncls = <class 'htturunner.result_assert.Result'>, path_1 = 'api'\nfilename = 'get_weixin_delete_department.yml'\n\n    @classmethod\n    def result_assert(cls, path_1, filename):\n        single_testcase_yaml = os.path.join(os.path.dirname(os.path.dirname(__file__)), \"tests\", path_1, filename)\n        result = cls.run.run_yml(single_testcase_yaml)\n    \n        if len(result) > 1:\n            result1 = []\n            if isinstance(result[0][0], list):\n                for res in result:\n                    for r in res:\n                        result = r[0]\n                        result1.append(result)\n                result = result1\n            else:\n                for res in result:\n                    result = res[0][0]\n                    result1.append(result)\n                result = result1\n        elif len(result) > 1 and isinstance(result[0][0], list):\n            result1 = []\n            for res in result[0]:\n                for r in res:\n                    result = r[0]\n                    result1.append(result)\n            result = result1\n        elif len(result[0]) > 1:\n            result2 = []\n            for res in result[0]:\n                result = res[0]\n                result2.append(result)\n            result = result2\n        else:\n            result = result[0][0]\n    \n        for ass in result:\n>           if ass.get(\"csv_name\"):\nE           AttributeError: 'str' object has no attribute 'get'\n\n../htturunner/result_assert.py:45: AttributeError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "2a01abf8e736961b",
+      "name" : "log",
+      "source" : "2a01abf8e736961b.txt",
+      "type" : "text/plain",
+      "size" : 0
+    }, {
+      "uid" : "186e09158f9158e6",
+      "name" : "stdout",
+      "source" : "186e09158f9158e6.txt",
+      "type" : "text/plain",
+      "size" : 0
+    }, {
+      "uid" : "c9ca9749888a1519",
+      "name" : "stderr",
+      "source" : "c9ca9749888a1519.txt",
+      "type" : "text/plain",
+      "size" : 0
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "部门管理"
+  }, {
+    "name" : "story",
+    "value" : "删除部门"
+  }, {
+    "name" : "suite",
+    "value" : "test_weixin_apart"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestApart"
+  }, {
+    "name" : "host",
+    "value" : "anxiaodongdeMacBook-Pro.local"
+  }, {
+    "name" : "thread",
+    "value" : "2138-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_weixin_apart"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "18263889e53900c.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,8 @@
+INFO     root:result_assert.py:48 ====================删除部门====================
+INFO     root:result_assert.py:49 url:https://qyapi.weixin.qq.com/cgi-bin/department/delete
+INFO     root:result_assert.py:50 method:GET
+INFO     root:result_assert.py:55 request_data:{'headers': {'content-type': 'application/x-www-form-urlencoded; charset=UTF-8', 'sec-fetch-mode': 'cors', 'sec-fetch-site': 'same-origin', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36', 'x-requested-with': 'XMLHttpRequest'}, 'params': {'access_token': '_TC9yy8mRFGTh6Ewdtvnx7irzBx_Czje3_vqg3KC_0KKTrdPdNXjxlWtdQyJFirz35sp2Cje1wxcArgR-8DUN8-bY34adR9WxIcXJGaoSeTPgSIBtnLv1dXd-OwBCQbSxU0EOdpXZEv_L3UNel-JGcnRyoCQI65Pw2Q7dLQSWT5xnZt2kBy9f1OigY1MmXnVbP-lkqR6AHY8sDxFYiXMJA', 'id': '14'}}
+INFO     root:result_assert.py:56 response_data:{'errcode': 0, 'errmsg': 'deleted'}
+INFO     root:result_assert.py:57 ----------Assert----------
+INFO     root:result_assert.py:60 status_code expected:200 actual:200 PASS
+INFO     root:result_assert.py:60 $.errmsg expected:deleted actual:deleted PASS

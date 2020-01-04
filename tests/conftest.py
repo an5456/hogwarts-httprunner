@@ -1,6 +1,7 @@
 import pytest
 
 from htturunner.getlog import GetLog
+from htturunner.result_assert import Result
 
 
 def pytest_configure(config):
@@ -18,3 +19,8 @@ def pytest_configure(config):
 @pytest.fixture(scope="module", autouse=True)
 def get_log():
     GetLog().set_log_config_1()
+
+
+# @pytest.fixture(scope="class", autouse=True)
+# def get_weixin_token():
+#     Result.result_assert("api/base_api", "get_weixin_token.yml")
