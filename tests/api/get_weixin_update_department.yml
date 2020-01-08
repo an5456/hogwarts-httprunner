@@ -14,7 +14,7 @@ teststeps:
                 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36
             x-requested-with: XMLHttpRequest
         method: GET
-        json:
+        data:
           id: ${created_id}
           name:  修改${telephone()}
           parentid: 2

@@ -13,9 +13,9 @@ install:
   - pip install poetry
   - poetry install -vvv
 script:
-  - poetry run coverage run --source=htturunner -m unittest discover
+  - poetry run coverage run --source=main_function -m unittest discover
   - poetry run coverage report
   - poetry run coveralls
-#  - poetry run coverage run --source=htturunner -m unittest discover
+#  - poetry run coverage run --source=main_function -m unittest discover
 #  - poetry run coverage report
 #  - poetry run coveralls

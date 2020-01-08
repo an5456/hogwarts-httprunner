@@ -1,7 +1,7 @@
 import pytest
 
-from htturunner.getlog import GetLog
-from htturunner.result_assert import Result
+from main_function.getlog import GetLog
+from main_function.result_assert import Result
 
 
 def pytest_configure(config):
