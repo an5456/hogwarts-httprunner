@@ -5,7 +5,7 @@
     "name" : "test_weixin_apart",
     "children" : [ {
       "name" : "test_get_department_token",
-      "uid" : "6ef59d87cc8e4e74",
+      "uid" : "bf94d73bb8a4dbc4",
       "parentUid" : "e302ae555c2d1687d8dc6e7a1e461fc1",
       "status" : "passed",
       "time" : {
@@ -17,49 +17,49 @@
       "parameters" : [ ]
     }, {
       "name" : "test_get_department_list",
-      "uid" : "60fff2bfbebfb24d",
+      "uid" : "301a96f8a6ff2e6d",
       "parentUid" : "e302ae555c2d1687d8dc6e7a1e461fc1",
       "status" : "passed",
       "time" : {
-        "start" : 1578196256905,
-        "stop" : 1578196257178,
-        "duration" : 273
+        "start" : 1578492013328,
+        "stop" : 1578492013415,
+        "duration" : 87
       },
       "flaky" : true,
       "parameters" : [ ]
     }, {
       "name" : "test_create_department",
-      "uid" : "1f5a5c238e66cb69",
+      "uid" : "f50da17fa1d74061",
       "parentUid" : "e302ae555c2d1687d8dc6e7a1e461fc1",
       "status" : "passed",
       "time" : {
-        "start" : 1578196257182,
-        "stop" : 1578196259414,
-        "duration" : 2232
+        "start" : 1578492013417,
+        "stop" : 1578492013983,
+        "duration" : 566
       },
       "flaky" : true,
       "parameters" : [ ]
     }, {
       "name" : "test_update_department",
-      "uid" : "5ad0c24e641c65d0",
+      "uid" : "d987ab6c8d89b008",
       "parentUid" : "e302ae555c2d1687d8dc6e7a1e461fc1",
       "status" : "failed",
       "time" : {
-        "start" : 1578196259417,
-        "stop" : 1578196260255,
-        "duration" : 838
+        "start" : 1578492013985,
+        "stop" : 1578492014266,
+        "duration" : 281
       },
       "flaky" : true,
       "parameters" : [ ]
     }, {
       "name" : "test_delete_department",
-      "uid" : "f3cd320857c60cdd",
+      "uid" : "b3d732691fdc788c",
       "parentUid" : "e302ae555c2d1687d8dc6e7a1e461fc1",
       "status" : "passed",
       "time" : {
-        "start" : 1578196260324,
-        "stop" : 1578196260939,
-        "duration" : 615
+        "start" : 1578492014341,
+        "stop" : 1578492015336,
+        "duration" : 995
       },
       "flaky" : true,
       "parameters" : [ ]
@@ -69,49 +69,49 @@
     "name" : "test_testcase",
     "children" : [ {
       "name" : "test_run_testcase_yml",
-      "uid" : "5661b92c454e182",
+      "uid" : "6890d48e30b31d24",
       "parentUid" : "9c66ade6a1190469350a864cf2e7cbb1",
       "status" : "passed",
       "time" : {
-        "start" : 1578196249227,
-        "stop" : 1578196250779,
-        "duration" : 1552
+        "start" : 1578492008367,
+        "stop" : 1578492012188,
+        "duration" : 3821
       },
       "flaky" : true,
       "parameters" : [ ]
     }, {
       "name" : "test_run_login",
-      "uid" : "fda0d29f51308b58",
+      "uid" : "364997550bcf4e56",
       "parentUid" : "9c66ade6a1190469350a864cf2e7cbb1",
       "status" : "passed",
       "time" : {
-        "start" : 1578196250783,
-        "stop" : 1578196251047,
-        "duration" : 264
+        "start" : 1578492012193,
+        "stop" : 1578492012407,
+        "duration" : 214
       },
       "flaky" : true,
       "parameters" : [ ]
     }, {
       "name" : "test_get_login_submit",
-      "uid" : "4e92f359dfb95642",
+      "uid" : "9c353ebf4a7e0271",
       "parentUid" : "9c66ade6a1190469350a864cf2e7cbb1",
       "status" : "passed",
       "time" : {
-        "start" : 1578196251051,
-        "stop" : 1578196252838,
-        "duration" : 1787
+        "start" : 1578492012411,
+        "stop" : 1578492012810,
+        "duration" : 399
       },
       "flaky" : true,
       "parameters" : [ ]
     }, {
       "name" : "test_get_home_page",
-      "uid" : "2b1feef7dddafd58",
+      "uid" : "376c6a7a413f6176",
       "parentUid" : "9c66ade6a1190469350a864cf2e7cbb1",
       "status" : "passed",
       "time" : {
-        "start" : 1578196252842,
-        "stop" : 1578196256438,
-        "duration" : 3596
+        "start" : 1578492012813,
+        "stop" : 1578492013240,
+        "duration" : 427
       },
       "flaky" : true,
       "parameters" : [ ]

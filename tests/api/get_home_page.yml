@@ -6,7 +6,7 @@ config:
     base_url: https://mubu.com
     verify: False
 teststeps:
--   name: get_home_page
+    name: get_home_page
     request:
         url: https://mubu.com/?phone=${read_1($username,$password)}
         method: "GET"
@@ -21,14 +21,14 @@ teststeps:
     -  eq:
        - status_code
        - 200
--   name: test
-    request:
-        url: https://mubu.com/?text=${text}
-        method: "GET"
-        headers:
-            user-agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 "
-        verify: False
-    validate:
-    -   eq:
-        - status_code
-        -  200
+#-   name: test
+#    request:
+#        url: https://mubu.com/?text=${text}
+#        method: "GET"
+#        headers:
+#            user-agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 "
+#        verify: False
+#    validate:
+#    -   eq:
+#        - status_code
+#        -  200

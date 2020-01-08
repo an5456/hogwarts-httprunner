@@ -19,14 +19,17 @@ class Utils:
         :param json_field: 解析表达式 $..data
         :return:
         """
-        if isinstance(resp, dict):
-            value = jsonpath.jsonpath(resp, json_field)
-        elif "html" in resp.text:
-            html = etree.HTML(resp.text, etree.HTMLParser())
-            value = html.xpath(json_field+'//text()')
-        else:
-            value = jsonpath.jsonpath(resp.json(), json_field)
-        return value[0]
+        try:
+            if isinstance(resp, dict):
+                value = jsonpath.jsonpath(resp, json_field)
+            elif "html" in resp.text:
+                html = etree.HTML(resp.text, etree.HTMLParser())
+                value = html.xpath(json_field+'//text()')
+            else:
+                value = jsonpath.jsonpath(resp.json(), json_field)
+            return value[0]
+        except IndexError:
+            return value
 
     @classmethod
     def write_data_to_yaml(cls, path, data):
