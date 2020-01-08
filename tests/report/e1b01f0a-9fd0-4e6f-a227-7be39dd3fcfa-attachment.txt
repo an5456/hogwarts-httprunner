@@ -1,9 +1,0 @@
-[32mINFO    [0m root:test_testcase.py:25 每个测试用例之前运行
-[32mINFO    [0m root:test_testcase.py:56 hhhhhhhhhhhhh
-[32mINFO    [0m root:test_testcase.py:58 ====================https://mubu.com/api/login/submit====================
-[32mINFO    [0m root:test_testcase.py:59 url:https://mubu.com/api/login/submit
-[32mINFO    [0m root:test_testcase.py:60 method:POST
-[32mINFO    [0m root:test_testcase.py:65 request_data:{'headers': {'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 ', 'content-type': 'application/x-www-form-urlencoded; charset=UTF-8'}, 'data': {'phone': '17729597958', 'password': 'dong19871103', 'remember': 'true'}}
-[32mINFO    [0m root:test_testcase.py:66 response_data:{'code': 0, 'msg': None, 'data': {'next': '/list'}}
-[32mINFO    [0m root:test_testcase.py:67 ----------Assert----------
-[32mINFO    [0m root:test_testcase.py:69 $.code expected:0 actual:0

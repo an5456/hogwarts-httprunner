@@ -1,1 +1,0 @@
-{"uuid": "8252a857-ce5f-48f2-b1fd-763f80d5b8b6", "children": ["c78c41ef-6dd3-4f62-92c1-ce2b4c5a81b4"], "befores": [{"name": "get_weixin_token", "status": "passed", "start": 1578134185984, "stop": 1578134186072}], "start": 1578134185984, "stop": 1578134186502}
