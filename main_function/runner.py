@@ -1,6 +1,5 @@
 import base64
 import json
-from json import JSONDecodeError
 import urllib3
 from requests import sessions
 import os
@@ -89,7 +88,6 @@ class Runapi:
                             password: 123456
                     """
                     parsed_request = self.action.parse_content(request, session_variables_mapping)
-
                     try:
                         verify = all_veriables_mapping["config"]["verify"]
                         parsed_request["verify"] = verify
@@ -99,61 +97,10 @@ class Runapi:
                     res_list.append(result_data)
                     return res_list
             else:
-                parsed_request = self.action.parse_content(request, session_variables_mapping)
-                try:
-                    """判断是否有设置verify，绕过ssl验证"""
-                    verify = all_veriables_mapping["config"]["verify"]
-                    parsed_request["verify"] = verify
-                except KeyError:
-                    pass
-                result_data = self.send_request(api_info["validate"], parsed_request, api_info)
-                res_list.append(result_data)
-                return res_list
-
-    # def send_request(self, validate=None, parsed_request=None, api_info=None, csv_dict=None):
-    #     """发送请求"""
-
-    # method = parsed_request.pop("method")
-    # url = parsed_request.pop("url")
-    # if api_info.get('teardown'):
-    #     session_variables_mapping["extract"] = api_info['teardown'].get("extract")
-    # else:
-    #     if session_variables_mapping.get("extract"):
-    #         api_info["extract"] = session_variables_mapping["extract"]
-    # urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-    #
-    # reps = session.request(method, url, **parsed_request)
-    # reps = self.get_env_info(validate, parsed_request, api_info, csv_dict)
-    # return reps
-    # path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "cookies.yaml")
-    #
-    # self.get_request_data(parsed_request, api_info)
-    # self.extract_data(api_info, reps)
-    #
-    # try:
-    #     self.teardown_yaml(api_info)
-    #     if session_variables_mapping.get("extract") is not None:
-    #         session_variables_mapping.pop("extract")
-    #
-    # except KeyError:
-    #     pass
-    #
-    # if csv_dict:
-    #     result_data = self.action.parse_return_info(validate, reps, url,
-    #                                                 method, parsed_request,
-    #                                                 api_info, api_info["name"],
-    #                                                 session_variables_mapping,
-    #                                                 csv_dict.get("desc"))
-    # else:
-    #     result_data = self.action.parse_return_info(validate, reps, url,
-    #                                                 method, parsed_request,
-    #                                                 api_info, api_info["name"],
-    #                                                 session_variables_mapping)
-    # if api_info.get("save"):
-    #     parsed_save = self.action.parse_content(api_info["save"], session_variables_mapping)
-    #     save_dict = {"cookies": {"cookie": parsed_save}}
-    #     Utils.write_data_to_yaml(path, save_dict)
-    # return result_data
+                # 没有config时发送请求
+                return self.not_config_send_request(request, api_info)
+        else:
+            return self.not_config_send_request(request, api_info)
 
     def run_yml(self, yml_file):
         """运行yml文件"""
@@ -185,6 +132,7 @@ class Runapi:
             self.run_yml(ru_path)
 
     def teardown_yaml(self, api_info):
+        """断言依赖其它接口的返回值"""
         file_path = os.path.dirname(os.path.dirname(__file__)) + "/tests/"
         if api_info["teardown"].get("api"):
             ru_path = os.path.join(file_path, api_info["teardown"].get("api"))
@@ -216,7 +164,7 @@ class Runapi:
         except AttributeError:
             logging.error("extract is None")
 
-    def send_request(self, parsed_validate=None, parsed_request=None, api_info=None, csv_dict=None):
+    def send_request(self, parsed_validate, parsed_request, api_info, csv_dict=None):
         """发送请求"""
         config_info = Utils.read_yaml(os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "env.yml"))
         if config_info:
@@ -293,6 +241,20 @@ class Runapi:
             save_dict = {"cookies": {"cookie": parsed_save}}
             Utils.write_data_to_yaml(path, save_dict)
         return result_data
+
+    def not_config_send_request(self, request, api_info):
+        """没有config时发送请求"""
+        res_list = []
+        parsed_request = self.action.parse_content(request, session_variables_mapping)
+        try:
+            """判断是否有设置verify，绕过ssl验证"""
+            verify = all_veriables_mapping["config"]["verify"]
+            parsed_request["verify"] = verify
+        except KeyError:
+            pass
+        result_data = self.send_request(api_info["validate"], parsed_request, api_info)
+        res_list.append(result_data)
+        return res_list
 
 
 if __name__ == '__main__':

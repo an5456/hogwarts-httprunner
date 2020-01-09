@@ -34,7 +34,7 @@ teststeps:
         - $.errcode
         - 0
     -   eq:
-        - $.name
+        - $.department_info.name
         - ${name}
         - re
 
