@@ -4,6 +4,6 @@
 .pytest_cache
 html
 report
-logs
+logs/*
 
 
