@@ -4,10 +4,10 @@ import urllib3
 from requests import sessions
 import os
 
-from main_function.loader import Load
-from main_function.parse import ParseContent
-from main_function.utis import Utils
-from main_function.validate import is_api, is_testcase
+from core.loader import Load
+from core.parse import ParseContent
+from core.utis import Utils
+from core.validate import is_api, is_testcase
 import warnings
 import logging
 

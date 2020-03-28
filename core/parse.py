@@ -1,10 +1,10 @@
 import re
 from json import JSONDecodeError
 
-from main_function.func_suit import FuncSuit
+from core.func_suit import FuncSuit
 
 # 匹配规则，例如：${test} 匹配后为：test
-from main_function.utis import Utils
+from core.utis import Utils
 
 variable_regex_compile = re.compile(r"\$\{(\w+)\}|\$(\w+)")
 # 匹配规则，例如：${func(${var_1}, ${var_2})}
@@ -136,6 +136,8 @@ class ParseContent:
                     key = value[0]
                     # 响应断言如果断言的key里面有"$"就用jsonpath获取断言的结果
                     # 如果没有"$"就用一般的json规则去提取数据
+                    if "content" in key:
+                        key = key.replace("content", "$")
                     if "$" in key:
                         if len(value) > 2:
                             actual_value = str(Utils.extract_json_field(session_mapping_dict, key))

@@ -4,121 +4,105 @@
   "children" : [ {
     "name" : "anxiaodongdeMacBook-Pro.local",
     "children" : [ {
-      "name" : "19860-MainThread",
+      "name" : "2987-MainThread",
       "children" : [ {
-        "name" : "test_get_home_page",
-        "uid" : "376c6a7a413f6176",
-        "parentUid" : "c4f04f215495091ba74c7d6aea3f3332",
-        "status" : "passed",
-        "time" : {
-          "start" : 1578492012813,
-          "stop" : 1578492013240,
-          "duration" : 427
-        },
-        "flaky" : true,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_update_department",
-        "uid" : "d987ab6c8d89b008",
-        "parentUid" : "c4f04f215495091ba74c7d6aea3f3332",
-        "status" : "failed",
-        "time" : {
-          "start" : 1578492013985,
-          "stop" : 1578492014266,
-          "duration" : 281
-        },
-        "flaky" : true,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_run_login",
-        "uid" : "364997550bcf4e56",
-        "parentUid" : "c4f04f215495091ba74c7d6aea3f3332",
-        "status" : "passed",
-        "time" : {
-          "start" : 1578492012193,
-          "stop" : 1578492012407,
-          "duration" : 214
-        },
-        "flaky" : true,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_create_department",
-        "uid" : "f50da17fa1d74061",
-        "parentUid" : "c4f04f215495091ba74c7d6aea3f3332",
-        "status" : "passed",
-        "time" : {
-          "start" : 1578492013417,
-          "stop" : 1578492013983,
-          "duration" : 566
-        },
-        "flaky" : true,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_run_testcase_yml",
-        "uid" : "6890d48e30b31d24",
-        "parentUid" : "c4f04f215495091ba74c7d6aea3f3332",
-        "status" : "passed",
-        "time" : {
-          "start" : 1578492008367,
-          "stop" : 1578492012188,
-          "duration" : 3821
-        },
-        "flaky" : true,
-        "parameters" : [ ]
-      }, {
         "name" : "test_get_login_submit",
-        "uid" : "9c353ebf4a7e0271",
-        "parentUid" : "c4f04f215495091ba74c7d6aea3f3332",
+        "uid" : "d079993a73a32da5",
+        "parentUid" : "e4c64fdadfa66b5bd7d6d60fa142ebfd",
         "status" : "passed",
         "time" : {
-          "start" : 1578492012411,
-          "stop" : 1578492012810,
-          "duration" : 399
+          "start" : 1585386688979,
+          "stop" : 1585386689227,
+          "duration" : 248
         },
-        "flaky" : true,
+        "flaky" : false,
         "parameters" : [ ]
       }, {
         "name" : "test_get_department_list",
-        "uid" : "301a96f8a6ff2e6d",
-        "parentUid" : "c4f04f215495091ba74c7d6aea3f3332",
+        "uid" : "258647f7d242e1f2",
+        "parentUid" : "e4c64fdadfa66b5bd7d6d60fa142ebfd",
         "status" : "passed",
         "time" : {
-          "start" : 1578492013328,
-          "stop" : 1578492013415,
-          "duration" : 87
+          "start" : 1585386689648,
+          "stop" : 1585386689738,
+          "duration" : 90
         },
-        "flaky" : true,
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_run_testcase_yml",
+        "uid" : "6ec9467ae59c0199",
+        "parentUid" : "e4c64fdadfa66b5bd7d6d60fa142ebfd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1585386687966,
+          "stop" : 1585386688791,
+          "duration" : 825
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_update_department",
+        "uid" : "bf59d4d4940e95ef",
+        "parentUid" : "e4c64fdadfa66b5bd7d6d60fa142ebfd",
+        "status" : "failed",
+        "time" : {
+          "start" : 1585386689960,
+          "stop" : 1585386690280,
+          "duration" : 320
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_run_login",
+        "uid" : "8d0256c7b1f34cc3",
+        "parentUid" : "e4c64fdadfa66b5bd7d6d60fa142ebfd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1585386688794,
+          "stop" : 1585386688975,
+          "duration" : 181
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_create_department",
+        "uid" : "9484b80f8b3e438e",
+        "parentUid" : "e4c64fdadfa66b5bd7d6d60fa142ebfd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1585386689742,
+          "stop" : 1585386689956,
+          "duration" : 214
+        },
+        "flaky" : false,
         "parameters" : [ ]
       }, {
         "name" : "test_delete_department",
-        "uid" : "b3d732691fdc788c",
-        "parentUid" : "c4f04f215495091ba74c7d6aea3f3332",
+        "uid" : "c5412d0800236a06",
+        "parentUid" : "e4c64fdadfa66b5bd7d6d60fa142ebfd",
         "status" : "passed",
         "time" : {
-          "start" : 1578492014341,
-          "stop" : 1578492015336,
-          "duration" : 995
+          "start" : 1585386690359,
+          "stop" : 1585386690767,
+          "duration" : 408
         },
-        "flaky" : true,
+        "flaky" : false,
         "parameters" : [ ]
-      } ],
-      "uid" : "c4f04f215495091ba74c7d6aea3f3332"
-    }, {
-      "name" : "2245-MainThread",
-      "children" : [ {
-        "name" : "test_get_department_token",
-        "uid" : "bf94d73bb8a4dbc4",
-        "parentUid" : "ba4fbc4c1e162567ad92fd97c6df8f38",
+      }, {
+        "name" : "test_get_home_page",
+        "uid" : "a5bcda23b28c675f",
+        "parentUid" : "e4c64fdadfa66b5bd7d6d60fa142ebfd",
         "status" : "passed",
         "time" : {
-          "start" : 1578131572567,
-          "stop" : 1578131572659,
-          "duration" : 92
+          "start" : 1585386689232,
+          "stop" : 1585386689558,
+          "duration" : 326
         },
-        "flaky" : true,
+        "flaky" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "ba4fbc4c1e162567ad92fd97c6df8f38"
+      "uid" : "e4c64fdadfa66b5bd7d6d60fa142ebfd"
     } ],
     "uid" : "90798661423fb2d2323aed12cbceaa57"
   } ]

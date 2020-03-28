@@ -1,5 +1,5 @@
 import allure
-from main_function.result_assert import Result
+from core.result_assert import Result
 
 
 @allure.feature("部门管理")

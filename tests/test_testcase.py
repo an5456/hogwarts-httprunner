@@ -1,6 +1,6 @@
 import os
 import allure
-from main_function.result_assert import Result
+from core.result_assert import Result
 
 
 def setup_module():

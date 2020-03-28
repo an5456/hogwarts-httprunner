@@ -2,128 +2,116 @@
   "uid" : "98d3104e051c652961429bf95fa0b5d6",
   "name" : "suites",
   "children" : [ {
-    "name" : "test_weixin_apart",
-    "children" : [ {
-      "name" : "TestApart",
-      "children" : [ {
-        "name" : "test_get_department_token",
-        "uid" : "bf94d73bb8a4dbc4",
-        "parentUid" : "e089e7f51991f61bbb33b44fb21d46c6",
-        "status" : "passed",
-        "time" : {
-          "start" : 1578131572567,
-          "stop" : 1578131572659,
-          "duration" : 92
-        },
-        "flaky" : true,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_get_department_list",
-        "uid" : "301a96f8a6ff2e6d",
-        "parentUid" : "e089e7f51991f61bbb33b44fb21d46c6",
-        "status" : "passed",
-        "time" : {
-          "start" : 1578492013328,
-          "stop" : 1578492013415,
-          "duration" : 87
-        },
-        "flaky" : true,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_create_department",
-        "uid" : "f50da17fa1d74061",
-        "parentUid" : "e089e7f51991f61bbb33b44fb21d46c6",
-        "status" : "passed",
-        "time" : {
-          "start" : 1578492013417,
-          "stop" : 1578492013983,
-          "duration" : 566
-        },
-        "flaky" : true,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_update_department",
-        "uid" : "d987ab6c8d89b008",
-        "parentUid" : "e089e7f51991f61bbb33b44fb21d46c6",
-        "status" : "failed",
-        "time" : {
-          "start" : 1578492013985,
-          "stop" : 1578492014266,
-          "duration" : 281
-        },
-        "flaky" : true,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_delete_department",
-        "uid" : "b3d732691fdc788c",
-        "parentUid" : "e089e7f51991f61bbb33b44fb21d46c6",
-        "status" : "passed",
-        "time" : {
-          "start" : 1578492014341,
-          "stop" : 1578492015336,
-          "duration" : 995
-        },
-        "flaky" : true,
-        "parameters" : [ ]
-      } ],
-      "uid" : "e089e7f51991f61bbb33b44fb21d46c6"
-    } ],
-    "uid" : "73dc1798285c81e18af90a53d20adcf2"
-  }, {
     "name" : "test_testcase",
     "children" : [ {
       "name" : "TestSingle",
       "children" : [ {
         "name" : "test_run_testcase_yml",
-        "uid" : "6890d48e30b31d24",
+        "uid" : "6ec9467ae59c0199",
         "parentUid" : "2befefe24711a2f7accc0b2789f0460f",
         "status" : "passed",
         "time" : {
-          "start" : 1578492008367,
-          "stop" : 1578492012188,
-          "duration" : 3821
+          "start" : 1585386687966,
+          "stop" : 1585386688791,
+          "duration" : 825
         },
-        "flaky" : true,
+        "flaky" : false,
         "parameters" : [ ]
       }, {
         "name" : "test_run_login",
-        "uid" : "364997550bcf4e56",
+        "uid" : "8d0256c7b1f34cc3",
         "parentUid" : "2befefe24711a2f7accc0b2789f0460f",
         "status" : "passed",
         "time" : {
-          "start" : 1578492012193,
-          "stop" : 1578492012407,
-          "duration" : 214
+          "start" : 1585386688794,
+          "stop" : 1585386688975,
+          "duration" : 181
         },
-        "flaky" : true,
+        "flaky" : false,
         "parameters" : [ ]
       }, {
         "name" : "test_get_login_submit",
-        "uid" : "9c353ebf4a7e0271",
+        "uid" : "d079993a73a32da5",
         "parentUid" : "2befefe24711a2f7accc0b2789f0460f",
         "status" : "passed",
         "time" : {
-          "start" : 1578492012411,
-          "stop" : 1578492012810,
-          "duration" : 399
+          "start" : 1585386688979,
+          "stop" : 1585386689227,
+          "duration" : 248
         },
-        "flaky" : true,
+        "flaky" : false,
         "parameters" : [ ]
       }, {
         "name" : "test_get_home_page",
-        "uid" : "376c6a7a413f6176",
+        "uid" : "a5bcda23b28c675f",
         "parentUid" : "2befefe24711a2f7accc0b2789f0460f",
         "status" : "passed",
         "time" : {
-          "start" : 1578492012813,
-          "stop" : 1578492013240,
-          "duration" : 427
+          "start" : 1585386689232,
+          "stop" : 1585386689558,
+          "duration" : 326
         },
-        "flaky" : true,
+        "flaky" : false,
         "parameters" : [ ]
       } ],
       "uid" : "2befefe24711a2f7accc0b2789f0460f"
     } ],
     "uid" : "c5b9ea08638a2e809ea770f760ddbde1"
+  }, {
+    "name" : "test_weixin_apart",
+    "children" : [ {
+      "name" : "TestApart",
+      "children" : [ {
+        "name" : "test_get_department_list",
+        "uid" : "258647f7d242e1f2",
+        "parentUid" : "e089e7f51991f61bbb33b44fb21d46c6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1585386689648,
+          "stop" : 1585386689738,
+          "duration" : 90
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_create_department",
+        "uid" : "9484b80f8b3e438e",
+        "parentUid" : "e089e7f51991f61bbb33b44fb21d46c6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1585386689742,
+          "stop" : 1585386689956,
+          "duration" : 214
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_update_department",
+        "uid" : "bf59d4d4940e95ef",
+        "parentUid" : "e089e7f51991f61bbb33b44fb21d46c6",
+        "status" : "failed",
+        "time" : {
+          "start" : 1585386689960,
+          "stop" : 1585386690280,
+          "duration" : 320
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_delete_department",
+        "uid" : "c5412d0800236a06",
+        "parentUid" : "e089e7f51991f61bbb33b44fb21d46c6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1585386690359,
+          "stop" : 1585386690767,
+          "duration" : 408
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "e089e7f51991f61bbb33b44fb21d46c6"
+    } ],
+    "uid" : "73dc1798285c81e18af90a53d20adcf2"
   } ]
 }

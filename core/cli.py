@@ -1,7 +1,7 @@
 import argparse
 import sys
 
-from main_function.runner import run_yml
+from core.runner import run_yml
 
 
 def main():

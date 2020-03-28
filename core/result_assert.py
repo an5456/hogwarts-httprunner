@@ -1,7 +1,7 @@
 import os, logging
 
-from main_function.runner import Runapi
-from main_function.utis import Utils
+from core.runner import Runapi
+from core.utis import Utils
 
 
 class Result:

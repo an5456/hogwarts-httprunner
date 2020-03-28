@@ -2,7 +2,7 @@ import datetime
 import logging
 import os
 
-from main_function.properties_utils import Properties
+from core.properties_utils import Properties
 
 
 class GetLog:

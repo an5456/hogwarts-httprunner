@@ -1,0 +1,38 @@
+config:
+    name: testcase description
+    variables: {}
+teststeps:
+-   name: /webApi/out/bill/list
+    request:
+        headers:
+            User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+        method: GET
+        params:
+            billNo: ''
+            createTimeFrom: '1582794309318'
+            createTimeTo: '1585386309318'
+            pageNum: '1'
+            pageSize: '10'
+            planStatusList[0]: '0'
+            planStatusList[1]: '1'
+        url: http://testtiger.csjmro.com/webApi/out/bill/list
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - application/json;charset=UTF-8
+    -   eq:
+        - content.errorMsg
+        - null
+    -   eq:
+        - content.detailError
+        - null
+    -   eq:
+        - content.code
+        - '200'
+    -   eq:
+        - content.success
+        - true

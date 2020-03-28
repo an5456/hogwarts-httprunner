@@ -7,15 +7,15 @@
       "name" : "AssertionError",
       "children" : [ {
         "name" : "test_update_department",
-        "uid" : "d987ab6c8d89b008",
+        "uid" : "bf59d4d4940e95ef",
         "parentUid" : "a0017ad855102fea08b8682d27fec4ca",
         "status" : "failed",
         "time" : {
-          "start" : 1578492013985,
-          "stop" : 1578492014266,
-          "duration" : 281
+          "start" : 1585386689960,
+          "stop" : 1585386690280,
+          "duration" : 320
         },
-        "flaky" : true,
+        "flaky" : false,
         "parameters" : [ ]
       } ],
       "uid" : "a0017ad855102fea08b8682d27fec4ca"
