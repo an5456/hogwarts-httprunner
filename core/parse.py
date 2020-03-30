@@ -148,7 +148,10 @@ class ParseContent:
                     expected_value = value[1]  # 预期结果
 
                     if isinstance(actual_value, int) or isinstance(expected_value, int):
-                        actual_value = int(actual_value)
+                        if actual_value == 'False' or actual_value == 'True':
+                            actual_value = actual_value
+                        else:
+                            actual_value = int(actual_value)
                         expected_value = int(expected_value)
                     reps_dict = {
                         "expected": expected_value,
