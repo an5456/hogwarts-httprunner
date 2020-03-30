@@ -30,6 +30,8 @@ class Utils:
             return value[0]
         except IndexError:
             return value
+        except TypeError:
+            return value
 
     @classmethod
     def write_data_to_yaml(cls, path, data):
