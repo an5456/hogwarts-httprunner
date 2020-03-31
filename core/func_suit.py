@@ -24,10 +24,10 @@ class FuncSuit:
         ran = random.randint(0, 9)
         return str(ran)
 
-    def test_1(self, username, password):
-        print("hello world==={}".format(username))
-        print("hello world==={}".format(password))
-        return str(username) + password
+    def test_1(self, info_data):
+        print("hello world==={}".format(info_data["username"]))
+        print("hello world==={}".format(info_data["password"]))
+        return str(info_data["username"]) + info_data["password"]
 
     def telephone(self):
         """

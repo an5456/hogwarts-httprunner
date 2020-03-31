@@ -6,4 +6,4 @@ def sort_a(lis):
     print(lis)
 
 
-sort_a([9, 2, 8, 6, 4, 12])
+sort_a([9, 2, 8, 45, 6, 4, 12])

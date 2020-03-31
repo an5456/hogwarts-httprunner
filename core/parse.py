@@ -53,6 +53,8 @@ class ParseContent:
         if info_dict:
             if fun_name in f:
                 return f[fun_name](FuncSuit(), info_dict)
+            else:
+                print(fun_name+"不存在")
         else:
             if fun_name in f:
                 return f[fun_name](FuncSuit())

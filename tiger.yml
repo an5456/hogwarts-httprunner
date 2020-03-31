@@ -17,13 +17,11 @@ teststeps:
             planStatusList[0]: '0'
             planStatusList[1]: '1'
         url: http://testtiger.csjmro.com/webApi/out/bill/list
+    type: json
     validate:
     -   eq:
         - status_code
         - 200
-    -   eq:
-        - headers.Content-Type
-        - application/json;charset=UTF-8
     -   eq:
         - content.errorMsg
         - null

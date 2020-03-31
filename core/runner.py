@@ -10,7 +10,7 @@ from core.utis import Utils
 from core.validate import is_api, is_testcase
 import warnings
 import logging
-
+from requests_toolbelt.multipart.encoder import MultipartEncoder
 session = sessions.Session()
 # # 匹配规则，例如：${test} 匹配后为：test
 # variable_regex_compile = re.compile(r"\$\{(\w+)\}|\$(\w+)")
@@ -42,17 +42,26 @@ class Runapi:
         warnings.simplefilter("ignore", ResourceWarning)
         self.get_run_api(api_info)  # 判断是否获取依赖接口
         request = api_info["request"]
+        if request.get("upfile"):
+            up_data = request.get("upfile")
+            multipart_encoder = MultipartEncoder(
+                fields={
+                    up_data["fileType"]: (up_data["fileName"], open(up_data["filePath"], 'rb'))
+                }
+            )
+            request["data"] = multipart_encoder
+            request["headers"]["Content-Type"] = multipart_encoder.content_type
+
         # 有config时执行以下代码
         if all_veriables_mapping["config"]:
             try:
                 base_url = all_veriables_mapping["config"]["base_url"]
-                if len(base_url) < len(request["url"]):
-                    request["url"] = request["url"]
-                else:
+                if base_url:
                     request["url"] = base_url + "/" + request["url"]
             except KeyError:
                 request["url"] = request["url"]
             variables = all_veriables_mapping["config"].get("variables")
+
             if variables is not None:
                 for key, value in variables.items():
                     session_variables_mapping[key] = value
@@ -255,6 +264,15 @@ class Runapi:
         result_data = self.send_request(api_info["validate"], parsed_request, api_info)
         res_list.append(result_data)
         return res_list
+    def upload_file(self):
+        multipart_encoder = MultipartEncoder(
+            fields={
+                'file': ('customerTemp.xlsx', open('D:\模板\customerTemp.xlsx', 'rb'), 'file/xlsx')
+            }
+        )
+        headers = {
+            "Content-Type": multipart_encoder.content_type
+        }
 
 
 if __name__ == '__main__':

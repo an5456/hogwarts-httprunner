@@ -11,6 +11,10 @@ teststeps:
             id: '0'
         url: https://qyapi.weixin.qq.com/cgi-bin/department/list
     type: json
+    upfile:
+        fileType: file
+        fileName: aa.xlsx
+        filePath: D:\
     validate:
     -   eq:
         - status_code
