@@ -17,7 +17,7 @@ teststeps:
         params:
             access_token: ${get_token()}
             id: ${created_id}
-        url: https://qyapi.weixin.qq.com/cgi-bin/department/delete
+        url: cgi-bin/department/delete
     type: json
     validate:
     -   eq:

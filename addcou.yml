@@ -1,0 +1,38 @@
+config:
+    name: testcase description
+    variables: {}
+teststeps:
+-   name: /webApi/customer/save
+    request:
+        headers:
+            Content-Type: application/json;charset=UTF-8
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML,
+                like Gecko) Chrome/73.0.3683.75 Safari/537.36
+        json:
+            customerLevel: '1'
+            customerName: fd
+            customerState: '1'
+        method: POST
+        url: http://testtiger.csjmro.com/webApi/customer/save
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - application/json;charset=UTF-8
+    -   eq:
+        - content.errorMsg
+        - null
+    -   eq:
+        - content.detailError
+        - null
+    -   eq:
+        - content.code
+        - '200'
+    -   eq:
+        - content.data
+        - C2000037
+    -   eq:
+        - content.success
+        - true

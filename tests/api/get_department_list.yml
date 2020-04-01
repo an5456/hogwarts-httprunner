@@ -1,5 +1,6 @@
 config:
     verify: False
+    base_url: https://qyapi.weixin.qq.com
 teststeps:
     name: 获取部门列表接口
     request:
@@ -9,12 +10,8 @@ teststeps:
         params:
             access_token: ${get_token()}
             id: '0'
-        url: https://qyapi.weixin.qq.com/cgi-bin/department/list
+        url: cgi-bin/department/list
     type: json
-    upfile:
-        fileType: file
-        fileName: aa.xlsx
-        filePath: D:\
     validate:
     -   eq:
         - status_code

@@ -1,0 +1,34 @@
+config:
+    name: testcase description
+    variables: {}
+teststeps:
+-   name: /webApi/customer/importCustomerInfo
+    request:
+        headers:
+            Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryaL6VEvN9Wv1fyoBL
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML,
+                like Gecko) Chrome/73.0.3683.75 Safari/537.36
+            Cookie: JSESSIONID=0CAF26EE3B152737357108E2002D8346
+        method: POST
+        url: http://testtiger.csjmro.com/webApi/customer/importCustomerInfo
+        upfile:
+            fileType: file
+            fileName: customerTemp.xlsx
+            filePath: D:\模板\customerTemp.xlsx
+    type: json
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - content.errorMsg
+        - None
+    -   eq:
+        - content.detailError
+        - None
+    -   eq:
+        - content.code
+        - 200
+    -   eq:
+        - content.data
+        - 批量导入成功！

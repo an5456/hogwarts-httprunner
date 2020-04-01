@@ -1,0 +1,34 @@
+config:
+    name: testcase description
+    variables: {}
+teststeps:
+-   name: /webApi/customer/save
+    request:
+        headers:
+            Content-Type: application/json;charset=UTF-8
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML,
+                like Gecko) Chrome/73.0.3683.75 Safari/537.36
+            Cookie: JSESSIONID=F82F1E77F76DF79F1A45ECAB42EBA9DC
+        json:
+            customerLevel: '1'
+            customerLinkFax: '5555555'
+            customerLinkUser: 张三12345
+            customerLinkuserTel: '17729597984'
+            customerName: 麻溜
+            customerState: '1'
+        method: POST
+        url: http://testtiger.csjmro.com/webApi/customer/save
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - content.errorMsg
+        - None
+    -   eq:
+        - content.detailError
+        - None
+    -   eq:
+        - content.code
+        - '200'
+

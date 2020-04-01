@@ -1,6 +1,8 @@
 import re
 from json import JSONDecodeError
 
+from requests_toolbelt import MultipartEncoder
+
 from core.func_suit import FuncSuit
 
 # 匹配规则，例如：${test} 匹配后为：test
@@ -130,6 +132,11 @@ class ParseContent:
 
     def parse_return_info(self, variables_request, reps, url, method, parsed_request, api_info, name, session_mapping_dict, csv_dict=None, ):
         """组装返回断言和日志信息"""
+        if isinstance(parsed_request.get("data"), MultipartEncoder):
+            # parsed_request["data"] = session_mapping_dict
+            parsed_request.pop("data")
+            parsed_request["upfile"] = session_mapping_dict["upfile"]
+
         variables_request = self.parse_content(variables_request, session_mapping_dict)
         exp = []
         for var_value in variables_request:
@@ -140,13 +147,14 @@ class ParseContent:
                     # 如果没有"$"就用一般的json规则去提取数据
                     if "content" in key:
                         key = key.replace("content", "$")
+
                     if "$" in key:
                         if len(value) > 2:
                             actual_value = str(Utils.extract_json_field(session_mapping_dict, key))
                         else:
                             actual_value = str(Utils.extract_json_field(reps, key))
                     else:
-                        actual_value = getattr(reps, key)  # 实际结果
+                        actual_value = str(getattr(reps, key))  # 实际结果
                     expected_value = value[1]  # 预期结果
 
                     if isinstance(actual_value, int) or isinstance(expected_value, int):
@@ -165,7 +173,6 @@ class ParseContent:
             reps = reps.json()
         except JSONDecodeError:
             # reps = reps.text
-
             reps = ""
         res_dict = {
             "name": name,

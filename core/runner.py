@@ -51,13 +51,17 @@ class Runapi:
             )
             request["data"] = multipart_encoder
             request["headers"]["Content-Type"] = multipart_encoder.content_type
+            session_variables_mapping["upfile"] = request.pop("upfile")
 
         # 有config时执行以下代码
         if all_veriables_mapping["config"]:
             try:
                 base_url = all_veriables_mapping["config"]["base_url"]
                 if base_url:
-                    request["url"] = base_url + "/" + request["url"]
+                    if len(base_url) < len(request["url"]):
+                        request["url"] = request["url"]
+                    else:
+                        request["url"] = base_url + "/" + request["url"]
             except KeyError:
                 request["url"] = request["url"]
             variables = all_veriables_mapping["config"].get("variables")

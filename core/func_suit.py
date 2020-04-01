@@ -27,7 +27,7 @@ class FuncSuit:
     def test_1(self, info_data):
         print("hello world==={}".format(info_data["username"]))
         print("hello world==={}".format(info_data["password"]))
-        return str(info_data["username"]) + info_data["password"]
+        return str(info_data["username"]) + "&"+info_data["password"]
 
     def telephone(self):
         """

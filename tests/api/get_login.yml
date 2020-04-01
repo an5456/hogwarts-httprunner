@@ -32,26 +32,26 @@ teststeps:
    -  eq: ["$.code", 0]
 #      $.code: 0
 
--  name: /cgi-bin/gettoken
-   request:
-        headers:
-            User-Agent: python-requests/2.22.0
-        method: GET
-        params:
-            corpid: ww49e0d1fa2a92fcd4
-            corpsecret: yGKZP7grNAPyejnRqgpTquiv1vgiCVRL3lhWnD2Bktg
-        url: https://qyapi.weixin.qq.com/cgi-bin/gettoken
-   type: json
-   extract:
-     access_token: $.access_token
-   save: ${access_token}
-   validate:
-   -  eq:
-      -  $.errmsg
-      -  ok
-   -  eq:
-      - status_code
-      - 200
+#-  name: /cgi-bin/gettoken
+#   request:
+#        headers:
+#            User-Agent: python-requests/2.22.0
+#        method: GET
+#        params:
+#            corpid: ww49e0d1fa2a92fcd4
+#            corpsecret: yGKZP7grNAPyejnRqgpTquiv1vgiCVRL3lhWnD2Bktg
+#        url: https://qyapi.weixin.qq.com/cgi-bin/gettoken
+#   type: json
+#   extract:
+#     access_token: $.access_token
+#   save: ${access_token}
+#   validate:
+#   -  eq:
+#      -  $.errmsg
+#      -  ok
+#   -  eq:
+#      - status_code
+#      - 200
 #   -  eq: ["access_token", $.access_token]
 #    -   eq:
 #        - headers.Content-Type
