@@ -8,7 +8,7 @@ teststeps:
             Content-Type: application/json;charset=UTF-8
             User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML,
                 like Gecko) Chrome/73.0.3683.75 Safari/537.36
-            Cookie: JSESSIONID=F82F1E77F76DF79F1A45ECAB42EBA9DC
+            Cookie: JSESSIONID=AEA47E9868DD37303FE9246ACE8B8E38
         json:
             customerLevel: '1'
             customerLinkFax: '5555555'
@@ -18,6 +18,7 @@ teststeps:
             customerState: '1'
         method: POST
         url: http://testtiger.csjmro.com/webApi/customer/save
+    type: json
     validate:
     -   eq:
         - status_code

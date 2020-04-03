@@ -35,8 +35,8 @@ class TestSingle:
         Result.result_assert(filename="get_home_page.yml")
         allure.attach.file(os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "login.csv"), "报告",
                            allure.attachment_type.CSV)
-    # def test_upfile(self):
-    #     Result.result_assert(filename="loadfile.yml")
-    #
-    # def test_addcustomer(self):
-    #     Result.result_assert(filename="addcustomer.yml")
+    def test_upfile(self):
+        Result.result_assert(filename="loadfile.yml")
+
+    def test_addcustomer(self):
+        Result.result_assert(filename="addcustomer.yml")
