@@ -19,7 +19,7 @@ class DataCurd:
         )
         logging.info("创建数据库连接")
 
-    def insert(self, sql):
+    def insert_data(self, sql):
         try:
             with self.connection.cursor() as cursor:
                 # sql = "insert into users (name, sex) values (\"dachui\", 34)"
@@ -35,7 +35,7 @@ class DataCurd:
             self.connection.close()
             logging.info("数据库连接已关闭")
 
-    def select(self, sql):
+    def select_data(self, sql):
         try:
             with self.connection.cursor() as cursor:
                 cursor.execute(sql)
@@ -49,4 +49,4 @@ if __name__ == '__main__':
     a = "insert into users (name, sex) values ('777227007', 36);"
     b = "select name from users where sex=19;"
     # DataCurd().insert(a)
-    print(DataCurd().select(b).get("name"))
+    print(DataCurd().select_data(b).get("name"))

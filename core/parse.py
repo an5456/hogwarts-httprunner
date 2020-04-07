@@ -84,8 +84,17 @@ class ParseContent:
                                 s = "${%s($%s,$%s)}" % (regx_data[0][0], parse_list[0], parse_list[1])
                                 print(s)
                                 r = self.res(regx_data[0][0], result_dict)
-                                print(r)
-                                return str_1.replace("${%s($%s,$%s)}" % (regx_data[0][0], parse_list[0], parse_list[1]), str_1.replace(str(s), str(r)))
+
+                                cn = str_1.split(",")
+                                vb = s.split(",")
+                                if cn[0] == vb[0]:
+                                    return r
+
+                                print(len(str_1))
+                                print(len(s))
+
+                                # return str_1.replace("${%s($%s,$%s)}" % (regx_data[0][0], parse_list[0], parse_list[1]), str_1.replace(str(s), str(r)))
+                                return str_1.replace("${%s($%s,$%s)}" % (regx_data[0][0], parse_list[0], parse_list[1]),r)
                             else:
                                 t = regx_data[0][1].split(",")
                                 result_dict[t[0]] = t[0]

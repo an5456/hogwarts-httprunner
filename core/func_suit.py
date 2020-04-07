@@ -9,6 +9,8 @@ from datetime import timedelta, date
 import pymysql
 import yaml, os
 
+from core.data_curd import DataCurd
+
 letters = string.ascii_letters
 # 获取26个小写字母
 Lowercase_letters = string.ascii_lowercase
@@ -52,7 +54,7 @@ class FuncSuit:
 
         # 拼接手机号
         telephone = "1{}{}{}".format(second, third, suffix)
-        logging.info("创建手机号："+telephone)
+        logging.info("创建手机号：" + telephone)
         return telephone
 
     def create_telephone(self):
@@ -96,27 +98,30 @@ class FuncSuit:
             operation = open(path, "r", encoding="utf-8")
             return yaml.load(operation.read(), Loader=yaml.FullLoader).get("cookies")["cookie"]
 
-    def oper_database(self):
-        connection = pymysql.connect(
+    def select_data(self, data):
+        self.connection = pymysql.connect(
             host='119.3.89.184',
+            port=3308,
             user='root',
             password='test123456',
             db='test_db',
-            charset='utf-8',
+            charset='utf8',
             cursorclass=pymysql.cursors.DictCursor
         )
         try:
-            with connection.cursor() as cursor:
-                pass
-        except Exception as e:
-            pass
+            with self.connection.cursor() as cursor:
+                cursor.execute(data["sql"])
+                result = cursor.fetchone()
+                return result.get(data["key"])
         finally:
-            connection.close()
+            self.connection.close()
+
 
 if __name__ == '__main__':
     # FuncSuit().telephone()
     # FuncSuit().create_telephone()
-    FuncSuit().code()
-    FuncSuit().r_string()
-    second = [3, 4, 5, 7, 8][random.randint(0, 4)]
-    print(second)
+    # FuncSuit().code()
+    # FuncSuit().r_string()
+    # second = [3, 4, 5, 7, 8][random.randint(0, 4)]
+    # print(second)
+    print(FuncSuit().select_data("select name from users where sex=19;", "name"))

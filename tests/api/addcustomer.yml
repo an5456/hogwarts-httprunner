@@ -1,6 +1,8 @@
 config:
     name: testcase description
-    variables: {}
+    variables:
+        sql: select name from users where sex=19;
+        key: name
 teststeps:
 -   name: /webApi/customer/save
     request:
@@ -8,7 +10,7 @@ teststeps:
             Content-Type: application/json;charset=UTF-8
             User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML,
                 like Gecko) Chrome/73.0.3683.75 Safari/537.36
-            Cookie: JSESSIONID=DF215875082FE5FCBE19104BD6ED79E8
+            Cookie: JSESSIONID=595C7AFA31989B1BB41F952D6BC4F71B
         json:
             customerLevel: '1'
             customerLinkFax: '5555555'
@@ -19,10 +21,13 @@ teststeps:
         method: POST
         url: http://testtiger.csjmro.com/webApi/customer/save
     type: json
+    extract:
+        database: ${select_data($sql, $key)}
+
     validate:
     -   eq:
         - status_code
-        - 200
+        - ${database}
     -   eq:
         - content.errorMsg
         - None

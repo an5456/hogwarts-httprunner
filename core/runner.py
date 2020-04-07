@@ -170,10 +170,13 @@ class Runapi:
         try:
             for var_name in extract_mapping.keys():
                 var_expr = extract_mapping[var_name]
-                if "${" in var_expr:
+                if "${" in var_expr or "$" in var_expr:
                     var_expr = self.action.parse_content(var_expr, session_variables_mapping)
-                var_value = Utils.extract_json_field(reps, var_expr)
-                session_variables_mapping[var_name] = var_value
+                    if "$" in var_expr:
+                        var_value = Utils.extract_json_field(reps, var_expr)
+                    else:
+                        var_value = var_expr
+                    session_variables_mapping[var_name] = var_value
         except AttributeError:
             logging.error("extract is None")
 

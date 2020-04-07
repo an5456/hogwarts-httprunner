@@ -93,5 +93,8 @@
 # source /Library/Frameworks/Python.framework/Versions/3.6/bin/virtualenvwrapper.sh
 # PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
 # export PATH
-import subprocess
-res = subprocess.run("nohup python3 -m http.server >out.log 2>&1 & ", shell=True)
+# import subprocess
+# res = subprocess.run("nohup python3 -m http.server >out.log 2>&1 & ", shell=True)
+a = "432432432423hhh"
+a.replace(a, "123213213")
+print(a)
