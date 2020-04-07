@@ -1,4 +1,24 @@
 {
+  "cb9ecc73d434ed1643f0779c86d7fd88" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "5323d8c4d59a9a9d",
+      "status" : "broken",
+      "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\模板\\\\customerTemp.xlsx'",
+      "time" : {
+        "start" : 1586273314887,
+        "stop" : 1586273314893,
+        "duration" : 6
+      }
+    } ]
+  },
   "9c95dab400b4a6de89dedd0371d0cc61" : {
     "statistic" : {
       "failed" : 0,
@@ -9,12 +29,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "a5bcda23b28c675f",
+      "uid" : "160cff996af1054e",
       "status" : "passed",
       "time" : {
-        "start" : 1585386689232,
-        "stop" : 1585386689558,
-        "duration" : 326
+        "start" : 1586273314576,
+        "stop" : 1586273314883,
+        "duration" : 307
       }
     } ]
   },
@@ -28,12 +48,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "8d0256c7b1f34cc3",
+      "uid" : "456afb015ba417e8",
       "status" : "passed",
       "time" : {
-        "start" : 1585386688794,
-        "stop" : 1585386688975,
-        "duration" : 181
+        "start" : 1586273314165,
+        "stop" : 1586273314271,
+        "duration" : 106
       }
     } ]
   },
@@ -47,12 +67,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "c5412d0800236a06",
+      "uid" : "df5c9ddce3949a6d",
       "status" : "passed",
       "time" : {
-        "start" : 1585386690359,
-        "stop" : 1585386690767,
-        "duration" : 408
+        "start" : 1586273339607,
+        "stop" : 1586273339972,
+        "duration" : 365
       }
     } ]
   },
@@ -66,12 +86,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "9484b80f8b3e438e",
+      "uid" : "4dd2e499a79327f4",
       "status" : "passed",
       "time" : {
-        "start" : 1585386689742,
-        "stop" : 1585386689956,
-        "duration" : 214
+        "start" : 1586273339104,
+        "stop" : 1586273339305,
+        "duration" : 201
       }
     } ]
   },
@@ -85,12 +105,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "d079993a73a32da5",
+      "uid" : "3d3d302a69b60b02",
       "status" : "passed",
       "time" : {
-        "start" : 1585386688979,
-        "stop" : 1585386689227,
-        "duration" : 248
+        "start" : 1586273314274,
+        "stop" : 1586273314574,
+        "duration" : 300
       }
     } ]
   },
@@ -104,12 +124,32 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "6ec9467ae59c0199",
+      "uid" : "a90dce9c0951d947",
       "status" : "passed",
       "time" : {
-        "start" : 1585386687966,
-        "stop" : 1585386688791,
-        "duration" : 825
+        "start" : 1586273313778,
+        "stop" : 1586273314161,
+        "duration" : 383
+      }
+    } ]
+  },
+  "41efa9182c71351aa0e40361160c2aeb" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "c46bb8d7f9343b40",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1586273314990,
+        "stop" : 1586273338773,
+        "duration" : 23783
       }
     } ]
   },
@@ -123,12 +163,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "258647f7d242e1f2",
+      "uid" : "1818324a0877f028",
       "status" : "passed",
       "time" : {
-        "start" : 1585386689648,
-        "stop" : 1585386689738,
-        "duration" : 90
+        "start" : 1586273339018,
+        "stop" : 1586273339101,
+        "duration" : 83
       }
     } ]
   },
@@ -142,13 +182,13 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "bf59d4d4940e95ef",
+      "uid" : "aead9a40d24c69bb",
       "status" : "failed",
       "statusDetails" : "AssertionError",
       "time" : {
-        "start" : 1585386689960,
-        "stop" : 1585386690280,
-        "duration" : 320
+        "start" : 1586273339308,
+        "stop" : 1586273339591,
+        "duration" : 283
       }
     } ]
   }
