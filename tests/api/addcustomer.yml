@@ -10,7 +10,7 @@ teststeps:
             Content-Type: application/json;charset=UTF-8
             User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML,
                 like Gecko) Chrome/73.0.3683.75 Safari/537.36
-            Cookie: JSESSIONID=595C7AFA31989B1BB41F952D6BC4F71B
+            Cookie: JSESSIONID=A1D50555D1575CA8890A6B548C6B5906
         json:
             customerLevel: '1'
             customerLinkFax: '5555555'
