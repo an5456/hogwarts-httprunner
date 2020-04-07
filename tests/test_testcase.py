@@ -19,15 +19,15 @@ class TestSingle:
         """斤斤计较测试"""
         Result.result_assert("testcase", "mubu_login.yml")
 
-    # @allure.story("测试2")
-    # def test_run_login(self):
-    #     """范德萨范德"""
-    #     Result.result_assert(filename="get_login.yml")
-    #
-    # @allure.story("测试登陆123")
-    # def test_get_login_submit(self):
-    #     """ 呵呵呵呵1234"""
-    #     Result.result_assert(filename="get_login_submit.yml")
+    @allure.story("测试2")
+    def test_run_login(self):
+        """范德萨范德"""
+        Result.result_assert(filename="get_login.yml")
+
+    @allure.story("测试登陆123")
+    def test_get_login_submit(self):
+        """ 呵呵呵呵1234"""
+        Result.result_assert(filename="get_login_submit.yml")
 
     @allure.story("测试4")
     def test_get_home_page(self):
