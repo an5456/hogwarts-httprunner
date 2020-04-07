@@ -95,7 +95,7 @@ class ParseContent:
                     else:
                         return str_1.replace("${%s()}" % (regx_data[0][0]), str(self.res(regx_data[0][0])))
         except Exception as e:
-            print("=====" + str(e))
+            print(str(e))
 
     # 字段替换
     def replace_var(self, content, variables_mapping):
@@ -161,8 +161,8 @@ class ParseContent:
                         if actual_value == 'False' or actual_value == 'True':
                             actual_value = actual_value
                         else:
-                            actual_value = int(actual_value)
-                        expected_value = int(expected_value)
+                            actual_value = str(actual_value)
+                        expected_value = str(expected_value)
                     reps_dict = {
                         "expected": expected_value,
                         "actual": actual_value,

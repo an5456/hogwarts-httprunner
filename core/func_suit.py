@@ -1,3 +1,4 @@
+import logging
 import random
 import string
 
@@ -5,6 +6,7 @@ import string
 import time
 from datetime import timedelta, date
 
+import pymysql
 import yaml, os
 
 letters = string.ascii_letters
@@ -27,7 +29,7 @@ class FuncSuit:
     def test_1(self, info_data):
         print("hello world==={}".format(info_data["username"]))
         print("hello world==={}".format(info_data["password"]))
-        return str(info_data["username"]) + "&"+info_data["password"]
+        return str(info_data["username"]) + "&" + info_data["password"]
 
     def telephone(self):
         """
@@ -35,6 +37,7 @@ class FuncSuit:
         :return:
         """
         # 第二位数字
+
         second = [3, 4, 5, 7, 8][random.randint(0, 4)]
         # 第三位数字
         third = {
@@ -49,6 +52,7 @@ class FuncSuit:
 
         # 拼接手机号
         telephone = "1{}{}{}".format(second, third, suffix)
+        logging.info("创建手机号："+telephone)
         return telephone
 
     def create_telephone(self):
@@ -61,12 +65,12 @@ class FuncSuit:
         # s是小写字母和数字的集合
         s = Lowercase_letters + digits
         # 生成28位小写和数字的集合，并将列表转字符串
-        code = ''.join(random.sample(s, 28))
+        code = ''.join(random.sample(s, 10))
         print('随机code:%s' % code)
         return code
 
     def r_string(self):  # 生成随机字符串
-        data = "1234567890zxcvbnmlkjhgfdsaqwertyuiop"
+        data = "1234567890zxcvbnmlkjhgf#$%z%%%^dsaqwertyuiopABCDEFGHIGKLMNOP"
         # 用时间来做随机播种
         random.seed(time.time())
         # 随机选取数据
@@ -92,9 +96,27 @@ class FuncSuit:
             operation = open(path, "r", encoding="utf-8")
             return yaml.load(operation.read(), Loader=yaml.FullLoader).get("cookies")["cookie"]
 
+    def oper_database(self):
+        connection = pymysql.connect(
+            host='119.3.89.184',
+            user='root',
+            password='test123456',
+            db='test_db',
+            charset='utf-8',
+            cursorclass=pymysql.cursors.DictCursor
+        )
+        try:
+            with connection.cursor() as cursor:
+                pass
+        except Exception as e:
+            pass
+        finally:
+            connection.close()
 
 if __name__ == '__main__':
-    FuncSuit().telephone()
-    FuncSuit().create_telephone()
+    # FuncSuit().telephone()
+    # FuncSuit().create_telephone()
     FuncSuit().code()
     FuncSuit().r_string()
+    second = [3, 4, 5, 7, 8][random.randint(0, 4)]
+    print(second)
