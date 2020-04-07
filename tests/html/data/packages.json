@@ -4,20 +4,8 @@
   "children" : [ {
     "name" : "test_testcase",
     "children" : [ {
-      "name" : "test_run_testcase_yml",
-      "uid" : "a90dce9c0951d947",
-      "parentUid" : "9c66ade6a1190469350a864cf2e7cbb1",
-      "status" : "passed",
-      "time" : {
-        "start" : 1586273313778,
-        "stop" : 1586273314161,
-        "duration" : 383
-      },
-      "flaky" : false,
-      "parameters" : [ ]
-    }, {
       "name" : "test_run_login",
-      "uid" : "456afb015ba417e8",
+      "uid" : "349709209dabb453",
       "parentUid" : "9c66ade6a1190469350a864cf2e7cbb1",
       "status" : "passed",
       "time" : {
@@ -29,7 +17,7 @@
       "parameters" : [ ]
     }, {
       "name" : "test_get_login_submit",
-      "uid" : "3d3d302a69b60b02",
+      "uid" : "c61cfd7097b437be",
       "parentUid" : "9c66ade6a1190469350a864cf2e7cbb1",
       "status" : "passed",
       "time" : {
@@ -40,40 +28,52 @@
       "flaky" : false,
       "parameters" : [ ]
     }, {
-      "name" : "test_get_home_page",
-      "uid" : "160cff996af1054e",
+      "name" : "test_run_testcase_yml",
+      "uid" : "e1153b40385f89df",
       "parentUid" : "9c66ade6a1190469350a864cf2e7cbb1",
       "status" : "passed",
       "time" : {
-        "start" : 1586273314576,
-        "stop" : 1586273314883,
-        "duration" : 307
+        "start" : 1586275708983,
+        "stop" : 1586275709249,
+        "duration" : 266
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_get_home_page",
+      "uid" : "b031b910f3ff9b1",
+      "parentUid" : "9c66ade6a1190469350a864cf2e7cbb1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1586275709252,
+        "stop" : 1586275709521,
+        "duration" : 269
       },
       "flaky" : false,
       "parameters" : [ ]
     }, {
       "name" : "test_upfile",
-      "uid" : "5323d8c4d59a9a9d",
+      "uid" : "e2b7967bf2286389",
       "parentUid" : "9c66ade6a1190469350a864cf2e7cbb1",
       "status" : "broken",
       "time" : {
-        "start" : 1586273314887,
-        "stop" : 1586273314893,
+        "start" : 1586275709525,
+        "stop" : 1586275709531,
         "duration" : 6
       },
-      "flaky" : false,
+      "flaky" : true,
       "parameters" : [ ]
     }, {
       "name" : "test_addcustomer",
-      "uid" : "c46bb8d7f9343b40",
+      "uid" : "d224d2e13fe926ed",
       "parentUid" : "9c66ade6a1190469350a864cf2e7cbb1",
       "status" : "failed",
       "time" : {
-        "start" : 1586273314990,
-        "stop" : 1586273338773,
-        "duration" : 23783
+        "start" : 1586275709625,
+        "stop" : 1586275709812,
+        "duration" : 187
       },
-      "flaky" : false,
+      "flaky" : true,
       "parameters" : [ ]
     } ],
     "uid" : "9c66ade6a1190469350a864cf2e7cbb1"
@@ -81,49 +81,49 @@
     "name" : "test_weixin_apart",
     "children" : [ {
       "name" : "test_get_department_list",
-      "uid" : "1818324a0877f028",
+      "uid" : "221a898dfc0b8167",
       "parentUid" : "e302ae555c2d1687d8dc6e7a1e461fc1",
       "status" : "passed",
       "time" : {
-        "start" : 1586273339018,
-        "stop" : 1586273339101,
-        "duration" : 83
+        "start" : 1586275710045,
+        "stop" : 1586275710127,
+        "duration" : 82
       },
       "flaky" : false,
       "parameters" : [ ]
     }, {
       "name" : "test_create_department",
-      "uid" : "4dd2e499a79327f4",
+      "uid" : "5f000ad45bcf5efa",
       "parentUid" : "e302ae555c2d1687d8dc6e7a1e461fc1",
       "status" : "passed",
       "time" : {
-        "start" : 1586273339104,
-        "stop" : 1586273339305,
-        "duration" : 201
+        "start" : 1586275710130,
+        "stop" : 1586275710336,
+        "duration" : 206
       },
       "flaky" : false,
       "parameters" : [ ]
     }, {
       "name" : "test_update_department",
-      "uid" : "aead9a40d24c69bb",
+      "uid" : "4b9ceef38035c2be",
       "parentUid" : "e302ae555c2d1687d8dc6e7a1e461fc1",
       "status" : "failed",
       "time" : {
-        "start" : 1586273339308,
-        "stop" : 1586273339591,
-        "duration" : 283
+        "start" : 1586275710339,
+        "stop" : 1586275710635,
+        "duration" : 296
       },
-      "flaky" : false,
+      "flaky" : true,
       "parameters" : [ ]
     }, {
       "name" : "test_delete_department",
-      "uid" : "df5c9ddce3949a6d",
+      "uid" : "27a23e3a15ae6c95",
       "parentUid" : "e302ae555c2d1687d8dc6e7a1e461fc1",
       "status" : "passed",
       "time" : {
-        "start" : 1586273339607,
-        "stop" : 1586273339972,
-        "duration" : 365
+        "start" : 1586275710647,
+        "stop" : 1586275710964,
+        "duration" : 317
       },
       "flaky" : false,
       "parameters" : [ ]

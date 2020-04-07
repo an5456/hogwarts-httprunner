@@ -14,10 +14,10 @@ class TestApart:
         """获取部门列表"""
         Result.result_assert(filename="get_department_list.yml")
 
-    @allure.story("003创建部门")
-    def test_create_department(self):
-        """创建部门"""
-        Result.result_assert(filename="get_create_department.yml")
+    # @allure.story("003创建部门")
+    # def test_create_department(self):
+    #     """创建部门"""
+    #     Result.result_assert(filename="get_create_department.yml")
 
     @allure.story("004修改部门名称")
     def test_update_department(self):
