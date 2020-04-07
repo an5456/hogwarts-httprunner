@@ -29,12 +29,12 @@ class TestSingle:
     #     """ 呵呵呵呵1234"""
     #     Result.result_assert(filename="get_login_submit.yml")
 
-    @allure.story("测试4")
-    def test_get_home_page(self):
-        """测试呵呵呵呵"""
-        Result.result_assert(filename="get_home_page.yml")
-        allure.attach.file(os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "login.csv"), "报告",
-                           allure.attachment_type.CSV)
+    # @allure.story("测试4")
+    # def test_get_home_page(self):
+    #     """测试呵呵呵呵"""
+    #     Result.result_assert(filename="get_home_page.yml")
+    #     allure.attach.file(os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "login.csv"), "报告",
+    #                        allure.attachment_type.CSV)
 
     @allure.story("上传文件")
     def test_upfile(self):

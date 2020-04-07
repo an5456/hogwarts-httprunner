@@ -7,13 +7,13 @@
       "name" : "FileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\模板\\\\customerTemp.xlsx'",
       "children" : [ {
         "name" : "test_upfile",
-        "uid" : "f4eb4ca6795a0361",
+        "uid" : "e72ddd2ea1c0f0c5",
         "parentUid" : "18954bdd1e896b72a930e39214d328ee",
         "status" : "broken",
         "time" : {
-          "start" : 1586276272274,
-          "stop" : 1586276272282,
-          "duration" : 8
+          "start" : 1586277121397,
+          "stop" : 1586277121404,
+          "duration" : 7
         },
         "flaky" : false,
         "parameters" : [ ]
@@ -27,25 +27,25 @@
       "name" : "AssertionError",
       "children" : [ {
         "name" : "test_addcustomer",
-        "uid" : "6f97fb3f316cbc30",
+        "uid" : "4c36d5050429e66f",
         "parentUid" : "a0017ad855102fea08b8682d27fec4ca",
         "status" : "failed",
         "time" : {
-          "start" : 1586276272374,
-          "stop" : 1586276272638,
-          "duration" : 264
+          "start" : 1586277121498,
+          "stop" : 1586277121684,
+          "duration" : 186
         },
         "flaky" : false,
         "parameters" : [ ]
       }, {
         "name" : "test_update_department",
-        "uid" : "1dfc2d17d26e5b0f",
+        "uid" : "5f89c71f2b870aff",
         "parentUid" : "a0017ad855102fea08b8682d27fec4ca",
         "status" : "failed",
         "time" : {
-          "start" : 1586276272947,
-          "stop" : 1586276273376,
-          "duration" : 429
+          "start" : 1586277122164,
+          "stop" : 1586277122470,
+          "duration" : 306
         },
         "flaky" : false,
         "parameters" : [ ]
