@@ -224,7 +224,6 @@ class Runapi:
                     api_info["extract"] = session_variables_mapping["extract"]
             urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
             reps = session.request(method, url, **parsed_request)
-
             self.get_request_data(parsed_request, api_info)
             self.extract_data(api_info, reps)
             return self.extract_and_get_data(parsed_validate, parsed_request, api_info, csv_dict, reps, url, method)
@@ -271,15 +270,6 @@ class Runapi:
         result_data = self.send_request(api_info["validate"], parsed_request, api_info)
         res_list.append(result_data)
         return res_list
-    def upload_file(self):
-        multipart_encoder = MultipartEncoder(
-            fields={
-                'file': ('customerTemp.xlsx', open('D:\模板\customerTemp.xlsx', 'rb'), 'file/xlsx')
-            }
-        )
-        headers = {
-            "Content-Type": multipart_encoder.content_type
-        }
 
 
 if __name__ == '__main__':

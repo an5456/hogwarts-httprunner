@@ -1,0 +1,35 @@
+{
+  "config": {
+    "verify": false,
+    "base_url": "https://qyapi.weixin.qq.com"
+  },
+  "teststeps": {
+    "name": "获取部门列表接口",
+    "request": {
+      "headers": {
+        "User-Agent": "python-requests/2.22.0"
+      },
+      "method": "GET",
+      "params": {
+        "access_token": "${get_token()}",
+        "id": "0"
+      },
+      "url": "cgi-bin/department/list"
+    },
+    "type": "json",
+    "validate": [
+      {
+        "eq": [
+          "status_code",
+          200
+        ]
+      },
+      {
+        "eq": [
+          "$.errmsg",
+          "ok"
+        ]
+      }
+    ]
+  }
+}

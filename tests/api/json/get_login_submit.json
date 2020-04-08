@@ -1,0 +1,50 @@
+{
+  "config": {
+    "name": "testcase description",
+    "variables": {
+      "username": "${username}",
+      "password": "${password}",
+      "code": "${assert}",
+      "status": "${status}"
+    },
+    "base_url": "https://mubu.com",
+    "verify": false
+  },
+  "teststeps": {
+    "name": "测试登陆接口",
+    "request": {
+      "url": "api/login/submit",
+      "method": "POST",
+      "headers": {
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 ",
+        "content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+      },
+      "data": {
+        "phone": "${username}",
+        "password": "${password}",
+        "remember": true
+      }
+    },
+    "type": "json",
+    "validate": [
+      {
+        "eq": [
+          "status_code",
+          "${status}"
+        ]
+      },
+      {
+        "eq": [
+          "$.code",
+          "${code}"
+        ]
+      },
+      {
+        "eq": [
+          "status_code",
+          200
+        ]
+      }
+    ]
+  }
+}

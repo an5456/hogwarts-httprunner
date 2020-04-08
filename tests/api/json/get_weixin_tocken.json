@@ -1,0 +1,45 @@
+{
+  "config": {
+    "verify": false,
+    "base_url": "https://qyapi.weixin.qq.com"
+  },
+  "teststeps": {
+    "name": "获取token",
+    "request": {
+      "headers": {
+        "User-Agent": "python-requests/2.22.0"
+      },
+      "method": "GET",
+      "params": {
+        "corpid": "ww49e0d1fa2a92fcd4",
+        "corpsecret": "yGKZP7grNAPyejnRqgpTquiv1vgiCVRL3lhWnD2Bktg"
+      },
+      "url": "cgi-bin/gettoken"
+    },
+    "type": "json",
+    "extract": {
+      "access_token": "$.access_token"
+    },
+    "save": "${access_token}",
+    "validate": [
+      {
+        "eq": [
+          "status_code",
+          200
+        ]
+      },
+      {
+        "eq": [
+          "$.errcode",
+          0
+        ]
+      },
+      {
+        "eq": [
+          "$.errmsg",
+          "ok"
+        ]
+      }
+    ]
+  }
+}

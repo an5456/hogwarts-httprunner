@@ -1,0 +1,32 @@
+{
+  "config": {
+    "name": "testcase description",
+    "variables": {
+      "username": 17729597958,
+      "password": "dong19871103"
+    },
+    "verify": false
+  },
+  "teststeps": {
+    "name": "https://mubu.comget_home_page",
+    "request": {
+      "url": "https://mubu.com/?phone=${test_1($username,$password)}",
+      "method": "GET",
+      "headers": {
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 "
+      },
+      "verify": false
+    },
+    "extract": {
+      "text": "//div[@class="header-user"]/a[@href='/apps']"
+    },
+    "validate": [
+      {
+        "eq": [
+          "status_code",
+          200
+        ]
+      }
+    ]
+  }
+}

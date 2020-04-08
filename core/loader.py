@@ -20,6 +20,26 @@ class Load:
             result = json.loads(result)
             return result
 
+    def yml_switch_to_json(self):
+        """批量将某个文件夹下的yml文件，转换写入到另一个文件夹下对应json文件中，
+           其中json文件的名称和yml文件的名称是一样的
+        """
+        filePath = os.path.dirname(os.path.dirname(__file__)) + "/tests/api/yml"
+        file_path = os.path.dirname(os.path.dirname(__file__)) + "/tests/api/json"
+        files = os.listdir(filePath)
+        for fi in files:
+            if fi.endswith(".yml"):
+                res = fi.split(".")
+                with open(filePath+"/"+fi, "r", encoding="utf-8") as f:
+                    yml_content = f.read()
+                    loaded_json = yaml.load(yml_content, Loader=yaml.FullLoader)
+                    str_json = json.dumps(loaded_json, indent=2).encode("utf-8").decode("unicode_escape")
+                    rs = file_path +"/"+ res[0]+".json"
+                    open(rs, 'w')
+                    with open(rs, "w", encoding="utf-8") as f:
+                        f.write(str_json)
+
+
     @classmethod
     def load_csv(self):
         """加载csv文件"""
@@ -34,7 +54,10 @@ class Load:
                     csv_dict = dict(row)
                     csv_content_list.append(csv_dict)
         return csv_content_list
+
+
 if __name__ == '__main__':
-    r = Load().load_yml(r"C:\Users\Administrator\Desktop\hogwarts-httprunner\tests\api\get_login_1.json")
-    print(type(r))
-    print(r)
+    # r = Load().load_yml(r"C:\Users\Administrator\Desktop\hogwarts-httprunner\tests\api\get_login_1.json")
+    # print(type(r))
+    # print(r)
+    Load().yml_switch_to_json()

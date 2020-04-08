@@ -1,0 +1,50 @@
+{
+  "config": {
+    "verify": false,
+    "base_url": "https://qyapi.weixin.qq.com"
+  },
+  "teststeps": {
+    "name": "创建部门接口",
+    "request": {
+      "headers": {
+        "User-Agent": "python-requests/2.22.0",
+        "content-type": "application/json; charset=utf-8"
+      },
+      "json": {
+        "id": null,
+        "name": "子部门${telephone()}",
+        "order": 1,
+        "parentid": 2
+      },
+      "method": "POST",
+      "params": {
+        "access_token": "${get_token()}"
+      },
+      "url": "cgi-bin/department/create"
+    },
+    "type": "json",
+    "extr": {
+      "name": "$..name"
+    },
+    "extract": {
+      "created_id": "$.id"
+    },
+    "teardown": {
+      "api": "api/get_department_list.yml",
+      "extract": {
+        "department_info": "$..department[?(@.id==${created_id})]"
+      }
+    },
+    "validate": [
+      {
+        "eq": ["status_code", 200]
+      },
+      {
+        "eq": ["$.errcode", 0]
+      },
+      {
+        "eq": ["$.department_info.name", "${name}", "ignore"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "config": {
+    "name": "testcase description",
+    "variables": {},
+    "verify": false
+  },
+  "teststeps": [
+    {
+      "name": "修改部门名称",
+      "api": "api/get_create_department.yml",
+      "request": {
+        "headers": {
+          "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+          "sec-fetch-mode": "cors",
+          "sec-fetch-site": "same-origin",
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36",
+          "x-requested-with": "XMLHttpRequest"
+        },
+        "method": "GET",
+        "data": {
+          "id": "${created_id}",
+          "name": "修改${telephone()}",
+          "parentid": 2,
+          "order": 1
+        },
+        "params": {
+          "access_token": "${get_token()}"
+        },
+        "url": "https://qyapi.weixin.qq.com/cgi-bin/department/update"
+      },
+      "type": "json",
+      "validate": [
+        {
+          "eq": [
+            "status_code",
+            200
+          ]
+        },
+        {
+          "eq": [
+            "$.errcode",
+            0
+          ]
+        }
+      ]
+    }
+  ]
+}
