@@ -1,5 +1,6 @@
 import csv
 import io
+import json
 import os
 import yaml
 
@@ -8,10 +9,16 @@ class Load:
     @classmethod
     def load_yml(self, yml_file):
         """读取yaml文件内容"""
-        with open(yml_file, "r", encoding="utf-8") as f:
-            yml_content = f.read()
-            loaded_json = yaml.load(yml_content, Loader=yaml.FullLoader)
-        return loaded_json
+        if not yml_file.endswith('.json'):
+            with open(yml_file, "r", encoding="utf-8") as f:
+                yml_content = f.read()
+                loaded_json = yaml.load(yml_content, Loader=yaml.FullLoader)
+            return loaded_json
+        else:
+            with open(yml_file, "r", encoding="utf-8") as f:
+                result = f.read()
+            result = json.loads(result)
+            return result
 
     @classmethod
     def load_csv(self):
@@ -27,3 +34,7 @@ class Load:
                     csv_dict = dict(row)
                     csv_content_list.append(csv_dict)
         return csv_content_list
+if __name__ == '__main__':
+    r = Load().load_yml(r"C:\Users\Administrator\Desktop\hogwarts-httprunner\tests\api\get_login_1.json")
+    print(type(r))
+    print(r)

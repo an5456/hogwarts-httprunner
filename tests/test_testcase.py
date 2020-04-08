@@ -22,7 +22,7 @@ class TestSingle:
     @allure.story("测试2")
     def test_run_login(self):
         """范德萨范德"""
-        Result.result_assert(filename="get_login.yml")
+        Result.result_assert(filename="get_login_1.json")
 
     @allure.story("测试登陆123")
     def test_get_login_submit(self):

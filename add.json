@@ -1,0 +1,61 @@
+{
+    "config": {
+        "name": "testcase description",
+        "variables": {}
+    },
+    "teststeps": [
+        {
+            "name": "/webApi/sku/info/skuListByCondition",
+            "request": {
+                "url": "http://testtiger.csjmro.com/webApi/sku/info/skuListByCondition",
+                "method": "POST",
+                "headers": {
+                    "User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36",
+                    "Content-Type": "application/json;charset=UTF-8"
+                },
+                "json": {
+                    "pageSize": 10,
+                    "pageNum": 1
+                }
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        200
+                    ]
+                },
+                {
+                    "eq": [
+                        "headers.Content-Type",
+                        "application/json;charset=UTF-8"
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.errorMsg",
+                        null
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.detailError",
+                        null
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.code",
+                        "200"
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.success",
+                        true
+                    ]
+                }
+            ]
+        }
+    ]
+}

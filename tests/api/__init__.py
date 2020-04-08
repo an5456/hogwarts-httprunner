@@ -95,6 +95,18 @@
 # export PATH
 # import subprocess
 # res = subprocess.run("nohup python3 -m http.server >out.log 2>&1 & ", shell=True)
-a = "432432432423hhh"
-a.replace(a, "123213213")
-print(a)
+# a = "432432432423hhh"
+# a.replace(a, "123213213")
+# print(a)
+import sys
+class Person(object):
+    pass
+p = Person()
+p1 = p
+print(sys.getrefcount(p))
+p2 = p1
+print(sys.getrefcount(p))
+p3 = p2
+print(sys.getrefcount(p))
+del p1
+print(sys.getrefcount(p))

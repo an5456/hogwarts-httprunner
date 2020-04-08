@@ -23,7 +23,6 @@ teststeps:
     type: json
     extract:
         database: ${select_data($sql, $key)}
-
     validate:
     -   eq:
         - status_code

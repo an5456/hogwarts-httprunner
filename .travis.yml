@@ -19,3 +19,5 @@ script:
 #  - poetry run coverage run --source=core -m unittest discover
 #  - poetry run coverage report
 #  - poetry run coveralls
+# by www.bejson.com
+
