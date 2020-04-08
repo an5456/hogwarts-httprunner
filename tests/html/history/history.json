@@ -1,39 +1,21 @@
 {
-  "9c95dab400b4a6de89dedd0371d0cc61" : {
+  "cb9ecc73d434ed1643f0779c86d7fd88" : {
     "statistic" : {
       "failed" : 0,
-      "broken" : 0,
+      "broken" : 1,
       "skipped" : 0,
-      "passed" : 1,
+      "passed" : 0,
       "unknown" : 0,
       "total" : 1
     },
     "items" : [ {
-      "uid" : "a5bcda23b28c675f",
-      "status" : "passed",
+      "uid" : "e72ddd2ea1c0f0c5",
+      "status" : "broken",
+      "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\模板\\\\customerTemp.xlsx'",
       "time" : {
-        "start" : 1585386689232,
-        "stop" : 1585386689558,
-        "duration" : 326
-      }
-    } ]
-  },
-  "fea38451c2c2faeec54aa425a7c9b17c" : {
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 1,
-      "unknown" : 0,
-      "total" : 1
-    },
-    "items" : [ {
-      "uid" : "8d0256c7b1f34cc3",
-      "status" : "passed",
-      "time" : {
-        "start" : 1585386688794,
-        "stop" : 1585386688975,
-        "duration" : 181
+        "start" : 1586277121397,
+        "stop" : 1586277121404,
+        "duration" : 7
       }
     } ]
   },
@@ -47,50 +29,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "c5412d0800236a06",
+      "uid" : "7792f1d3c7472bf8",
       "status" : "passed",
       "time" : {
-        "start" : 1585386690359,
-        "stop" : 1585386690767,
-        "duration" : 408
-      }
-    } ]
-  },
-  "46e3b22ad087b89c39a957af5ba8e5e7" : {
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 1,
-      "unknown" : 0,
-      "total" : 1
-    },
-    "items" : [ {
-      "uid" : "9484b80f8b3e438e",
-      "status" : "passed",
-      "time" : {
-        "start" : 1585386689742,
-        "stop" : 1585386689956,
-        "duration" : 214
-      }
-    } ]
-  },
-  "9d45b30fd97667aff13f3a162735a3a9" : {
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 1,
-      "unknown" : 0,
-      "total" : 1
-    },
-    "items" : [ {
-      "uid" : "d079993a73a32da5",
-      "status" : "passed",
-      "time" : {
-        "start" : 1585386688979,
-        "stop" : 1585386689227,
-        "duration" : 248
+        "start" : 1586277122482,
+        "stop" : 1586277122812,
+        "duration" : 330
       }
     } ]
   },
@@ -104,12 +48,32 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "6ec9467ae59c0199",
+      "uid" : "156338e049172b1c",
       "status" : "passed",
       "time" : {
-        "start" : 1585386687966,
-        "stop" : 1585386688791,
-        "duration" : 825
+        "start" : 1586277121106,
+        "stop" : 1586277121393,
+        "duration" : 287
+      }
+    } ]
+  },
+  "41efa9182c71351aa0e40361160c2aeb" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "4c36d5050429e66f",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1586277121498,
+        "stop" : 1586277121684,
+        "duration" : 186
       }
     } ]
   },
@@ -123,12 +87,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "258647f7d242e1f2",
+      "uid" : "cb79443720453da",
       "status" : "passed",
       "time" : {
-        "start" : 1585386689648,
-        "stop" : 1585386689738,
-        "duration" : 90
+        "start" : 1586277121924,
+        "stop" : 1586277122161,
+        "duration" : 237
       }
     } ]
   },
@@ -142,13 +106,13 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "bf59d4d4940e95ef",
+      "uid" : "5f89c71f2b870aff",
       "status" : "failed",
       "statusDetails" : "AssertionError",
       "time" : {
-        "start" : 1585386689960,
-        "stop" : 1585386690280,
-        "duration" : 320
+        "start" : 1586277122164,
+        "stop" : 1586277122470,
+        "duration" : 306
       }
     } ]
   }
