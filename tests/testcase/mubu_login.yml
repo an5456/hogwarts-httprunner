@@ -1,7 +1,7 @@
 
 teststeps:
 - name: https://mubu.com/api/login/submit
-  api: api/get_login.yml
+  api: get_login.yml
   request:
 
     url: https://mubu.com/api/login/submit

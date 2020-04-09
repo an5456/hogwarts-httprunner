@@ -4,7 +4,7 @@ config:
     verify: false
 teststeps:
 -   name: 修改部门名称
-    api: api/get_create_department.yml
+    api: get_create_department.yml
     request:
         headers:
             content-type: application/x-www-form-urlencoded; charset=UTF-8

@@ -23,7 +23,7 @@ teststeps:
     extract:
         created_id: $.id
     teardown:
-        api: api/get_department_list.yml
+        api: get_department_list.yml
         extract:
             department_info: $..department[?(@.id==${created_id})]
     validate:

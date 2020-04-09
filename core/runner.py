@@ -137,7 +137,7 @@ class Runapi:
 
     # 获取依赖接口
     def get_run_api(self, api_info):
-        file_path = os.path.dirname(os.path.dirname(__file__)) + "/tests/"
+        file_path = os.path.join(os.path.dirname(os.path.dirname(__file__)) ,"tests","api","yml")
         if api_info.get("api"):
             ru_path = os.path.join(file_path, api_info.get("api"))
             print("依赖运行了")
@@ -146,7 +146,7 @@ class Runapi:
 
     def teardown_yaml(self, api_info):
         """断言依赖其它接口的返回值"""
-        file_path = os.path.dirname(os.path.dirname(__file__)) + "/tests/"
+        file_path = os.path.join(os.path.dirname(os.path.dirname(__file__)),"tests","api", "yml")
         if api_info["teardown"].get("api"):
             ru_path = os.path.join(file_path, api_info["teardown"].get("api"))
             Load.load_yml(ru_path)

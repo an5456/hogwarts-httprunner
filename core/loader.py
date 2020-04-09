@@ -24,8 +24,8 @@ class Load:
         """批量将某个文件夹下的yml文件，转换写入到另一个文件夹下对应json文件中，
            其中json文件的名称和yml文件的名称是一样的
         """
-        filePath = os.path.dirname(os.path.dirname(__file__)) + "/tests/api/yml"
-        file_path = os.path.dirname(os.path.dirname(__file__)) + "/tests/api/json"
+        filePath = os.path.join(os.path.dirname(os.path.dirname(__file__)) + "/tests/api/yml")
+        file_path = os.path.join(os.path.dirname(os.path.dirname(__file__)) + "/tests/api/json")
         files = os.listdir(filePath)
         for fi in files:
             if fi.endswith(".yml"):

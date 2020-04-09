@@ -4,7 +4,7 @@ config:
     varify: false
 teststeps:
 -   name: 删除部门
-    api: api/get_create_department.yml
+    api: get_create_department.yml
     request:
         headers:
             content-type: application/x-www-form-urlencoded; charset=UTF-8
