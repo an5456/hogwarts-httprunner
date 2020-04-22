@@ -203,7 +203,7 @@ class Runapi:
                             reps = json.loads(base64.b64decode(reps.content))
                     self.get_request_data(parsed_request, api_info)
                     self.extract_data(api_info, reps)
-                    return self.extract_and_get_data(parsed_validate, parsed_request, api_info, csv_dict, reps, url,
+                    return self.extract_and_get_data(parsed_validate, parsed_request, api_info, csv_dict, reps, reps.url,
                                                      method)
                 elif "dubbo" == config_info["schema"]:
                     pass
@@ -226,7 +226,7 @@ class Runapi:
             reps = session.request(method, url, **parsed_request)
             self.get_request_data(parsed_request, api_info)
             self.extract_data(api_info, reps)
-            return self.extract_and_get_data(parsed_validate, parsed_request, api_info, csv_dict, reps, url, method)
+            return self.extract_and_get_data(parsed_validate, parsed_request, api_info, csv_dict, reps, reps.url, method)
 
     def extract_and_get_data(self, parsed_validate, parsed_request, api_info, csv_dict, reps, url, method):
         """提取请求或者响应的数据，已经保存数据到yml文件"""

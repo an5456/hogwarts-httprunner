@@ -19,16 +19,10 @@
     "type": "json",
     "validate": [
       {
-        "eq": [
-          "status_code",
-          200
-        ]
+        "eq": ["status_code",200]
       },
       {
-        "eq": [
-          "$.errmsg",
-          "ok"
-        ]
+        "eq": ["$.errmsg", "ok"]
       }
     ]
   }
