@@ -1,6 +1,6 @@
 import pytest
 
-from core.getlog import GetLog
+#from core.getlog import GetLog
 
 
 def pytest_configure(config):
