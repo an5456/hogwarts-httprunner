@@ -17,7 +17,7 @@ def teardown_module():
 
 @allure.feature("测试接口")
 class TestSingle:
-    GetLog.get_logs_info()
+
     @allure.story("测试1")
     def test_run_testcase_yml(self):
         """斤斤计较测试"""

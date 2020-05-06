@@ -8,7 +8,8 @@ from core.result_assert import Result
 
 @allure.feature("部门管理")
 class TestApart:
-    GetLog.get_logs_info()
+
+
     @allure.story("001获取tocken")
     def setup_class(self):
         """001获取token"""
@@ -33,4 +34,3 @@ class TestApart:
     # def test_update_department(self):
     #     """修改部门名称"""
     #     Result.result_assert("api/yml", "get_weixin_update_department.yml")
-
