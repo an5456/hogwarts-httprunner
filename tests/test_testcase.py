@@ -29,9 +29,9 @@ class TestSingle:
 
     ids = ["{}-{}-{}".format(i['username'], i["password"], i['assert']) for i in Load.load_csv()]
 
-    @pytest.mark.parametrize("data", Load.load_csv(), ids=ids)
+    # @pytest.mark.parametrize("data", Load.load_csv(), ids=ids)
     @allure.story("测试登陆123")
-    def test_get_login_submit(self, data):
+    def test_get_login_submit(self):
         """ 呵呵呵呵1234"""
         Result.result_assert("api/yml", "get_login_submit.yml")
 
