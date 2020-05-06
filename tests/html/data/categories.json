@@ -1,0 +1,61 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "FileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\模板\\\\customerTemp.xlsx'",
+      "children" : [ {
+        "name" : "test_upfile",
+        "uid" : "360835eb8a9e2c81",
+        "parentUid" : "18954bdd1e896b72a930e39214d328ee",
+        "status" : "broken",
+        "time" : {
+          "start" : 1588157839933,
+          "stop" : 1588157839938,
+          "duration" : 5
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "18954bdd1e896b72a930e39214d328ee"
+    }, {
+      "name" : "lxml.etree.XPathEvalError: Expected $ for variable reference",
+      "children" : [ {
+        "name" : "test_addcustomer",
+        "uid" : "ff0bd83719d713ff",
+        "parentUid" : "d0d9cbbb22a55c7f91cd111d6eecf22e",
+        "status" : "broken",
+        "time" : {
+          "start" : 1588157840032,
+          "stop" : 1588157840144,
+          "duration" : 112
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "d0d9cbbb22a55c7f91cd111d6eecf22e"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  }, {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError",
+      "children" : [ {
+        "name" : "test_update_department",
+        "uid" : "4299cf9160d43866",
+        "parentUid" : "a0017ad855102fea08b8682d27fec4ca",
+        "status" : "failed",
+        "time" : {
+          "start" : 1588157840532,
+          "stop" : 1588157840836,
+          "duration" : 304
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "a0017ad855102fea08b8682d27fec4ca"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
+}

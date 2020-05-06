@@ -1,5 +1,8 @@
 import os
 import allure
+import pytest
+
+from core.loader import Load
 from core.result_assert import Result
 
 
@@ -24,8 +27,11 @@ class TestSingle:
         """范德萨范德"""
         Result.result_assert("api/json", "get_login.json")
 
+    ids = ["{}-{}-{}".format(i['username'], i["password"], i['assert']) for i in Load.load_csv()]
+
+    @pytest.mark.parametrize("data", Load.load_csv(), ids=ids)
     @allure.story("测试登陆123")
-    def test_get_login_submit(self):
+    def test_get_login_submit(self,data):
         """ 呵呵呵呵1234"""
         Result.result_assert("api/yml", "get_login_submit.yml")
 

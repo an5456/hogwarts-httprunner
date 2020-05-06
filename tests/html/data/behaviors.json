@@ -1,0 +1,157 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "测试接口",
+    "children" : [ {
+      "name" : "测试1",
+      "children" : [ {
+        "name" : "test_run_testcase_yml",
+        "uid" : "ea35023edcb64782",
+        "parentUid" : "200b281afa50b2454e309f232c76f4a7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1588157838963,
+          "stop" : 1588157839317,
+          "duration" : 354
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "200b281afa50b2454e309f232c76f4a7"
+    }, {
+      "name" : "测试2",
+      "children" : [ {
+        "name" : "test_run_login",
+        "uid" : "95ce8157dd406ca7",
+        "parentUid" : "28ef4d408ae8a2f70a5c9f53bf72059f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1588157839320,
+          "stop" : 1588157839421,
+          "duration" : 101
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "28ef4d408ae8a2f70a5c9f53bf72059f"
+    }, {
+      "name" : "测试登陆123",
+      "children" : [ {
+        "name" : "test_get_login_submit",
+        "uid" : "a76eeb63b83731ae",
+        "parentUid" : "a68519fabdf8f99bdcd658f5cc07b5cc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1588157839424,
+          "stop" : 1588157839668,
+          "duration" : 244
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "a68519fabdf8f99bdcd658f5cc07b5cc"
+    }, {
+      "name" : "测试4",
+      "children" : [ {
+        "name" : "test_get_home_page",
+        "uid" : "10003e19feaa1926",
+        "parentUid" : "8650a35675163e4a2800d438a4a76b1a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1588157839671,
+          "stop" : 1588157839931,
+          "duration" : 260
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "8650a35675163e4a2800d438a4a76b1a"
+    }, {
+      "name" : "上传文件",
+      "children" : [ {
+        "name" : "test_upfile",
+        "uid" : "360835eb8a9e2c81",
+        "parentUid" : "407689bd3a23cb23337f5995edf2ea60",
+        "status" : "broken",
+        "time" : {
+          "start" : 1588157839933,
+          "stop" : 1588157839938,
+          "duration" : 5
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "407689bd3a23cb23337f5995edf2ea60"
+    }, {
+      "name" : "创建客户",
+      "children" : [ {
+        "name" : "test_addcustomer",
+        "uid" : "ff0bd83719d713ff",
+        "parentUid" : "da97dececb0db1c5cd5f162be43a7461",
+        "status" : "broken",
+        "time" : {
+          "start" : 1588157840032,
+          "stop" : 1588157840144,
+          "duration" : 112
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "da97dececb0db1c5cd5f162be43a7461"
+    } ],
+    "uid" : "a946f7f2848a07a3b16cc482d28ca675"
+  }, {
+    "name" : "部门管理",
+    "children" : [ {
+      "name" : "002获取部分列表",
+      "children" : [ {
+        "name" : "test_get_department_list",
+        "uid" : "2368f82b77f3ad69",
+        "parentUid" : "2cf57e1d4222a55a5203e5297d4f7b6c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1588157840440,
+          "stop" : 1588157840529,
+          "duration" : 89
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "2cf57e1d4222a55a5203e5297d4f7b6c"
+    }, {
+      "name" : "004修改部门名称",
+      "children" : [ {
+        "name" : "test_update_department",
+        "uid" : "4299cf9160d43866",
+        "parentUid" : "7f89b80e16230c2efd7ab1822b98c879",
+        "status" : "failed",
+        "time" : {
+          "start" : 1588157840532,
+          "stop" : 1588157840836,
+          "duration" : 304
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "7f89b80e16230c2efd7ab1822b98c879"
+    }, {
+      "name" : "005删除部门",
+      "children" : [ {
+        "name" : "test_delete_department",
+        "uid" : "7a68c2f659fc8a3b",
+        "parentUid" : "2347bd43586a585dc37c6488a276c50a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1588157840848,
+          "stop" : 1588157841198,
+          "duration" : 350
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "2347bd43586a585dc37c6488a276c50a"
+    } ],
+    "uid" : "e96a8b8237ba44d09d61657369c49b14"
+  } ]
+}

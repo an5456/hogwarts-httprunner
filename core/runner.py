@@ -185,7 +185,7 @@ class Runapi:
         config_info = Utils.read_yaml(os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "env.yml"))
         if config_info:
             if config_info["weixin"]["schema"] is not None:
-                if config_info["weixin"]["schema"] == "http":  # 是否是http请求
+                if config_info["weixin"]["schema"] == "http" and config_info["weixin"]["schema"] == "https" :  # 是否是http或者https请求
                     url = parsed_request.pop("url").replace("qyapi.weixin.qq.com",
                                                             config_info["weixin"]["qyapi.weixin.qq.com"][
                                                                 config_info["weixin"]["default"]])
@@ -273,6 +273,6 @@ class Runapi:
 
 
 if __name__ == '__main__':
-    str_1 = "xxxs:${test_1($username,$password)}ssss:wwwww"
+    str_1 = "xxxs:${test_1($username,$password)}ssss:www"
     test_dict = {"username": "zhangsan", "password": 123456, "age": 21}
     print(Runapi().action.parse_funtion(str_1, test_dict))

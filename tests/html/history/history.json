@@ -1,0 +1,176 @@
+{
+  "cb9ecc73d434ed1643f0779c86d7fd88" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "360835eb8a9e2c81",
+      "status" : "broken",
+      "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\模板\\\\customerTemp.xlsx'",
+      "time" : {
+        "start" : 1588157839933,
+        "stop" : 1588157839938,
+        "duration" : 5
+      }
+    } ]
+  },
+  "9c95dab400b4a6de89dedd0371d0cc61" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "10003e19feaa1926",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588157839671,
+        "stop" : 1588157839931,
+        "duration" : 260
+      }
+    } ]
+  },
+  "fea38451c2c2faeec54aa425a7c9b17c" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "95ce8157dd406ca7",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588157839320,
+        "stop" : 1588157839421,
+        "duration" : 101
+      }
+    } ]
+  },
+  "5ee475380eb6570273936d594eafc2c4" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "7a68c2f659fc8a3b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588157840848,
+        "stop" : 1588157841198,
+        "duration" : 350
+      }
+    } ]
+  },
+  "9d45b30fd97667aff13f3a162735a3a9" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "a76eeb63b83731ae",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588157839424,
+        "stop" : 1588157839668,
+        "duration" : 244
+      }
+    } ]
+  },
+  "a795ec9b90752ada9e41d5e5673b3878" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "ea35023edcb64782",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588157838963,
+        "stop" : 1588157839317,
+        "duration" : 354
+      }
+    } ]
+  },
+  "41efa9182c71351aa0e40361160c2aeb" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "ff0bd83719d713ff",
+      "status" : "broken",
+      "statusDetails" : "lxml.etree.XPathEvalError: Expected $ for variable reference",
+      "time" : {
+        "start" : 1588157840032,
+        "stop" : 1588157840144,
+        "duration" : 112
+      }
+    } ]
+  },
+  "28e41a0a6f1810034074f52f2cc6f690" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "2368f82b77f3ad69",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588157840440,
+        "stop" : 1588157840529,
+        "duration" : 89
+      }
+    } ]
+  },
+  "0b207a42cf244f1b321ce68a1dc0349e" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "4299cf9160d43866",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1588157840532,
+        "stop" : 1588157840836,
+        "duration" : 304
+      }
+    } ]
+  }
+}

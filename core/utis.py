@@ -1,4 +1,7 @@
+import csv
+import io
 import json
+import os
 import re
 import jsonpath
 import yaml
@@ -45,8 +48,6 @@ class Utils:
         """读取yaml中信息"""
         operation = open(path, "r", encoding="utf-8")
         return yaml.load(operation.read(), Loader=yaml.FullLoader)
-
-
 
 
 if __name__ == '__main__':
