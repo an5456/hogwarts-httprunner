@@ -32,10 +32,7 @@
       "type": "json",
       "validate": [
         {
-          "eq": [
-            "$.code",
-            0
-          ]
+          "eq": ["$.code", 0]
         }
       ]
     }

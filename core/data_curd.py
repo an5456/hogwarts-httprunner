@@ -1,5 +1,4 @@
 import logging
-
 import pymysql
 from core.getlog import GetLog
 
