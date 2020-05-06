@@ -1,21 +1,20 @@
 {
-  "cb9ecc73d434ed1643f0779c86d7fd88" : {
+  "fea38451c2c2faeec54aa425a7c9b17c" : {
     "statistic" : {
       "failed" : 0,
-      "broken" : 1,
+      "broken" : 0,
       "skipped" : 0,
-      "passed" : 0,
+      "passed" : 1,
       "unknown" : 0,
       "total" : 1
     },
     "items" : [ {
-      "uid" : "2a3e8cc15740e400",
-      "status" : "broken",
-      "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\模板\\\\customerTemp.xlsx'",
+      "uid" : "9711bdef0100f260",
+      "status" : "passed",
       "time" : {
-        "start" : 1588772583304,
-        "stop" : 1588772583311,
-        "duration" : 7
+        "start" : 1588773294325,
+        "stop" : 1588773294408,
+        "duration" : 83
       }
     } ]
   },
@@ -29,31 +28,32 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "a7b8c4b3d57d5f10",
+      "uid" : "4ba6e0bd4577e8c4",
       "status" : "passed",
       "time" : {
-        "start" : 1588772582931,
-        "stop" : 1588772583296,
-        "duration" : 365
+        "start" : 1588773295152,
+        "stop" : 1588773295425,
+        "duration" : 273
       }
     } ]
   },
-  "fea38451c2c2faeec54aa425a7c9b17c" : {
+  "cb9ecc73d434ed1643f0779c86d7fd88" : {
     "statistic" : {
       "failed" : 0,
-      "broken" : 0,
+      "broken" : 1,
       "skipped" : 0,
-      "passed" : 1,
+      "passed" : 0,
       "unknown" : 0,
       "total" : 1
     },
     "items" : [ {
-      "uid" : "8be21f881327585d",
-      "status" : "passed",
+      "uid" : "94f077ef9aa271f7",
+      "status" : "broken",
+      "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\模板\\\\customerTemp.xlsx'",
       "time" : {
-        "start" : 1588772581909,
-        "stop" : 1588772582010,
-        "duration" : 101
+        "start" : 1588773295429,
+        "stop" : 1588773295435,
+        "duration" : 6
       }
     } ]
   },
@@ -67,12 +67,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "d05168b2d91c5637",
+      "uid" : "ee9b3233f0dbbb45",
       "status" : "passed",
       "time" : {
-        "start" : 1588772584384,
-        "stop" : 1588772584712,
-        "duration" : 328
+        "start" : 1588773296301,
+        "stop" : 1588773296653,
+        "duration" : 352
       }
     } ]
   },
@@ -86,12 +86,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "61820272fddd3310",
+      "uid" : "e08b1ef137ce4eff",
       "status" : "passed",
       "time" : {
-        "start" : 1588772582317,
-        "stop" : 1588772582623,
-        "duration" : 306
+        "start" : 1588773294656,
+        "stop" : 1588773294902,
+        "duration" : 246
       }
     } ]
   },
@@ -105,12 +105,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "8119bdd7fe7db31f",
+      "uid" : "8d01236e90f07a6e",
       "status" : "passed",
       "time" : {
-        "start" : 1588772584174,
-        "stop" : 1588772584380,
-        "duration" : 206
+        "start" : 1588773296065,
+        "stop" : 1588773296298,
+        "duration" : 233
       }
     } ]
   },
@@ -124,12 +124,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "7129e721b5b7faaa",
+      "uid" : "4b8a20e0e9e4a42e",
       "status" : "passed",
       "time" : {
-        "start" : 1588772581555,
-        "stop" : 1588772581905,
-        "duration" : 350
+        "start" : 1588773294022,
+        "stop" : 1588773294321,
+        "duration" : 299
       }
     } ]
   },
@@ -143,13 +143,13 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "9e85e68556fcb433",
+      "uid" : "dc3fe603e81d4ee6",
       "status" : "failed",
       "statusDetails" : "AssertionError",
       "time" : {
-        "start" : 1588772583411,
-        "stop" : 1588772583807,
-        "duration" : 396
+        "start" : 1588773295533,
+        "stop" : 1588773295702,
+        "duration" : 169
       }
     } ]
   },
@@ -163,12 +163,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "fbd7a74691bfc48f",
+      "uid" : "922a1e5582826359",
       "status" : "passed",
       "time" : {
-        "start" : 1588772584050,
-        "stop" : 1588772584170,
-        "duration" : 120
+        "start" : 1588773295973,
+        "stop" : 1588773296061,
+        "duration" : 88
       }
     } ]
   },
@@ -182,12 +182,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "7377d9db6af6b78d",
+      "uid" : "37b5cdfda3df35e1",
       "status" : "passed",
       "time" : {
-        "start" : 1588772582013,
-        "stop" : 1588772582313,
-        "duration" : 300
+        "start" : 1588773294412,
+        "stop" : 1588773294652,
+        "duration" : 240
       }
     } ]
   },
@@ -201,12 +201,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "bfe69e1c24c39f00",
+      "uid" : "ae085cf79c28b33c",
       "status" : "passed",
       "time" : {
-        "start" : 1588772582626,
-        "stop" : 1588772582928,
-        "duration" : 302
+        "start" : 1588773294907,
+        "stop" : 1588773295148,
+        "duration" : 241
       }
     } ]
   }
