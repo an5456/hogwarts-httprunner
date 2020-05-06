@@ -1,91 +1,111 @@
 [ {
-  "uid" : "2368f82b77f3ad69",
-  "name" : "test_get_department_list",
+  "uid" : "e3000003acf3a492",
+  "name" : "test_get_login_submit[17729597958-dong19871103-02]",
   "time" : {
-    "start" : 1588157840440,
-    "stop" : 1588157840529,
-    "duration" : 89
+    "start" : 1588769241149,
+    "stop" : 1588769241399,
+    "duration" : 250
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "360835eb8a9e2c81",
-  "name" : "test_upfile",
-  "time" : {
-    "start" : 1588157839933,
-    "stop" : 1588157839938,
-    "duration" : 5
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "a76eeb63b83731ae",
-  "name" : "test_get_login_submit",
-  "time" : {
-    "start" : 1588157839424,
-    "stop" : 1588157839668,
-    "duration" : 244
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "7a68c2f659fc8a3b",
-  "name" : "test_delete_department",
-  "time" : {
-    "start" : 1588157840848,
-    "stop" : 1588157841198,
-    "duration" : 350
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "ea35023edcb64782",
+  "uid" : "35158f5fd2942272",
   "name" : "test_run_testcase_yml",
   "time" : {
-    "start" : 1588157838963,
-    "stop" : 1588157839317,
-    "duration" : 354
+    "start" : 1588769240268,
+    "stop" : 1588769240533,
+    "duration" : 265
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "95ce8157dd406ca7",
+  "uid" : "c15c85257480a822",
+  "name" : "test_delete_department",
+  "time" : {
+    "start" : 1588769242779,
+    "stop" : 1588769243164,
+    "duration" : 385
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7041eed920eaec6a",
+  "name" : "test_get_login_submit[17729597958-dong19871103-01]",
+  "time" : {
+    "start" : 1588769240895,
+    "stop" : 1588769241144,
+    "duration" : 249
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c5d6b1aaaf4c57d3",
   "name" : "test_run_login",
   "time" : {
-    "start" : 1588157839320,
-    "stop" : 1588157839421,
-    "duration" : 101
+    "start" : 1588769240537,
+    "stop" : 1588769240619,
+    "duration" : 82
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "10003e19feaa1926",
-  "name" : "test_get_home_page",
+  "uid" : "cdf5747ba44bfad3",
+  "name" : "test_upfile",
   "time" : {
-    "start" : 1588157839671,
-    "stop" : 1588157839931,
-    "duration" : 260
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "ff0bd83719d713ff",
-  "name" : "test_addcustomer",
-  "time" : {
-    "start" : 1588157840032,
-    "stop" : 1588157840144,
-    "duration" : 112
+    "start" : 1588769241695,
+    "stop" : 1588769241701,
+    "duration" : 6
   },
   "status" : "broken",
   "severity" : "normal"
 }, {
-  "uid" : "4299cf9160d43866",
-  "name" : "test_update_department",
+  "uid" : "7d57cf3c44203152",
+  "name" : "test_create_department",
   "time" : {
-    "start" : 1588157840532,
-    "stop" : 1588157840836,
-    "duration" : 304
+    "start" : 1588769242280,
+    "stop" : 1588769242776,
+    "duration" : 496
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "436c1a0103ce071a",
+  "name" : "test_addcustomer",
+  "time" : {
+    "start" : 1588769241796,
+    "stop" : 1588769241924,
+    "duration" : 128
   },
   "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "777e089717fbeed8",
+  "name" : "test_get_login_submit[17729597958-dong19871103-00]",
+  "time" : {
+    "start" : 1588769240622,
+    "stop" : 1588769240891,
+    "duration" : 269
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5aad64b1dabc51d0",
+  "name" : "test_get_home_page",
+  "time" : {
+    "start" : 1588769241404,
+    "stop" : 1588769241692,
+    "duration" : 288
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "dcbee10d7849895b",
+  "name" : "test_get_department_list",
+  "time" : {
+    "start" : 1588769242179,
+    "stop" : 1588769242276,
+    "duration" : 97
+  },
+  "status" : "passed",
   "severity" : "normal"
 } ]

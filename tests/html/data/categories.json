@@ -7,34 +7,18 @@
       "name" : "FileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\模板\\\\customerTemp.xlsx'",
       "children" : [ {
         "name" : "test_upfile",
-        "uid" : "360835eb8a9e2c81",
+        "uid" : "cdf5747ba44bfad3",
         "parentUid" : "18954bdd1e896b72a930e39214d328ee",
         "status" : "broken",
         "time" : {
-          "start" : 1588157839933,
-          "stop" : 1588157839938,
-          "duration" : 5
+          "start" : 1588769241695,
+          "stop" : 1588769241701,
+          "duration" : 6
         },
         "flaky" : false,
         "parameters" : [ ]
       } ],
       "uid" : "18954bdd1e896b72a930e39214d328ee"
-    }, {
-      "name" : "lxml.etree.XPathEvalError: Expected $ for variable reference",
-      "children" : [ {
-        "name" : "test_addcustomer",
-        "uid" : "ff0bd83719d713ff",
-        "parentUid" : "d0d9cbbb22a55c7f91cd111d6eecf22e",
-        "status" : "broken",
-        "time" : {
-          "start" : 1588157840032,
-          "stop" : 1588157840144,
-          "duration" : 112
-        },
-        "flaky" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "d0d9cbbb22a55c7f91cd111d6eecf22e"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
   }, {
@@ -42,14 +26,14 @@
     "children" : [ {
       "name" : "AssertionError",
       "children" : [ {
-        "name" : "test_update_department",
-        "uid" : "4299cf9160d43866",
+        "name" : "test_addcustomer",
+        "uid" : "436c1a0103ce071a",
         "parentUid" : "a0017ad855102fea08b8682d27fec4ca",
         "status" : "failed",
         "time" : {
-          "start" : 1588157840532,
-          "stop" : 1588157840836,
-          "duration" : 304
+          "start" : 1588769241796,
+          "stop" : 1588769241924,
+          "duration" : 128
         },
         "flaky" : false,
         "parameters" : [ ]

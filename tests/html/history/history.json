@@ -1,4 +1,23 @@
 {
+  "fea38451c2c2faeec54aa425a7c9b17c" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "c5d6b1aaaf4c57d3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588769240537,
+        "stop" : 1588769240619,
+        "duration" : 82
+      }
+    } ]
+  },
   "cb9ecc73d434ed1643f0779c86d7fd88" : {
     "statistic" : {
       "failed" : 0,
@@ -9,13 +28,13 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "360835eb8a9e2c81",
+      "uid" : "cdf5747ba44bfad3",
       "status" : "broken",
       "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\模板\\\\customerTemp.xlsx'",
       "time" : {
-        "start" : 1588157839933,
-        "stop" : 1588157839938,
-        "duration" : 5
+        "start" : 1588769241695,
+        "stop" : 1588769241701,
+        "duration" : 6
       }
     } ]
   },
@@ -29,31 +48,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "10003e19feaa1926",
+      "uid" : "5aad64b1dabc51d0",
       "status" : "passed",
       "time" : {
-        "start" : 1588157839671,
-        "stop" : 1588157839931,
-        "duration" : 260
-      }
-    } ]
-  },
-  "fea38451c2c2faeec54aa425a7c9b17c" : {
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 1,
-      "unknown" : 0,
-      "total" : 1
-    },
-    "items" : [ {
-      "uid" : "95ce8157dd406ca7",
-      "status" : "passed",
-      "time" : {
-        "start" : 1588157839320,
-        "stop" : 1588157839421,
-        "duration" : 101
+        "start" : 1588769241404,
+        "stop" : 1588769241692,
+        "duration" : 288
       }
     } ]
   },
@@ -67,16 +67,16 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "7a68c2f659fc8a3b",
+      "uid" : "c15c85257480a822",
       "status" : "passed",
       "time" : {
-        "start" : 1588157840848,
-        "stop" : 1588157841198,
-        "duration" : 350
+        "start" : 1588769242779,
+        "stop" : 1588769243164,
+        "duration" : 385
       }
     } ]
   },
-  "9d45b30fd97667aff13f3a162735a3a9" : {
+  "980d9f280b0154363b45605cdf2472e0" : {
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -86,12 +86,31 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "a76eeb63b83731ae",
+      "uid" : "7041eed920eaec6a",
       "status" : "passed",
       "time" : {
-        "start" : 1588157839424,
-        "stop" : 1588157839668,
-        "duration" : 244
+        "start" : 1588769240895,
+        "stop" : 1588769241144,
+        "duration" : 249
+      }
+    } ]
+  },
+  "46e3b22ad087b89c39a957af5ba8e5e7" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "7d57cf3c44203152",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588769242280,
+        "stop" : 1588769242776,
+        "duration" : 496
       }
     } ]
   },
@@ -105,32 +124,32 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "ea35023edcb64782",
+      "uid" : "35158f5fd2942272",
       "status" : "passed",
       "time" : {
-        "start" : 1588157838963,
-        "stop" : 1588157839317,
-        "duration" : 354
+        "start" : 1588769240268,
+        "stop" : 1588769240533,
+        "duration" : 265
       }
     } ]
   },
   "41efa9182c71351aa0e40361160c2aeb" : {
     "statistic" : {
-      "failed" : 0,
-      "broken" : 1,
+      "failed" : 1,
+      "broken" : 0,
       "skipped" : 0,
       "passed" : 0,
       "unknown" : 0,
       "total" : 1
     },
     "items" : [ {
-      "uid" : "ff0bd83719d713ff",
-      "status" : "broken",
-      "statusDetails" : "lxml.etree.XPathEvalError: Expected $ for variable reference",
+      "uid" : "436c1a0103ce071a",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
       "time" : {
-        "start" : 1588157840032,
-        "stop" : 1588157840144,
-        "duration" : 112
+        "start" : 1588769241796,
+        "stop" : 1588769241924,
+        "duration" : 128
       }
     } ]
   },
@@ -144,32 +163,50 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "2368f82b77f3ad69",
+      "uid" : "dcbee10d7849895b",
       "status" : "passed",
       "time" : {
-        "start" : 1588157840440,
-        "stop" : 1588157840529,
-        "duration" : 89
+        "start" : 1588769242179,
+        "stop" : 1588769242276,
+        "duration" : 97
       }
     } ]
   },
-  "0b207a42cf244f1b321ce68a1dc0349e" : {
+  "71ae392e3797e88d4c59a38f90fb3b3f" : {
     "statistic" : {
-      "failed" : 1,
+      "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 0,
+      "passed" : 1,
       "unknown" : 0,
       "total" : 1
     },
     "items" : [ {
-      "uid" : "4299cf9160d43866",
-      "status" : "failed",
-      "statusDetails" : "AssertionError",
+      "uid" : "777e089717fbeed8",
+      "status" : "passed",
       "time" : {
-        "start" : 1588157840532,
-        "stop" : 1588157840836,
-        "duration" : 304
+        "start" : 1588769240622,
+        "stop" : 1588769240891,
+        "duration" : 269
+      }
+    } ]
+  },
+  "3b88e349bfb683a1729d95bc07a01246" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "e3000003acf3a492",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588769241149,
+        "stop" : 1588769241399,
+        "duration" : 250
       }
     } ]
   }
