@@ -1,11 +1,14 @@
 import time
 
 import allure
+
+from core.getlog import GetLog
 from core.result_assert import Result
 
 
 @allure.feature("部门管理")
 class TestApart:
+    GetLog.get_logs_info()
     @allure.story("001获取tocken")
     def setup_class(self):
         """001获取token"""

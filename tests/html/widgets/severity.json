@@ -1,111 +1,111 @@
 [ {
-  "uid" : "80f6b2aa0ea5d3a4",
-  "name" : "test_get_home_page",
-  "time" : {
-    "start" : 1588769631788,
-    "stop" : 1588769632120,
-    "duration" : 332
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "ae68478cf2e7cb74",
-  "name" : "test_run_testcase_yml",
-  "time" : {
-    "start" : 1588769630567,
-    "stop" : 1588769630855,
-    "duration" : 288
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "8b6aa9d9abbb749c",
-  "name" : "test_get_login_submit[17729597958-dong19871103-01]",
-  "time" : {
-    "start" : 1588769631243,
-    "stop" : 1588769631520,
-    "duration" : 277
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "c8b6fe21f5c1f81",
-  "name" : "test_create_department",
-  "time" : {
-    "start" : 1588769632702,
-    "stop" : 1588769632934,
-    "duration" : 232
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "8284478e6c8bce01",
-  "name" : "test_delete_department",
-  "time" : {
-    "start" : 1588769632938,
-    "stop" : 1588769633360,
-    "duration" : 422
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "fd5466549dd96136",
-  "name" : "test_get_login_submit[17729597958-dong19871103-00]",
-  "time" : {
-    "start" : 1588769630962,
-    "stop" : 1588769631238,
-    "duration" : 276
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "babb0bd6526a9431",
+  "uid" : "2d69c9fbbb6fc732",
   "name" : "test_upfile",
   "time" : {
-    "start" : 1588769632124,
-    "stop" : 1588769632134,
-    "duration" : 10
+    "start" : 1588770299701,
+    "stop" : 1588770299708,
+    "duration" : 7
   },
   "status" : "broken",
   "severity" : "normal"
 }, {
-  "uid" : "30a6df178a348eea",
+  "uid" : "3016fbb56b2e13b9",
+  "name" : "test_get_home_page",
+  "time" : {
+    "start" : 1588770299335,
+    "stop" : 1588770299698,
+    "duration" : 363
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "798b57a093c740e3",
+  "name" : "test_run_testcase_yml",
+  "time" : {
+    "start" : 1588770297973,
+    "stop" : 1588770298340,
+    "duration" : 367
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5d8b8e865e29c2c",
+  "name" : "test_get_login_submit[17729597958-dong19871103-00]",
+  "time" : {
+    "start" : 1588770298448,
+    "stop" : 1588770298738,
+    "duration" : 290
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3075d475452ddaeb",
   "name" : "test_get_login_submit[17729597958-dong19871103-02]",
   "time" : {
-    "start" : 1588769631524,
-    "stop" : 1588769631784,
-    "duration" : 260
+    "start" : 1588770299045,
+    "stop" : 1588770299331,
+    "duration" : 286
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "d96e9c50d9fdd365",
+  "uid" : "1ad54e4941933579",
   "name" : "test_get_department_list",
   "time" : {
-    "start" : 1588769632622,
-    "stop" : 1588769632698,
-    "duration" : 76
+    "start" : 1588770300185,
+    "stop" : 1588770300266,
+    "duration" : 81
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "eef9b94ddbb6b92f",
+  "uid" : "1af8bb6685e5c3d3",
   "name" : "test_run_login",
   "time" : {
-    "start" : 1588769630859,
-    "stop" : 1588769630959,
-    "duration" : 100
+    "start" : 1588770298344,
+    "stop" : 1588770298443,
+    "duration" : 99
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "643d2fd42782a622",
+  "uid" : "6797fe5a10d72c9b",
+  "name" : "test_get_login_submit[17729597958-dong19871103-01]",
+  "time" : {
+    "start" : 1588770298742,
+    "stop" : 1588770299041,
+    "duration" : 299
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9c5692c3ba1b8104",
+  "name" : "test_delete_department",
+  "time" : {
+    "start" : 1588770300566,
+    "stop" : 1588770300991,
+    "duration" : 425
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "928abdb94079b446",
   "name" : "test_addcustomer",
   "time" : {
-    "start" : 1588769632235,
-    "stop" : 1588769632372,
-    "duration" : 137
+    "start" : 1588770299799,
+    "stop" : 1588770299944,
+    "duration" : 145
   },
   "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "8e65c308f29306b0",
+  "name" : "test_create_department",
+  "time" : {
+    "start" : 1588770300270,
+    "stop" : 1588770300562,
+    "duration" : 292
+  },
+  "status" : "passed",
   "severity" : "normal"
 } ]

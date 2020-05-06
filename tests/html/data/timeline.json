@@ -4,141 +4,141 @@
   "children" : [ {
     "name" : "anxiaodongdeMacBook-Pro.local",
     "children" : [ {
-      "name" : "11836-MainThread",
+      "name" : "12133-MainThread",
       "children" : [ {
-        "name" : "test_get_department_list",
-        "uid" : "d96e9c50d9fdd365",
-        "parentUid" : "3c1df0d7b09ee72641c541d45d272145",
-        "status" : "passed",
-        "time" : {
-          "start" : 1588769632622,
-          "stop" : 1588769632698,
-          "duration" : 76
-        },
-        "flaky" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_run_testcase_yml",
-        "uid" : "ae68478cf2e7cb74",
-        "parentUid" : "3c1df0d7b09ee72641c541d45d272145",
-        "status" : "passed",
-        "time" : {
-          "start" : 1588769630567,
-          "stop" : 1588769630855,
-          "duration" : 288
-        },
-        "flaky" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_run_login",
-        "uid" : "eef9b94ddbb6b92f",
-        "parentUid" : "3c1df0d7b09ee72641c541d45d272145",
-        "status" : "passed",
-        "time" : {
-          "start" : 1588769630859,
-          "stop" : 1588769630959,
-          "duration" : 100
-        },
-        "flaky" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_create_department",
-        "uid" : "c8b6fe21f5c1f81",
-        "parentUid" : "3c1df0d7b09ee72641c541d45d272145",
-        "status" : "passed",
-        "time" : {
-          "start" : 1588769632702,
-          "stop" : 1588769632934,
-          "duration" : 232
-        },
-        "flaky" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_get_login_submit[17729597958-dong19871103-01]",
-        "uid" : "8b6aa9d9abbb749c",
-        "parentUid" : "3c1df0d7b09ee72641c541d45d272145",
-        "status" : "passed",
-        "time" : {
-          "start" : 1588769631243,
-          "stop" : 1588769631520,
-          "duration" : 277
-        },
-        "flaky" : false,
-        "parameters" : [ "{'username': '17729597958', 'password': 'dong19871103', 'assert': '0', 'status': '200', 'desc': '密码错误'}" ]
-      }, {
-        "name" : "test_get_login_submit[17729597958-dong19871103-00]",
-        "uid" : "fd5466549dd96136",
-        "parentUid" : "3c1df0d7b09ee72641c541d45d272145",
-        "status" : "passed",
-        "time" : {
-          "start" : 1588769630962,
-          "stop" : 1588769631238,
-          "duration" : 276
-        },
-        "flaky" : false,
-        "parameters" : [ "{'username': '17729597958', 'password': 'dong19871103', 'assert': '0', 'status': '200', 'desc': '正常登陆'}" ]
-      }, {
-        "name" : "test_delete_department",
-        "uid" : "8284478e6c8bce01",
-        "parentUid" : "3c1df0d7b09ee72641c541d45d272145",
-        "status" : "passed",
-        "time" : {
-          "start" : 1588769632938,
-          "stop" : 1588769633360,
-          "duration" : 422
-        },
-        "flaky" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_upfile",
-        "uid" : "babb0bd6526a9431",
-        "parentUid" : "3c1df0d7b09ee72641c541d45d272145",
-        "status" : "broken",
-        "time" : {
-          "start" : 1588769632124,
-          "stop" : 1588769632134,
-          "duration" : 10
-        },
-        "flaky" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_get_home_page",
-        "uid" : "80f6b2aa0ea5d3a4",
-        "parentUid" : "3c1df0d7b09ee72641c541d45d272145",
-        "status" : "passed",
-        "time" : {
-          "start" : 1588769631788,
-          "stop" : 1588769632120,
-          "duration" : 332
-        },
-        "flaky" : false,
-        "parameters" : [ ]
-      }, {
         "name" : "test_addcustomer",
-        "uid" : "643d2fd42782a622",
-        "parentUid" : "3c1df0d7b09ee72641c541d45d272145",
+        "uid" : "928abdb94079b446",
+        "parentUid" : "22728e9dff6ba6cfe0b09fe13296daa2",
         "status" : "failed",
         "time" : {
-          "start" : 1588769632235,
-          "stop" : 1588769632372,
-          "duration" : 137
+          "start" : 1588770299799,
+          "stop" : 1588770299944,
+          "duration" : 145
         },
         "flaky" : false,
         "parameters" : [ ]
       }, {
         "name" : "test_get_login_submit[17729597958-dong19871103-02]",
-        "uid" : "30a6df178a348eea",
-        "parentUid" : "3c1df0d7b09ee72641c541d45d272145",
+        "uid" : "3075d475452ddaeb",
+        "parentUid" : "22728e9dff6ba6cfe0b09fe13296daa2",
         "status" : "passed",
         "time" : {
-          "start" : 1588769631524,
-          "stop" : 1588769631784,
-          "duration" : 260
+          "start" : 1588770299045,
+          "stop" : 1588770299331,
+          "duration" : 286
         },
         "flaky" : false,
         "parameters" : [ "{'username': '17729597958', 'password': 'dong19871103', 'assert': '0', 'status': '200', 'desc': '用户名错误'}" ]
+      }, {
+        "name" : "test_delete_department",
+        "uid" : "9c5692c3ba1b8104",
+        "parentUid" : "22728e9dff6ba6cfe0b09fe13296daa2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1588770300566,
+          "stop" : 1588770300991,
+          "duration" : 425
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_upfile",
+        "uid" : "2d69c9fbbb6fc732",
+        "parentUid" : "22728e9dff6ba6cfe0b09fe13296daa2",
+        "status" : "broken",
+        "time" : {
+          "start" : 1588770299701,
+          "stop" : 1588770299708,
+          "duration" : 7
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_run_testcase_yml",
+        "uid" : "798b57a093c740e3",
+        "parentUid" : "22728e9dff6ba6cfe0b09fe13296daa2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1588770297973,
+          "stop" : 1588770298340,
+          "duration" : 367
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_create_department",
+        "uid" : "8e65c308f29306b0",
+        "parentUid" : "22728e9dff6ba6cfe0b09fe13296daa2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1588770300270,
+          "stop" : 1588770300562,
+          "duration" : 292
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_run_login",
+        "uid" : "1af8bb6685e5c3d3",
+        "parentUid" : "22728e9dff6ba6cfe0b09fe13296daa2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1588770298344,
+          "stop" : 1588770298443,
+          "duration" : 99
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_get_login_submit[17729597958-dong19871103-01]",
+        "uid" : "6797fe5a10d72c9b",
+        "parentUid" : "22728e9dff6ba6cfe0b09fe13296daa2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1588770298742,
+          "stop" : 1588770299041,
+          "duration" : 299
+        },
+        "flaky" : false,
+        "parameters" : [ "{'username': '17729597958', 'password': 'dong19871103', 'assert': '0', 'status': '200', 'desc': '密码错误'}" ]
+      }, {
+        "name" : "test_get_login_submit[17729597958-dong19871103-00]",
+        "uid" : "5d8b8e865e29c2c",
+        "parentUid" : "22728e9dff6ba6cfe0b09fe13296daa2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1588770298448,
+          "stop" : 1588770298738,
+          "duration" : 290
+        },
+        "flaky" : false,
+        "parameters" : [ "{'username': '17729597958', 'password': 'dong19871103', 'assert': '0', 'status': '200', 'desc': '正常登陆'}" ]
+      }, {
+        "name" : "test_get_department_list",
+        "uid" : "1ad54e4941933579",
+        "parentUid" : "22728e9dff6ba6cfe0b09fe13296daa2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1588770300185,
+          "stop" : 1588770300266,
+          "duration" : 81
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_get_home_page",
+        "uid" : "3016fbb56b2e13b9",
+        "parentUid" : "22728e9dff6ba6cfe0b09fe13296daa2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1588770299335,
+          "stop" : 1588770299698,
+          "duration" : 363
+        },
+        "flaky" : false,
+        "parameters" : [ ]
       } ],
-      "uid" : "3c1df0d7b09ee72641c541d45d272145"
+      "uid" : "22728e9dff6ba6cfe0b09fe13296daa2"
     } ],
     "uid" : "90798661423fb2d2323aed12cbceaa57"
   } ]

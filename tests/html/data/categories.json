@@ -7,13 +7,13 @@
       "name" : "FileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\模板\\\\customerTemp.xlsx'",
       "children" : [ {
         "name" : "test_upfile",
-        "uid" : "babb0bd6526a9431",
+        "uid" : "2d69c9fbbb6fc732",
         "parentUid" : "18954bdd1e896b72a930e39214d328ee",
         "status" : "broken",
         "time" : {
-          "start" : 1588769632124,
-          "stop" : 1588769632134,
-          "duration" : 10
+          "start" : 1588770299701,
+          "stop" : 1588770299708,
+          "duration" : 7
         },
         "flaky" : false,
         "parameters" : [ ]
@@ -27,13 +27,13 @@
       "name" : "AssertionError",
       "children" : [ {
         "name" : "test_addcustomer",
-        "uid" : "643d2fd42782a622",
+        "uid" : "928abdb94079b446",
         "parentUid" : "a0017ad855102fea08b8682d27fec4ca",
         "status" : "failed",
         "time" : {
-          "start" : 1588769632235,
-          "stop" : 1588769632372,
-          "duration" : 137
+          "start" : 1588770299799,
+          "stop" : 1588770299944,
+          "duration" : 145
         },
         "flaky" : false,
         "parameters" : [ ]

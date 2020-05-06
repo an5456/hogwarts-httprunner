@@ -2,6 +2,7 @@ import os
 import allure
 import pytest
 
+from core.getlog import GetLog
 from core.loader import Load
 from core.result_assert import Result
 
@@ -16,7 +17,7 @@ def teardown_module():
 
 @allure.feature("测试接口")
 class TestSingle:
-
+    GetLog.get_logs_info()
     @allure.story("测试1")
     def test_run_testcase_yml(self):
         """斤斤计较测试"""
