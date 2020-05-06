@@ -1,17 +1,6 @@
 {
   "total" : 2,
   "items" : [ {
-    "uid" : "a946f7f2848a07a3b16cc482d28ca675",
-    "name" : "测试接口",
-    "statistic" : {
-      "failed" : 1,
-      "broken" : 1,
-      "skipped" : 0,
-      "passed" : 1,
-      "unknown" : 0,
-      "total" : 3
-    }
-  }, {
     "uid" : "e96a8b8237ba44d09d61657369c49b14",
     "name" : "部门管理",
     "statistic" : {
@@ -21,6 +10,17 @@
       "passed" : 2,
       "unknown" : 0,
       "total" : 3
+    }
+  }, {
+    "uid" : "a946f7f2848a07a3b16cc482d28ca675",
+    "name" : "测试接口",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 5,
+      "unknown" : 0,
+      "total" : 6
     }
   } ]
 }

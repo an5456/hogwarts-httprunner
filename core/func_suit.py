@@ -54,7 +54,7 @@ class FuncSuit:
 
         # 拼接手机号
         telephone = "1{}{}{}".format(second, third, suffix)
-        logging.info("创建手机号：" + telephone)
+        # logging.info("创建手机号：" + telephone)
         return telephone
 
     def create_telephone(self):
@@ -124,4 +124,8 @@ if __name__ == '__main__':
     # FuncSuit().r_string()
     # second = [3, 4, 5, 7, 8][random.randint(0, 4)]
     # print(second)
-    print(FuncSuit().select_data("select name from users where sex=19;", "name"))
+    a = {
+        "sql": "select name from users where sex=19;",
+        "key": "name"
+    }
+    print(FuncSuit().select_data(a))
