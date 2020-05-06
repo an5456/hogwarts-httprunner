@@ -7,13 +7,13 @@
       "name" : "测试1",
       "children" : [ {
         "name" : "test_run_testcase_yml",
-        "uid" : "35158f5fd2942272",
+        "uid" : "ae68478cf2e7cb74",
         "parentUid" : "200b281afa50b2454e309f232c76f4a7",
         "status" : "passed",
         "time" : {
-          "start" : 1588769240268,
-          "stop" : 1588769240533,
-          "duration" : 265
+          "start" : 1588769630567,
+          "stop" : 1588769630855,
+          "duration" : 288
         },
         "flaky" : false,
         "parameters" : [ ]
@@ -23,13 +23,13 @@
       "name" : "测试2",
       "children" : [ {
         "name" : "test_run_login",
-        "uid" : "c5d6b1aaaf4c57d3",
+        "uid" : "eef9b94ddbb6b92f",
         "parentUid" : "28ef4d408ae8a2f70a5c9f53bf72059f",
         "status" : "passed",
         "time" : {
-          "start" : 1588769240537,
-          "stop" : 1588769240619,
-          "duration" : 82
+          "start" : 1588769630859,
+          "stop" : 1588769630959,
+          "duration" : 100
         },
         "flaky" : false,
         "parameters" : [ ]
@@ -39,37 +39,37 @@
       "name" : "测试登陆123",
       "children" : [ {
         "name" : "test_get_login_submit[17729597958-dong19871103-00]",
-        "uid" : "777e089717fbeed8",
+        "uid" : "fd5466549dd96136",
         "parentUid" : "a68519fabdf8f99bdcd658f5cc07b5cc",
         "status" : "passed",
         "time" : {
-          "start" : 1588769240622,
-          "stop" : 1588769240891,
-          "duration" : 269
+          "start" : 1588769630962,
+          "stop" : 1588769631238,
+          "duration" : 276
         },
         "flaky" : false,
         "parameters" : [ "{'username': '17729597958', 'password': 'dong19871103', 'assert': '0', 'status': '200', 'desc': '正常登陆'}" ]
       }, {
         "name" : "test_get_login_submit[17729597958-dong19871103-01]",
-        "uid" : "7041eed920eaec6a",
+        "uid" : "8b6aa9d9abbb749c",
         "parentUid" : "a68519fabdf8f99bdcd658f5cc07b5cc",
         "status" : "passed",
         "time" : {
-          "start" : 1588769240895,
-          "stop" : 1588769241144,
-          "duration" : 249
+          "start" : 1588769631243,
+          "stop" : 1588769631520,
+          "duration" : 277
         },
         "flaky" : false,
         "parameters" : [ "{'username': '17729597958', 'password': 'dong19871103', 'assert': '0', 'status': '200', 'desc': '密码错误'}" ]
       }, {
         "name" : "test_get_login_submit[17729597958-dong19871103-02]",
-        "uid" : "e3000003acf3a492",
+        "uid" : "30a6df178a348eea",
         "parentUid" : "a68519fabdf8f99bdcd658f5cc07b5cc",
         "status" : "passed",
         "time" : {
-          "start" : 1588769241149,
-          "stop" : 1588769241399,
-          "duration" : 250
+          "start" : 1588769631524,
+          "stop" : 1588769631784,
+          "duration" : 260
         },
         "flaky" : false,
         "parameters" : [ "{'username': '17729597958', 'password': 'dong19871103', 'assert': '0', 'status': '200', 'desc': '用户名错误'}" ]
@@ -79,13 +79,13 @@
       "name" : "测试4",
       "children" : [ {
         "name" : "test_get_home_page",
-        "uid" : "5aad64b1dabc51d0",
+        "uid" : "80f6b2aa0ea5d3a4",
         "parentUid" : "8650a35675163e4a2800d438a4a76b1a",
         "status" : "passed",
         "time" : {
-          "start" : 1588769241404,
-          "stop" : 1588769241692,
-          "duration" : 288
+          "start" : 1588769631788,
+          "stop" : 1588769632120,
+          "duration" : 332
         },
         "flaky" : false,
         "parameters" : [ ]
@@ -95,13 +95,13 @@
       "name" : "上传文件",
       "children" : [ {
         "name" : "test_upfile",
-        "uid" : "cdf5747ba44bfad3",
+        "uid" : "babb0bd6526a9431",
         "parentUid" : "407689bd3a23cb23337f5995edf2ea60",
         "status" : "broken",
         "time" : {
-          "start" : 1588769241695,
-          "stop" : 1588769241701,
-          "duration" : 6
+          "start" : 1588769632124,
+          "stop" : 1588769632134,
+          "duration" : 10
         },
         "flaky" : false,
         "parameters" : [ ]
@@ -111,13 +111,13 @@
       "name" : "创建客户",
       "children" : [ {
         "name" : "test_addcustomer",
-        "uid" : "436c1a0103ce071a",
+        "uid" : "643d2fd42782a622",
         "parentUid" : "da97dececb0db1c5cd5f162be43a7461",
         "status" : "failed",
         "time" : {
-          "start" : 1588769241796,
-          "stop" : 1588769241924,
-          "duration" : 128
+          "start" : 1588769632235,
+          "stop" : 1588769632372,
+          "duration" : 137
         },
         "flaky" : false,
         "parameters" : [ ]
@@ -131,13 +131,13 @@
       "name" : "002获取部分列表",
       "children" : [ {
         "name" : "test_get_department_list",
-        "uid" : "dcbee10d7849895b",
+        "uid" : "d96e9c50d9fdd365",
         "parentUid" : "2cf57e1d4222a55a5203e5297d4f7b6c",
         "status" : "passed",
         "time" : {
-          "start" : 1588769242179,
-          "stop" : 1588769242276,
-          "duration" : 97
+          "start" : 1588769632622,
+          "stop" : 1588769632698,
+          "duration" : 76
         },
         "flaky" : false,
         "parameters" : [ ]
@@ -147,13 +147,13 @@
       "name" : "003创建部门",
       "children" : [ {
         "name" : "test_create_department",
-        "uid" : "7d57cf3c44203152",
+        "uid" : "c8b6fe21f5c1f81",
         "parentUid" : "fce2ab4845c8fff6963f64d025f9c37a",
         "status" : "passed",
         "time" : {
-          "start" : 1588769242280,
-          "stop" : 1588769242776,
-          "duration" : 496
+          "start" : 1588769632702,
+          "stop" : 1588769632934,
+          "duration" : 232
         },
         "flaky" : false,
         "parameters" : [ ]
@@ -163,13 +163,13 @@
       "name" : "005删除部门",
       "children" : [ {
         "name" : "test_delete_department",
-        "uid" : "c15c85257480a822",
+        "uid" : "8284478e6c8bce01",
         "parentUid" : "2347bd43586a585dc37c6488a276c50a",
         "status" : "passed",
         "time" : {
-          "start" : 1588769242779,
-          "stop" : 1588769243164,
-          "duration" : 385
+          "start" : 1588769632938,
+          "stop" : 1588769633360,
+          "duration" : 422
         },
         "flaky" : false,
         "parameters" : [ ]

@@ -1,5 +1,5 @@
 {
-  "fea38451c2c2faeec54aa425a7c9b17c" : {
+  "9c95dab400b4a6de89dedd0371d0cc61" : {
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -9,12 +9,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "c5d6b1aaaf4c57d3",
+      "uid" : "80f6b2aa0ea5d3a4",
       "status" : "passed",
       "time" : {
-        "start" : 1588769240537,
-        "stop" : 1588769240619,
-        "duration" : 82
+        "start" : 1588769631788,
+        "stop" : 1588769632120,
+        "duration" : 332
       }
     } ]
   },
@@ -28,17 +28,17 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "cdf5747ba44bfad3",
+      "uid" : "babb0bd6526a9431",
       "status" : "broken",
       "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\模板\\\\customerTemp.xlsx'",
       "time" : {
-        "start" : 1588769241695,
-        "stop" : 1588769241701,
-        "duration" : 6
+        "start" : 1588769632124,
+        "stop" : 1588769632134,
+        "duration" : 10
       }
     } ]
   },
-  "9c95dab400b4a6de89dedd0371d0cc61" : {
+  "fea38451c2c2faeec54aa425a7c9b17c" : {
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -48,12 +48,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "5aad64b1dabc51d0",
+      "uid" : "eef9b94ddbb6b92f",
       "status" : "passed",
       "time" : {
-        "start" : 1588769241404,
-        "stop" : 1588769241692,
-        "duration" : 288
+        "start" : 1588769630859,
+        "stop" : 1588769630959,
+        "duration" : 100
       }
     } ]
   },
@@ -67,12 +67,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "c15c85257480a822",
+      "uid" : "8284478e6c8bce01",
       "status" : "passed",
       "time" : {
-        "start" : 1588769242779,
-        "stop" : 1588769243164,
-        "duration" : 385
+        "start" : 1588769632938,
+        "stop" : 1588769633360,
+        "duration" : 422
       }
     } ]
   },
@@ -86,12 +86,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "7041eed920eaec6a",
+      "uid" : "8b6aa9d9abbb749c",
       "status" : "passed",
       "time" : {
-        "start" : 1588769240895,
-        "stop" : 1588769241144,
-        "duration" : 249
+        "start" : 1588769631243,
+        "stop" : 1588769631520,
+        "duration" : 277
       }
     } ]
   },
@@ -105,12 +105,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "7d57cf3c44203152",
+      "uid" : "c8b6fe21f5c1f81",
       "status" : "passed",
       "time" : {
-        "start" : 1588769242280,
-        "stop" : 1588769242776,
-        "duration" : 496
+        "start" : 1588769632702,
+        "stop" : 1588769632934,
+        "duration" : 232
       }
     } ]
   },
@@ -124,12 +124,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "35158f5fd2942272",
+      "uid" : "ae68478cf2e7cb74",
       "status" : "passed",
       "time" : {
-        "start" : 1588769240268,
-        "stop" : 1588769240533,
-        "duration" : 265
+        "start" : 1588769630567,
+        "stop" : 1588769630855,
+        "duration" : 288
       }
     } ]
   },
@@ -143,13 +143,13 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "436c1a0103ce071a",
+      "uid" : "643d2fd42782a622",
       "status" : "failed",
       "statusDetails" : "AssertionError",
       "time" : {
-        "start" : 1588769241796,
-        "stop" : 1588769241924,
-        "duration" : 128
+        "start" : 1588769632235,
+        "stop" : 1588769632372,
+        "duration" : 137
       }
     } ]
   },
@@ -163,12 +163,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "dcbee10d7849895b",
+      "uid" : "d96e9c50d9fdd365",
       "status" : "passed",
       "time" : {
-        "start" : 1588769242179,
-        "stop" : 1588769242276,
-        "duration" : 97
+        "start" : 1588769632622,
+        "stop" : 1588769632698,
+        "duration" : 76
       }
     } ]
   },
@@ -182,12 +182,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "777e089717fbeed8",
+      "uid" : "fd5466549dd96136",
       "status" : "passed",
       "time" : {
-        "start" : 1588769240622,
-        "stop" : 1588769240891,
-        "duration" : 269
+        "start" : 1588769630962,
+        "stop" : 1588769631238,
+        "duration" : 276
       }
     } ]
   },
@@ -201,12 +201,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "e3000003acf3a492",
+      "uid" : "30a6df178a348eea",
       "status" : "passed",
       "time" : {
-        "start" : 1588769241149,
-        "stop" : 1588769241399,
-        "duration" : 250
+        "start" : 1588769631524,
+        "stop" : 1588769631784,
+        "duration" : 260
       }
     } ]
   }

@@ -1,4 +1,5 @@
 import pytest
+
 from core.getlog import GetLog
 
 
@@ -16,7 +17,7 @@ def pytest_configure(config):
 
 @pytest.fixture(scope="module", autouse=True)
 def get_log():
-    GetLog().get_logs_info()
+    GetLog.get_logs_info()
 
 # @pytest.fixture(scope="class", autouse=True)
 # def get_weixin_token():
