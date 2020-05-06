@@ -1,6 +1,17 @@
 {
   "total" : 2,
   "items" : [ {
+    "uid" : "c5b9ea08638a2e809ea770f760ddbde1",
+    "name" : "test_testcase",
+    "statistic" : {
+      "failed" : 2,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 5,
+      "unknown" : 0,
+      "total" : 7
+    }
+  }, {
     "uid" : "73dc1798285c81e18af90a53d20adcf2",
     "name" : "test_weixin_apart",
     "statistic" : {
@@ -10,17 +21,6 @@
       "passed" : 2,
       "unknown" : 0,
       "total" : 3
-    }
-  }, {
-    "uid" : "c5b9ea08638a2e809ea770f760ddbde1",
-    "name" : "test_testcase",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 1,
-      "skipped" : 0,
-      "passed" : 5,
-      "unknown" : 0,
-      "total" : 6
     }
   } ]
 }
