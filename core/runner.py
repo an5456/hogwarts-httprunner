@@ -185,7 +185,7 @@ class Runapi:
         config_info = Utils.read_yaml(os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "env.yml"))
         if config_info:
             if config_info["weixin"]["schema"] is not None:
-                if config_info["weixin"]["schema"] == "http":  # 是否是http请求
+                if config_info["weixin"]["schema"] == "http" and config_info["weixin"]["schema"] == "https" :  # 是否是http或者https请求
                     url = parsed_request.pop("url").replace("qyapi.weixin.qq.com",
                                                             config_info["weixin"]["qyapi.weixin.qq.com"][
                                                                 config_info["weixin"]["default"]])
@@ -203,7 +203,7 @@ class Runapi:
                             reps = json.loads(base64.b64decode(reps.content))
                     self.get_request_data(parsed_request, api_info)
                     self.extract_data(api_info, reps)
-                    return self.extract_and_get_data(parsed_validate, parsed_request, api_info, csv_dict, reps, url,
+                    return self.extract_and_get_data(parsed_validate, parsed_request, api_info, csv_dict, reps, reps.url,
                                                      method)
                 elif "dubbo" == config_info["schema"]:
                     pass
@@ -226,7 +226,7 @@ class Runapi:
             reps = session.request(method, url, **parsed_request)
             self.get_request_data(parsed_request, api_info)
             self.extract_data(api_info, reps)
-            return self.extract_and_get_data(parsed_validate, parsed_request, api_info, csv_dict, reps, url, method)
+            return self.extract_and_get_data(parsed_validate, parsed_request, api_info, csv_dict, reps, reps.url, method)
 
     def extract_and_get_data(self, parsed_validate, parsed_request, api_info, csv_dict, reps, url, method):
         """提取请求或者响应的数据，已经保存数据到yml文件"""
@@ -273,6 +273,6 @@ class Runapi:
 
 
 if __name__ == '__main__':
-    str_1 = "xxxs:${test_1($username,$password)}ssss:wwwww"
+    str_1 = "xxxs:${test_1($username,$password)}ssss:www"
     test_dict = {"username": "zhangsan", "password": 123456, "age": 21}
     print(Runapi().action.parse_funtion(str_1, test_dict))
