@@ -8,4 +8,4 @@ if __name__ == '__main__':
         "rm -rf report;"
         "rm -rf html;"
         "pytest -s --alluredir=report;"           
-        "allure generate report -o html --clean;", shell=True)
+        "allure generate report -o html;", shell=True)
