@@ -16,7 +16,7 @@ def pytest_configure(config):
 
 @pytest.fixture(scope="module", autouse=True)
 def get_log():
-    GetLog().set_log_config_1()
+    GetLog().get_logs()
 
 # @pytest.fixture(scope="class", autouse=True)
 # def get_weixin_token():
