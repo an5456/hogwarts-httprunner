@@ -44,7 +44,7 @@ class TestSingle:
 
     @allure.story("上传文件")
     def test_upfile(self):
-        Result.result_assert("api/yml", " .yml")
+        Result.result_assert("api/yml", "loadfile.yml")
 
     @allure.story("创建客户")
     def test_addcustomer(self):
